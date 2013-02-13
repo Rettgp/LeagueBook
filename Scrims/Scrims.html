@@ -144,27 +144,28 @@
                 <div id="hgroups">
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tr>
-                            <td class="td_group_title" valign="bottom"><div id="h1"><a id="groupTitle" href="http://leaguebook.com/"><h1>League book</h1></a></div></td>
-                            <td class="td_notifications" valign="bottom">    <ul id="headerNotificationsIcons">
+                            <td class="td_group_title" valign="bottom"><div id="h1">
+                                    <a id="groupTitle" href="http://leaguebook.com/">
+                                        <h1>LeagueBook</h1>
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="td_notifications" valign="bottom">
+                                <ul id="headerNotificationsIcons">
                                     <li>
-                                        <a href="#" id="headerFriendRequestItem" onclick="return false">&nbsp;</a>
+                                        <a id="headerFriendRequestItem" onclick="return false" href="#"> </a>
                                         <ul class="notificationMenu" style="display: none">
-                                            <h3>
-                                                Friend Requests
-                                            </h3>
-
-                                            <div class="notificationContent">
-                                                <li class="notificationNoContent">No New Requests</li>
-                                            </div>
-                                            <li class="bottom"><a href="http://leaguebook.com/dashboard/alerts">See All Friend Requests</a></li>
+                                            <h3> Friend Requests </h3>
+                                            <div class="notificationContent"> </div>
+                                            <li class="bottom">
+                                                <a href="http://leaguebook.com/dashboard/alerts">See All Friend Requests</a>
+                                            </li>
                                         </ul>
                                     </li>
-
                                     <li>
-                                        <a href="#" id="headerMessagesItem" rel="setAllMessagesPassive" onclick="return false">&nbsp;</a>
+                                        <a id="headerMessagesItem" onclick="return false" rel="setAllMessagesPassive" href="#"> </a>
                                         <ul class="notificationMenu" style="display: none">
-                                            <h3>
-                                                Messages
+                                            <h3>Messages
                                                 <div class="notificationAction">
                                                     <a href="http://leaguebook.com/dashboard/compose_message">Compose New Message</a>
                                                 </div>
@@ -172,62 +173,43 @@
                                             <div class="notificationContent">
                                                 <li class="notificationNoContent">No Messages</li>
                                             </div>
-                                            <li class="bottom"><a href="http://leaguebook.com/dashboard/messages">See All Messages</a></li>
+                                            <li class="bottom">
+                                                <a href="http://leaguebook.com/dashboard/messages">See All Messages</a>
+                                            </li>
                                         </ul>
                                     </li>
-
                                     <li>
-                                        <a href="#" id="headerNotificationsItem" rel="setAllNotificationsPassive" onclick="return false">&nbsp;</a>
+                                        <a id="headerNotificationsItem" onclick="return false" rel="setAllNotificationsPassive" href="#"> </a>
                                         <ul class="notificationMenu" style="display: none">
-                                            <h3>
-                                                Notifications
-                                            </h3>
-                                            <div class="notificationContent">
-                                                <li class="notificationNoContent">No Notifications</li>
-                                            </div>
-                                            <li class="bottom"><a href="http://leaguebook.com/dashboard/notifications">See All Notifications</a></li>
+                                            <h3> Notifications </h3>
+                                            <div class="notificationContent"> </div>
+                                            <li class="bottom">
+                                                <a href="http://leaguebook.com/dashboard/notifications">See All Notifications</a>
+                                            </li>
                                         </ul>
                                     </li>
                                 </ul>
                             </td>
-                            <td class="td_search" valign="bottom"><div id="searchBoxDiv">
-                                    <form id="book_search_form" action="http://leaguebook.com/people/search" method="POST">
-                                        <input type="search" autocomplete="off" placeholder="Search" id="book_groups_search_text" name="q" />
-
-                                        <input type="submit" id="searchSubmitInput" />
-
+                            <td class="td_search" valign="bottom">
+                                <div id="searchBoxDiv">
+                                    <form id="book_search_form" method="POST" action="http://leaguebook.com/people/search">
+                                        <input id="book_groups_search_text" type="search" name="q" placeholder="Search" autocomplete="off" data-placeholder-bound="true">
+                                        <input id="searchSubmitInput" type="submit" data-placeholder-bound="true">
                                         <ul id="book_search_types_box" class="autocomplete" style="display: none">
-                                            <li id="searchPeopleModule" class="searchModule"
-                                                onClick="groups.search.goToAdvancedSearch()">
-
-                                                <div class="searchModuleTitle">
-                                                    People
-                                                </div>
-
-                                                <div class="searchModuleSubtitle">
-                                                    Advanced Search
-                                                </div>
+                                            <li id="searchPeopleModule" class="searchModule" onClick="groups.search.goToAdvancedSearch()">
+                                                <div class="searchModuleTitle">People</div>
+                                                <div class="searchModuleSubtitle">Advanced Search</div>
                                             </li>
-
                                             <li id="searchPeopleModuleLoading" class="searchResultsLoading" style="display: none"></li>
-
                                             <li id="searchMessagesModule" class="searchModule" onClick="groups.search.searchInModule('messages')">
-                                                <div class="searchModuleTitle">
-                                                    Messages
-                                                </div>
-
-                                                <div class="searchModuleSubtitle">
-                                                    More ‣
-                                                </div>
+                                                <div class="searchModuleTitle">Messages</div>
+                                                <div class="searchModuleSubtitle">More?</div>
+                                            </li>
                                             <li id="searchBlogsModule" class="searchModule" onClick="groups.search.searchInModule('blogs')">
-                                                <div class="searchModuleTitle">
-                                                    Blogs
-                                                </div>
-
-                                                <div class="searchModuleSubtitle">
-                                                    More ‣
-                                                </div>
-                                            </li>			
+                                                <div class="searchModuleTitle">Blogs</div>
+                                                <div class="searchModuleSubtitle">More?</div>
+                                            </li>
+                                            <li id="searchBlogsModuleLoading" class="searchResultsLoading" style="display: none"></li>
                                             <li class="noResultsFound centered hovered" style="display: none" class="hovered">
                                                 No results found for <span class="searchKeyword"></span>
                                             </li>
@@ -240,7 +222,7 @@
                                     <li id="basicItemProfile"><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi">Profile</a></li>
                                     <li id="basicItemAccount"><a href="#">Account <span class="downArrowIcon">&#9660;</span></a>
                                         <ul id="accountMenu">
-                                            <div class="userAvatar"><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi"><img src="http://leaguebook.com/avatars/b/80.png" alt="Levi Limmex" width="50" height="50" align="absmiddle"></a><p><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi">Levi Limmex</a></p></div>
+                                            <div class="userAvatar"><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi"><img src="no_image.png" alt="Levi Limmex" width="50" height="50" align="absmiddle"></a><p><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi">Levi Limmex</a></p></div>
                                             <li><a href="http://leaguebook.com/dashboard/myprofile">Edit Profile</a></li>
                                             <!--<li><a href="http://leaguebook.com/dashboard/preferences">Account Settings</a></li>-->
                                             <li><a href="http://leaguebook.com/dashboard/privacy_settings">Privacy Settings</a></li>
@@ -268,8 +250,39 @@
                         <p><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi/edit">Edit Profile</a></p>
                     </div>
 
-                    <div id="menu"><ul id="nav" class="level1"><li id="menu_item_17306106" ><a href="http://leaguebook.com/home"><span>Home</span></a></li><li id="menu_item_17306107" ><a href="http://leaguebook.com/people/oajiivhbldxbldhwi" z=""><span>My Profile</span></a></li><li id="menu_item_17306108" ><a href="http://leaguebook.com/people"><span>Friends</span></a></li><li id="menu_item_17306109" ><a href="http://leaguebook.com/dashboard/spread" z=""><span>Invite</span></a></li><li id="menu_item_17306110"><a href="http://leaguebook.com/groups"><span>Teams</span></a></li><li id="menu_item_17306111" ><a href="http://leaguebook.com/photos"><span>Screenshots</span></a></li><li id="menu_item_17306112" ><a href="http://leaguebook.com/videos"><span>Videos</span></a></li><li id ="menu_item_17306113" class="selected" ><a href=http://leaguebook.com/scrims><span>Scrims</span></a></li><li id="menu_item_17306114" ><a href="http://leaguebook.com/blogs"><span>Blogs</span></a></li></ul><div style="clear:both;"></div></div>                
-                    <ul id="subGroupsBlock">
+					<div id="menu">
+                        <ul id="nav" class="level1">
+                            <li id="menu_item_17306106" class="selected" >
+                                <a href="../userhomepage/userhomepage.html"><span>Home</span></a>
+                            </li>
+                            <li id="menu_item_17306107" >
+                                <a href="../myprofile/myprofile.html" z=""><span>My Profile</span></a>
+                            </li>
+                            <li id="menu_item_17306108" >
+                                <a href="../friends/friends.html"><span>Members</span></a>
+                            </li>
+                            <li id="menu_item_17306109" >
+                                <a href="../invite/invite.html" z=""><span>Invite</span></a>
+                            </li>
+                            <li id="menu_item_17306110" >
+                                <a href="../teams/teams.html"><span>Teams</span></a>
+                            </li>
+                            <li id="menu_item_17306111" >
+                                <a href="../screenshots/screenshots.html"><span>Screenshots</span></a>
+                            </li>
+                            <li id="menu_item_17306112" >
+                                <a href="../videos/videos.html"><span>Videos</span></a>
+                            </li>
+                            <li id ="menu_item_17306113" >
+                                <a href="../scrims/scrims.html"><span>Scrims</span></a>
+                            </li>
+                            <li id="menu_item_17306114" >
+                                <a href="../blogs/blogs.html"><span>Blogs</span></a>
+                            </li>
+                        </ul>
+                        <div style="clear:both;"></div>
+                    </div>                    
+					<ul id="subGroupsBlock">
                         <h3><a href="http://leaguebook.com/groups">Teams</a></h3>
                         <li><a href="http://leaguebook.com/groups/267317">Sample Teams</a></li
                     </ul>

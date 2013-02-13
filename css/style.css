@@ -27,7 +27,7 @@ abbr, acronym {
 body {
     background: none repeat scroll 0 0 #F7F7F7;
     color: #787878;
-    font: 11px/1.273em "Lucida Grande",Tahoma,Verdana,Arial,sans-serif;
+    font: 13px/2em "Lucida Grande",Tahoma,Verdana,Arial,sans-serif;
     overflow-x: hidden;
 }
 a {
@@ -155,7 +155,7 @@ blockquote {
 #h1 {
     color: #F7F7F7;
     float: left;
-    font-size: 1.7em;
+    font-size: 2.0em;
     font-weight: bold;
     line-height: 1.1em;
     margin-right: 10px;
@@ -250,7 +250,8 @@ a#headerNotificationsItem {
 #aSide {
     float: left;
     margin-top: 20px;
-    width: 170px;
+	margin-left: 220px;
+    width: 150px;
 }
 #aSide img {
     border-radius: 3px 3px 3px 3px;
@@ -571,13 +572,13 @@ ul#accountMenu .userAvatar a:hover {
 #contentWrapper {
     clear: both;
     margin: 15px auto 0;
-    width: 980px;
+    width: 1600px;
 }
 #content {
     float: left;
     min-height: 450px;
     position: relative;
-    width: 810px;
+    width: 1200px;
 }
 #content .col_full {
     background: none repeat scroll 0 0 #FFFFFF;
@@ -639,7 +640,7 @@ ul#accountMenu .userAvatar a:hover {
     float: left;
     padding-top: 37px;
     position: relative;
-    width: 28.5%;
+    width: 18.5%;
     z-index: 5;
 }
 #content .col_two_main_menu {
@@ -678,7 +679,7 @@ ul#accountMenu .userAvatar a:hover {
     z-index: 10;
 }
 #contentWrapper.flexi #aSide {
-    display: none;
+
 }
 #contentWrapper.flexi #content {
     width: 980px;
