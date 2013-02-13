@@ -1,18 +1,22 @@
-***Request a duo page
+*Request a duo page
 
 --Takes your highest win rate heros, matches them with summoners who have high win rates with heros
   that your highest win rate heros have high win rates with
 
 --Within 100 of your elo/league/what the fuck ever.
 
-***Community pages you can subscribe to
+*Community pages you can subscribe to
 
-***Scrim page (sorta started it)
+---Examples: Top 5 plays of the week, top 5 pictures of the week, patch previews
 
-***Clean up code/make it our own
+*Scrim page (sorta started it)
 
-***Bracket page
+*Clean up code/make it our own
 
-***Streams embedded
+*Bracket page
+
+*Streams embedded
+
+*Top 3 most improved players this week on homepage.
 
 Text me a few times when you have free time tomorrow.
