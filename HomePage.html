@@ -3,24 +3,23 @@
 <head>
   <title>LeagueBook</title>
   <style type="text/css">
-	h1 {
+	h1.head {
 		position: fixed;
 		width: 100%;
 		margin-left: -184px;
-
 		height: 40px;
-		margin-top: -18px;
-		padding-left: 5em;
+		margin-top: -13px;
+		padding-left: 10em;
+		padding-right: 50em;
 		color: white;
 		background-color: black; 
 	}
 	body {
-		padding-left: 11em;
+		padding-left: 10em;
 		padding-top: -5em;
-		padding-right: 50em;
+		padding-right: 30em;
 		font-family: Rockwell, "Courier New", Courier, Georgia,
                  Times, "Times New Roman", serif; 
-		font: bold;
 		color: purple;
 		background-color: white;
 	}
@@ -30,29 +29,48 @@
 		left: 1em;
 		width: 9em 
 	}
+	
+	div.news {
+		padding-left: 1em;
+		padding-top:1em;
+		padding-right: 1em;
+		background-color: #CCFFFF;
+	}
+	form.sign_in {
+		margin-top: -30px;
+		margin-left: 500px;
+		font-size:15px;
+	}
+		
   </style>
 </head>
 
+<h1 class="head">LeagueBook
+	<form class="sign_in">
+		First name: <input type="text" name="fname">
+		Last name: <input type="text" name="lname">
+		<input type="submit" value="Submit">
+	</form>
+</h1>
+
 <body>
 
-
 <!-- Main content -->
-<h1>LeagueBook</h1>
 
-<p>BODY
+	<div class ="news">
+		<p>gf
 
-<p>BODY
+		<p>fg
 
-<p>Body
-
+		<p>fgdafg
+	</div>
 <!-- Site navigation menu -->
-<ul class="navbar">
-  <li><a href="index.html"><input type="image" src="button.gif" name="image" width="100" height="30"></a>
-  <li><a href="musings.html"><input type="image" src="button.gif" name="image" width="100" height="30"></a>
-  <li><a href="town.html"><input type="image" src="button.gif" name="image" width="100" height="30"></a>
-  <li><a href="links.html"><input type="image" src="button.gif" name="image" width="100" height="30"></a>
-</ul>
-
+	<ul class="navbar">
+		<li><a href="index.html"><input type="image" src="button.gif" name="image" width="100" height="30"></a>
+		<li><a href="musings.html"><input type="image" src="button.gif" name="image" width="100" height="30"></a>
+		<li><a href="town.html"><input type="image" src="button.gif" name="image" width="100" height="30"></a>
+		<li><a href="links.html"><input type="image" src="button.gif" name="image" width="100" height="30"></a>
+	</ul>
 
 </body>
 </html>
