@@ -1,0 +1,50 @@
+
+.tabs10Cont, .slidingTabs {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+}
+.tabs10Cont ul, .slidingTabs ul {
+    list-style: none outside none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 10px 0 0;
+    position: relative;
+}
+.tabs10Cont li, .slidingTabs li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+.tabs10Cont li a, .slidingTabs li a {
+    border-radius: 3px 3px 0 0;
+    float: left;
+    font-size: 12px;
+    margin: 0 5px 0 0;
+    outline: medium none;
+    padding: 10px 20px 7px;
+    text-decoration: none !important;
+}
+.tabs10Cont li.selected a, .slidingTabs li.selected a {
+    border-radius: 3px 3px 0 0;
+    border-style: solid solid none;
+}
+.tabs10Cont .panel, .slidingTabs .panel {
+    border-radius: 0 0 3px 3px;
+    margin: -1px 0 0;
+    overflow: auto;
+    padding: 10px;
+}
+#block_no_new_people_tabs .tabs10Cont .panel {
+    float: left;
+    min-height: 600px;
+    width: 96%;
+}
+#horizontal_tab_menu_people_blogs-content .homeBlog_body p {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+#people_tab_menu_edit {
+    float: right;
+    margin-right: 15px;
+    padding-top: 7px;
+}

@@ -1,0 +1,114 @@
+
+@charset "UTF-8";
+ul#headerNotificationsIcons ul.notificationMenu {
+    border-top: medium none;
+    left: -1px;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    text-align: left;
+    top: 30px;
+    width: 320px;
+    z-index: 9999;
+}
+ul#headerNotificationsIcons ul.notificationMenu h3 {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+}
+ul#headerNotificationsIcons ul.notificationMenu h3 div.notificationAction {
+    float: right;
+    font-weight: normal;
+}
+ul#headerNotificationsIcons ul.notificationMenu h3 div.notificationAction a {
+    height: 0;
+    padding: 0;
+}
+ul#headerNotificationsIcons ul.notificationMenu h3 div.notificationAction a:hover {
+    background: none repeat scroll 0 0 transparent;
+    text-decoration: underline;
+}
+ul#headerNotificationsIcons ul.notificationMenu div.notificationContent li.notificationNoContent {
+    border: medium none;
+    line-height: 20px;
+    margin: 0 0 5px;
+    padding: 0 10px;
+    width: auto;
+}
+ul#headerNotificationsIcons ul.notificationMenu div.notificationContent li {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    width: 100%;
+}
+ul#headerNotificationsIcons ul.notificationMenu div.notificationContent li.clickable {
+    cursor: pointer;
+}
+ul#headerNotificationsIcons ul.notificationMenu div.notificationContent li.last {
+    border: medium none;
+}
+ul#headerNotificationsIcons ul.notificationMenu div.notificationContent li div {
+    padding: 0 10px;
+}
+ul#headerNotificationsIcons .notificationItemContainer button {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    border-radius: 0 0 0 0;
+    box-shadow: none;
+    font-weight: normal;
+    margin: 6px 15px 0 -2px;
+    padding: 0;
+    text-shadow: none;
+}
+ul#headerNotificationsIcons ul.notificationMenu div.notificationContent li img {
+    float: left;
+    height: 50px;
+    margin-right: 10px;
+    vertical-align: top;
+    width: 50px;
+}
+ul#headerNotificationsIcons ul.notificationMenu div.notificationContent li img.outgoingMessage {
+    border: 0 none;
+    float: none;
+    height: 9px;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    width: 8px;
+}
+ul#headerNotificationsIcons ul.notificationMenu div.notificationContent li h3 {
+    border: medium none;
+    margin: 0;
+    padding: 0;
+}
+ul#headerNotificationsIcons ul.notificationMenu div.notificationContent li h3.inline {
+    display: inline;
+}
+ul#headerNotificationsIcons ul.notificationMenu div.notificationContent li p.no_margin {
+    margin-top: 0;
+}
+ul#headerNotificationsIcons ul.notificationMenu div.notificationContent li p.small {
+    font-size: 9px;
+}
+ul#headerNotificationsIcons ul.notificationMenu div.notificationContent li p a {
+    display: inline;
+    font-weight: bold;
+    padding: 0;
+}
+ul#headerNotificationsIcons ul.notificationMenu li.bottom {
+    display: block;
+    font-weight: bold;
+    line-height: 30px;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+ul#headerNotificationsIcons li .userCount {
+    font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size: 11px;
+    z-index: 1;
+}

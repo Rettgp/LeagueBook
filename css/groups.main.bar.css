@@ -1,0 +1,131 @@
+
+@charset "utf-8";
+#groups_bar, #groups_bar .button, #groups_bar .panel {
+    border-color: #CCCCCC;
+    border-style: solid;
+    color: #666666;
+    font: 11px Tahoma;
+    margin: 0;
+}
+#groups_bar {
+    background: -moz-linear-gradient(center top , #F0F0F0, #E9E9E9) repeat scroll 0 0 transparent;
+    border-width: 0;
+    bottom: 0;
+    box-shadow: 0 0 5px 0 #CCCCCC;
+    height: 27px;
+    overflow: visible;
+    padding: 0;
+    position: fixed;
+    right: 10px;
+    z-index: 91;
+}
+#groups_bar a, #groups_bar a:hover {
+    text-decoration: none;
+    transition: none 0s ease 0s;
+}
+#groups_bar ul, #groups_bar li {
+    line-height: 18px;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+#groups_bar li.message {
+    background: url("http://grou.ps/images/fugue/mail.png") no-repeat scroll left center transparent;
+    padding-left: 20px;
+}
+#groups_bar li.friend_request {
+    background: url("http://grou.ps/images/fugue/user--plus.png") no-repeat scroll left center transparent;
+    padding-left: 20px;
+}
+#groups_bar li.poke {
+    background: url("http://grou.ps/images/fugue/hand-point.png") no-repeat scroll left center transparent;
+    padding-left: 20px;
+}
+#groups_bar .groups_bar_overlay {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+#groups_bar .button {
+    background-position: 3px center;
+    background-repeat: no-repeat;
+    border-width: 3px 1px 0;
+    cursor: pointer;
+    float: left;
+    min-height: 16px;
+    min-width: 16px;
+    overflow: visible;
+    padding: 5px 5px 3px 22px;
+    position: relative;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #FFFFFF;
+    z-index: 10;
+}
+#groups_bar .button:first-child {
+}
+#groups_bar .count {
+    background: none repeat scroll 0 0 #FF0000;
+    border: 1px solid #FF0000;
+    border-radius: 10px 10px 10px 10px !important;
+    color: #FFFFFF;
+    display: block;
+    font-size: 9px;
+    left: 10px;
+    margin: 0;
+    min-width: 11px;
+    padding: 1px;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: none;
+    top: -5px;
+}
+#groups_bar .count:hover {
+    text-decoration: none;
+}
+#groups_bar .loading {
+    background-image: url("/images/msg_loading.gif") !important;
+}
+#groups_bar .button.active {
+}
+#groups_bar .button.active .count {
+    display: none;
+}
+#groups_bar .panel {
+    background: -moz-linear-gradient(center top , #F6F6F6, #E9E9E9) repeat scroll 0 0 transparent;
+    border: 1px solid #CCCCCC;
+    bottom: 27px;
+    box-shadow: 0 0 5px 0 #CCCCCC;
+    padding: 15px;
+    position: absolute;
+    visibility: hidden;
+    width: 150px;
+    z-index: 9;
+}
+#groups_bar .panel h6 {
+    display: block;
+    font: bold 11px Tahoma !important;
+    margin: -15px -15px 7px;
+    overflow: hidden;
+    padding: 5px 0 5px 8px;
+    text-align: left;
+}
+#groups_bar .button.active + .panel {
+    visibility: visible;
+}
+#groups_notifications_button {
+    background-image: url("http://grou.ps/images/groups_bar/notifications.png");
+}
+#groups_notifications_button:hover, #groups_notifications_button.active {
+    background-image: url("http://grou.ps/images/groups_bar/notifications_hover.png");
+}
+#groups_search_button {
+    padding: 2px !important;
+}

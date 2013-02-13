@@ -1,0 +1,29 @@
+
+div.accordion {
+    position: relative;
+}
+div.accordion-toggle {
+    border-style: none none solid;
+    border-width: 1px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 3px 5px !important;
+    position: relative;
+    z-index: 10;
+}
+div.accordion-content {
+    overflow: hidden;
+}
+.twPropertyContainer {
+    float: left;
+    font-size: 0.95em;
+    line-height: 35px;
+    margin-right: 2%;
+    overflow: hidden;
+    width: 48%;
+}
+.twPropertyContainer .twPropertyHeader {
+    float: left;
+    width: 45%;
+}
