@@ -7,4 +7,8 @@
 
 ***Subscriptions page
 
-***Scrim page
+***Scrim page (sorta started it)
+
+***Clean up code
+
+***Bracket page
