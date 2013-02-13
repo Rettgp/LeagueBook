@@ -5,7 +5,7 @@
 
 --Within 100 of your elo/league/what the fuck ever.
 
-***Subscriptions page
+***Community pages you can subscribe to
 
 ***Scrim page (sorta started it)
 
@@ -13,8 +13,6 @@
 
 ***Bracket page
 
-***Make side font bigger
-
-***Make page stretch a bit more
+***Streams embedded
 
 Text me a few times when you have free time tomorrow.
