@@ -46,7 +46,6 @@
 		var isTheBook = true;
 		var blogsAllowed = true;
     var askAllowed = false;
-		var filesAllowed = true;
 	</script>
 </head>
 <body class="group_member">
@@ -191,8 +190,6 @@ function searchGroups()
                     More ?
                 </div>
             </li>
-	            <li id="searchForumModuleLoading" class="searchResultsLoading" style="display: none"></li>
-            
 				            <li id="searchBlogsModule" class="searchModule" onClick="groups.search.searchInModule('blogs')">
 	                <div class="searchModuleTitle">
 	                    Blogs
@@ -204,20 +201,6 @@ function searchGroups()
                 </li>
 
 	            <li id="searchBlogsModuleLoading" class="searchResultsLoading" style="display: none"></li>
-            
-			
-				            <li id="searchFilesModule" class="searchModule" onClick="groups.search.searchInModule('files')">
-	                <div class="searchModuleTitle">
-	                    Files
-	                </div>
-
-	                <div class="searchModuleSubtitle">
-	                    More ?
-	                </div>
-                </li>
-
-	            <li id="searchFilesModuleLoading" class="searchResultsLoading" style="display: none"></li>
-			
             <li class="noResultsFound centered hovered" style="display: none" class="hovered">
                 	No results found for <span class="searchKeyword"></span>
             </li>
@@ -258,7 +241,7 @@ function searchGroups()
                                               <p><a href="http://leaguebook.grou.ps/people/person/oajiivhbldxbldhwi/edit">Edit Profile</a></p>
                     </div>
                                 
-                <div id="menu"><ul id="nav" class="level1"><li id="menu_item_17306106" class="selected" ><a href="http://leaguebook.grou.ps/home"><span>Home</span></a></li><li id="menu_item_17306107" ><a href="http://leaguebook.grou.ps/people/oajiivhbldxbldhwi" z=""><span>My Profile</span></a></li><li id="menu_item_17306108" ><a href="http://leaguebook.grou.ps/people"><span>Members</span></a></li><li id="menu_item_17306109" ><a href="http://leaguebook.grou.ps/dashboard/spread" z=""><span>Invite</span></a></li><li id="menu_item_17306110" ><a href="http://leaguebook.grou.ps/groups"><span>Groups</span></a></li><li id="menu_item_17306111" ><a href="http://leaguebook.grou.ps/photos"><span>Photos</span></a></li><li id="menu_item_17306112" ><a href="http://leaguebook.grou.ps/videos"><span>Videos</span></a></li><li id="menu_item_17306113" ><a href="http://leaguebook.grou.ps/files"><span>Files</span></a></li><li id="menu_item_17306114" ><a href="http://leaguebook.grou.ps/blogs"><span>Blogs</span></a></li><li id="menu_item_17306116" ><a href="http://leaguebook.grou.ps/talks"><span>Forum</span></a></li></ul><div style="clear:both;"></div></div>                
+                <div id="menu"><ul id="nav" class="level1"><li id="menu_item_17306106" class="selected" ><a href="http://leaguebook.grou.ps/home"><span>Home</span></a></li><li id="menu_item_17306107" ><a href="http://leaguebook.grou.ps/people/oajiivhbldxbldhwi" z=""><span>My Profile</span></a></li><li id="menu_item_17306108" ><a href="http://leaguebook.grou.ps/people"><span>Members</span></a></li><li id="menu_item_17306109" ><a href="http://leaguebook.grou.ps/dashboard/spread" z=""><span>Invite</span></a></li><li id="menu_item_17306110" ><a href="http://leaguebook.grou.ps/groups"><span>Teams</span></a></li><li id="menu_item_17306111" ><a href="http://leaguebook.grou.ps/photos"><span>Screenshots</span></a></li><li id="menu_item_17306112" ><a href="http://leaguebook.grou.ps/videos"><span>Videos</span></a></li><li id="menu_item_17306114" ><a href="http://leaguebook.grou.ps/blogs"><span>Blogs</span></a></li></ul><div style="clear:both;"></div></div>                
                                     <ul id="subGroupsBlock">
                     <h3><a href="http://leaguebook.grou.ps/groups">Subgroups</a></h3>
                                                                     <li><a href="http://leaguebook.grou.ps/groups/267317">Sample Group</a></li>
@@ -270,7 +253,7 @@ function searchGroups()
 <div id="top_block_no_1202933"  class="movable"  data-type="newsfeed"><div class="box"><div class="box_top" id="block_title_no_1"><h2>Newsfeed</h2></div><div style="clear:both"></div><div class="box_mid"><div class="content" id="block_no_1202933">
 				<div id="status_form">
 					<form onsubmit="return false">
-						<div id="status_form_media">	<ul>		<li class="update_status active"><a href="javascript:;">Update Status</a></li>		<li class="title_attach" >Share:</li><li class="add_photos"><a href="http://leaguebook.grou.ps/photos/add">Photo</a></li><li class="add_video"><a href="http://leaguebook.grou.ps/videos/add">Video</a></li><li class="add_blog"><a href="http://leaguebook.grou.ps/blogs/add">Blog</a></li><li class="add_file"><a href="http://leaguebook.grou.ps/files/add">File</a></li>	</ul></div>
+						<div id="status_form_media">	<ul>		<li class="update_status active"><a href="javascript:;">Update Status</a></li>		<li class="title_attach" >Share:</li><li class="add_photos"><a href="http://leaguebook.grou.ps/photos/add">Photo</a></li><li class="add_video"><a href="http://leaguebook.grou.ps/videos/add">Video</a></li><li class="add_blog"><a href="http://leaguebook.grou.ps/blogs/add">Blog</a></li></ul></div>
 
 						<div id="statusMsgContainer">
 							<textarea class="special_border" id="status_msg" cols="70" placeholder="What's happening in the rift, Summoner?"></textarea>
@@ -331,7 +314,7 @@ function searchGroups()
 <div id="top_block_no_1202930"  class="movable" ><div class="box"><div class="box_top" id="block_title_no_1"><h2>A few things to do...</h2></div><div style="clear:both"></div><div class="box_mid box_mid_sidebar_ie_width_fix"><div class="content" id="block_no_1202930"><div class='gamingProgressBar special_border'>
   <div style='width:12%;' class='value'><span>%0</span></div>
 </div>
-<ul id='gamingYourTargets'><li>Complete Your Profile</li><li>Add Your Photo</li><li>Invite People to Join</li><li>Join Groups</li></ul></div></div></div><div class="box_bottom"><span class="box_bottom_right"></span><span class="box_bottom_left"></span></div></div>
+<ul id='gamingYourTargets'><li>Complete Your Profile</li><li>Upload a Screenshot</li><li>Invite People to Join</li><li>View recruiting Teams</li></ul></div></div></div><div class="box_bottom"><span class="box_bottom_right"></span><span class="box_bottom_left"></span></div></div>
 <div id="top_block_no_1202931"  class="movable" ><div class="box"><div class="box_top" id="block_title_no_1"><h2>Invite a friend</h2></div><div style="clear:both"></div><div class="box_mid box_mid_sidebar_ie_width_fix"><div class="content" id="block_no_1202931"><form method="POST" id="invitation_block" action="http://leaguebook.grou.ps/call_friends.php"><input type="hidden" name="return_url" value="http://leaguebook.grou.ps/dashboard/spread" /><input type="hidden" name="group_name" value="leaguebook" />Separate emails by commas.<input type="text" name="gnippet_invite" placeholder="friend@gmail.com" id="recipient_list" class="special_border" /><textarea id="gnippet_invitation_text" style="display:none">I joined League book where I can post pictures, videos and events and I want to invite you here to communicate and collaborate. First, you need to join League book! Once you join, you can also create your own profile.</textarea><input id="submit_send_friend" type="submit" value="Submit" /><br>Daily quota:  <b id='avaliable_invitation'>200</b> invitation.</form><p><a href="http://leaguebook.grou.ps/dashboard/spread" id="btn_invitation_preview">Preview Invite</a></p></div></div></div><div class="box_bottom"><span class="box_bottom_right"></span><span class="box_bottom_left"></span></div></div>		
 </div>
 </div>
@@ -354,7 +337,7 @@ function searchGroups()
 	 <div id="groups_notifications_panel" class="panel">
 	  <h6>Notifications</h6>
 	  <ul>
-	   <a href="http://leaguebook.grou.ps/dashboard/alerts">There is no notification.</a>
+	   <a href="http://leaguebook.grou.ps/dashboard/alerts">You have no new notifications.</a>
 	  </ul>
 	 </div>
 	<a id="groups_chat_button_g_leaguebook" class="chat group button" title="Chat" href="/_trigger/chat/toggle/group/leaguebook"><span id="groups_chat_button_g_label">Chat</span></a>
@@ -415,7 +398,7 @@ function searchGroups()
 groups._info.groupId = 704597;
 groups._info.title = 'League book';
 groups._info.moduleTitle = '';
-groups._info.searchTypes = {'blogs':{title:'Blogs',actionURL:'http://leaguebook.grou.ps/blogs/search'},'chat':{title:'Chat',actionURL:'http://leaguebook.grou.ps/chat/search'},'people':{title:'Members',actionURL:'http://leaguebook.grou.ps/people/search'},'talks':{title:'Forum',actionURL:'http://leaguebook.grou.ps/talks/search'},'files':{title:'Files',actionURL:'http://leaguebook.grou.ps/files/search'},'messages':{title:'Priv. Messages',actionURL:'http://leaguebook.grou.ps/dashboard/search_messages'}};
+groups._info.searchTypes = {'blogs':{title:'Blogs',actionURL:'http://leaguebook.grou.ps/blogs/search'},'chat':{title:'Chat',actionURL:'http://leaguebook.grou.ps/chat/search'},'people':{title:'Members',actionURL:'http://leaguebook.grou.ps/people/search'},'messages':{title:'Priv. Messages',actionURL:'http://leaguebook.grou.ps/dashboard/search_messages'}};
 groups._info.language = 'english';
 groups._info.languageRevision={custom:135260045,main:424,name:'english'};
 groups._info.bannedWords = '';
