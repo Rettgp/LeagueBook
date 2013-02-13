@@ -1,4 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<script src="homePageScript.js" type="text/javascript"></script>
+<script src="jquery.js" type="text/javascript"></script>
 <html>
 <head>
   <title>LeagueBook</title>
@@ -36,6 +38,13 @@
 		padding-right: 1em;
 		background-color: #CCFFFF;
 	}
+	div.nav {
+		margin-left: -169px;
+		margin-top: -110px;
+		margin-right: 1264px;
+		background-color: black;
+		
+	}
 	form.sign_in {
 		margin-top: -30px;
 		margin-left: 500px;
@@ -47,30 +56,29 @@
 
 <h1 class="head">LeagueBook
 	<form class="sign_in">
-		First name: <input type="text" name="fname">
-		Last name: <input type="text" name="lname">
-		<input type="submit" value="Submit">
+		Account: <input type="text" name="user">
+		Password: <input type="text" name="pass">
+		<input type="button" value="Login" onclick="verify()">
 	</form>
 </h1>
-
-<body>
-
-<!-- Main content -->
-
-	<div class ="news">
+<div class ="news">
 		<p>gf
 
 		<p>fg
 
 		<p>fgdafg
-	</div>
+</div>
+
+<body>
+
+<!-- Main content -->
+
 <!-- Site navigation menu -->
-	<ul class="navbar">
-		<li><a href="index.html"><input type="image" src="button.gif" name="image" width="100" height="30"></a>
-		<li><a href="musings.html"><input type="image" src="button.gif" name="image" width="100" height="30"></a>
-		<li><a href="town.html"><input type="image" src="button.gif" name="image" width="100" height="30"></a>
-		<li><a href="links.html"><input type="image" src="button.gif" name="image" width="100" height="30"></a>
-	</ul>
+<!---<a href="index.html"><input type="image" src="button.gif" name="image" width="100" height="30"></a> -->
+	<div class ="nav">
+		<p>gfasdasd<br>
+		<p>sd
+	</div>
 
 </body>
 </html>
