@@ -1,0 +1,10 @@
+***Request a duo page
+
+--Takes your highest win rate heros, matches them with summoners who have high win rates with heros
+  that your highest win rate heros have high win rates with
+
+--Within 100 of your elo/league/what the fuck ever.
+
+***Subscriptions page
+
+***Scrim page
