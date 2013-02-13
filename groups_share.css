@@ -1,0 +1,14 @@
+
+#groups_share_links_container {
+    overflow: hidden;
+    padding: 0 12px;
+}
+#groups_share_links_container li {
+    float: left;
+    list-style: none outside none;
+    margin: 0 0 5px;
+    width: 50%;
+}
+#groups_share_links_container li a {
+    padding: 5px 5px 5px 25px;
+}

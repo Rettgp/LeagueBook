@@ -14,6 +14,14 @@
 <link rel="index" title="League book" href="http://leaguebook.com">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://com/rss/leaguebook/home">
 <link href="style.css" rel="stylesheet" type="text/css">
+<link href="groups.module.chat.css" rel="stylesheet" type="text/css">
+<link href="groups.main.bar.css" rel="stylesheet" type="text/css">
+<link href="groups_admin_panel.css" rel="stylesheet" type="text/css">
+<link href="groups_comments.css" rel="stylesheet" type="text/css">
+<link href="groups_modal_box.css" rel="stylesheet" type="text/css">
+<link href="groups_newsfeed.css" rel="stylesheet" type="text/css">
+<link href="groups_share.css" rel="stylesheet" type="text/css">
+<link href="groups_top_bar.css" rel="stylesheet" type="text/css">
 <script type='text/javascript'>
     var _gaq = _gaq || [];
 
@@ -325,20 +333,52 @@ function searchGroups()
 
 		<div id="groups_bar">
 			<span id="groups_search_button" class="button">
-				<form id="search_form" action="http://leaguebook.com/people/search" method="POST" autocomplete="off">
-					<input type="search" id="groups_search_text" name="q" placeholder="Search in group">
+				<form id="search_form" autocomplete="off" method="POST" action="http://leaguebook.grou.ps/people/search">
+					<input id="groups_search_text" type="search" placeholder="Search in group" name="q" data-placeholder-bound="true">
 				</form>
 			</span>
-
-			<a id="groups_notifications_button" title="Notifications" class="button" href="javascript:;">Notifications<div id="groups_notification_count" class="count" style="display:none;"><img class="groups_bar_overlay" src="/images/groups_bar/overlay.png" />0</div></a>
-	 <div id="groups_notifications_panel" class="panel">
-	  <h6>Notifications</h6>
-	  <ul>
-	   <a href="http://leaguebook.com/dashboard/alerts">You have no new notifications.</a>
-	  </ul>
-	 </div>
-	<a id="groups_chat_button_g_leaguebook" class="chat group button" title="Chat" href="/_trigger/chat/toggle/group/leaguebook"><span id="groups_chat_button_g_label">Chat</span></a>
+			<a id="groups_notifications_button" class="button" href="javascript:;" title="Notifications">
+				Notifications
+				<div id="groups_notification_count" class="count" style="display:none;">
+					<img class="groups_bar_overlay" src="/images/groups_bar/overlay.png">
+						0
+				</div>
+			</a>
+			<div id="groups_notifications_panel" class="panel" style="right: 91px;">
+				<h6>Notifications</h6>
+				<ul>
+					<a href="http://leaguebook.grou.ps/dashboard/alerts">There is no notification.</a>
+				</ul>
 			</div>
+			<a id="groups_chat_button_g_leaguebook" class="chat group button active" href="#" title="Group Chat">
+				<span>Chat (1 online)</span>
+				<div class="count" style="display: none;" id="groupsfw13607291338465400">
+					<img class="groups_bar_overlay" src="/images/groups_bar/overlay.png">
+					<span id="groups_chat_unread_count_g_leaguebook">0</span>
+				</div>
+			</a>
+			<div id="groups_chat_panel_g_leaguebook" class="chat group panel" style="right: -1px;">
+				<h6 class="special_highlight">
+					<a class="chat_close_button" style="display:block" href="/_trigger/chat/action/close_group_panel"> </a>
+					<a id="groups_chat_sound_g_leaguebook" class="groups_chat_sound on" href="/_trigger/chat/toggle/beep/g_leaguebook" title="Chat Sound"> </a>
+					<a id="groups_chat_state_g_leaguebook" class="groups_chat_state online" href="/_trigger/chat/toggle/offline/g_leaguebook" title="Chat State">Online</a>
+					Chat
+				</h6>
+				<ol id="groups_chat_conversation_g_leaguebook" class="hConversation"></ol>
+				<ul id="groups_chat_user_list_g_leaguebook" class="chat_user_list">
+					<li id="panel_chat_user_13530230" class="vcard">
+						<a href="_trigger/chat/with/13530230" data-userid="13530230">
+							<img class="avatar" width="30" height="30" src="http://leaguebook.grou.ps/avatars/b/80.png" alt="Levi Limmex's avatar">
+							<span class="fn">Levi Limmex</span>
+						</a>
+					</li>
+				</ul>
+				<div class="chat_new_message">
+					<textarea id="groups_chat_new_message_g_leaguebook" class="message_area"></textarea>
+					<button id="groups_chat_send_message_g_leaguebook" class="message_send">Send</button>
+				</div>
+			</div>
+		</div>
 
 <div id="groups_toaster_vcard" class="special_bg special_text special_border"></div>
 
