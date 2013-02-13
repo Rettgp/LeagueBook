@@ -130,6 +130,8 @@ blockquote {
 }
 #header {
     background: -moz-linear-gradient(center top , #101212 0%, #090A0A 100%) repeat scroll 0 0 transparent;
+	background: -webkit-linear-gradient(center top , #101212 0%, #090A0A 100%) repeat scroll 0 0 transparent;
+	background: linear-gradient(center top , #101212 0%, #090A0A 100%) repeat scroll 0 0 transparent;
     box-shadow: 0 1px 3px rgba(10, 10, 10, 0.4);
     clear: both;
     min-height: 44px;
