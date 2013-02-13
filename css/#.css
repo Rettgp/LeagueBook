@@ -1,0 +1,27 @@
+
+#newsfeed .userStream .pic {
+    margin-left: -100% !important;
+    width: 50px !important;
+}
+#newsfeed .userStream .msgCont {
+    width: 100% !important;
+}
+#newsfeed .userStream .msgCont .msg, #newsfeed .userStream .msgCont .media, #newsfeed .userStream .msgFooter, #newsfeed .userStream .msgCont .userBox {
+    margin-left: 60px !important;
+}
+#newsfeed .userStream .msgCont .userCommentStream .pic {
+    padding: 4px 0 4px 10px !important;
+    width: 35px !important;
+}
+#newsfeed .userStream .msgCont .userCommentStream .msgFooter {
+    margin-left: 0 !important;
+}
+#newsfeed .userStream .msgCont .userCommentStream .msg .msgBody, #newsfeed .userStream .msgCont .userCommentStream .msg .msgFooter {
+    line-height: 16px;
+    margin-left: 50px !important;
+    margin-right: 5px !important;
+}
+#newsfeed .userStream .msgCont .userCommentStream .msg {
+    margin-left: 0 !important;
+    width: 100% !important;
+}

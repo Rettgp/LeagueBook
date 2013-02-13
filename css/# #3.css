@@ -1,0 +1,15 @@
+
+#col_2 .group_description_block .desc_logo {
+    float: left;
+    width: 20%;
+}
+#col_2 .group_description_block .freetellafriend {
+    margin-top: 10px;
+    text-align: right;
+}
+.group_description_block .freetellafriend {
+    margin-top: 10px;
+}
+.group_description_block .desc_logo {
+    text-align: center;
+}
