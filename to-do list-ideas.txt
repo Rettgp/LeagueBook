@@ -9,11 +9,7 @@
 
 ---Examples: Top 5 plays of the week, top 5 pictures of the week, patch previews
 
-*Scrim page (sorta started it)
-
 *Clean up code/make it our own ---DONE SORTA
-
-*Bracket page
 
 *Streams embedded
 
@@ -22,8 +18,6 @@
 *Chat module
 
 *Most recent game played in news feed
-
-*Home Page built
 
 *Database backend setup
 
