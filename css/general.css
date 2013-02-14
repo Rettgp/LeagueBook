@@ -410,6 +410,11 @@ input[type="checkbox"], input[type="radio"] {
     padding-bottom: 10px;
     text-align: center;
 }
+.regFormContainer{
+	float: left;
+    padding: 10px 0;
+    width: 100%;
+}
 .siteFormContainer {
     float: left;
     padding: 10px 0;
