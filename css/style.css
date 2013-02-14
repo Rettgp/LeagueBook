@@ -30,6 +30,18 @@ body {
     font: 13px/2em "Lucida Grande",Tahoma,Verdana,Arial,sans-serif;
     overflow-x: hidden;
 }
+#header #login_form{
+	z-index: 1000;
+	color: #FFFFFF;
+    float: right;
+    font-size: 125%;
+    margin-left: 1050px;
+    margin-right: 1px;
+    margin-top: 10px;
+    padding-top: 1px;
+    position: absolute;
+    text-shadow: 0.1em 0.1em 0.2em white;
+}
 a {
     color: #080B0B;
     text-decoration: none;
@@ -139,7 +151,7 @@ blockquote {
     min-height: 44px;
 }
 #hgroups {
-    margin: 0 auto;
+	margin: 0 auto;
     min-height: 44px;
     position: relative;
     width: 980px;
@@ -168,6 +180,7 @@ blockquote {
     width: 150px;
 }
 #h1 a {
+	text-shadow: 0.1em 0.1em 0.2em grey;
     color: #F7F7F7;
     display: inline-block;
     padding: 2px 0;
@@ -449,6 +462,7 @@ ul#basicMenu {
     padding: 0;
 }
 ul#basicMenu > li {
+	margin-top: -12px;
     float: left;
     position: relative;
 }
