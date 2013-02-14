@@ -29,6 +29,8 @@
         <link href="../css/prototabs.css" rel="stylesheet" type="text/css">
         <link href="../css/general.css" rel="stylesheet" type="text/css">
         <link href="../css/accordion.css" rel="stylesheet" type="text/css">
+		<!-- JQuery library inclusion -->
+		<script src="../jquery.js" type="text/javascript"></script>
         <script type='text/javascript'>
             var _gaq = _gaq || [];
 
@@ -64,8 +66,7 @@
         </script>
     </head>
 
-    <body class="group_member">
-
+    <body class="group_member" onload="myFunction()">
 
 
 
@@ -83,8 +84,27 @@
         <!-- skfnsdfknsdlkfn leaguebook -->
 
 
-
+		
         <script>
+			function myFunction(){
+				var url = 'http://api.elophant.com/v2/na/summoner/rytael?key=orzAVNzOQCgT9R36YfW1';
+				$.get(url,
+				{
+					summonerName:"rytael",
+				},
+				function(data,status){
+					var name = data.match(/\w+|"[^"]+"/g)[4].replace(/"/g, '');
+					var acctID = data.match(/\w+|"[^"]+"/g)[6].replace(/"/g, '');
+					var profileIconID = data.match(/\w+|"[^"]+"/g)[8].replace(/"/g, '');
+					var summonerLVL = data.match(/\w+|"[^"]+"/g)[12].replace(/"/g, '');
+					var summonerID = data.match(/\w+|"[^"]+"/g)[14].replace(/"/g, '');
+					document.getElementById("userProfileBlock").children[1].textContent = name;
+					if(profileIconID == 0)
+						document.getElementById("userProfileBlock").children[0].children[0].src = "file:///C:/Users/Garrett%27s/Desktop/Baylife/trunk/pictures/icons0.png";			
+					
+				});
+			}
+
             function searchGroups()
             {
 
