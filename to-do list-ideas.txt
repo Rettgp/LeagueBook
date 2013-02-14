@@ -11,7 +11,7 @@
 
 *Scrim page (sorta started it)
 
-*Clean up code/make it our own
+*Clean up code/make it our own ---DONE SORTA
 
 *Bracket page
 
@@ -19,4 +19,12 @@
 
 *Top 3 most improved players this week on homepage.
 
-Text me a few times when you have free time tomorrow.
+*Chat module
+
+*Most recent game played in news feed
+
+*Home Page built
+
+*Database backend setup
+
+*Login module setup

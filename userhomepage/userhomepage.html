@@ -94,9 +94,9 @@
 					summonerName:"rytael",
 				},
 				function(data,status){
+					alert(data);
 					var name = data.match(/\w+|"[^"]+"/g)[4].replace(/"/g, '');
 					acctID = data.match(/\w+|"[^"]+"/g)[6].replace(/"/g, '');
-					alert(acctID);
 					var profileIconID = data.match(/\w+|"[^"]+"/g)[8].replace(/"/g, '');
 					var summonerLVL = data.match(/\w+|"[^"]+"/g)[12].replace(/"/g, '');
 					var summonerID = data.match(/\w+|"[^"]+"/g)[14].replace(/"/g, '');
@@ -106,7 +106,6 @@
 					
 				});
 				var url = "http://api.elophant.com/v2/na/recent_games/" + acctID + "?key=orzAVNzOQCgT9R36YfW1";
-				alert(url);
 				$.get(url,
 				{
 					accountId: acctID,
