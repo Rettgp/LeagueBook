@@ -52,12 +52,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 		if ($result) {
 			if ($total ==  1) {
 				session_start();
-				$_SESSION['login'] = "1";
+				$_SESSION['sess_login'] = true;
+				$_SESSION['acct'] = $email;
 				header ("Location: ../userhomepage/userhomepage.html");
 			}
 			else {
 				session_start();
-				$_SESSION['login'] = "";
 				header ("Location: ../index.html");
 			}	
 		}
@@ -74,6 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	}
 
 }
+
 
 
 ?>

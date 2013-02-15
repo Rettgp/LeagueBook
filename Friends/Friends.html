@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php
+	if (isset($_SESSION['sess_login']) && $_SESSION['sess_login'] == true) {
+		echo "Welcome";
+	} else {
+		echo "Please log in first to see this page.";
+	}
+?>
 <html dir="ltr">
     <head>
 		<?PHP
@@ -76,7 +83,6 @@
         </script>
     </head>
     <body class="group_member">
-
 
 
 
