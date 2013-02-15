@@ -18,33 +18,21 @@ function quote_smart($value, $handle) {
    return $value;
 }
 
-echo $_POST['acct'];
-echo $_REQUEST['acct'];
-
-import_request_variables('p', 'p_');
-echo $p_acct;
-alert($p_acct);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-/*
-	$uname = $_POST['username'];
-	$pword = $_POST['password'];
+
+	$uname = $_POST['acct'];
+	$pword = $_POST['pass'];
 
 	$uname = htmlspecialchars($uname);
-	$pword = htmlspecialchars($pword);*/
-	echo $_POST['acct'];
-	echo $_REQUEST['acct'];
-
-	import_request_variables('p', 'p_');
-	echo $p_acct;
-	alert($p_acct);
+	$pword = htmlspecialchars($pword);
 	//==========================================
 	//	CONNECT TO THE LOCAL DATABASE
 	//==========================================
-	$user_name = "root";
-	$pass_word = "";
-	$database = "login";
-	$server = "127.0.0.1";
+	$user_name = "LoLCodexData";
+	$pass_word = "Israel90123!";
+	$database = "users";
+	$server = "LoLCodexData.db.10536782.hostedresource.com";
 
 	$db_handle = mysql_connect($server, $user_name, $pass_word);
 	$db_found = mysql_select_db($database, $db_handle);
@@ -54,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 		$uname = quote_smart($uname, $db_handle);
 		$pword = quote_smart($pword, $db_handle);
 
-		$SQL = "SELECT * FROM login WHERE L1 = $uname AND L2 = md5($pword)";
+		$SQL = "SELECT * FROM login WHERE email = $uname AND password = md5($pword)";
 		$result = mysql_query($SQL);
 		$num_rows = mysql_num_rows($result);
 
@@ -63,15 +51,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	//====================================================
 
 		if ($result) {
-			if ($num_rows > 0) {
+			if ($num_rows ==  1) {
 				session_start();
 				$_SESSION['login'] = "1";
-				header ("Location: page1.php");
+				header ("Location: userhomepage.html");
 			}
 			else {
 				session_start();
 				$_SESSION['login'] = "";
-				header ("Location: signup.php");
+				header ("Location: index.html");
 			}	
 		}
 		else {
