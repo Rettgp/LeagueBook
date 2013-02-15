@@ -13,12 +13,8 @@
 
 *Streams embedded
 
-*Top 3 most improved players this week on homepage.
+*Top 3 most improved players this week on homepage. --
 
-*Chat module
+*Chat module ---
 
-*Most recent game played in news feed
-
-*Database backend setup
-
-*Login module setup
+*Most recent game played in news feed ---

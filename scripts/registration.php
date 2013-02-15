@@ -127,6 +127,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 			session_start();
 			$_SESSION['sess_login'] = 1;
+			$_SESSION['acct'] = $email;
 
 			header ("Location: /userhomepage/userhomepage.php");
 
