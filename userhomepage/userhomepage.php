@@ -272,7 +272,7 @@
                                 src="no_image.png"
                                 alt="Levi Limmex"
                                 width="50" height="50"></a>
-                        <h1><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi">L6vi</a></h1>
+                        <h1><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi"><?PHP print $_SESSION['acct']; ?></a></h1>
                         <p><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi/edit">Edit Profile</a></p>
                     </div>              
                     <div id="menu">
@@ -339,7 +339,7 @@
                                                             <a href="http://leaguebook.com/videos/add">Video</a></li><li class="add_blog"><a href="http://leaguebook.com/blogs/add">Blog</a></li></ul></div>
 
                                                 <div id="statusMsgContainer">
-                                                    <textarea class="special_border" id="status_msg" cols="70" placeholder="What's happening in the rift, Summoner?"></textarea>
+                                                    <textarea class="special_border" id="status_msg" cols="70" placeholder="What's happening in the rift, Summoner? "></textarea>
                                                 </div>
                                                 <div id="status_form_actions">
                                                     <div class="status_form_action"><input id="status_form_update_button" type="button" value="Update" /></div>
