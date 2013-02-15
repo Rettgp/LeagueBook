@@ -2,7 +2,6 @@
 <?PHP
 		session_start();
 		if (isset($_SESSION['sess_login']) && $_SESSION['sess_login'] == 1) {
-			header ('Location: www.google.com');
 		} else {
 			header ('Location: ../index.html');
 		}
