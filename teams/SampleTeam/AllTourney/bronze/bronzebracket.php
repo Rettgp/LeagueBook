@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html dir="ltr">
 <head>
-<title>lolcodex | Private social network</title>
+<title>LoLcodex | Private social network</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
 <meta name="Keywords" content="">
@@ -19,8 +19,8 @@
 <link rel="shortcut icon" href="/images/favicon.ico">
 <link rel="stylesheet" type="text/css" href="../../../../css/style.css" id="groups_template_style">
 <link rel="stylesheet" type="text/css" href="../../../../css/general.css">
-<link rel="index" title="League book" href="http://lolcodex.com">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="http://com/rss/lolcodex/home">
+<link rel="index" title="League book" href="http://LoLcodex.com">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://com/rss/LoLcodex/home">
 <link href="../../../../css/style.css" rel="stylesheet" type="text/css">
 <link href="../../../../css/#.css" rel="stylesheet" type="text/css">
 <link href="../../../../css/# #2.css" rel="stylesheet" type="text/css">
@@ -43,7 +43,7 @@
             _gaq.push(['_setDomainName', 'none']);
             _gaq.push(['_setAllowLinker', true]);
             _gaq.push(['_setCustomVar', 1,'member_type', 'group_member', 3]);
-            _gaq.push(['_setCustomVar', 2,'subdomain', 'lolcodex.com', 3]);
+            _gaq.push(['_setCustomVar', 2,'subdomain', 'LoLcodex.com', 3]);
             _gaq.push(['_setCustomVar', 3,'category', 'other', 3]);
             _gaq.push(['_setCustomVar', 4,'product_type', 'Free Pivot', 3]);
             _gaq.push(['_setCustomVar', 5,'custom_domain', 'false', 3]);
@@ -80,7 +80,7 @@
 	<div id="groupsInfoBox">
 	</div>
 </div>
-<!-- skfnsdfknsdlkfn lolcodex -->
+<!-- skfnsdfknsdlkfn LoLcodex -->
 <script>
             function searchGroups()
             {
@@ -117,8 +117,8 @@
 				<tr>
 					<td class="td_group_title" valign="bottom">
 						<div id="h1">
-							<a id="groupTitle" href="http://lolcodex.com/">
-							<h1>lolcodex</h1>
+							<a id="groupTitle" href="http://LoLcodex.com/">
+							<h1>LoLcodex</h1>
 							</a>
 						</div>
 					</td>
@@ -168,8 +168,8 @@
                 /*subgroup*/
                 /*gadmin*/
                 /*album*/
-                groups._info.domName = 'http://lolcodex.com';
-                groups._info.groupName = 'lolcodex';
+                groups._info.domName = 'http://LoLcodex.com';
+                groups._info.groupName = 'LoLcodex';
                 groups._info.groupNameX = '';
                 groups._info.isMember = '1';
                 groups._info.isGroupAdmin = '';
@@ -189,14 +189,14 @@
                 groups._info.groupId = 704597;
                 groups._info.title = 'League book';
                 groups._info.moduleTitle = '';
-                groups._info.searchTypes = {'blogs':{title:'Blogs',actionURL:'http://lolcodex.com/blogs/search'},'chat':{title:'Chat',actionURL:'http://lolcodex.com/chat/search'},'people':{title:'Members',actionURL:'http://lolcodex.com/people/search'},'messages':{title:'Priv. Messages',actionURL:'http://lolcodex.com/dashboard/search_messages'}};
+                groups._info.searchTypes = {'blogs':{title:'Blogs',actionURL:'http://LoLcodex.com/blogs/search'},'chat':{title:'Chat',actionURL:'http://LoLcodex.com/chat/search'},'people':{title:'Members',actionURL:'http://LoLcodex.com/people/search'},'messages':{title:'Priv. Messages',actionURL:'http://LoLcodex.com/dashboard/search_messages'}};
                 groups._info.language = 'english';
                 groups._info.languageRevision={custom:135260045,main:424,name:'english'};
                 groups._info.bannedWords = '';
                 groups._info.titleSeperator = ' | ';
                 groups._info.userNameSurname = 'Levi Limmex';
                 groups._info.userAvatar = 'no_image.png';
-                groups._info.chatConfig = {"jid":"13530230-704597@im.com","room":"704597@conference.im.com","token":"7e4422157878949a9db1641dec01d6af","bind_endpoint":"http:\/\/lolcodex.com\/http-bind","mode":"xmpp"};groups._info.membershipId = '31280300';
+                groups._info.chatConfig = {"jid":"13530230-704597@im.com","room":"704597@conference.im.com","token":"7e4422157878949a9db1641dec01d6af","bind_endpoint":"http:\/\/LoLcodex.com\/http-bind","mode":"xmpp"};groups._info.membershipId = '31280300';
                 groups._info.isAdmin = '';
                 groups._info.defaultAvatar = 'http://com/avatars/b/208.png?0';
                 groups._info.defaultAvatarMini = 'http://com/avatars/b/16.png?0';
@@ -570,7 +570,7 @@
                             groups.RenderController.showModal(txt);
                         }
                         else {
-                            window.location.href = 'http://lolcodex.com/'+res[1]+'/edit';
+                            window.location.href = 'http://LoLcodex.com/'+res[1]+'/edit';
                         }
                     }
                     else {
@@ -586,7 +586,7 @@
                 }
                 function EP_goToStaticPage() {
                     if(extra_page_key!='' ) {
-                        window.open('http://lolcodex.com/'+extra_page_key+'/edit','static_page');
+                        window.open('http://LoLcodex.com/'+extra_page_key+'/edit','static_page');
                     }
                 }
                 function EP_continueToAdministrate() {
@@ -649,7 +649,7 @@
                                 groups.RenderController.showModal(txt);
                             }
                             else {
-                                window.location.href = 'http://lolcodex.com/'+res[1];
+                                window.location.href = 'http://LoLcodex.com/'+res[1];
                             }
                         }
                     }
@@ -670,7 +670,7 @@
                 }
                 function EP_goToLink() {
                     if(extra_page_key!='' ) {
-                        window.location.href = 'http://lolcodex.com/'+extra_page_key;
+                        window.location.href = 'http://LoLcodex.com/'+extra_page_key;
                         extra_page_key = '';
                     }
                 }
@@ -718,7 +718,7 @@
                 }
                 function activateModulesResult(res) {
                     if(res!=""&&res!="admin") {
-                        document.location.href = "http://lolcodex.com/" + res;
+                        document.location.href = "http://LoLcodex.com/" + res;
                         /*
                                             if(add_from=='admin') {
                                                     groups.RenderController.hideModal();
@@ -726,11 +726,11 @@
                                             }
                                             else {
                                                     var txt = '<h1>Add Module</h1>';
-                                                    txt += '<div class="info">Your changes are successfully saved. If you want to administrate your pages, click <a href="http://lolcodex.com/admin/pages">here</a> or <a href="javascript:document.location.reload(true)">click</a> to continue...</div>';
+                                                    txt += '<div class="info">Your changes are successfully saved. If you want to administrate your pages, click <a href="http://LoLcodex.com/admin/pages">here</a> or <a href="javascript:document.location.reload(true)">click</a> to continue...</div>';
                                                     groups.RenderController.showModal(txt);
                                             }*/
                     } else {
-                        document.location.href = "http://lolcodex.com/admin/pages";
+                        document.location.href = "http://LoLcodex.com/admin/pages";
                         //document.location.reload(true);
                     }
                 }

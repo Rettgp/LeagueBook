@@ -19,8 +19,8 @@
         <link rel="shortcut icon" href="/images/favicon.ico">
         <link rel="stylesheet" type="text/css" href="../css/style.css" id="groups_template_style">
         <link rel="stylesheet" type="text/css" href="../css/general.css">
-        <link rel="index" title="League book" href="http://lolcodex.com">
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="http://com/rss/lolcodex/groups">
+        <link rel="index" title="League book" href="http://LoLcodex.com">
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="http://com/rss/LoLcodex/groups">
         <link href="../css/style.css" rel="stylesheet" type="text/css">
         <link href="../css/#.css" rel="stylesheet" type="text/css">
         <link href="../css/# #2.css" rel="stylesheet" type="text/css">
@@ -44,7 +44,7 @@
             _gaq.push(['_setDomainName', 'none']);
             _gaq.push(['_setAllowLinker', true]);
             _gaq.push(['_setCustomVar', 1,'member_type', 'group_member', 3]);
-            _gaq.push(['_setCustomVar', 2,'subdomain', 'lolcodex.com', 3]);
+            _gaq.push(['_setCustomVar', 2,'subdomain', 'LoLcodex.com', 3]);
             _gaq.push(['_setCustomVar', 3,'category', 'other', 3]);
             _gaq.push(['_setCustomVar', 4,'product_type', 'Free Pivot', 3]);
             _gaq.push(['_setCustomVar', 5,'custom_domain', 'false', 3]);
@@ -103,7 +103,7 @@
         <div id="groupsInfoBoxCont" style="visibility:hidden;"><img src="/images/InfoBoxArrow2up.png" class="arrow" />
             <div id="groupsInfoBox"> </div>
         </div>
-        <!-- skfnsdfknsdlkfn lolcodex -->
+        <!-- skfnsdfknsdlkfn LoLcodex -->
 
 
 
@@ -150,8 +150,8 @@
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tr>
                             <td class="td_group_title" valign="bottom"><div id="h1">
-                                    <a id="groupTitle" href="http://lolcodex.com/">
-                                        <h1>lolcodex</h1>
+                                    <a id="groupTitle" href="http://LoLcodex.com/">
+                                        <h1>LoLcodex</h1>
                                     </a>
                                 </div>
                             </td>
@@ -163,7 +163,7 @@
                                             <h3> Friend Requests </h3>
                                             <div class="notificationContent"> </div>
                                             <li class="bottom">
-                                                <a href="http://lolcodex.com/dashboard/alerts">See All Friend Requests</a>
+                                                <a href="http://LoLcodex.com/dashboard/alerts">See All Friend Requests</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -172,14 +172,14 @@
                                         <ul class="notificationMenu" style="display: none">
                                             <h3>Messages
                                                 <div class="notificationAction">
-                                                    <a href="http://lolcodex.com/dashboard/compose_message">Compose New Message</a>
+                                                    <a href="http://LoLcodex.com/dashboard/compose_message">Compose New Message</a>
                                                 </div>
                                             </h3>
                                             <div class="notificationContent">
                                                 <li class="notificationNoContent">No Messages</li>
                                             </div>
                                             <li class="bottom">
-                                                <a href="http://lolcodex.com/dashboard/messages">See All Messages</a>
+                                                <a href="http://LoLcodex.com/dashboard/messages">See All Messages</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -189,7 +189,7 @@
                                             <h3> Notifications </h3>
                                             <div class="notificationContent"> </div>
                                             <li class="bottom">
-                                                <a href="http://lolcodex.com/dashboard/notifications">See All Notifications</a>
+                                                <a href="http://LoLcodex.com/dashboard/notifications">See All Notifications</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -197,7 +197,7 @@
                             </td>
                             <td class="td_search" valign="bottom">
                                 <div id="searchBoxDiv">
-                                    <form id="book_search_form" method="POST" action="http://lolcodex.com/people/search">
+                                    <form id="book_search_form" method="POST" action="http://LoLcodex.com/people/search">
                                         <input id="book_groups_search_text" type="search" name="q" placeholder="Search" autocomplete="off" data-placeholder-bound="true">
                                         <input id="searchSubmitInput" type="submit" data-placeholder-bound="true">
                                         <ul id="book_search_types_box" class="autocomplete" style="display: none">
@@ -223,18 +223,18 @@
                                 </div>
                             </td>
                             <td class="td_user_nav" valign="bottom" align="right"><ul id="basicMenu">
-                                    <li id="basicItemHome"><a href="http://lolcodex.com/">Home</a></li>
-                                    <li id="basicItemProfile"><a href="http://lolcodex.com/people/person/oajiivhbldxbldhwi">Profile</a></li>
+                                    <li id="basicItemHome"><a href="http://LoLcodex.com/">Home</a></li>
+                                    <li id="basicItemProfile"><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi">Profile</a></li>
                                     <li id="basicItemAccount"><a href="#">Account <span class="downArrowIcon">&#9660;</span></a>
                                         <ul id="accountMenu">
-                                            <div class="userAvatar"><a href="http://lolcodex.com/people/person/oajiivhbldxbldhwi"><img src="no_image.png" alt="Levi Limmex" width="50" height="50" align="absmiddle"></a><p><a href="http://lolcodex.com/people/person/oajiivhbldxbldhwi">Levi Limmex</a></p></div>
-                                            <li><a href="http://lolcodex.com/dashboard/myprofile">Edit Profile</a></li>
-                                            <!--<li><a href="http://lolcodex.com/dashboard/preferences">Account Settings</a></li>-->
-                                            <li><a href="http://lolcodex.com/dashboard/privacy_settings">Privacy Settings</a></li>
-                                            <!--<li><a href="http://lolcodex.com/dashboard/compose_message">Compose New Message</a></li>
-                                            <li><a href="http://lolcodex.com/dashboard/password">Change Credentials</a></li>
-                                            <li><a href="http://lolcodex.com/dashboard/email_settings">E-mail Settings</a></li>-->
-                                            <li><a href="http://lolcodex.com/dashboard/spread">Invite People</a></li>
+                                            <div class="userAvatar"><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><img src="no_image.png" alt="Levi Limmex" width="50" height="50" align="absmiddle"></a><p><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi">Levi Limmex</a></p></div>
+                                            <li><a href="http://LoLcodex.com/dashboard/myprofile">Edit Profile</a></li>
+                                            <!--<li><a href="http://LoLcodex.com/dashboard/preferences">Account Settings</a></li>-->
+                                            <li><a href="http://LoLcodex.com/dashboard/privacy_settings">Privacy Settings</a></li>
+                                            <!--<li><a href="http://LoLcodex.com/dashboard/compose_message">Compose New Message</a></li>
+                                            <li><a href="http://LoLcodex.com/dashboard/password">Change Credentials</a></li>
+                                            <li><a href="http://LoLcodex.com/dashboard/email_settings">E-mail Settings</a></li>-->
+                                            <li><a href="http://LoLcodex.com/dashboard/spread">Invite People</a></li>
                                             <li><a href="/signout">Log Out</a></li>
                                         </ul>
                                     </li>
@@ -247,12 +247,12 @@
             <div id="contentWrapper" class="">
                 <div id="aSide">
                     <div id="userProfileBlock">
-                        <a href="http://lolcodex.com/people/person/oajiivhbldxbldhwi"><img
+                        <a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><img
                                 src="no_image.png"
                                 alt="Levi Limmex"
                                 width="50" height="50"></a>
-                        <h1><a href="http://lolcodex.com/people/person/oajiivhbldxbldhwi">L6vi</a></h1>
-                        <p><a href="http://lolcodex.com/people/person/oajiivhbldxbldhwi/edit">Edit Profile</a></p>
+                        <h1><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi">L6vi</a></h1>
+                        <p><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi/edit">Edit Profile</a></p>
                     </div>              
                     <div id="menu">
                         <ul id="nav" class="level1">
@@ -295,7 +295,7 @@
                 </div>            
                 <div id="content"><div id="col_main" class="col_main">
                         <div id="top_block_no_1"  ><div class="box"><div class="box_top" id="block_title_no_1"><h2>My Teams</h2></div><div style="clear:both"></div><div class="box_mid"><div class="content" id="block_no_1"><table id="group_container" class="thumbnail_view"><tr><td ><a href="../teams/SampleTeam/SampleTeamA.html" title="Sample Group"><img alt="Sample Group" src="http://com//images/supgroup_def.png" width="80" height="80" class="tv_image" /><span class="tv_caption">Sample Team</a><span class="tv_info"><br><a href="../teams/SampleTeam/SampleTeamA.html"><strong>1</strong></a> member(s)</span></td></tr></table>		<div style="display:none;">
-                                            <form action="http://lolcodex.com/groups" id="sorterform" method="POST">
+                                            <form action="http://LoLcodex.com/groups" id="sorterform" method="POST">
                                                 <div style="margin-bottom:2px;"><input type="hidden" name="sort_by" id="sorterselect" style="width:150px;" />
                                                     <!--
                                                     <option value="date">Sort By Date</option>
@@ -317,7 +317,7 @@
                                             <a href="javascript:void(sortBy('title'))">Sort by Title</a>
                                             <a href="javascript:void(sortBy('member_count'))">Sort by Members</a>
                                         </div></h2></div><div style="clear:both"></div><div class="box_mid"><div class="content" id="block_no_2"><table id="group_container" class="thumbnail_view"><tr><td ><a href="../teams/SampleTeam/SampleTeamA.html" title="Sample Group"><img alt="Sample Group" src="http://com//images/supgroup_def.png" width="80" height="80" class="tv_image" /><span class="tv_caption">Sample Team</a><span class="tv_info"><br><a href="../teams/SampleTeam/SampleTeamA.html"><strong>1</strong></a> member(s)</span></td></tr></table>		<div style="display:none;">
-                                            <form action="http://lolcodex.com/groups" id="sorterform" method="POST">
+                                            <form action="http://LoLcodex.com/groups" id="sorterform" method="POST">
                                                 <div style="margin-bottom:2px;"><input type="hidden" name="sort_by" id="sorterselect" style="width:150px;" />
                                                     <!--
                                                     <option value="date">Sort By Date</option>
@@ -349,7 +349,7 @@
 
             <div id="groups_bar">
                 <span id="groups_search_button" class="button">
-                    <form id="search_form" action="http://lolcodex.com/people/search" method="POST" autocomplete="off">
+                    <form id="search_form" action="http://LoLcodex.com/people/search" method="POST" autocomplete="off">
                         <input type="search" id="groups_search_text" name="q" placeholder="Search in group">
                     </form>
                 </span>
@@ -358,10 +358,10 @@
                 <div id="groups_notifications_panel" class="panel">
                     <h6>Notifications</h6>
                     <ul>
-                        <a href="http://lolcodex.com/dashboard/alerts">There are no new Notifications.</a>
+                        <a href="http://LoLcodex.com/dashboard/alerts">There are no new Notifications.</a>
                     </ul>
                 </div>
-                <a id="groups_chat_button_g_leaguebook" class="chat group button" title="Chat" href="/_trigger/chat/toggle/group/lolcodex"><span id="groups_chat_button_g_label">Chat</span></a>
+                <a id="groups_chat_button_g_leaguebook" class="chat group button" title="Chat" href="/_trigger/chat/toggle/group/LoLcodex"><span id="groups_chat_button_g_label">Chat</span></a>
             </div>
 
             <div id="groups_toaster_vcard" class="special_bg special_text special_border"></div>
@@ -393,8 +393,8 @@
     
                 /*album*/
     
-                groups._info.domName = 'http://lolcodex.com';
-                groups._info.groupName = 'lolcodex';
+                groups._info.domName = 'http://LoLcodex.com';
+                groups._info.groupName = 'LoLcodex';
                 groups._info.groupNameX = 'm:pV___________^__________bolu__________^__________gy|8';
                 groups._info.isMember = '1';
                 groups._info.isGroupAdmin = '';
@@ -420,14 +420,14 @@
                 groups._info.groupId = 704597;
                 groups._info.title = 'League book';
                 groups._info.moduleTitle = '';
-                groups._info.searchTypes = {'blogs':{title:'Blogs',actionURL:'http://lolcodex.com/blogs/search'},'chat':{title:'Chat',actionURL:'http://lolcodex.com/chat/search'},'people':{title:'Members',actionURL:'http://lolcodex.com/people/search'},'talks':{title:'Forum',actionURL:'http://lolcodex.com/talks/search'},'wiki':{title:'Wiki',actionURL:'http://lolcodex.com/wiki/search'},'files':{title:'Files',actionURL:'http://lolcodex.com/files/search'},'messages':{title:'Priv. Messages',actionURL:'http://lolcodex.com/dashboard/search_messages'}};
+                groups._info.searchTypes = {'blogs':{title:'Blogs',actionURL:'http://LoLcodex.com/blogs/search'},'chat':{title:'Chat',actionURL:'http://LoLcodex.com/chat/search'},'people':{title:'Members',actionURL:'http://LoLcodex.com/people/search'},'talks':{title:'Forum',actionURL:'http://LoLcodex.com/talks/search'},'wiki':{title:'Wiki',actionURL:'http://LoLcodex.com/wiki/search'},'files':{title:'Files',actionURL:'http://LoLcodex.com/files/search'},'messages':{title:'Priv. Messages',actionURL:'http://LoLcodex.com/dashboard/search_messages'}};
                 groups._info.language = 'english';
                 groups._info.languageRevision={custom:135260045,main:424,name:'english'};
                 groups._info.bannedWords = '';
                 groups._info.titleSeperator = ' | ';
                 groups._info.userNameSurname = 'Levi Limmex';
-                groups._info.userAvatar = 'http://lolcodex.com/avatars/b/80.png';
-                groups._info.chatConfig = {"jid":"13530230-704597@im.com","room":"704597@conference.im.com","token":"7e4422157878949a9db1641dec01d6af","bind_endpoint":"http:\/\/lolcodex.com\/http-bind","mode":"xmpp"};groups._info.membershipId = '31280300';
+                groups._info.userAvatar = 'http://LoLcodex.com/avatars/b/80.png';
+                groups._info.chatConfig = {"jid":"13530230-704597@im.com","room":"704597@conference.im.com","token":"7e4422157878949a9db1641dec01d6af","bind_endpoint":"http:\/\/LoLcodex.com\/http-bind","mode":"xmpp"};groups._info.membershipId = '31280300';
                 groups._info.isAdmin = '';
                 groups._info.defaultAvatar = 'http://com/avatars/b/208.png?0';
                 groups._info.defaultAvatarMini = 'http://com/avatars/b/16.png?0';
@@ -846,7 +846,7 @@
                             groups.RenderController.showModal(txt);
                         }
                         else {
-                            window.location.href = 'http://lolcodex.com/'+res[1]+'/edit';
+                            window.location.href = 'http://LoLcodex.com/'+res[1]+'/edit';
                         }
                     }
                     else {
@@ -864,7 +864,7 @@
 
                 function EP_goToStaticPage() {
                     if(extra_page_key!='' ) {
-                        window.open('http://lolcodex.com/'+extra_page_key+'/edit','static_page');
+                        window.open('http://LoLcodex.com/'+extra_page_key+'/edit','static_page');
                     }
                 }
 
@@ -933,7 +933,7 @@
                                 groups.RenderController.showModal(txt);
                             }
                             else {
-                                window.location.href = 'http://lolcodex.com/'+res[1];
+                                window.location.href = 'http://LoLcodex.com/'+res[1];
                             }
 
                         }
@@ -957,7 +957,7 @@
 
                 function EP_goToLink() {
                     if(extra_page_key!='' ) {
-                        window.location.href = 'http://lolcodex.com/'+extra_page_key;
+                        window.location.href = 'http://LoLcodex.com/'+extra_page_key;
                         extra_page_key = '';
                     }
                 }
@@ -1018,7 +1018,7 @@
                     if(res!=""&&res!="admin") {
 
 
-                        document.location.href = "http://lolcodex.com/" + res;
+                        document.location.href = "http://LoLcodex.com/" + res;
 
                         /*
                                             if(add_from=='admin') {
@@ -1027,12 +1027,12 @@
                                             }
                                             else {
                                                     var txt = '<h1>Add Module</h1>';
-                                                    txt += '<div class="info">Your changes are successfully saved. If you want to administrate your pages, click <a href="http://lolcodex.com/admin/pages">here</a> or <a href="javascript:document.location.reload(true)">click</a> to continue...</div>';
+                                                    txt += '<div class="info">Your changes are successfully saved. If you want to administrate your pages, click <a href="http://LoLcodex.com/admin/pages">here</a> or <a href="javascript:document.location.reload(true)">click</a> to continue...</div>';
                                                     groups.RenderController.showModal(txt);
                                             }*/
 
                     } else {
-                        document.location.href = "http://lolcodex.com/admin/pages";
+                        document.location.href = "http://LoLcodex.com/admin/pages";
                         //document.location.reload(true);
                     }
                 }
