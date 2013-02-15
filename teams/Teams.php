@@ -1,47 +1,45 @@
+<?PHP
+		session_start();
+		if (isset($_SESSION['sess_login']) && $_SESSION['sess_login'] == 1) {
+			
+		} else {
+			header ('Location: ../index.html');
+		}
+?>
 <!DOCTYPE html>
 <html dir="ltr">
-<head>
-		<?PHP
-
-			session_start();
-
-			if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
-
-			header ("Location: ../index.html");
-
-			}
-
-		?>
-<title>LeagueBook | Private social network</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
-<meta name="Keywords" content="">
-<meta name="Description" content="Private social network">
-<meta name="Generator" content="com 2.0">
-<meta name="Robots" content="index">
-<link rel="shortcut icon" href="/images/favicon.ico">
-<link rel="stylesheet" type="text/css" href="../../../../css/style.css" id="groups_template_style">
-<link rel="stylesheet" type="text/css" href="../../../../css/general.css">
-<link rel="index" title="League book" href="http://leaguebook.com">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="http://com/rss/leaguebook/home">
-<link href="../../../../css/style.css" rel="stylesheet" type="text/css">
-<link href="../../../../css/#.css" rel="stylesheet" type="text/css">
-<link href="../../../../css/# #2.css" rel="stylesheet" type="text/css">
-<link href="../../../../css/# #3.css" rel="stylesheet" type="text/css">
-<link href="../../../../css/groups.module.chat.css" rel="stylesheet" type="text/css">
-<link href="../../../../css/groups.main.bar.css" rel="stylesheet" type="text/css">
-<link href="../../../../css/groups_admin_panel.css" rel="stylesheet" type="text/css">
-<link href="../../../../css/groups_comments.css" rel="stylesheet" type="text/css">
-<link href="../../../../css/groups_modal_box.css" rel="stylesheet" type="text/css">
-<link href="../../../../css/groups_newsfeed.css" rel="stylesheet" type="text/css">
-<link href="../../../../css/groups_share.css" rel="stylesheet" type="text/css">
-<link href="../../../../css/groups_top_bar.css" rel="stylesheet" type="text/css">
-<link href="../../../../css/groups.notification.menu.css" rel="stylesheet" type="text/css">
-<link href="../../../../css/prototabs.css" rel="stylesheet" type="text/css">
-<link href="../../../../css/general.css" rel="stylesheet" type="text/css">
-<link href="../../../../css/accordion.css" rel="stylesheet" type="text/css">
-<script type='text/javascript'>
+    <head>
+        <title>Teams | League book</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
+        <meta name="Keywords" content=",Groups">
+        <meta name="Description" content="Private social network">
+        <meta name="Generator" content="com 2.0">
+        <meta name="Robots" content="index">
+        <link rel="shortcut icon" href="/images/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="../css/style.css" id="groups_template_style">
+        <link rel="stylesheet" type="text/css" href="../css/general.css">
+        <link rel="index" title="League book" href="http://leaguebook.com">
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="http://com/rss/leaguebook/groups">
+        <link href="../css/style.css" rel="stylesheet" type="text/css">
+        <link href="../css/#.css" rel="stylesheet" type="text/css">
+        <link href="../css/# #2.css" rel="stylesheet" type="text/css">
+        <link href="../css/# #3.css" rel="stylesheet" type="text/css">
+        <link href="../css/groups.module.chat.css" rel="stylesheet" type="text/css">
+        <link href="../css/groups.main.bar.css" rel="stylesheet" type="text/css">
+        <link href="../css/groups_admin_panel.css" rel="stylesheet" type="text/css">
+        <link href="../css/groups_comments.css" rel="stylesheet" type="text/css">
+        <link href="../css/groups_modal_box.css" rel="stylesheet" type="text/css">
+        <link href="../css/groups_newsfeed.css" rel="stylesheet" type="text/css">
+        <link href="../css/groups_share.css" rel="stylesheet" type="text/css">
+        <link href="../css/groups_top_bar.css" rel="stylesheet" type="text/css">
+        <link href="../css/groups.notification.menu.css" rel="stylesheet" type="text/css">
+        <link href="../css/prototabs.css" rel="stylesheet" type="text/css">
+        <link href="../css/general.css" rel="stylesheet" type="text/css">
+        <link href="../css/accordion.css" rel="stylesheet" type="text/css">
+        <script type='text/javascript'>
             var _gaq = _gaq || [];
+
             _gaq.push(['_setAccount', 'UA-3121632-1']);
             _gaq.push(['_setDomainName', 'none']);
             _gaq.push(['_setAllowLinker', true]);
@@ -51,50 +49,81 @@
             _gaq.push(['_setCustomVar', 4,'product_type', 'Free Pivot', 3]);
             _gaq.push(['_setCustomVar', 5,'custom_domain', 'false', 3]);
             _gaq.push(['_trackPageview']);
+
+    
+
             (function() {
                 var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
                 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
                 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
             })();
+
         </script>
-<script src="../../../../scripts/authentication.js" type="text/javascript"></script>
-<!-- ehc -->
-<!-- /ehc -->
-<script type="text/javascript" charset="utf-8">
+
+
+        <!-- ehc -->
+        <style type="text/css">
+            #subgroup_desc { margin-bottom: 10px; background-color: #FFF; }
+            #subgroup_desc div { margin-bottom:0px; }
+
+            /* calendar */
+            .calender_item { margin: 0 0 15px 0; }
+            .calendar_icon { color: #333; background: url(http://com/images/calendar.png) no-repeat; width: 41px; height: 30px; text-align: center; padding: 22px 0 0 0; line-height: 14px; float: left; margin: 0 10px 0 0; }
+            .calendar_icon .day { font-size: 18px; }
+            .calendar_icon .month { font-size: 10px; }
+            .calender_title { font-weight: bold; margin: 0 0 3px 0; }
+            .calender_header { padding: 0 0 5px 0; margin: 0 0 5px 0; font-weight: bold; }
+            .calender_details { margin: 15px 0 0 0; width: 100%; }
+        </style>
+        <!-- /ehc -->
+
+        <link href="/public/css/groups/groups.notification.menus.css?15997" rel="stylesheet" type="text/css">
+        <script type="text/javascript" charset="utf-8">
             var isTheBook = true;
             var blogsAllowed = true;
             var askAllowed = false;
         </script>
-</head>
-<body class="group_member">
-<div id="bg_differentiation" style="display: none">
-</div>
-<div id="ajax_popup" style="display: none">
-	<div class="ajaxModalBox">
-		<a href="javascript:groups.modalBox.hide()" class="closeButton"></a>
-		<div id="ajax_popup_content">
-		</div>
-	</div>
-</div>
-<div id="busy_popup">
-</div>
-<div id="groupsInfoBoxCont" style="visibility:hidden;">
-	<img src="/images/InfoBoxArrow2up.png" class="arrow"/>
-	<div id="groupsInfoBox">
-	</div>
-</div>
-<!-- skfnsdfknsdlkfn leaguebook -->
-<script>
+    </head>
+    <body class="group_member">
+
+
+
+
+        <div id="bg_differentiation" style="display: none"></div>
+        <div id="ajax_popup" style="display: none">
+            <div class="ajaxModalBox"> <a href="javascript:groups.modalBox.hide()" class="closeButton"></a>
+                <div id="ajax_popup_content"></div>
+            </div>
+        </div>
+        <div id="busy_popup"></div>
+        <div id="loader"><blink>Loading...</blink></div>
+        <div id="groupsNotifierCont">
+            <div id="groupsNotifier" class="msg_info"></div>
+        </div>
+        <div id="groupsInfoBoxCont" style="visibility:hidden;"><img src="/images/InfoBoxArrow2up.png" class="arrow" />
+            <div id="groupsInfoBox"> </div>
+        </div>
+        <!-- skfnsdfknsdlkfn leaguebook -->
+
+
+
+        <script>
             function searchGroups()
             {
+
                 var searchText = document.search.searchText.value;
+
                 searchText = searchText.replace(/%/g, "%25");
+
                 if(searchText) {
+
                     window.location = "http://com/home/search/" + searchText;
                 }
             }
+
             function keys(e)
             {
+
                 if(e.keyCode) {
                     var k = e.keyCode;
                 } else {
@@ -105,105 +134,307 @@
             function isEnters(e)
             {
                 var k = keys(e);
+
                 if(k == 13) {
                     searchGroups();
                     // return true;
                 } else {
                     return false;
                 }
+
             }
         </script>
-<div id="layout" class="module_home ">
-	<div id="header">
-			<div id="hgroups">
-				<table width="100%" border="0" cellspacing="0" cellpadding="0">
-				<tr>
-					<td class="td_group_title" valign="bottom">
-						<div id="h1">
-							<a id="groupTitle" href="http://leaguebook.com/">
-							<h1>LeagueBook</h1>
-							</a>
-						</div>
-					</td>
-				</tr>
-				</table>
-			</div>
-		</div>
-		<a id="newsfeed_loadMsgs" class="moreButton radius special_bg special_text special_border" href="javascript:;" style="display:none">Load More</a>
-	</div>
-	<div id="home_content">
-		<div id="top_block_no_1">
-			<div class="box">
-				<div style="clear:both">
-				</div>
-				<div class="box_mid">
-					<div class="content" id="block_no_1">
-					<h2 style="display: block; font-size: 25px; margin: 20px 0 10px;">GOLD BRACKET PREEZ!</h2>
-						</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="box_bottom">
-					<span class="box_bottom_right"></span><span class="box_bottom_left"></span>
-				</div>
-			</div>
-		</div>
-		<div class="box_bottom">
-			<span class="box_bottom_right"></span><span class="box_bottom_left"></span>
-		</div>
-		<div id="footer">
-			 &copy; 2013 League book
-		</div>
-		<iframe style="display:none;" name="_rlcdn" width=0 height=0 frameborder=0 src="http://ei.rlcdn.com/362258.gif?x=50b6c8d56ee2089ab2920555bfb0468ad7a137f72601a5d9&c=bf-ecb">
-		</iframe>
-		<!-- footer scripts begin -->
-		<!-- tpl:cm -->
-		<script type="text/javascript">
+        <div id="layout" class="module_groups ">
+            <div id="header">
+                <div id="hgroups">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td class="td_group_title" valign="bottom"><div id="h1">
+                                    <a id="groupTitle" href="http://leaguebook.com/">
+                                        <h1>LeagueBook</h1>
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="td_notifications" valign="bottom">
+                                <ul id="headerNotificationsIcons">
+                                    <li>
+                                        <a id="headerFriendRequestItem" onclick="return false" href="#"> </a>
+                                        <ul class="notificationMenu" style="display: none">
+                                            <h3> Friend Requests </h3>
+                                            <div class="notificationContent"> </div>
+                                            <li class="bottom">
+                                                <a href="http://leaguebook.com/dashboard/alerts">See All Friend Requests</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a id="headerMessagesItem" onclick="return false" rel="setAllMessagesPassive" href="#"> </a>
+                                        <ul class="notificationMenu" style="display: none">
+                                            <h3>Messages
+                                                <div class="notificationAction">
+                                                    <a href="http://leaguebook.com/dashboard/compose_message">Compose New Message</a>
+                                                </div>
+                                            </h3>
+                                            <div class="notificationContent">
+                                                <li class="notificationNoContent">No Messages</li>
+                                            </div>
+                                            <li class="bottom">
+                                                <a href="http://leaguebook.com/dashboard/messages">See All Messages</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a id="headerNotificationsItem" onclick="return false" rel="setAllNotificationsPassive" href="#"> </a>
+                                        <ul class="notificationMenu" style="display: none">
+                                            <h3> Notifications </h3>
+                                            <div class="notificationContent"> </div>
+                                            <li class="bottom">
+                                                <a href="http://leaguebook.com/dashboard/notifications">See All Notifications</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="td_search" valign="bottom">
+                                <div id="searchBoxDiv">
+                                    <form id="book_search_form" method="POST" action="http://leaguebook.com/people/search">
+                                        <input id="book_groups_search_text" type="search" name="q" placeholder="Search" autocomplete="off" data-placeholder-bound="true">
+                                        <input id="searchSubmitInput" type="submit" data-placeholder-bound="true">
+                                        <ul id="book_search_types_box" class="autocomplete" style="display: none">
+                                            <li id="searchPeopleModule" class="searchModule" onClick="groups.search.goToAdvancedSearch()">
+                                                <div class="searchModuleTitle">People</div>
+                                                <div class="searchModuleSubtitle">Advanced Search</div>
+                                            </li>
+                                            <li id="searchPeopleModuleLoading" class="searchResultsLoading" style="display: none"></li>
+                                            <li id="searchMessagesModule" class="searchModule" onClick="groups.search.searchInModule('messages')">
+                                                <div class="searchModuleTitle">Messages</div>
+                                                <div class="searchModuleSubtitle">More?</div>
+                                            </li>
+                                            <li id="searchBlogsModule" class="searchModule" onClick="groups.search.searchInModule('blogs')">
+                                                <div class="searchModuleTitle">Blogs</div>
+                                                <div class="searchModuleSubtitle">More?</div>
+                                            </li>
+                                            <li id="searchBlogsModuleLoading" class="searchResultsLoading" style="display: none"></li>
+                                            <li class="noResultsFound centered hovered" style="display: none" class="hovered">
+                                                No results found for <span class="searchKeyword"></span>
+                                            </li>
+                                        </ul>
+                                    </form>
+                                </div>
+                            </td>
+                            <td class="td_user_nav" valign="bottom" align="right"><ul id="basicMenu">
+                                    <li id="basicItemHome"><a href="http://leaguebook.com/">Home</a></li>
+                                    <li id="basicItemProfile"><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi">Profile</a></li>
+                                    <li id="basicItemAccount"><a href="#">Account <span class="downArrowIcon">&#9660;</span></a>
+                                        <ul id="accountMenu">
+                                            <div class="userAvatar"><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi"><img src="no_image.png" alt="Levi Limmex" width="50" height="50" align="absmiddle"></a><p><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi">Levi Limmex</a></p></div>
+                                            <li><a href="http://leaguebook.com/dashboard/myprofile">Edit Profile</a></li>
+                                            <!--<li><a href="http://leaguebook.com/dashboard/preferences">Account Settings</a></li>-->
+                                            <li><a href="http://leaguebook.com/dashboard/privacy_settings">Privacy Settings</a></li>
+                                            <!--<li><a href="http://leaguebook.com/dashboard/compose_message">Compose New Message</a></li>
+                                            <li><a href="http://leaguebook.com/dashboard/password">Change Credentials</a></li>
+                                            <li><a href="http://leaguebook.com/dashboard/email_settings">E-mail Settings</a></li>-->
+                                            <li><a href="http://leaguebook.com/dashboard/spread">Invite People</a></li>
+                                            <li><a href="/signout">Log Out</a></li>
+                                        </ul>
+                                    </li>
+                                </ul></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div id="contentWrapper" class="">
+                <div id="aSide">
+                    <div id="userProfileBlock">
+                        <a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi"><img
+                                src="no_image.png"
+                                alt="Levi Limmex"
+                                width="50" height="50"></a>
+                        <h1><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi">L6vi</a></h1>
+                        <p><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi/edit">Edit Profile</a></p>
+                    </div>              
+                    <div id="menu">
+                        <ul id="nav" class="level1">
+                            <li id="menu_item_17306106" class="selected" >
+                                <a href="../userhomepage/userhomepage.php"><span>Home</span></a>
+                            </li>
+                            <li id="menu_item_17306107" >
+                                <a href="../myprofile/myprofile.php" z=""><span>My Profile</span></a>
+                            </li>
+                            <li id="menu_item_17306108" >
+                                <a href="../friends/friends.php"><span>Friends</span></a>
+                            </li>
+                            <li id="menu_item_17306109" >
+                                <a href="../invite/invite.php" z=""><span>Invite</span></a>
+                            </li>
+                            <li id="menu_item_17306110" >
+                                <a href="../teams/teams.php"><span>Teams</span></a>
+                            </li>
+                            <li id="menu_item_17306111" >
+                                <a href="../screenshots/screenshots.php"><span>Screenshots</span></a>
+                            </li>
+                            <li id="menu_item_17306112" >
+                                <a href="../videos/videos.php"><span>Videos</span></a>
+                            </li>
+                            <li id ="menu_item_17306113" >
+                                <a href="../scrims/scrims.php"><span>Scrims</span></a>
+                            </li>
+                            <li id="menu_item_17306114" >
+                                <a href="../blogs/blogs.php"><span>Blogs</span></a>
+                            </li>
+                        </ul>
+                        <div style="clear:both;"></div>
+                    </div>                
+					<ul id="subGroupsBlock">
+                        <h3><a href="../teams/teams.php">Teams</a></h3>
+                        <li>
+							<a href=" ../teams/SampleTeam/SampleTeamA.php">Sample Teams</a>
+						</li>
+					</ul>     
+                </div>            
+                <div id="content"><div id="col_main" class="col_main">
+                        <div id="top_block_no_1"  ><div class="box"><div class="box_top" id="block_title_no_1"><h2>My Teams</h2></div><div style="clear:both"></div><div class="box_mid"><div class="content" id="block_no_1"><table id="group_container" class="thumbnail_view"><tr><td ><a href="../teams/SampleTeam/SampleTeamA.html" title="Sample Group"><img alt="Sample Group" src="http://com//images/supgroup_def.png" width="80" height="80" class="tv_image" /><span class="tv_caption">Sample Team</a><span class="tv_info"><br><a href="../teams/SampleTeam/SampleTeamA.html"><strong>1</strong></a> member(s)</span></td></tr></table>		<div style="display:none;">
+                                            <form action="http://leaguebook.com/groups" id="sorterform" method="POST">
+                                                <div style="margin-bottom:2px;"><input type="hidden" name="sort_by" id="sorterselect" style="width:150px;" />
+                                                    <!--
+                                                    <option value="date">Sort By Date</option>
+                                                    <option value="title">Sort By Title</option>
+                                                    <option value="member_count">Sort By Members Count</option>
+                                                    </select>
+                                                    --></div>
+                                                <input type="submit" name="sort_submit" value="Reload" />
+                                            </form>
+                                        </div>
+                                        <script>
+                                            function sortBy(w) {
+                                                document.getElementById('sorterselect').value = w;
+                                                document.getElementById('sorterform').submit();
+                                            }
+                                        </script></div></div></div><div class="box_bottom"><span class="box_bottom_right"></span><span class="box_bottom_left"></span></div></div>
+                        <div id="top_block_no_2"  ><div class="box"><div class="box_top" id="block_title_no_2"><h2>					<div class="menu_list" id="block_title_sub_menu">
+                                            <a href="javascript:void(sortBy('date'))">Sort by Date</a>
+                                            <a href="javascript:void(sortBy('title'))">Sort by Title</a>
+                                            <a href="javascript:void(sortBy('member_count'))">Sort by Members</a>
+                                        </div></h2></div><div style="clear:both"></div><div class="box_mid"><div class="content" id="block_no_2"><table id="group_container" class="thumbnail_view"><tr><td ><a href="../teams/SampleTeam/SampleTeamA.html" title="Sample Group"><img alt="Sample Group" src="http://com//images/supgroup_def.png" width="80" height="80" class="tv_image" /><span class="tv_caption">Sample Team</a><span class="tv_info"><br><a href="../teams/SampleTeam/SampleTeamA.html"><strong>1</strong></a> member(s)</span></td></tr></table>		<div style="display:none;">
+                                            <form action="http://leaguebook.com/groups" id="sorterform" method="POST">
+                                                <div style="margin-bottom:2px;"><input type="hidden" name="sort_by" id="sorterselect" style="width:150px;" />
+                                                    <!--
+                                                    <option value="date">Sort By Date</option>
+                                                    <option value="title">Sort By Title</option>
+                                                    <option value="member_count">Sort By Members Count</option>
+                                                    </select>
+                                                    --></div>
+                                                <input type="submit" name="sort_submit" value="Reload" />
+                                            </form>
+                                        </div>
+                                        <script>
+                                            function sortBy(w) {
+                                                document.getElementById('sorterselect').value = w;
+                                                document.getElementById('sorterform').submit();
+                                            }
+                                        </script></div></div></div><div class="box_bottom"><span class="box_bottom_right"></span><span class="box_bottom_left"></span></div></div>
+                    </div>
+                    <div class="col_side" id="col_sidebar">
+                        <div id="top_block_no_1009337"  class="movable" ><div class="box"><div class="box_mid box_mid_sidebar_ie_width_fix"><div class="content" id="block_no_1009337"><center></center></div></div></div><div class="box_bottom"><span class="box_bottom_right"></span><span class="box_bottom_left"></span></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="footer"> &copy; 2013 League book
+            </div>
+
+
+
+
+            <div id="groups_bar">
+                <span id="groups_search_button" class="button">
+                    <form id="search_form" action="http://leaguebook.com/people/search" method="POST" autocomplete="off">
+                        <input type="search" id="groups_search_text" name="q" placeholder="Search in group">
+                    </form>
+                </span>
+
+                <a id="groups_notifications_button" title="Notifications" class="button" href="javascript:;">Notifications<div id="groups_notification_count" class="count" style="display:none;"><img class="groups_bar_overlay" src="/images/groups_bar/overlay.png" />0</div></a>
+                <div id="groups_notifications_panel" class="panel">
+                    <h6>Notifications</h6>
+                    <ul>
+                        <a href="http://leaguebook.com/dashboard/alerts">There are no new Notifications.</a>
+                    </ul>
+                </div>
+                <a id="groups_chat_button_g_leaguebook" class="chat group button" title="Chat" href="/_trigger/chat/toggle/group/leaguebook"><span id="groups_chat_button_g_label">Chat</span></a>
+            </div>
+
+            <div id="groups_toaster_vcard" class="special_bg special_text special_border"></div>
+
+
+
+            <iframe style="display:none;" name="_rlcdn" width=0 height=0 frameborder=0 src="http://ei.rlcdn.com/362258.gif?x=50b6c8d56ee2089ab2920555bfb0468ad7a137f72601a5d9&c=bf-ecb"></iframe>
+
+            <!-- footer scripts begin -->
+
+
+            <!-- tpl:cm -->
+            <script type="text/javascript">
                 window.groups = {_info:{module:{}},langStrings:{}};
+
+        
                 if(window._kmq) {
                     _kmq.push(['identify', 'username_oajiivhbldxbldhwi']);
                 }
             </script>
-		<!-- tpl:gp -->
-		<!--script src="/public/js/src/lib/LAB/LAB.js?b=1359739035"></script-->
-		<script type="text/javascript">
+            <!-- tpl:gp -->
+
+            <!--script src="/public/js/src/lib/LAB/LAB.js?b=1359739035"></script-->
+
+            <script type="text/javascript">
                 /*subgroup*/
+    
                 /*gadmin*/
+    
                 /*album*/
+    
                 groups._info.domName = 'http://leaguebook.com';
                 groups._info.groupName = 'leaguebook';
-                groups._info.groupNameX = '';
+                groups._info.groupNameX = 'm:pV___________^__________bolu__________^__________gy|8';
                 groups._info.isMember = '1';
                 groups._info.isGroupAdmin = '';
-                groups._info.subscriptionName = '';
-                groups._info.shouldEmailSubscriptionNotification = '';
+                groups._info.subscriptionName = 'Free Pivot';
+                groups._info.shouldEmailSubscriptionNotification = '1';
                 groups._info.obj1 = '';
                 groups._info.userId = '13530230';
                 groups._info.userName = 'oajiivhbldxbldhwi';
                 groups._info.isMobile = '';
-                groups._info.module.name = 'home';
+                groups._info.module.name = 'groups';
                 groups._info.module.profileOwnerId = '';
+                groups._info.wikiPageCategoryId = '';
+                groups._info.wikiCategoryId = '';
                 groups._info.previewImage = '';
-                groups._info.module.layout = 'TriColumns';
+
+    
                 groups._info.module.designMode = !!window.hasPermission;
+
                 /*--------------*/
+
                 /*javascript_variables*/
+    
                 groups._info.groupId = 704597;
                 groups._info.title = 'League book';
                 groups._info.moduleTitle = '';
-                groups._info.searchTypes = {'blogs':{title:'Blogs',actionURL:'http://leaguebook.com/blogs/search'},'chat':{title:'Chat',actionURL:'http://leaguebook.com/chat/search'},'people':{title:'Members',actionURL:'http://leaguebook.com/people/search'},'messages':{title:'Priv. Messages',actionURL:'http://leaguebook.com/dashboard/search_messages'}};
+                groups._info.searchTypes = {'blogs':{title:'Blogs',actionURL:'http://leaguebook.com/blogs/search'},'chat':{title:'Chat',actionURL:'http://leaguebook.com/chat/search'},'people':{title:'Members',actionURL:'http://leaguebook.com/people/search'},'talks':{title:'Forum',actionURL:'http://leaguebook.com/talks/search'},'wiki':{title:'Wiki',actionURL:'http://leaguebook.com/wiki/search'},'files':{title:'Files',actionURL:'http://leaguebook.com/files/search'},'messages':{title:'Priv. Messages',actionURL:'http://leaguebook.com/dashboard/search_messages'}};
                 groups._info.language = 'english';
                 groups._info.languageRevision={custom:135260045,main:424,name:'english'};
                 groups._info.bannedWords = '';
                 groups._info.titleSeperator = ' | ';
                 groups._info.userNameSurname = 'Levi Limmex';
-                groups._info.userAvatar = 'no_image.png';
+                groups._info.userAvatar = 'http://leaguebook.com/avatars/b/80.png';
                 groups._info.chatConfig = {"jid":"13530230-704597@im.com","room":"704597@conference.im.com","token":"7e4422157878949a9db1641dec01d6af","bind_endpoint":"http:\/\/leaguebook.com\/http-bind","mode":"xmpp"};groups._info.membershipId = '31280300';
                 groups._info.isAdmin = '';
                 groups._info.defaultAvatar = 'http://com/avatars/b/208.png?0';
                 groups._info.defaultAvatarMini = 'http://com/avatars/b/16.png?0';
+        
+
                 /*javascript_language_strings*/
+    
                 groups.langStrings['See %s new update(s)'] = 'See %s new update(s)';
                 groups.langStrings['Delete'] = 'Delete';
                 groups.langStrings['Like'] = 'Like';
@@ -247,11 +478,13 @@
                 groups.langStrings['next century'] = 'next century';
                 groups.langStrings['centuries'] = 'centuries';
                 groups.langStrings['next year'] = 'next year';
+
                 groups.langStrings['Adding your comment...'] = 'Adding your comment...';
                 groups.langStrings['Comment added.'] = 'Comment added.';
                 groups.langStrings['Comment deleted.'] = 'Comment deleted.';
                 groups.langStrings['Deleting comment...'] = 'Deleting comment...';
                 groups.langStrings['Group Chat'] = 'Group Chat';
+
                 groups.langStrings['Page design saved.'] = 'Page design saved.';
                 groups.langStrings['Deleting block...'] = 'Deleting block...';
                 groups.langStrings['Add New Standard Modules'] = 'Add New Standard Modules';
@@ -273,6 +506,7 @@
                 groups.langStrings['The block you want is not here? Enter your own HTML code here to integrate external codes, create ads, and more.'] = 'The block you want is not here? Enter your own HTML code here to integrate external codes, create ads, and more.';
                 groups.langStrings['Use this module if you would like to display feeds from other apps.'] = 'Use this module if you would like to display feeds from other apps.';
                 groups.langStrings['You have already added all the blocks.'] = 'You have already added all the blocks.';
+
                 groups.langStrings['Deleting draft...'] = 'Deleting draft...';
                 groups.langStrings['Delete External Blogs'] = 'Delete External Blogs';
                 groups.langStrings['There is no blog to delete.'] = 'There is no blog to delete.';
@@ -284,8 +518,11 @@
                 groups.langStrings['RSS Feed'] = 'RSS Feed';
                 groups.langStrings['Write a new blog post from right here inside this network.'] = 'Write a new blog post from right here inside this network.';
                 groups.langStrings['Add an RSS feed/a blog from another website to the blog section in this network.'] = 'Add an RSS feed/a blog from another website to the blog section in this network.';
+
                 groups.langStrings['Select a video file'] = 'Select a video file';
+
                 groups.langStrings['Save as template'] = 'Save as template';
+
                 groups.langStrings['Uploading image...'] = 'Uploading image...';
                 groups.langStrings['Cropping image...'] = 'Cropping image...';
                 groups.langStrings['Updating profile information...'] = 'Updating profile information...';
@@ -298,6 +535,7 @@
                 groups.langStrings['Loading cropper...'] = 'Loading cropper...';
                 groups.langStrings['Adjusting thumbnail...'] = 'Adjusting thumbnail...';
                 groups.langStrings['Saving tab settings...'] = 'Saving tab settings...';
+
                 groups.langStrings['Tag This Photo'] = 'Tag This Photo';
                 groups.langStrings['Finish Tagging'] = 'Finish Tagging';
                 groups.langStrings['You should write more for a tag.'] = 'You should write more for a tag.';
@@ -305,15 +543,18 @@
                 groups.langStrings['Rotating...'] = 'Rotating...';
                 groups.langStrings['Loading rotated image...'] = 'Loading rotated image...';
                 groups.langStrings['Saving tags...'] = 'Saving tags...';
+
                 groups.langStrings['Oops, temporary error occurred. Please try again...'] = 'Oops, temporary error occurred. Please try again...';
                 groups.langStrings['Search in %s'] = 'Search in %s';
                 groups.langStrings['You should fill %s field to add comment.'] = 'You should fill %s field to add comment.';
                 groups.langStrings['Loading...'] = 'Loading...';
                 groups.langStrings['Saving page...'] = 'Saving page...';
+
                 groups.langStrings['Loading template...'] = 'Loading template...';
                 groups.langStrings['Uploading...'] = 'Uploading...';
                 groups.langStrings['Saving page...'] = 'Saving page...';
                 groups.langStrings['Add New Standard Block'] = 'Add New Standard Block';
+
                 function dont_show_change_layout()
                 {
                     groups.RenderController.renderPageBusy();
@@ -324,9 +565,13 @@
                     groups.RenderController.hideModal();
                     document.getElementById('topbar_info_text').innerHTML = res;
                 }
+
+
                 /*ajax_javascript*/
-                window.applySajaxMethods = function(){['ExtraPages_addExtraPage','ExtraPages_getAddModulePanel','ExtraPages_get3rdAddModulePanel','ExtraPages_activateModules','ExtraBlocks_addBlock','ExtraBlocks_removeBlock','ExtraBlocks_selectBlock','ExtraBlocks_editBlock','ExtraBlocks_editBlockWithContentLimit','ExtraBlocks_savePageDesign','ExtraBlocks_getModulesListForModuleBox','deleteAction','saveStatusMessage','getMemberActions','addTwitterAssociation','reportIssue','facebookconnect_signup','zendSupport','sendSupportTicket','facebookconnect_control','updateEntrySimple','pollVote','dont_show_change_layout','ExtraBlocks_getModulesListForModuleBox','getModulesListForModuleBox','ExtraBlocks_addBlock'].each(function(f){window["x_"+f]=function(){return _S(f, Array.prototype.slice.apply(arguments));};});};
+                window.applySajaxMethods = function(){['ExtraPages_addExtraPage','ExtraPages_getAddModulePanel','ExtraPages_get3rdAddModulePanel','ExtraPages_activateModules','ExtraBlocks_addBlock','ExtraBlocks_removeBlock','ExtraBlocks_selectBlock','ExtraBlocks_editBlock','ExtraBlocks_editBlockWithContentLimit','ExtraBlocks_savePageDesign','ExtraBlocks_getModulesListForModuleBox','addSubGroup','deleteSubGroup','editSubGroup','joinSubGroup','leaveSubGroup','getInvitablesBox','invite','setPicture','loadWall','postForWall','deleteWallPost','hasLimitToCreateSubgroup','deleteAction','saveStatusMessage','getMemberActions','addTwitterAssociation','reportIssue','facebookconnect_signup','zendSupport','sendSupportTicket','facebookconnect_control','updateEntrySimple','pollVote','dont_show_change_layout','ExtraBlocks_getModulesListForModuleBox','getModulesListForModuleBox','ExtraBlocks_addBlock'].each(function(f){window["x_"+f]=function(){return _S(f, Array.prototype.slice.apply(arguments));};});};
+
                 /*ajax_functions*/
+    
                 function twitterAssociation() {
                     var txt = '';
                     txt += '<h1>Twitter Association:</h1>';
@@ -339,14 +584,19 @@
                     txt += '</form>';
                     groups.RenderController.showModal(txt);
                 }
+
                 function twitterAssociationSubmit(formobj)
                 {
                     if (!validateCompleteForm(formobj,'error')) return false;
+
                     groups.RenderController.renderPageBusy();
+
                     var twitter_username = document.getElementById('username').value;
                     var twitter_password = document.getElementById('passwd').value;
+
                     x_addTwitterAssociation(twitter_username,twitter_password,addTwitterAssociationCB);
                 }
+
                 function addTwitterAssociationCB(result)
                 {
                     if (result)
@@ -360,6 +610,7 @@
                         groups.RenderController.showModal('<h1>Twitter Association</h1>Error. Please <a href=\"javascript:twitterAssociation()\">try</a> again...');
                     }
                 }
+
                 var charLimit = 140;
                 function controlCharLimit(textarea_obj) {
                     var text = textarea_obj.value;
@@ -377,6 +628,7 @@
                         status_char_left_obj.style.color = '';
                     }
                 }
+
                 function saveStatusMessage() {
                     var msg_obj = xGetElementById('status_msg');
                     var msg = msg_obj.value.replace(/^\s+|\s+$/g,"");
@@ -387,6 +639,7 @@
                         x_saveStatusMessage(msg,saveStatusMessageResult);
                     }
                 }
+
                 status_message_count = 0;
                 function saveStatusMessageResult(res) {
                     var status = res[0];
@@ -420,6 +673,7 @@
                         x_deleteAction(act_id,status,deleteActionResult);
                     }
                 }
+
                 function deleteActionResult(res) {
                     if(!res[0]) {
                         alert(res[1]);
@@ -434,6 +688,7 @@
                     groups.RenderController.renderPageBusy();
                     xGetElementById("load_more_link").href = "javascript:;";
                     load_more_member_id = member_id;
+
                     var wall_messages = document.getElementsByName("min_wall_msg");
                     var wall_messages_length = wall_messages.length;
                     var wall_messages_value = "";
@@ -443,6 +698,7 @@
                     var actions_value = "";
                     var min_action = 0;
                     var i = 0;
+
                     for(i=0;i<wall_messages_length;i++) {
                         wall_messages_value = wall_messages[i].value;
                         if(min_wall_msg==0) {
@@ -463,8 +719,10 @@
                                 min_action = min_action>actions_value?actions_value:min_action;
                         }
                     }
+
                     x_getMemberActions(member_id,min_action,min_wall_msg,"html",loadMoreActionResult);
                 }
+
                 function loadMoreActionResult(res) {
                     var obj = xGetElementById("old_actions_container");
                     if(res!="") {
@@ -478,14 +736,18 @@
                     else {
                         xDisplay("load_more","none");
                     }
+
                     if(load_more_member_id!=0)
                         xGetElementById("load_more_link").href = "javascript:loadMoreAction("+load_more_member_id+")";
                     load_more_member_id = 0;
                     groups.RenderController.hideModal();
                 }
+
+		
                 var add_from = 'admin';
                 var extra_page_container = '';
                 var extra_page_key = '';
+
                 // Cache Variables
                 var static_page_title = '';
                 var static_page_who_can_see = '';
@@ -493,19 +755,24 @@
                 var link_link = '';
                 var link_link_type = '';
                 var link_who_can_see ='';
+
                 function EP_addNewPage(from) {
                     if(from!="admin")
                         add_from = "menu";
+
                     replacements =
                         {
                         addFrom: add_from
                     };
+
                     groups.modalBox.show("addPage", { replacements: replacements } , "_common");
                 }
+
                 function EP_addStaticPageForm() {
                     var txt = '<form class="groupsForm" name="addStaticPageForm" onsubmit="return false;">';
                     txt += '<label class="formTitle">Title:</label>';
                     txt += '<div><input type="text" id="page_title" maxlength="50" required="1" realname="Title" /></div>';
+
                     /*
                                     txt += '<label class="formTitle">Page Layout:</label>';
                                     txt += '<div>';
@@ -527,6 +794,7 @@
                                     txt += '</tbody></table>';
                                     txt += '</div>';
                      */
+
                     txt += '<label class="formTitle">Who Can See:</label>';
                     txt += '<div class="FormTopPadding"><input type="radio" name="page_who_can_see" id="page_who_can_see_anyone" checked="checked" /> <label for="page_who_can_see_anyone">Anyone</label>';
                     txt += ' <input type="radio" name="page_who_can_see" id="page_who_can_see_members"  /> <label for="page_who_can_see_members">Members</label> <style>.content_info_box{margin-left:0px !important}</style></div>';
@@ -534,9 +802,11 @@
                     txt += '</form>';
                     return txt;
                 }
+
                 function EP_addStaticPage() {
                     groups.RenderController.showModal('<h1><span class="module_box_icon module_box_joker"></span>Add Static Page</h1>'+EP_addStaticPageForm());
                 }
+
                 function EP_addStaticPageSubmit(formobj) {
                     if(!validateCompleteForm(formobj,'error')) return false;
                     groups.RenderController.renderPageBusy();
@@ -555,12 +825,15 @@
                                             }
                                     }
                      */
+
                     if(xGetElementById('page_who_can_see_members').checked)
                         who_can_see = 'members';
+
                     static_page_title = title;
                     static_page_who_can_see = who_can_see;
                     x_ExtraPages_addExtraPage(title,'internal','',static_page_who_can_see, EP_addStaticPageResult);
                 }
+
                 function EP_addStaticPageResult(res) {
                     var status = res[0];
                     var msg = res[1];
@@ -584,14 +857,17 @@
                         xGetElementById('page_title').value = static_page_title;
                         xGetElementById('page_who_can_see_'+static_page_who_can_see).checked = true;
                     }
+
                     static_page_title = '';
                     static_page_who_can_see = '';
                 }
+
                 function EP_goToStaticPage() {
                     if(extra_page_key!='' ) {
                         window.open('http://leaguebook.com/'+extra_page_key+'/edit','static_page');
                     }
                 }
+
                 function EP_continueToAdministrate() {
                     groups.RenderController.hideModal();
                     if(extra_page_container!='' ) {
@@ -600,6 +876,7 @@
                         extra_page_key = '';
                     }
                 }
+
                 function EP_addLinkForm() {
                     var txt = '<form class="groupsForm" onsubmit="return false;">';
                     txt += '<label class="formTitle">Title:</label>';
@@ -616,9 +893,11 @@
                     txt += '</form>';
                     return txt;
                 }
+
                 function EP_addLink() {
                     groups.RenderController.showModal('<h1><span class="module_box_icon module_box_joker"></span>Add Link</h1>'+EP_addLinkForm());
                 }
+
                 function EP_addLinkSubmit(formobj) {
                     if(!validateCompleteForm(formobj,'error')) return false;
                     groups.RenderController.renderPageBusy();
@@ -630,12 +909,14 @@
                     var who_can_see = 'anyone';
                     if(xGetElementById('page_who_can_see_members').checked)
                         who_can_see = 'members';
+
                     link_title = title;
                     link_link = content;
                     link_link_type = type;
                     link_who_can_see = who_can_see;
                     x_ExtraPages_addExtraPage(title,type,content,who_can_see,EP_addLinkResult);
                 }
+
                 function EP_addLinkResult(res) {
                     var status = res[0];
                     var msg = res[1];
@@ -654,6 +935,7 @@
                             else {
                                 window.location.href = 'http://leaguebook.com/'+res[1];
                             }
+
                         }
                     }
                     else {
@@ -666,23 +948,28 @@
                         xGetElementById('page_content_type_'+link_link_type).checked = true;
                         xGetElementById('page_who_can_see_'+link_who_can_see).checked = true;
                     }
+
                     link_title = '';
                     link_link = '';
                     link_link_type = '';
                     link_who_can_see = '';
                 }
+
                 function EP_goToLink() {
                     if(extra_page_key!='' ) {
                         window.location.href = 'http://leaguebook.com/'+extra_page_key;
                         extra_page_key = '';
                     }
                 }
+
                 function EP_checkBox(input_id) {
                     var obj = xGetElementById(input_id);
                     var obj_checked = obj.checked;
                     obj.checked = !obj_checked;
                 }
+
                 function EP_addModule(addFrom) {
+
                     groups.modalBox.show(
                     "addModule",
                     {
@@ -705,23 +992,34 @@
                     "_common"
                 );
                 }
+
                 function EP_activateModules(addFrom) {
                     groups.RenderController.renderPageBusy();
+
+
                     var modules = '';
                     var all_modules = document.getElementsByName('modules');
                     var all_modules_length = all_modules.length;
                     for(var i=0;i<all_modules_length;i++) {
                         if(all_modules[i].checked) {
+
                             if(modules!='')
                                 modules += '__SPLIT__';
+
                             modules += all_modules[i].value;
                         }
                     }
+
                     x_ExtraPages_activateModules(modules,addFrom,activateModulesResult);
                 }
+
                 function activateModulesResult(res) {
+
                     if(res!=""&&res!="admin") {
+
+
                         document.location.href = "http://leaguebook.com/" + res;
+
                         /*
                                             if(add_from=='admin') {
                                                     groups.RenderController.hideModal();
@@ -732,14 +1030,20 @@
                                                     txt += '<div class="info">Your changes are successfully saved. If you want to administrate your pages, click <a href="http://leaguebook.com/admin/pages">here</a> or <a href="javascript:document.location.reload(true)">click</a> to continue...</div>';
                                                     groups.RenderController.showModal(txt);
                                             }*/
+
                     } else {
                         document.location.href = "http://leaguebook.com/admin/pages";
                         //document.location.reload(true);
                     }
                 }
+
+		
+
                 /*function to run onload*/
                 groups.platform_ready = function(){
+        
                 };
+
                 groups.initialGraphData                 = "";
                 groups.initialGraphLabels               = "";
                 groups.initialGraphTooltips             = "";
@@ -749,11 +1053,16 @@
                 groups.initialGraphReadableDisc         = "";
                 groups.initialGraphPieValues            = "";
                 groups.initialGraphPieSlides            = "";
+
+
                 groups.shouldShowLove = '';
+
                 /*--------------*/
             </script>
-		<script type="text/javascript" rel="compressed" charset="utf-8" src="/public/js/min.grouppage.js?b=1359739035"></script>
-		<script type="text/javascript" src="http://s.skimresources.com/js/6948X660046.skimlinks.js"></script>
-		<!-- footer scripts end -->
-		</body>
-		</html>
+
+
+            <script type="text/javascript" rel="compressed" charset="utf-8" src="/public/js/min.grouppage.js?b=1359739035"></script>
+
+            <script type="text/javascript" src="http://s.skimresources.com/js/6948X660046.skimlinks.js"></script>
+            <!-- footer scripts end --></body>
+</html>

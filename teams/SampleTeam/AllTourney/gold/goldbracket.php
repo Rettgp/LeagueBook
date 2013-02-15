@@ -1,45 +1,42 @@
+<?PHP
+		session_start();
+		if (isset($_SESSION['sess_login']) && $_SESSION['sess_login'] == 1) {
+			
+		} else {
+			header ('Location: ../index.html');
+		}
+?>
 <!DOCTYPE html>
 <html dir="ltr">
 <head>
-		<?PHP
-
-			session_start();
-
-			if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
-
-			header ("Location: ../index.html");
-
-			}
-
-		?>
-<title>Available Tournaments| League book</title>
+<title>LeagueBook | Private social network</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
-<meta name="Keywords" content=",Groups">
+<meta name="Keywords" content="">
 <meta name="Description" content="Private social network">
 <meta name="Generator" content="com 2.0">
 <meta name="Robots" content="index">
 <link rel="shortcut icon" href="/images/favicon.ico">
-<link rel="stylesheet" type="text/css" href="../../../css/style.css" id="groups_template_style">
-<link rel="stylesheet" type="text/css" href="../../../css/general.css">
+<link rel="stylesheet" type="text/css" href="../../../../css/style.css" id="groups_template_style">
+<link rel="stylesheet" type="text/css" href="../../../../css/general.css">
 <link rel="index" title="League book" href="http://leaguebook.com">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="http://com/rss/leaguebook/groups">
-<link href="../../../css/style.css" rel="stylesheet" type="text/css">
-<link href="../../../css/#.css" rel="stylesheet" type="text/css">
-<link href="../../../css/# #2.css" rel="stylesheet" type="text/css">
-<link href="../../../css/# #3.css" rel="stylesheet" type="text/css">
-<link href="../../../css/groups.module.chat.css" rel="stylesheet" type="text/css">
-<link href="../../../css/groups.main.bar.css" rel="stylesheet" type="text/css">
-<link href="../../../css/groups_admin_panel.css" rel="stylesheet" type="text/css">
-<link href="../../../css/groups_comments.css" rel="stylesheet" type="text/css">
-<link href="../../../css/groups_modal_box.css" rel="stylesheet" type="text/css">
-<link href="../../../css/groups_newsfeed.css" rel="stylesheet" type="text/css">
-<link href="../../../css/groups_share.css" rel="stylesheet" type="text/css">
-<link href="../../../css/groups_top_bar.css" rel="stylesheet" type="text/css">
-<link href="../../../css/groups.notification.menu.css" rel="stylesheet" type="text/css">
-<link href="../../../css/prototabs.css" rel="stylesheet" type="text/css">
-<link href="../../../css/general.css" rel="stylesheet" type="text/css">
-<link href="../../../css/accordion.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://com/rss/leaguebook/home">
+<link href="../../../../css/style.css" rel="stylesheet" type="text/css">
+<link href="../../../../css/#.css" rel="stylesheet" type="text/css">
+<link href="../../../../css/# #2.css" rel="stylesheet" type="text/css">
+<link href="../../../../css/# #3.css" rel="stylesheet" type="text/css">
+<link href="../../../../css/groups.module.chat.css" rel="stylesheet" type="text/css">
+<link href="../../../../css/groups.main.bar.css" rel="stylesheet" type="text/css">
+<link href="../../../../css/groups_admin_panel.css" rel="stylesheet" type="text/css">
+<link href="../../../../css/groups_comments.css" rel="stylesheet" type="text/css">
+<link href="../../../../css/groups_modal_box.css" rel="stylesheet" type="text/css">
+<link href="../../../../css/groups_newsfeed.css" rel="stylesheet" type="text/css">
+<link href="../../../../css/groups_share.css" rel="stylesheet" type="text/css">
+<link href="../../../../css/groups_top_bar.css" rel="stylesheet" type="text/css">
+<link href="../../../../css/groups.notification.menu.css" rel="stylesheet" type="text/css">
+<link href="../../../../css/prototabs.css" rel="stylesheet" type="text/css">
+<link href="../../../../css/general.css" rel="stylesheet" type="text/css">
+<link href="../../../../css/accordion.css" rel="stylesheet" type="text/css">
 <script type='text/javascript'>
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-3121632-1']);
@@ -57,21 +54,9 @@
                 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
             })();
         </script>
+<script src="../../../../scripts/authentication.js" type="text/javascript"></script>
 <!-- ehc -->
-<style type="text/css">
-            #subgroup_desc { margin-bottom: 10px; background-color: #FFF; }
-            #subgroup_desc div { margin-bottom:0px; }
-            /* calendar */
-            .calender_item { margin: 0 0 15px 0; }
-            .calendar_icon { color: #333; background: url(http://com/images/calendar.png) no-repeat; width: 41px; height: 30px; text-align: center; padding: 22px 0 0 0; line-height: 14px; float: left; margin: 0 10px 0 0; }
-            .calendar_icon .day { font-size: 18px; }
-            .calendar_icon .month { font-size: 10px; }
-            .calender_title { font-weight: bold; margin: 0 0 3px 0; }
-            .calender_header { padding: 0 0 5px 0; margin: 0 0 5px 0; font-weight: bold; }
-            .calender_details { margin: 15px 0 0 0; width: 100%; }
-</style>
 <!-- /ehc -->
-<link href="/public/css/groups/groups.notification.menus.css?15997" rel="stylesheet" type="text/css">
 <script type="text/javascript" charset="utf-8">
             var isTheBook = true;
             var blogsAllowed = true;
@@ -89,13 +74,6 @@
 	</div>
 </div>
 <div id="busy_popup">
-</div>
-<div id="loader">
-	<blink>Loading...</blink>
-</div>
-<div id="groupsNotifierCont">
-	<div id="groupsNotifier" class="msg_info">
-	</div>
 </div>
 <div id="groupsInfoBoxCont" style="visibility:hidden;">
 	<img src="/images/InfoBoxArrow2up.png" class="arrow"/>
@@ -132,281 +110,92 @@
                 }
             }
         </script>
-<div id="layout" class="module_groups ">
+<div id="layout" class="module_home ">
 	<div id="header">
-		<div id="hgroups">
-			<table width="100%" border="0" cellspacing="0" cellpadding="0">
-			<tr>
-				<td class="td_group_title" valign="bottom">
-					<div id="h1">
-						<a id="groupTitle" href="http://leaguebook.com/">
-						<h1>LeagueBook</h1>
-						</a>
-					</div>
-				</td>
-				<td class="td_notifications" valign="bottom">
-					<ul id="headerNotificationsIcons">
-						<li>
-						<a id="headerFriendRequestItem" onclick="return false" href="#"></a>
-						<ul class="notificationMenu" style="display: none">
-							<h3> Friend Requests </h3>
-							<div class="notificationContent">
-							</div>
-							<li class="bottom">
-							<a href="http://leaguebook.com/dashboard/alerts">See All Friend Requests</a>
-							</li>
-						</ul>
-						</li>
-						<li>
-						<a id="headerMessagesItem" onclick="return false" rel="setAllMessagesPassive" href="#"></a>
-						<ul class="notificationMenu" style="display: none">
-							<h3>Messages
-							<div class="notificationAction">
-								<a href="http://leaguebook.com/dashboard/compose_message">Compose New Message</a>
-							</div>
-							</h3>
-							<div class="notificationContent">
-								<li class="notificationNoContent">No Messages</li>
-							</div>
-							<li class="bottom">
-							<a href="http://leaguebook.com/dashboard/messages">See All Messages</a>
-							</li>
-						</ul>
-						</li>
-						<li>
-						<a id="headerNotificationsItem" onclick="return false" rel="setAllNotificationsPassive" href="#"></a>
-						<ul class="notificationMenu" style="display: none">
-							<h3> Notifications </h3>
-							<div class="notificationContent">
-							</div>
-							<li class="bottom">
-							<a href="http://leaguebook.com/dashboard/notifications">See All Notifications</a>
-							</li>
-						</ul>
-						</li>
-					</ul>
-				</td>
-				<td class="td_search" valign="bottom">
-					<div id="searchBoxDiv">
-						<form id="book_search_form" method="POST" action="http://leaguebook.com/people/search">
-							<input id="book_groups_search_text" type="search" name="q" placeholder="Search" autocomplete="off" data-placeholder-bound="true">
-							<input id="searchSubmitInput" type="submit" data-placeholder-bound="true">
-							<ul id="book_search_types_box" class="autocomplete" style="display: none">
-								<li id="searchPeopleModule" class="searchModule" onclick="groups.search.goToAdvancedSearch()">
-								<div class="searchModuleTitle">
-									People
-								</div>
-								<div class="searchModuleSubtitle">
-									Advanced Search
-								</div>
-								</li>
-								<li id="searchPeopleModuleLoading" class="searchResultsLoading" style="display: none"></li>
-								<li id="searchMessagesModule" class="searchModule" onclick="groups.search.searchInModule('messages')">
-								<div class="searchModuleTitle">
-									Messages
-								</div>
-								<div class="searchModuleSubtitle">
-									More?
-								</div>
-								</li>
-								<li id="searchBlogsModule" class="searchModule" onclick="groups.search.searchInModule('blogs')">
-								<div class="searchModuleTitle">
-									Blogs
-								</div>
-								<div class="searchModuleSubtitle">
-									More?
-								</div>
-								</li>
-								<li id="searchBlogsModuleLoading" class="searchResultsLoading" style="display: none"></li>
-								<li class="noResultsFound centered hovered" style="display: none" class="hovered">
-								No results found for <span class="searchKeyword"></span>
-								</li>
-							</ul>
-						</form>
-					</div>
-				</td>
-				<td class="td_user_nav" valign="bottom" align="right">
-					<ul id="basicMenu">
-						<li id="basicItemHome"><a href="http://leaguebook.com/">Home</a></li>
-						<li id="basicItemProfile"><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi">Profile</a></li>
-						<li id="basicItemAccount"><a href="#">Account <span class="downArrowIcon">&#9660;</span></a>
-						<ul id="accountMenu">
-							<div class="userAvatar">
-								<a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi"><img src="no_image.png" alt="Levi Limmex" width="50" height="50" align="absmiddle"></a>
-								<p>
-									<a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi">Levi Limmex</a>
-								</p>
-							</div>
-							<li><a href="http://leaguebook.com/dashboard/myprofile">Edit Profile</a></li>
-							<!--<li><a href="http://leaguebook.com/dashboard/preferences">Account Settings</a></li>-->
-							<li><a href="http://leaguebook.com/dashboard/privacy_settings">Privacy Settings</a></li>
-							<!--<li><a href="http://leaguebook.com/dashboard/compose_message">Compose New Message</a></li>
-                                            <li><a href="http://leaguebook.com/dashboard/password">Change Credentials</a></li>
-                                            <li><a href="http://leaguebook.com/dashboard/email_settings">E-mail Settings</a></li>-->
-							<li><a href="http://leaguebook.com/dashboard/spread">Invite People</a></li>
-							<li><a href="/signout">Log Out</a></li>
-						</ul>
-						</li>
-					</ul>
-				</td>
-			</tr>
-			</table>
+			<div id="hgroups">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td class="td_group_title" valign="bottom">
+						<div id="h1">
+							<a id="groupTitle" href="http://leaguebook.com/">
+							<h1>LeagueBook</h1>
+							</a>
+						</div>
+					</td>
+				</tr>
+				</table>
+			</div>
 		</div>
+		<a id="newsfeed_loadMsgs" class="moreButton radius special_bg special_text special_border" href="javascript:;" style="display:none">Load More</a>
 	</div>
-	<div id="contentWrapper" class="">
-		<div id="aSide">
-			<div id="userProfileBlock">
-				<a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi"><img src="http://leaguebook.com/avatars/b/80.png" alt="Levi Limmex" width="50" height="50"></a>
-				<h1><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi">Levi Limmex</a></h1>
-				<p>
-					<a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi/edit">Edit Profile</a>
-				</p>
-			</div>
-			<div id="menu">
-				<ul id="nav" class="level1">
-					<li id="menu_item_17306106">
-					<a href="../../../userhomepage/userhomepage.html"><span>Home</span></a>
-					</li>
-					<li id="menu_item_17306107">
-					<a href="../../../myprofile/myprofile.html" z=""><span>My Profile</span></a>
-					</li>
-					<li id="menu_item_17306108">
-					<a href="../../../friends/friends.html"><span>Friends</span></a>
-					</li>
-					<li id="menu_item_17306109">
-					<a href="../../../invite/invite.html" z=""><span>Invite</span></a>
-					</li>
-					<li id="menu_item_17306110" class="selected">
-					<a href="../../../teams/teams.html"><span>Teams</span></a>
-					</li>
-					<li id="menu_item_17306111">
-					<a href="../../../screenshots/screenshots.html"><span>Screenshots</span></a>
-					</li>
-					<li id="menu_item_17306112">
-					<a href="../../../videos/videos.html"><span>Videos</span></a>
-					</li>
-					<li id "menu_item_17306113" 3">
-					<a href="../../../scrims/scrims.html"><span>Scrims</span></a>
-					</li>
-					<li id="menu_item_17306114">
-					<a href="../../../blogs/blogs.html"><span>Blogs</span></a>
-					</li>
-				</ul>
-				<div style="clear:both;">
+	<div id="home_content">
+		<div id="top_block_no_1">
+			<div class="box">
+				<div style="clear:both">
 				</div>
-			</div>
-			<ul id="subGroupsBlock">
-				<h3><a href="../../../teams/teams.html">Teams</a></h3>
-				<li>
-				<a href=" ../../../teams/SampleTeam/SampleTeamA.html">Sample Teams</a>
-				</li>
-			</ul>
-		</div>
-		<div id="content">
-			<div id="col_main" class="col_main">
-				<div id="top_block_no_1">
-					<div class="box">
-						<div class="box_top" id="block_title_no_1">
-							<h2>You can join any of the Tournaments below</h2>
+				<div class="box_mid">
+					<div class="content" id="block_no_1">
+					<h2 style="display: block; font-size: 25px; margin: 20px 0 10px;">GOLD BRACKET PREEZ!</h2>
 						</div>
-						<div style="clear:both">
-						</div>
-					</div>
-					<div class="box_bottom">
-						<span class="box_bottom_right"></span><span class="box_bottom_left"></span>
-					</div>
-				</div>
-				
-					</div>
-					<div class="box_bottom">
-						<span class="box_bottom_right"></span><span class="box_bottom_left"></span>
-					</div>
-				</div>
-			</div>
-			<div class="col_side" id="col_sidebar">
-				<div id="top_block_no_1009337" class="movable">
-					<div class="box">
-						<div class="box_mid box_mid_sidebar_ie_width_fix">
-							<div class="content" id="block_no_1009337">
-								<center></center>
 							</div>
 						</div>
 					</div>
-					<div class="box_bottom">
-						<span class="box_bottom_right"></span><span class="box_bottom_left"></span>
-					</div>
+				</div>
+				<div class="box_bottom">
+					<span class="box_bottom_right"></span><span class="box_bottom_left"></span>
 				</div>
 			</div>
 		</div>
-	<div id="footer">
-		 &copy; 2013 League book
-	</div>
-	<div id="groups_bar">
-		<span id="groups_search_button" class="button">
-		<form id="search_form" action="http://leaguebook.com/people/search" method="POST" autocomplete="off">
-			<input type="search" id="groups_search_text" name="q" placeholder="Search in group">
-		</form>
-		</span>
-		<a id="groups_notifications_button" title="Notifications" class="button" href="javascript:;">Notifications
-		<div id="groups_notification_count" class="count" style="display:none;">
-			<img class="groups_bar_overlay" src="/images/groups_bar/overlay.png"/>0
+		<div class="box_bottom">
+			<span class="box_bottom_right"></span><span class="box_bottom_left"></span>
 		</div>
-		</a>
-		<div id="groups_notifications_panel" class="panel">
-			<h6>Notifications</h6>
-			<ul>
-				<a href="http://leaguebook.com/dashboard/alerts">There are no new Notifications.</a>
-			</ul>
+		<div id="footer">
+			 &copy; 2013 League book
 		</div>
-		<a id="groups_chat_button_g_leaguebook" class="chat group button" title="Chat" href="/_trigger/chat/toggle/group/leaguebook"><span id="groups_chat_button_g_label">Chat</span></a>
-	</div>
-	<div id="groups_toaster_vcard" class="special_bg special_text special_border">
-	</div>
-	<iframe style="display:none;" name="_rlcdn" width=0 height=0 frameborder=0 src="http://ei.rlcdn.com/362258.gif?x=50b6c8d56ee2089ab2920555bfb0468ad7a137f72601a5d9&c=bf-ecb">
-	</iframe>
-	<!-- footer scripts begin -->
-	<!-- tpl:cm -->
-	<script type="text/javascript">
+		<iframe style="display:none;" name="_rlcdn" width=0 height=0 frameborder=0 src="http://ei.rlcdn.com/362258.gif?x=50b6c8d56ee2089ab2920555bfb0468ad7a137f72601a5d9&c=bf-ecb">
+		</iframe>
+		<!-- footer scripts begin -->
+		<!-- tpl:cm -->
+		<script type="text/javascript">
                 window.groups = {_info:{module:{}},langStrings:{}};
                 if(window._kmq) {
                     _kmq.push(['identify', 'username_oajiivhbldxbldhwi']);
                 }
             </script>
-	<!-- tpl:gp -->
-	<!--script src="/public/js/src/lib/LAB/LAB.js?b=1359739035"></script-->
-	<script type="text/javascript">
+		<!-- tpl:gp -->
+		<!--script src="/public/js/src/lib/LAB/LAB.js?b=1359739035"></script-->
+		<script type="text/javascript">
                 /*subgroup*/
                 /*gadmin*/
                 /*album*/
                 groups._info.domName = 'http://leaguebook.com';
                 groups._info.groupName = 'leaguebook';
-                groups._info.groupNameX = 'm:pV___________^__________bolu__________^__________gy|8';
+                groups._info.groupNameX = '';
                 groups._info.isMember = '1';
                 groups._info.isGroupAdmin = '';
-                groups._info.subscriptionName = 'Free Pivot';
-                groups._info.shouldEmailSubscriptionNotification = '1';
+                groups._info.subscriptionName = '';
+                groups._info.shouldEmailSubscriptionNotification = '';
                 groups._info.obj1 = '';
                 groups._info.userId = '13530230';
                 groups._info.userName = 'oajiivhbldxbldhwi';
                 groups._info.isMobile = '';
-                groups._info.module.name = 'groups';
+                groups._info.module.name = 'home';
                 groups._info.module.profileOwnerId = '';
-                groups._info.wikiPageCategoryId = '';
-                groups._info.wikiCategoryId = '';
                 groups._info.previewImage = '';
+                groups._info.module.layout = 'TriColumns';
                 groups._info.module.designMode = !!window.hasPermission;
                 /*--------------*/
                 /*javascript_variables*/
                 groups._info.groupId = 704597;
                 groups._info.title = 'League book';
                 groups._info.moduleTitle = '';
-                groups._info.searchTypes = {'blogs':{title:'Blogs',actionURL:'http://leaguebook.com/blogs/search'},'chat':{title:'Chat',actionURL:'http://leaguebook.com/chat/search'},'people':{title:'Members',actionURL:'http://leaguebook.com/people/search'},'talks':{title:'Forum',actionURL:'http://leaguebook.com/talks/search'},'wiki':{title:'Wiki',actionURL:'http://leaguebook.com/wiki/search'},'files':{title:'Files',actionURL:'http://leaguebook.com/files/search'},'messages':{title:'Priv. Messages',actionURL:'http://leaguebook.com/dashboard/search_messages'}};
+                groups._info.searchTypes = {'blogs':{title:'Blogs',actionURL:'http://leaguebook.com/blogs/search'},'chat':{title:'Chat',actionURL:'http://leaguebook.com/chat/search'},'people':{title:'Members',actionURL:'http://leaguebook.com/people/search'},'messages':{title:'Priv. Messages',actionURL:'http://leaguebook.com/dashboard/search_messages'}};
                 groups._info.language = 'english';
                 groups._info.languageRevision={custom:135260045,main:424,name:'english'};
                 groups._info.bannedWords = '';
                 groups._info.titleSeperator = ' | ';
                 groups._info.userNameSurname = 'Levi Limmex';
-                groups._info.userAvatar = 'http://leaguebook.com/avatars/b/80.png';
+                groups._info.userAvatar = 'no_image.png';
                 groups._info.chatConfig = {"jid":"13530230-704597@im.com","room":"704597@conference.im.com","token":"7e4422157878949a9db1641dec01d6af","bind_endpoint":"http:\/\/leaguebook.com\/http-bind","mode":"xmpp"};groups._info.membershipId = '31280300';
                 groups._info.isAdmin = '';
                 groups._info.defaultAvatar = 'http://com/avatars/b/208.png?0';
@@ -533,7 +322,7 @@
                     document.getElementById('topbar_info_text').innerHTML = res;
                 }
                 /*ajax_javascript*/
-                window.applySajaxMethods = function(){['ExtraPages_addExtraPage','ExtraPages_getAddModulePanel','ExtraPages_get3rdAddModulePanel','ExtraPages_activateModules','ExtraBlocks_addBlock','ExtraBlocks_removeBlock','ExtraBlocks_selectBlock','ExtraBlocks_editBlock','ExtraBlocks_editBlockWithContentLimit','ExtraBlocks_savePageDesign','ExtraBlocks_getModulesListForModuleBox','addSubGroup','deleteSubGroup','editSubGroup','joinSubGroup','leaveSubGroup','getInvitablesBox','invite','setPicture','loadWall','postForWall','deleteWallPost','hasLimitToCreateSubgroup','deleteAction','saveStatusMessage','getMemberActions','addTwitterAssociation','reportIssue','facebookconnect_signup','zendSupport','sendSupportTicket','facebookconnect_control','updateEntrySimple','pollVote','dont_show_change_layout','ExtraBlocks_getModulesListForModuleBox','getModulesListForModuleBox','ExtraBlocks_addBlock'].each(function(f){window["x_"+f]=function(){return _S(f, Array.prototype.slice.apply(arguments));};});};
+                window.applySajaxMethods = function(){['ExtraPages_addExtraPage','ExtraPages_getAddModulePanel','ExtraPages_get3rdAddModulePanel','ExtraPages_activateModules','ExtraBlocks_addBlock','ExtraBlocks_removeBlock','ExtraBlocks_selectBlock','ExtraBlocks_editBlock','ExtraBlocks_editBlockWithContentLimit','ExtraBlocks_savePageDesign','ExtraBlocks_getModulesListForModuleBox','deleteAction','saveStatusMessage','getMemberActions','addTwitterAssociation','reportIssue','facebookconnect_signup','zendSupport','sendSupportTicket','facebookconnect_control','updateEntrySimple','pollVote','dont_show_change_layout','ExtraBlocks_getModulesListForModuleBox','getModulesListForModuleBox','ExtraBlocks_addBlock'].each(function(f){window["x_"+f]=function(){return _S(f, Array.prototype.slice.apply(arguments));};});};
                 /*ajax_functions*/
                 function twitterAssociation() {
                     var txt = '';
@@ -960,8 +749,8 @@
                 groups.shouldShowLove = '';
                 /*--------------*/
             </script>
-	<script type="text/javascript" rel="compressed" charset="utf-8" src="/public/js/min.grouppage.js?b=1359739035"></script>
-	<script type="text/javascript" src="http://s.skimresources.com/js/6948X660046.skimlinks.js"></script>
-	<!-- footer scripts end -->
-	</body>
-	</html>
+		<script type="text/javascript" rel="compressed" charset="utf-8" src="/public/js/min.grouppage.js?b=1359739035"></script>
+		<script type="text/javascript" src="http://s.skimresources.com/js/6948X660046.skimlinks.js"></script>
+		<!-- footer scripts end -->
+		</body>
+		</html>

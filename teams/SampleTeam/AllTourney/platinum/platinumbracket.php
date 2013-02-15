@@ -1,17 +1,14 @@
+<?PHP
+		session_start();
+		if (isset($_SESSION['sess_login']) && $_SESSION['sess_login'] == 1) {
+			
+		} else {
+			header ('Location: ../index.html');
+		}
+?>
 <!DOCTYPE html>
 <html dir="ltr">
 <head>
-		<?PHP
-
-			session_start();
-
-			if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
-
-			header ("Location: ../index.html");
-
-			}
-
-		?>
 <title>LeagueBook | Private social network</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
@@ -138,7 +135,7 @@
 				</div>
 				<div class="box_mid">
 					<div class="content" id="block_no_1">
-					<h2 style="display: block; font-size: 25px; margin: 20px 0 10px;">SILVER BRACKET PREEZ!</h2>
+					<h2 style="display: block; font-size: 25px; margin: 20px 0 10px;">PLATINUM BRACKET PREEZ!</h2>
 						</div>
 							</div>
 						</div>

@@ -1,21 +1,18 @@
+<?PHP
+		session_start();
+		if (isset($_SESSION['sess_login']) && $_SESSION['sess_login'] == 1) {
+			
+		} else {
+			header ('Location: ../index.html');
+		}
+?>
 <!DOCTYPE html>
 <html dir="ltr">
     <head>
-		<?PHP
-
-			session_start();
-
-			if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
-
-			header ("Location: ../index.html");
-
-			}
-
-		?>
-        <title>Videos | League book</title>
+        <title>Blogs | League book</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
-        <meta name="Keywords" content=",Videos">
+        <meta name="Keywords" content=",Blogs">
         <meta name="Description" content="Private social network">
         <meta name="Generator" content="com 2.0">
         <meta name="Robots" content="index">
@@ -23,7 +20,7 @@
         <link rel="stylesheet" type="text/css" href="../css/style.css" id="groups_template_style">
         <link rel="stylesheet" type="text/css" href="../css/general.css">
         <link rel="index" title="League book" href="http://leaguebook.com">
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="http://com/rss/leaguebook/videos">
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="http://com/rss/leaguebook/blogs">
         <link href="../css/style.css" rel="stylesheet" type="text/css">
         <link href="../css/#.css" rel="stylesheet" type="text/css">
         <link href="../css/# #2.css" rel="stylesheet" type="text/css">
@@ -65,175 +62,7 @@
 
 
         <!-- ehc -->
-        <style type="text/css">
-            .video {
-                position: relative;
-                float: left;
-                width: 180px;
-                height: 170px;
-                text-align: center
-            }
-            .video_info {
-                text-align: left;
-                padding-left: 20px;
-                padding-top: 3px
-            }
-            .lastvideo {
-                position: relative;
-                float: left;
-                width: 160px;
-                height: 120px;
-                text-align: center
-            }
-            .lastvideo_info {
-                text-align: left;
-                padding-left: 10px;
-                padding-top: 3px
-            }
-
-            .tmb {
-                cursor: pointer;
-                border: 1px solid #000000;
-                width: 130px;
-                height: 97px
-            }
-            .tmb:hover {
-                border: 1px solid #FF0000
-            }
-            .tmb2 {
-                cursor: pointer;
-                border: 1px solid #000000;
-                width: 100px;
-                height: 75px
-            }
-            .tmb2:hover {
-                border: 1px solid #FF0000
-            }
-            .video_link {
-                font-weight: bold;
-                cursor: pointer;
-            }
-            .video_title {
-                font-size : 1.6em;
-                font-weight: bold;
-            }
-            .video_userIcon {
-                vertical-align: middle;
-                padding-right: 2px
-            }
-            .video_text {
-                font-weight: normal;
-            }
-            .video_textBold {
-                font-weight: bold;
-            }
-
-            div.flash {
-                width: 430px;
-                border-color: #eee;
-                -moz-border-radius: 5px;
-                -webkit-border-radius: 5px;
-            }
-            .progressWrapper {
-                width: 381px;
-                overflow: hidden;
-            }
-
-            .progressContainer {
-                margin-top: 5px;
-                margin-bottom: 0!important;
-                padding: 4px;
-                border: solid 1px #E8E8E8;
-                background-color: #F7F7F7;
-                overflow: hidden;
-            }
-            /* Message */
-            .message {
-                margin: 1em 0;
-                padding: 10px 20px;
-                border: solid 1px #FFDD99;
-                background-color: #FFFFCC;
-                overflow: hidden;
-            }
-            /* Error */
-            .red {
-                border: solid 1px #B50000;
-                background-color: #FFEBEB;
-            }
-
-            /* Current */
-            .green {
-                border: solid 1px #DDF0DD;
-                background-color: #EBFFEB;
-            }
-
-            /* Complete */
-            .blue {
-                border: solid 1px #CEE2F2;
-                background-color: #F0F5FF;
-            }
-
-            .progressName {
-                font-size: 8pt;
-                font-weight: 700;
-                color: #555;
-                width: 323px;
-                height: 14px;
-                text-align: left;
-                white-space: nowrap;
-                overflow: hidden;
-            }
-
-            .progressBarInProgress,
-            .progressBarComplete,
-            .progressBarError {
-                font-size: 0;
-                width: 0%;
-                height: 2px;
-                background-color: blue;
-                margin-top: 2px;
-            }
-
-            .progressBarComplete {
-                width: 100%;
-                background-color: green;
-                visibility: hidden;
-            }
-
-            .progressBarError {
-                width: 100%;
-                background-color: red;
-                visibility: hidden;
-            }
-
-            .progressBarStatus {
-                margin-top: 2px;
-                width: 337px;
-                font-size: 7pt;
-                font-family: Arial;
-                text-align: left;
-                white-space: nowrap;
-            }
-
-            a.progressCancel {
-                font-size: 0;
-                display: block;
-                height: 16px;
-                width: 16px;
-                background-image: url(/images/fugue/cross-small.png);
-                background-repeat: no-repeat;
-                float: right;
-            }
-
-            /* -- SWFUpload Object Styles ------------------------------- */
-            .swfupload {
-                vertical-align: top;
-            }
-        </style>
-        <script type="text/javascript" src="/includes/swfupload/js/swfupload.js?"></script>
-        <script type="text/javascript" src="/includes/swfupload/js/swfupload.queue.js?"></script>
-        <script type="text/javascript" src="/includes/swfupload/js/fileprogress.js?"></script>
-        <script type="text/javascript" src="/includes/swfupload/js/handlers.js?"></script>
+        <link rel="alternate" type="application/rss+xml" title="Grou.p Blogs" href="http://leaguebook.comrss/leaguebook/blogs" /><link rel="pingback" href="http://com/includes/xmlrpc.php" /><link rel="stylesheet" type="text/css" href="/public/css/datePicker.css" />
         <!-- /ehc -->
 
         <link href="/public/css/groups/groups.notification.menus.css?15997" rel="stylesheet" type="text/css">
@@ -303,7 +132,7 @@
 
             }
         </script>
-        <div id="layout" class="module_videos ">
+        <div id="layout" class="module_blogs ">
             <div id="header">
                 <div id="hgroups">
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -407,57 +236,55 @@
                 <div id="aSide">
                     <div id="userProfileBlock">
                         <a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi"><img
-                                src="http://leaguebook.com/avatars/b/80.png"
+                                src="no_image.png"
                                 alt="Levi Limmex"
                                 width="50" height="50"></a>
-                        <h1><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi">Levi Limmex</a></h1>
+                        <h1><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi">L6vi</a></h1>
                         <p><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi/edit">Edit Profile</a></p>
-                    </div>
-
+                    </div>              
                     <div id="menu">
                         <ul id="nav" class="level1">
-                            <li id="menu_item_17306106" >
-                                <a href="../userhomepage/userhomepage.html"><span>Home</span></a>
+                            <li id="menu_item_17306106" class="selected" >
+                                <a href="../userhomepage/userhomepage.php"><span>Home</span></a>
                             </li>
                             <li id="menu_item_17306107" >
-                                <a href="../myprofile/myprofile.html" z=""><span>My Profile</span></a>
+                                <a href="../myprofile/myprofile.php" z=""><span>My Profile</span></a>
                             </li>
                             <li id="menu_item_17306108" >
-                                <a href="../friends/friends.html"><span>Friends</span></a>
+                                <a href="../friends/friends.php"><span>Friends</span></a>
                             </li>
                             <li id="menu_item_17306109" >
-                                <a href="../invite/invite.html" z=""><span>Invite</span></a>
+                                <a href="../invite/invite.php" z=""><span>Invite</span></a>
                             </li>
                             <li id="menu_item_17306110" >
-                                <a href="../teams/teams.html"><span>Teams</span></a>
+                                <a href="../teams/teams.php"><span>Teams</span></a>
                             </li>
                             <li id="menu_item_17306111" >
-                                <a href="../screenshots/screenshots.html"><span>Screenshots</span></a>
+                                <a href="../screenshots/screenshots.php"><span>Screenshots</span></a>
                             </li>
-                            <li id="menu_item_17306112" class="selected" >
-                                <a href="../videos/videos.html"><span>Videos</span></a>
+                            <li id="menu_item_17306112" >
+                                <a href="../videos/videos.php"><span>Videos</span></a>
                             </li>
                             <li id ="menu_item_17306113" >
-                                <a href="../scrims/scrims.html"><span>Scrims</span></a>
+                                <a href="../scrims/scrims.php"><span>Scrims</span></a>
                             </li>
                             <li id="menu_item_17306114" >
-                                <a href="../blogs/blogs.html"><span>Blogs</span></a>
+                                <a href="../blogs/blogs.php"><span>Blogs</span></a>
                             </li>
                         </ul>
                         <div style="clear:both;"></div>
-                    </div>              
+                    </div>                
 					<ul id="subGroupsBlock">
-                        <h3><a href="../teams/teams.html">Teams</a></h3>
+                        <h3><a href="../teams/teams.php">Teams</a></h3>
                         <li>
-							<a href=" ../teams/SampleTeam/SampleTeamA.html">Sample Teams</a>
+							<a href=" ../teams/SampleTeam/SampleTeamA.php">Sample Teams</a>
 						</li>
-					</ul>
-
-                </div>           
+					</ul>     
+                </div>            
                 <div id="content"><div id="col_main" class="col_main">
-                        <div id="top_block_no_1"  ><div class="box"><div class="box_top" id="block_title_no_1"><h2>Videos</h2></div><div style="clear:both"></div><div class="box_mid"><div class="content" id="block_no_1">
-                                        <div class="modules_horizontal_menu_cont" style="padding-top:0"><ul class="modules_horizontal_menu"></ul></div>
-
+                        <div id="top_block_no_2"  >	
+                        </div>
+                        <div id="top_block_no_3"  ><div class="box"><div class="box_top" id="block_title_no_3"><h2>Blogs</h2></div><div style="clear:both"></div><div class="box_mid"><div class="content" id="block_no_3">
                                         <style>
                                             #status_form { overflow: hidden; }
                                             #newsfeed_filters { display: none; }
@@ -465,40 +292,23 @@
                                         <div id="newsfeed">
                                             <div id="oopsOverlay"></div>
                                             <div id="emptyContent">
-                                                <div class="emptyModuleIcon" style="background-position: -1792px 0;;"></div>
+                                                <div class="emptyModuleIcon" style="background-position: -2176px 0;;"></div>
                                                 <div class="emptyModuleText">
 
-                                                    <h3>You've reached the video <br> section but none have been posted yet!</h3><p>Why not contribute to this section by uploading a video? You can also share a video from YouTube, Metacafe, or Dailymotion.</p><ul id="emptyActions"><li><a class="emptyAddIcon" href="javascript:void(uploadVideo());">Upload a Video</a></li><li><a class="emptyAddIcon" href="javascript:void(shareVideo());">Share a video from YouTube, Metacafe and  Dailymotion</a></li></ul></div>
+                                                    <h3>Good news: The blog section is now online!</h3><p>Why not get the blog page started by writing a new blog entry or adding to an existing blog?</p><ul id="emptyActions"><li><a class="emptyAddIcon" href="http://leaguebook.com/blogs/add">Post a new blog</a></li></ul></div>
                                             </div>
-                                        </div>
-
-                                    </div></div></div><div class="box_bottom"><span class="box_bottom_right"></span><span class="box_bottom_left"></span></div></div>
+                                        </div></div></div></div><div class="box_bottom"><span class="box_bottom_right"></span><span class="box_bottom_left"></span></div></div>
                     </div>
                     <div class="col_side" id="col_sidebar">
-                        <div id="top_block_no_2"  >	<div class="box_mid_ops_button_cont"><button class="box_mid_ops_button add_content" onClick="javascript:uploadVideo();"><div class="content_plus"></div><div class="app_icon app_videos"></div>Upload Video</button></div>
+                        <div id="top_block_no_1"  >	<div class="box_mid_ops_button_cont"><button onclick="location.href='http://leaguebook.com/blogs/add'" class="box_mid_ops_button"> <div class="content_plus"></div> <div class="app_icon app_blogs"></div>Add Blog</button><ul class="box_mid_ops_button_ul"><li><a href="http://leaguebook.com/blogs/drafts">Drafts</a></li><li><a href="javascript:getBlogs()">Delete RSS Feeds</a> &bull;&nbsp;</li></ul></div>
                         </div>
-                        <div id="top_block_no_1421807"  class="movable" ><div class="box"><div class="box_top" id="block_title_no_3"><h2>Top Contributors</h2></div><div style="clear:both"></div><div class="box_mid box_mid_sidebar_ie_width_fix"><div class="content" id="block_no_1421807">No data yet...</div></div></div><div class="box_bottom"><span class="box_bottom_right"></span><span class="box_bottom_left"></span></div></div>
-                        <div id="top_block_no_1421808"  class="movable" >
-                            <div class="box">
-                                <div class="box_top" id="block_title_no_3">
-                                    <h2>Share</h2>
-                                </div>
-                                <div style="clear:both"></div>
-                                <div class="box_mid box_mid_sidebar_ie_width_fix">
-                                    <div class="content" id="block_no_1421808">
-                                        <script type="text/javascript" 
-                                        src="/gw.php?group_name=leaguebook&width=165px&fontfam=arial, helvetica, sans-serif&
-                                        fontsize=11&bkgcolor=f1f1f1&text_color=666&border_color=a4a4a4&gw_m_people=1&gw_m_people_amount=8&
-                                        gw_m_blogs=0&gw_m_blogs_amount=3&gw_m_talks=0&gw_m_talks_amount=3&gw_m_photos=0&gw_m_photos_amount=3&
-                                        gw_m_links=0&gw_m_links_amount=3&gw_m_wiki=0&gw_m_wiki_amount=3&gw_m_calendar=0&gw_m_calendar_amount=0&
-                                        gw_m_groups=0&gw_m_groups_amount=3&gw_m_videos=1&gw_m_videos_amount=0&gw_m_files=0&gw_m_files_amount=0&gw_m_latest=0&
-                                        gw_m_latest_amount=3&love_groups=0"></script>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="box_bottom"><span class="box_bottom_right"></span><span class="box_bottom_left"></span></div>
-                        </div>
-                        <div id="hidden_block_6"  style="display:none"  ><div class="box"><div style="clear:both"></div><div class="box_mid box_mid_sidebar_ie_width_fix"><div class="content" id="block_no_6"></div></div></div><div class="box_bottom"><span class="box_bottom_right"></span><span class="box_bottom_left"></span></div></div>
+                        <div id="top_block_no_2018886"  class="movable" ><div class="box"><div class="box_top" id="block_title_no_4"><h2>Did you know?</h2></div><div style="clear:both"></div><div class="box_mid box_mid_sidebar_ie_width_fix"><div class="content" id="block_no_2018886"><div class="adviseBlock">That you can post your blogs via email? <br><br> Simply email your blog text to <br> <b><a href="mailto:blog@leaguebook.com">blog@leaguebook.com</a></b> and your blog will be published to your group.</div></div></div></div><div class="box_bottom"><span class="box_bottom_right"></span><span class="box_bottom_left"></span></div></div>
+                        <div id="top_block_no_2018887"  class="movable" ><div class="box"><div class="box_top" id="block_title_no_4"><h2>Navigate</h2></div><div style="clear:both"></div><div class="box_mid box_mid_sidebar_ie_width_fix"><div class="content" id="block_no_2018887"><form method="POST" action="http://leaguebook.com/blogs/search">
+                                            <input type="text" id="module_search_text_aside" class="modules_search_text special_bg special_border special_text" name="bsq" placeholder="Search">
+                                            <input type="submit" class="modules_search_button" value="" />
+                                            <br>
+                                        </form></div></div></div><div class="box_bottom"><span class="box_bottom_right"></span><span class="box_bottom_left"></span></div></div>
+                        <div id="top_block_no_2018892"  class="movable" ><div class="box"><div class="box_mid box_mid_sidebar_ie_width_fix"><div class="content" id="block_no_2018892"><center></center></div></div></div><div class="box_bottom"><span class="box_bottom_right"></span><span class="box_bottom_left"></span></div></div>
                     </div>
                 </div>
             </div>
@@ -511,7 +321,7 @@
 
             <div id="groups_bar">
                 <span id="groups_search_button" class="button">
-                    <form id="search_form" action="http://leaguebook.com/people/search" method="POST" autocomplete="off">
+                    <form id="search_form" action="http://leaguebook.com/blogs/search" method="POST" autocomplete="off">
                         <input type="search" id="groups_search_text" name="q" placeholder="Search in group">
                     </form>
                 </span>
@@ -566,7 +376,7 @@
                 groups._info.userId = '13530230';
                 groups._info.userName = 'oajiivhbldxbldhwi';
                 groups._info.isMobile = '';
-                groups._info.module.name = 'videos';
+                groups._info.module.name = 'blogs';
                 groups._info.module.profileOwnerId = '';
                 groups._info.wikiPageCategoryId = '';
                 groups._info.wikiCategoryId = '';
@@ -581,7 +391,7 @@
     
                 groups._info.groupId = 704597;
                 groups._info.title = 'League book';
-                groups._info.moduleTitle = 'Videos';
+                groups._info.moduleTitle = 'Blogs';
                 groups._info.searchTypes = {'blogs':{title:'Blogs',actionURL:'http://leaguebook.com/blogs/search'},'chat':{title:'Chat',actionURL:'http://leaguebook.com/chat/search'},'people':{title:'Members',actionURL:'http://leaguebook.com/people/search'},'talks':{title:'Forum',actionURL:'http://leaguebook.com/talks/search'},'wiki':{title:'Wiki',actionURL:'http://leaguebook.com/wiki/search'},'files':{title:'Files',actionURL:'http://leaguebook.com/files/search'},'messages':{title:'Priv. Messages',actionURL:'http://leaguebook.com/dashboard/search_messages'}};
                 groups._info.language = 'english';
                 groups._info.languageRevision={custom:135260045,main:424,name:'english'};
@@ -730,7 +540,7 @@
 
 
                 /*ajax_javascript*/
-                window.applySajaxMethods = function(){['ExtraPages_addExtraPage','ExtraPages_getAddModulePanel','ExtraPages_get3rdAddModulePanel','ExtraPages_activateModules','ExtraBlocks_addBlock','ExtraBlocks_removeBlock','ExtraBlocks_selectBlock','ExtraBlocks_editBlock','ExtraBlocks_editBlockWithContentLimit','ExtraBlocks_savePageDesign','ExtraBlocks_getModulesListForModuleBox','video_changeButtonsHTML','getVideos','video_pages','shareVideo','selectVideo','editVideo','deleteVideo','showTaggedVideos','video_addComment','video_deleteComment','videos_addBlock','videos_removeBlock','videos_moveBlockUp','videos_moveBlockDown','videos_selectBlock','videos_editBlock','videos_pointUp','videos_pointDown','deleteAction','saveStatusMessage','getMemberActions','addTwitterAssociation','reportIssue','facebookconnect_signup','zendSupport','sendSupportTicket','facebookconnect_control','updateEntrySimple','pollVote','dont_show_change_layout','ExtraBlocks_getModulesListForModuleBox','getModulesListForModuleBox','ExtraBlocks_addBlock'].each(function(f){window["x_"+f]=function(){return _S(f, Array.prototype.slice.apply(arguments));};});};
+                window.applySajaxMethods = function(){['ExtraPages_addExtraPage','ExtraPages_getAddModulePanel','ExtraPages_get3rdAddModulePanel','ExtraPages_activateModules','ExtraBlocks_addBlock','ExtraBlocks_removeBlock','ExtraBlocks_selectBlock','ExtraBlocks_editBlock','ExtraBlocks_editBlockWithContentLimit','ExtraBlocks_savePageDesign','ExtraBlocks_getModulesListForModuleBox','xaddEntry','addComment','updateEntry','updateEntrySimple','deleteEntry','deleteComment','addBlogs','getBlogsAsHTML','deleteBlogs','blogs_addAction','publishDraft','deleteDraft','deleteAction','saveStatusMessage','getMemberActions','addTwitterAssociation','reportIssue','facebookconnect_signup','zendSupport','sendSupportTicket','facebookconnect_control','updateEntrySimple','pollVote','dont_show_change_layout','ExtraBlocks_getModulesListForModuleBox','getModulesListForModuleBox','ExtraBlocks_addBlock'].each(function(f){window["x_"+f]=function(){return _S(f, Array.prototype.slice.apply(arguments));};});};
 
                 /*ajax_functions*/
     
@@ -1199,589 +1009,10 @@
                     }
                 }
 
-                var VIDEOS_LIMIT_EXCEEDED = false;		var currentID = false;
-                var isMember =  true;
-                var group = 'leaguebook';
-                var oldTags = false;
-                var videos = false;
-
-                function changeButtonsHTML(mode) {
-                    switch(mode)
-                    {
-                        case 0:
-                            var html = '<form><input type="button" value="Upload New Video" onclick="uploadVideo();return false"/> <input type="button" value="Share Video" onclick="shareVideo();return false"/></form>';
-                            changeButtonsHTMLResult(html);
-                            break;
-                        case 1:
-                            x_video_changeButtonsHTML(currentID,changeButtonsHTMLResult);
-                            break;
-                        case 2:
-                            var html = '<form><input type="button" value="Show All Videos" onclick="showAllVideos()" />	<input type="button" value="Upload New Video" onclick="uploadVideo();return false"/> <input type="button" value="Share Video" onclick="shareVideo();return false"/></form>';
-                            changeButtonsHTMLResult(html);
-                            break;
-                    }
-                }
-
-                function changeButtonsHTMLResult(html) {
-                    var buttonsDiv = document.getElementById('block_no_3');
-                    buttonsDiv.innerHTML = html;
-                }
-
-                function showAllVideos() {
-                    groups.RenderController.renderPageBusy();
-                    x_getVideos(getPages);
-                }
-
-                function getPages(video_results) {
-                    videos = video_results;
-                    x_video_pages('http://com/','leaguebook','0','20',1,showAllVideosResult);
-                }
-
-                function showAllVideosResult(pages) {
-                    changeButtonsHTML(0);
-                    xDisplay("hidden_block_2","none");
-                    xDisplay("top_block_no_2","none");
-                    xDisplay("top_block_no_1","block");
-                    xDisplay("hidden_block_1","block");
-                    var videosDiv = document.getElementById('block_no_4');
-                    videosDiv.innerHTML = videos;
-                    var commentsDiv = document.getElementById('block_no_5');
-                    commentsDiv.innerHTML = pages;
-                    xDisplay("hidden_block_5","none");
-                    groups.RenderController.hideModal();
-                }
-
-                function showTaggedVideos(tag) {
-                    groups.RenderController.renderPageBusy();
-                    x_showTaggedVideos(tag,showTaggedVideosResult);
-                }
-
-                function showTaggedVideosResult(videos) {
-                    changeButtonsHTML(2);
-                    var videosDiv = document.getElementById('block_no_4');
-                    videosDiv.innerHTML = videos;
-                    xDisplay("hidden_block_5","none");
-                    groups.modalBox.hide();
-                }
-
-                function old_uploadVideo() {
-                    var txt = '<h1><span class="module_box_icon module_box_videos"></span>Upload New Video</h1>';
-                    if(VIDEOS_LIMIT_EXCEEDED) {
-                        txt += '<div class="info">The group has exceeded the storage limit. <a href="javascript:groups.RenderController.hideModal()">Click</a> to continue...</div>';
-                        groups.RenderController.showModal(txt);
-                    }
-                    else {
-                        if(false) {
-                            // txt += 'Video upload <u>temporarily</u> disabled. You may try sharing via embed code.';
-                            uploadAlternative();
-                        }
-                        else {
-                            if(isMember) {
-                                txt += '<form class=\"groupsForm\"method="POST" action="http://leaguebook.com/videos/upload" enctype="multipart/form-data">';
-                                txt += '<label class=\"formTitle\">Video File:</label>';
-                                txt += '<div><input type="hidden" name="traditional" value="1" /></div>';
-                                txt += '<div><input required="1" type="file" id="upload" name="upload" onfocus="inputfocus(this)" onblur="inputblur(this)" /></div><div class="FormSubText">Max 50 MB</div>';
-
-                                txt += '<label class=\"formTitle\">Title:</label><div><input type="text" id="utitle" name="utitle" onfocus="inputfocus(this)" onblur="inputblur(this)" required="1" realname="Title" /></div>';
-                                txt += '<label class=\"formTitle\">Tags:</label><div><input type="text" id="utags" name="utags" realname="Tags" onfocus="inputfocus(this)" onblur="inputblur(this)" /></div><div class=\"FormSubText\">Separate by comma</div>';
-                                txt += '<div class=\"module_box_button_container\"><input type="button" class="cancel_button" value="Cancel" onclick="groups.RenderController.hideModal()" /><input type="button" value="Upload" onclick="old_uploadVideoSubmit(this.form,this)" /></div></form>';
-
-                            } else
-                                txt = 'You could share video if you were a member. <a href="http://com/'+group+'/join">Click to join this group!</a>';
-                            groups.RenderController.showModal(txt);
-                        }
-
-                    }
-                }
-
-                function uploadVideo(default_panel) {
-                    replacements =
-                        {
-                        max_size_string: 'Max 50 MB',
-                        facebook_share: '',
-                        domname : 'http://leaguebook.com',
-                        xhost: 'http://leaguebook.com/',
-                        group_name: 'leaguebook',
-                        is_share_enabled: '',
-                        share_from_anywhere_string: '',
-                        share_from_anywhere_html: '',
-                        share_from_supported_service: '',
-                        supported_services: '',
-                        hidden_form_uploader: ''
-                    };
-
-                    if(VIDEOS_LIMIT_EXCEEDED) {
-                        groups.notifier.show('error', 'The group has exceeded the storage limit.');
-                        return;
-                    }
-                    else if (groups._info.userId == "0")
-                    {
-                        groups.notifier.show('error', 'You could share video if you were a member. <a href="http://leaguebook.com/join">Click to join this group!</a>');
-                        return;
-                    }
-
-                    replacements.supported_services = '<div class="FormSubText">YouTube &bull; MetaCafe &bull; DailyMotion</div>';replacements.share_from_supported_service = '<input required="1" type="text" id="link" value="http://" onfocus="inputfocus(this)" onblur="inputblur(this)" />';replacements.tags_as_html = '<label class="formTitle">Tags:</label><div><input type="text" id="utags" name="utags" realname="Tags" /></div><div class="FormSubText">Separate by comma</div>';replacements.tags_as_share = '<label class="formTitle">Tags:</label><div><input type="text" id="tags" onfocus="inputfocus(this);" onblur="inputblur(this);" /></div><div class="FormSubText">Separate by comma</div>';
-                    groups.modalBox.show(
-                    'uploadVideos',
-                    {
-                        replacements: replacements,
-                        afterShow: function()
-                        {
-                            window.setTimeout(function(){
-
-                                Prototype.Browser.IE9 = Prototype.Browser.IE && parseInt(navigator.userAgent.substring(navigator.userAgent.indexOf("MSIE")+5)) == 9;
-                                if(Prototype.Browser.IE9) {
-                                    $('videos_from_computer').observe('click', respond);
-                                    function respond(event) {
-                                        old_uploadVideo();
-                                    }
-                                }
-
-                                groups._uploader = new SWFUpload({
-                                    // Backend Settings
-                                    upload_url: "/includes/php_lib/fuploader/upload.php",
-                                    file_post_name: "SolmetraUploader",
-
-                                    //tags
-
-                                    // File Upload Settings
-                                    file_size_limit : "506001",	// 500 Mb
-                                    file_types : "*.avi;*.mpg;*.mpeg;*.mp4;*.mov;*.wmv;*.flv",
-                                    file_types_description : "Video Files",
-                                    file_upload_limit : "0",
-                                    file_queue_limit : "1",
-
-                                    // Event Handler Settings
-                                    file_queued_handler : fileQueued,
-                                    file_queue_error_handler : fileQueueError,
-                                    file_dialog_complete_handler : fileDialogComplete,
-                                    upload_start_handler : uploadStart,
-                                    upload_progress_handler : uploadProgress,
-                                    upload_error_handler : uploadError,
-                                    upload_success_handler : uploadSuccess,
-                                    upload_complete_handler : uploadComplete,
-
-                                    // Button Settings
-                                    button_placeholder_id : "spanButtonPlaceholder2",
-                                    button_image_url: '/images/ButtonUploadBg2.png',
-                                    button_width: 383,
-                                    button_height: 27,
-                                    button_text_top_padding: 5,
-                                    button_text: '<span class="button">' + groups.i18n('Select a video file') + '</font>',
-                                    button_text_style: '.button{font-family: "Tahoma"; text-align: center;}',
-
-                                    // Flash Settings
-                                    flash_url : "/includes/swfupload/swf/swfupload.swf",
-
-                                    swfupload_element_id : "flashUI2",		// Setting from graceful degradation plugin
-                                    degraded_element_id : "degradedUI2",	// Setting from graceful degradation plugin
-
-                                    custom_settings : {
-                                        progressTarget : "fsUploadProgress2",
-                                        cancelButtonId : "btnCancel2"
-                                    }
-                                });}, 75);
-
-                            default_panel = 1;
-                            // alert('Default Panel | ' + default_panel);
-                            if (default_panel == 1) {
-                                if ($("tabVideos")) {
-                                    new ProtoTabs('tabVideos', {defaultPanel: 'videos_from_computer-content'});
-                                }
-                            } else {
-                                if ($("tabVideos")) {
-                                    new ProtoTabs('tabVideos', {defaultPanel:'videos_from_share-content'});
-                                }
-                            }
-                        }
-                    }
-                );
-                }
-
-                function uploadVideoSubmit(formobj)
-                {
-                    if(!validateCompleteForm(formobj,'error'))
-                        return false;
-
-                    var uploaderStats = groups._uploader.getStats();
-                    if (uploaderStats.files_queued && !uploaderStats.successful_uploads)
-                    {
-                        groups._uploader.startUpload();
-                        return false;
-                    }
-                    else if (!uploaderStats.files_queued && !uploaderStats.successful_uploads)
-                    {
-                        groups.notifier.show('info', 'You should select a file to upload.');
-                        return false;
-                    }
-
-                    var shareOnFacebook = document.getElementById('share_on_facebook');
-                    if(shareOnFacebook && shareOnFacebook.checked && !formobj.__fbcheck)
-                    {
-                        formobj.__fbcheck = true;
-                        FB.Facebook.apiClient.users_hasAppPermission(
-                        "publish_stream",
-                        function(res)
-                        {
-
-                            formobj.submit();
-                        }
-                    );
-                        return false;
-                    }
-                    return true;
-                }
-
-                function old_uploadVideoSubmit(formobj,b) {
-                    if(!validateCompleteForm(formobj,'error')) return false;
-                    b.value = "Uploading...";
-                    b.disabled = true;
-                    formobj.submit();
-                }
-
-		
-
-                current_operation = 'share';
-                function shareVideo() {
-
-                    var txt = '<h1>Share Video</h1>';
-                    if(isMember) {
-                        txt += '<iframe style="display:none" id="thumbnail_upload_frame" name="thumbnail_upload_frame"></iframe>';
-                        txt += '<form class="groupsForm" name="tmb_uploader" id="tmb_uploader" action="http://leaguebook.com/includes/videos_thumbnail_uploader.php" ENCTYPE="multipart/form-data" method="post" target="thumbnail_upload_frame">';
-                        txt += '<input type="hidden" name="group_name" id="group_name" value="leaguebook" />';
-                        txt += '<input type="hidden" name="video_on_groups" id="video_on_groups" value="" />';
-                        txt += '<input type="hidden" name="action" id="action" value="share" />';
-                        txt += '<div id="share_video_link"><label class="formTitle">Video Link:</label>';
-                        txt += '<div><input required="1" type="text" id="link" value="http://" onfocus="inputfocus(this)" onblur="inputblur(this)" /></div><div class="FormSubText">YouTube &bull; MetaCafe &bull; DailyMotion</div>';				txt += '<label class="formTitle">Title:</label><div><input required="1" type="text" id="title" onfocus="inputfocus(this)" onblur="inputblur(this)" /></div>';
-                        txt += '<label class="formTitle">Tags:</label><div><input type="text" id="tags" onfocus="inputfocus(this)" onblur="inputblur(this)" /></div><div class="FormSubText">Separate by comma</div>';
-                        txt += '<div id="video_thumb_question_div"><a href="javascript:showThumbnailUploadForm()">Do you want to upload a custom thumbnail for this video?</a></div>';
-                        txt += '<div id="video_thumb_div" style="display:none"><label class="formTitle">Thumbnail:</label><div><input type="file" name="thumbnail" id="thumbnail"/></div></div>';        txt += '<div><input type="button" value="Share" onclick="shareVideoSubmit(this.form)" /><input type="button" class="cancel_button" value="Cancel" onclick="groups.RenderController.hideModal()" /></form>';
-                    } else
-                        txt = 'You could share video if you were a member. <a href="http://leaguebook.com/join">Click to join this group!</a>';
+                function addBlogs() {
+                    var txt = '<h1><span class="module_box_icon module_box_blogs"></span>Add External Blogs</h1>External feeds are not available. Click <a href="javascript:groups.RenderController.hideModal()">here</a> to go back.';
                     groups.RenderController.showModal(txt);
                 }
-
-                function showThumbnailUploadForm() {
-                    xDisplay('video_thumb_question_div','none');
-                    xDisplay('video_thumb_div','block');
-                }
-
-                var custom_thumbnail = 0;
-                function shareVideoSubmit(formobj) {
-                    current_operation = 'share';
-                    if(!validateCompleteForm(formobj,'error')) return false;
-                    var link = xGetElementById('link').value;
-                    var title = xGetElementById('title').value;
-                    var tags = xGetElementById('tags').value;
-                    var shareOnFacebook = document.getElementById('share_on_facebook');
-                    if(xGetElementById('thumbnail').value)
-                        custom_thumbnail = 1;
-
-                    //groups.RenderController.renderPageBusy();
-                    groups.RenderController.hideModal();
-                    groups.notifier.show('loader','Loading...');
-                    if( !shareOnFacebook ) {
-                        x_shareVideo(link,title,tags,custom_thumbnail,0,shareVideoResult);
-                    } else {         if(shareOnFacebook.checked) {
-                            x_shareVideo(link,title,tags,custom_thumbnail,1,shareVideoResult);
-                        } else {
-                            x_shareVideo(link,title,tags,custom_thumbnail,0,shareVideoResult);
-                        }
-                    }		}
-
-                function shareVideoResult(video) {
-                    if(video[0]===1) {
-                        if(custom_thumbnail) {
-                            custom_thumbnail = 0;
-                            xGetElementById('loader').innerHTML = '<blink>You have successfully shared the video. Now uploading thumbnail of the video, please wait...</blink>';
-                            xGetElementById('video_on_groups').value = video[1];
-                            document.tmb_uploader.submit();
-                        } else {
-                            window.location.href = video[1];
-                        }
-                    } else if(video[0]===0) {
-                        var txt = video[1];
-                        groups.RenderController.showModal('<h1>Share Video</h1>'+txt);
-                    } else {
-                        if(custom_thumbnail) {
-                            current_operation='moderation';
-                            custom_thumbnail = 0;
-                            //xGetElementById('loader').innerHTML = '<blink>Your video is successfully added to the moderation queue. Now uploading thumbnail of the video, please wait...</blink>';
-                            groups.notifier.show('success','Your video is successfully added to the moderation queue. Now uploading thumbnail of the video, please wait...');
-                            xGetElementById('video_on_groups').value = 'http://leaguebook.com/videos/'+video[2];
-                            document.tmb_uploader.submit();
-                        } else {
-                            var txt = video[1];
-                            popup_ajax('<h1>Share Video</h1>'+txt);
-                            //groups.RenderController.showModal
-                        }
-                    }
-                }
-
-                function uploadThumbnailResult(msg,success) {
-                    //alert('HOP THUMBNAIL LOADED MSG '+msg+'Success'+success);
-                    //xGetElementById('loader').innerHTML = '<blink>Loading...</blink>';
-                    if(success=='1') {
-                        if(current_operation=='moderation') {
-                            //window.location.href = 'http://leaguebook.com/videos';
-                            groups.notifier.show('success','Your video thumbnail has been uploaded successfully.');
-                        }
-                        else {
-                            window.location.href = msg;
-                        }
-                    }
-                    else {
-
-                        var txt = '';
-
-                        if(current_operation!='edit'&&current_operation!='moderation') {
-                            txt += '<h1>Share Video</h1>';
-                            txt += '<div class="info">Your video has been shared but the thumbnail could not be uploaded. ';
-                        }
-                        else if(current_operation=='moderation') {
-                            txt += '<h1>Share Video</h1>';
-                            txt += '<div class="info">Your video has been added to the moderation queue but the thumbnail could not be uploaded. ';
-                        }
-                        else {
-                            txt += '<h1>Edit Video</h1>';
-                            txt += '<div class="info">Your video has been edited but the thumbnail could not be uploaded. ';
-                        }
-
-                        txt += msg + '</div>';
-                        groups.RenderController.showModal(txt);
-                    }
-                }
-
-                function selectVideo(video) {
-                    groups.RenderController.renderPageBusy();
-                    x_selectVideo(video,editVideo);
-                }
-
-                function editVideo(video) {
-                    var id = video[0];
-                    if(id>0) {
-                        var title = video[1];
-                        var tags = video[2];
-                        var thumbnail = video[3];
-
-                        var link = video[4];
-                        oldTags = tags;
-                        var txt = '<h1><span class="module_box_icon module_box_videos"></span>Edit Video</h1>';
-                        txt += '<iframe style="display:none" id="thumbnail_upload_frame" name="thumbnail_upload_frame"></iframe>';
-                        txt += '<form class="groupsForm" name="tmb_uploader" id="tmb_uploader" action="http://leaguebook.com/includes/videos_thumbnail_uploader.php" ENCTYPE="multipart/form-data" method="post" target="thumbnail_upload_frame">';
-                        txt += '<input type="hidden" name="group_name" id="group_name" value="leaguebook" />';
-                        txt += '<input type="hidden" name="video_on_groups" id="video_on_groups" value="'+link+'" />';
-                        txt += '<input type="hidden" name="action" id="action" value="edit" />';
-                        txt += '<div><input type="hidden" id="id" value="'+id+'"/></div>';
-                        txt += '<label class="formTitle">Video Title:</label><div><input required="1" type="text" id="title" value="'+title+'" onfocus="inputfocus(this)" onblur="inputblur(this)" /></div>';
-                        txt += ''+tags+'';
-                        if(thumbnail!='') {
-                            txt += '<div><img src="'+thumbnail+'"/></div>';
-                        }
-                        txt += '<label class="formTitle">Thumbnail:</label><div><input type="file" name="thumbnail" id="thumbnail" value="'+thumbnail+'"/></div>';
-                        txt += '<div class="module_box_button_container"><input type="button" class="cancel_button" value="Cancel" onclick="groups.RenderController.hideModal()" /><input type="button" value="Submit" onclick="editVideoSubmit(this.form)" /></div></form>';
-                        groups.RenderController.showModal(txt);
-                    } else {
-                        groups.RenderController.hideModal();
-                        alert("Temporary error! Please try again later...");
-                    }
-                }
-
-                function editVideoSubmit(formobj) {
-                    current_operation = 'edit';
-                    if(!validateCompleteForm(formobj,'error')) return false;
-                    var id = xGetElementById('id').value;
-                    var title = xGetElementById('title').value;
-                    var newTags = xGetElementById('tags').value;
-                    var thumbnail = xGetElementById('thumbnail').value;
-                    if(thumbnail!='')
-                        custom_thumbnail = 1;
-                    groups.RenderController.renderPageBusy();
-                    x_editVideo(id,title,oldTags,newTags,editVideoResult);
-                }
-
-                function editVideoResult(res) {
-                    if(!res[0]) {
-                        groups.RenderController.hideModal();
-                        alert(res[1]);
-                    } else {
-                        if(!custom_thumbnail) {
-                            window.location.href = res[1];
-                        }
-                        else {
-                            groups.notifier.show('success','You have successfully edited the video. Now uploading new thumbnail of the video, please wait...');
-                            custom_thumbnail = 0;
-                            document.tmb_uploader.submit();
-                        }
-                    }
-                }
-
-                function deleteVideo(id) {
-                    var confirmDelete = confirm('Are you sure you want to delete the video and all of the comments and tags of it?');
-                    if(confirmDelete)
-                    {
-                        groups.RenderController.renderPageBusy();
-                        x_deleteVideo(id,deleteVideoResult);
-                    }
-                }
-
-                function deleteVideoResult(res) {
-                    if(!res[0]) {
-                        groups.RenderController.hideModal();
-                        alert(res[1]);
-                    } else {
-                        window.location.href = res[1];
-                    }
-                }
-
-
-
-                function lastvideos() {
-
-                }
-
-                var initial_comment_value = 1;
-                function empty_comment(obj) {
-                    if(initial_comment_value==1) {
-                        obj.value="";
-                        initial_comment_value = 0;
-                    }
-                }
-
-                function addVideosComment(id,formobj) {
-                    if(!validateCompleteForm(formobj,'error')) return false;
-                    groups.RenderController.renderPageBusy();
-                    var comment = xGetElementById('videos_comment').value;
-                    x_video_addComment(id,comment,addVideosCommentResult);
-                }
-
-                function addVideosCommentResult(res) {
-                    if(!res[0]) {
-                        alert('Failure: '+res[1]);
-                        groups.RenderController.hideModal();
-                    } else {
-                        groups.RenderController.hideModal();
-                        alert("Your comment has been added!");
-                    }
-                }
-
-                function deleteVideosComment(id,page_id) {
-                    var confirmDelete = confirm('Are you sure you want to delete the comment?');
-                    if(confirmDelete) {
-                        groups.RenderController.renderPageBusy();
-                        x_video_deleteComment(id,page_id,deleteVideosCommentResult);
-                    }
-                }
-
-                function deleteVideosCommentResult(res) {
-                    groups.RenderController.hideModal();
-                    if(!res[0]) {
-                        alert(res[1]);
-                    } else {
-                        alert("The comment has been deleted!");
-                    }
-                }
-
-                // TINYPIC PLUGIN
-                var plugin_id = Math.floor(Math.random()*1000000);
-
-                function getParameter(queryString, parameterName) {
-                    var parameterName = parameterName + "=";
-                    if(queryString.length > 0) {
-                        begin = queryString.indexOf(parameterName);
-                        if(begin != -1) {
-                            begin += parameterName.length;
-                            end = queryString.indexOf("&", begin);
-                            if(end == -1) {
-                                end = queryString.length;
-                            }
-                            return unescape(queryString.substring(begin, end));
-                        }
-                        return "";
-                    }
-                }
-
-                function showTinypicPlugin(){
-                    var el = document.getElementById('tinypic_plugin_'+plugin_id);
-                    el.style.display = '';
-                    if (el.src != '')
-                    {
-                        return;
-                    }
-                    var w = 260;
-                    var h = 246;
-                    curl = '';
-                    ctxt = '';
-
-                    tinypic_layout = 'narrow';
-                    tinypic_type = 'videos';
-                    tinypic_links = 'html';
-                    tinypic_language = 'en';
-                    tinypic_search = 'false';
-                    tinypic_callback_url = 'http%3A//com/tinypic_test.php';
-                    tinypic_callback_text = 'test';
-                    if (typeof(tinypic_callback_url) != 'undefined')
-                        curl = "|cu,"+tinypic_callback_url.replace(/\&/g, '%26');;
-                    if (typeof(tinypic_callback_text) != 'undefined')
-                        ctxt = "|ct,"+tinypic_callback_text.replace(/\&/g, '%26');;
-
-                    el.setAttribute("height", h);
-                    el.setAttribute("width", w);
-                    el.setAttribute("scrolling", "no");
-
-                    var tpurl = "http://plugin.tinypic.com/plugin/index.php?popts=l,"+tinypic_layout+"|t,"+tinypic_type+"|c,"+tinypic_links+"|i,"+tinypic_language+"|s,"+tinypic_search;
-                    if (curl)
-                        tpurl += curl;
-                    if (ctxt)
-                        tpurl += ctxt;
-                    el.src = tpurl;
-                }
-
-                function uploadAlternative() {
-                    groups.RenderController.showModal('<h1>Upload New Video</h1>Because of some glitches in the Amazon side, we implemented an alternative uploader. Upload your video via the plug-in, copy the embed code that plug-in showed. Then click <a href="javascript:shareFromAnywhere(true)">here</a> to share...<br /><br /><iframe id="tinypic_plugin_'+plugin_id+'" frameborder="0" style="display: none;" scrolling="no"></iframe><br/>');
-                    showTinypicPlugin();
-                }
-                function click_point_up(videoID) {
-                    groups.RenderController.renderPageBusy();
-                    x_videos_pointUp(videoID,click_point_up_res);
-                }
-
-                function click_point_down(videoID) {
-                    groups.RenderController.renderPageBusy();
-                    x_videos_pointDown(videoID,click_point_down_res);
-                }
-
-
-                function click_point_up_res(res) {
-
-                    if(res[0]) {
-                        videoID = parseInt(res[1]);
-                        point = parseInt(document.getElementById('video_point_1').innerHTML);
-                        swapContent('video_point_1',800,point + 1);
-                        document.getElementById('rate_content').innerHTML = '<a href="javascript:void(click_point_down('+videoID+'))" ><img align="absbottom" src="http://com/images/fugue/star-small.png">Liked</a>';
-                        groups.RenderController.hideModal();
-                    }
-                    else {
-                        groups.RenderController.hideModal();
-                    }
-                }
-
-
-                function click_point_down_res(res) {
-
-                    if(res[0]) {
-                        videoID = parseInt(res[1]);
-                        point = parseInt(document.getElementById('video_point_1').innerHTML);
-                        swapContent('video_point_1',800,point - 1);
-                        document.getElementById('rate_content').innerHTML = '<a href="javascript:void(click_point_up('+videoID+'))" ><img align="absbottom" src="http://com/images/fugue/star-small-empty.png">Like</a>';
-                        groups.RenderController.hideModal();
-                    }
-                    else {
-                        groups.RenderController.hideModal();
-                    }
-
-                }
-
 
                 /*function to run onload*/
                 groups.platform_ready = function(){

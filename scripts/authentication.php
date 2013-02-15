@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 				session_start();
 				$_SESSION['sess_login'] = true;
 				$_SESSION['acct'] = $email;
-				header ("Location: ../userhomepage/userhomepage.html");
+				header ("Location: ../userhomepage/userhomepage.php");
 			}
 			else {
 				session_start();

@@ -1,21 +1,18 @@
+<?PHP
+		session_start();
+		if (isset($_SESSION['sess_login']) && $_SESSION['sess_login'] == 1) {
+			
+		} else {
+			header ('Location: ../index.html');
+		}
+?>
 <!DOCTYPE html>
 <html dir="ltr">
     <head>
-		<?PHP
-
-			session_start();
-
-			if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
-
-			header ("Location: ../index.html");
-
-			}
-
-		?>
-        <title>League book | Private social network</title>
+        <title>Scrims | League book</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
-        <meta name="Keywords" content="">
+        <meta name="Keywords" content=",Groups">
         <meta name="Description" content="Private social network">
         <meta name="Generator" content="com 2.0">
         <meta name="Robots" content="index">
@@ -23,7 +20,7 @@
         <link rel="stylesheet" type="text/css" href="../css/style.css" id="groups_template_style">
         <link rel="stylesheet" type="text/css" href="../css/general.css">
         <link rel="index" title="League book" href="http://leaguebook.com">
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="">
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="http://com/rss/leaguebook/groups">
         <link href="../css/style.css" rel="stylesheet" type="text/css">
         <link href="../css/#.css" rel="stylesheet" type="text/css">
         <link href="../css/# #2.css" rel="stylesheet" type="text/css">
@@ -65,7 +62,19 @@
 
 
         <!-- ehc -->
+        <style type="text/css">
+            #subgroup_desc { margin-bottom: 10px; background-color: #FFF; }
+            #subgroup_desc div { margin-bottom:0px; }
 
+            /* calendar */
+            .calender_item { margin: 0 0 15px 0; }
+            .calendar_icon { color: #333; background: url(http://com/images/calendar.png) no-repeat; width: 41px; height: 30px; text-align: center; padding: 22px 0 0 0; line-height: 14px; float: left; margin: 0 10px 0 0; }
+            .calendar_icon .day { font-size: 18px; }
+            .calendar_icon .month { font-size: 10px; }
+            .calender_title { font-weight: bold; margin: 0 0 3px 0; }
+            .calender_header { padding: 0 0 5px 0; margin: 0 0 5px 0; font-weight: bold; }
+            .calender_details { margin: 15px 0 0 0; width: 100%; }
+        </style>
         <!-- /ehc -->
 
         <link href="/public/css/groups/groups.notification.menus.css?15997" rel="stylesheet" type="text/css">
@@ -135,7 +144,7 @@
 
             }
         </script>
-        <div id="layout" class="module_dashboard privacy_settings">
+        <div id="layout" class="module_groups ">
             <div id="header">
                 <div id="hgroups">
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -235,71 +244,101 @@
                 </div>
             </div>
 
-            <div id="contentWrapper" class="flexi">
+            <div id="contentWrapper" class="">
                 <div id="aSide">
                     <div id="userProfileBlock">
                         <a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi"><img
-                                src="http://leaguebook.com/avatars/b/80.png"
+                                src="no_image.png"
                                 alt="Levi Limmex"
                                 width="50" height="50"></a>
-                        <h1><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi">Levi Limmex</a></h1>
+                        <h1><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi">L6vi</a></h1>
                         <p><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi/edit">Edit Profile</a></p>
-                    </div>
-
-					<div id="menu">
+                    </div>              
+                    <div id="menu">
                         <ul id="nav" class="level1">
-                            <li id="menu_item_17306106" >
-                                <a href="../userhomepage/userhomepage.html"><span>Home</span></a>
+                            <li id="menu_item_17306106" class="selected" >
+                                <a href="../userhomepage/userhomepage.php"><span>Home</span></a>
                             </li>
                             <li id="menu_item_17306107" >
-                                <a href="../myprofile/myprofile.html" z=""><span>My Profile</span></a>
+                                <a href="../myprofile/myprofile.php" z=""><span>My Profile</span></a>
                             </li>
                             <li id="menu_item_17306108" >
-                                <a href="../friends/friends.html"><span>Friends</span></a>
+                                <a href="../friends/friends.php"><span>Friends</span></a>
                             </li>
                             <li id="menu_item_17306109" >
-                                <a href="../invite/invite.html" z=""><span>Invite</span></a>
+                                <a href="../invite/invite.php" z=""><span>Invite</span></a>
                             </li>
                             <li id="menu_item_17306110" >
-                                <a href="../teams/teams.html"><span>Teams</span></a>
+                                <a href="../teams/teams.php"><span>Teams</span></a>
                             </li>
                             <li id="menu_item_17306111" >
-                                <a href="../screenshots/screenshots.html"><span>Screenshots</span></a>
+                                <a href="../screenshots/screenshots.php"><span>Screenshots</span></a>
                             </li>
                             <li id="menu_item_17306112" >
-                                <a href="../videos/videos.html"><span>Videos</span></a>
+                                <a href="../videos/videos.php"><span>Videos</span></a>
                             </li>
                             <li id ="menu_item_17306113" >
-                                <a href="../scrims/scrims.html"><span>Scrims</span></a>
+                                <a href="../scrims/scrims.php"><span>Scrims</span></a>
                             </li>
                             <li id="menu_item_17306114" >
-                                <a href="../blogs/blogs.html"><span>Blogs</span></a>
+                                <a href="../blogs/blogs.php"><span>Blogs</span></a>
                             </li>
                         </ul>
                         <div style="clear:both;"></div>
-                    </div>                    
+                    </div>                
 					<ul id="subGroupsBlock">
-                        <h3><a href="../teams/teams.html">Teams</a></h3>
+                        <h3><a href="../teams/teams.php">Teams</a></h3>
                         <li>
-							<a href=" ../teams/SampleTeam/SampleTeamA.html">Sample Teams</a>
+							<a href=" ../teams/SampleTeam/SampleTeamA.php">Sample Teams</a>
 						</li>
-					</ul>
-
-                </div>           
-                <div id="content"><div class="col_menu" id="col_sidebar">
-                        <div id="top_block_no_2"  ><div class="box_mid_ops"><div class="content" id="block_no_2">    <div class="menu_list">
-                                        <a style="background-image: url(http://com/images/fugue/user--pencil.png)"  href="http://leaguebook.com/dashboard/myprofile">Edit My Profile</a>
-                                        <!--<a style="background-image: url(http://com/images/fugue/gear.png)"  href="http://leaguebook.com/dashboard/preferences">Preferences</a>-->
-                                        <a style="background-image: url(http://com/images/fugue/lock.png)"  href="http://leaguebook.com/dashboard/password">Change Credentials</a>
-                                        <a style="background-image: url(http://com/images/fugue/wall--pencil.png)"  href="http://leaguebook.com/dashboard/privacy_settings">Privacy Settings</a>
-                                        <a style="background-image: url(http://com/images/fugue/mail--plus.png)"  href="http://leaguebook.com/dashboard/compose_message">Compose New Message</a>
-                                        <a style="background-image: url(http://com/images/fugue/mail--pencil.png)"  href="http://leaguebook.com/dashboard/email_settings">E-mail Settings</a>
-                                        <a style="background-image: url(http://com/images/fugue/mails-stack.png)"  href="http://leaguebook.com/dashboard/messages">My Incoming Messages</a>
-                                        <a style="background-image: url(http://com/images/fugue/user--plus.png)"  href="http://leaguebook.com/dashboard/spread">Invite People!</a>
-                                        <a style="background-image: url(http://com/images/fugue/door-open-out.png)"  href="http://leaguebook.com/dashboard/signout">Sign Out</a>
-                                    </div></div></div><div class="box_bottom_ops"> </div></div></div>
-                    <div class="col_main_in_withmenubar">
-                        <div id="top_block_no_1"  ><div class="box"><div class="box_top" id="block_title_no_1"><h2>Privacy Settings</h2></div><div style="clear:both"></div><div class="box_mid"><div class="content" id="block_no_1"><form method="POST" action="http://com/leaguebook/dashboard/privacy_settings" class="siteForm"><div class="siteFormContainer">   <div class="siteFormTitle" style="width:250px !important">My profile page can be viewed by</div>   <div class="siteFormBody" style="width:250px !important">      <input type="radio" name="my_profile_page" id="my_profile_page_0" value="A" checked /> <label for="my_profile_page_0"> Everyone</label><br>      <input type="radio" name="my_profile_page" id="my_profile_page_1" value="G"  /> <label for="my_profile_page_1"> Only group members</label><br>      <input type="radio" name="my_profile_page" id="my_profile_page_2" value="F"  /> <label for="my_profile_page_2"> Just my friends</label>   </div></div><div class="siteFormContainer">   <div class="siteFormTitle" style="width:250px !important">My blogs, photos and videos can be viewed by</div>   <div class="siteFormBody" style="width:250px !important">      <input type="radio" name="my_bpv_page" id="my_bpv_page_0" value="A" checked /> <label for="my_bpv_page_0"> Everyone</label><br>      <input type="radio" name="my_bpv_page" id="my_bpv_page_1" value="G"  /> <label for="my_bpv_page_1"> Only group members</label><br>      <input type="radio" name="my_bpv_page" id="my_bpv_page_2" value="F"  /> <label for="my_bpv_page_2"> Just my friends</label>   </div></div><div class="siteFormContainer">   <div class="siteFormTitle" style="width:250px !important">My blogs, photos and videos can be commented by</div>   <div class="siteFormBody" style="width:250px !important">      <input type="radio" name="my_bpv_comment" id="my_bpv_comment_0" value="A" checked /> <label for="my_bpv_comment_0"> Everyone</label><br>      <input type="radio" name="my_bpv_comment" id="my_bpv_comment_1" value="G"  /> <label for="my_bpv_comment_1"> Only group members</label><br>      <input type="radio" name="my_bpv_comment" id="my_bpv_comment_2" value="F"  /> <label for="my_bpv_comment_2"> Just my friends</label>   </div></div><div class="siteFormSubmit">   <div class="siteFormTitle" style="width:33%">&nbsp;</div>   <div class="siteFormBody" style="width:64%">       <input type="hidden" name="social_graph_settings" value="1">       <input value="Save" type="submit">   </div></div></form></div></div></div><div class="box_bottom"><span class="box_bottom_right"></span><span class="box_bottom_left"></span></div></div>
+					</ul>     
+                </div>            
+                <div id="content"><div id="col_main" class="col_main">
+                        <div id="top_block_no_1"  ><div class="box"><div class="box_top" id="block_title_no_1"><h2>Your available Scrims:</h2></div><div style="clear:both"></div><div class="box_mid"><div class="content" id="block_no_1"><table id="group_container" class="thumbnail_view"><tr><td ><a href="http://leaguebook.com/groups/267317" title="Sample Group"><img alt="Sample Group" src="http://com//images/supgroup_def.png" width="80" height="80" class="tv_image" /><span class="tv_caption">Team that was challenged</a><span class="tv_info"><br><a href="http://leaguebook.com/groups/267317"><strong>1</strong></a> member(s)</span></td></tr></table>		<div style="display:none;">
+                                            <form action="http://leaguebook.com/groups" id="sorterform" method="POST">
+                                                <div style="margin-bottom:2px;"><input type="hidden" name="sort_by" id="sorterselect" style="width:150px;" />
+                                                    <!--
+                                                    <option value="date">Sort By Date</option>
+                                                    <option value="title">Sort By Title</option>
+                                                    <option value="member_count">Sort By Members Count</option>
+                                                    </select>
+                                                    --></div>
+                                                <input type="submit" name="sort_submit" value="Reload" />
+                                            </form>
+                                        </div>
+                                        <script>
+                                            function sortBy(w) {
+                                                document.getElementById('sorterselect').value = w;
+                                                document.getElementById('sorterform').submit();
+                                            }
+                                        </script></div></div></div><div class="box_bottom"><span class="box_bottom_right"></span><span class="box_bottom_left"></span></div></div>
+                        <div id="top_block_no_2"  ><div class="box"><div class="box_top" id="block_title_no_2"><h2>					
+                                    </h2></div><div style="clear:both"></div><div class="box_mid"><div class="content" id="block_no_2"><table id="group_container" class="thumbnail_view"><tr><td ><a href="http://leaguebook.com/groups/267317" title="Sample Group"><img alt="Sample Group" src="http://com//images/supgroup_def.png" width="80" height="80" class="tv_image" /><span class="tv_caption">Challenger</a><span class="tv_info"><br><a href="http://leaguebook.com/groups/267317"><strong>1</strong></a> member(s)</span></td></tr></table>		<div style="display:none;">
+                                            <form action="http://leaguebook.com/groups" id="sorterform" method="POST">
+                                                <div style="margin-bottom:2px;"><input type="hidden" name="sort_by" id="sorterselect" style="width:150px;" />
+                                                    <!--
+                                                    <option value="date">Sort By Date</option>
+                                                    <option value="title">Sort By Title</option>
+                                                    <option value="member_count">Sort By Members Count</option>
+                                                    </select>
+                                                    --></div>
+                                                <input type="submit" name="sort_submit" value="Reload" />
+                                            </form>
+                                        </div>
+                                        <div class="col_side" id="col_sidebar">
+                                            <div id="top_block_no_2"  >	<div class="box_mid_ops_button_cont"><button class="box_mid_ops_button add_content" onClick="javascript:uploadVideo();"><div class="content_plus"></div><div class="app_icon app_videos"></div>View next Available Scrim</button></div>
+                                            </div>
+                                            <div id="hidden_block_6"  style="display:none"  ><div class="box"><div style="clear:both"></div><div class="box_mid box_mid_sidebar_ie_width_fix"><div class="content" id="block_no_6"></div></div></div><div class="box_bottom"><span class="box_bottom_right"></span><span class="box_bottom_left"></span></div></div>
+                                        </div>
+                                        <script>
+                                            function sortBy(w) {
+                                                document.getElementById('sorterselect').value = w;
+                                                document.getElementById('sorterform').submit();
+                                            }
+                                        </script></div></div></div><div class="box_bottom"><span class="box_bottom_right"></span><span class="box_bottom_left"></span></div></div>
+                    </div>
+                    <div class="col_side" id="col_sidebar">
+                        <div id="top_block_no_1009337"  class="movable" ><div class="box"><div class="box_mid box_mid_sidebar_ie_width_fix"><div class="content" id="block_no_1009337"><center></center></div></div></div><div class="box_bottom"><span class="box_bottom_right"></span><span class="box_bottom_left"></span></div></div>
                     </div>
                 </div>
             </div>
@@ -312,7 +351,7 @@
 
             <div id="groups_bar">
                 <span id="groups_search_button" class="button">
-                    <form id="search_form" action="http://leaguebook.com/dashboard/search" method="POST" autocomplete="off">
+                    <form id="search_form" action="http://leaguebook.com/people/search" method="POST" autocomplete="off">
                         <input type="search" id="groups_search_text" name="q" placeholder="Search in group">
                     </form>
                 </span>
@@ -321,9 +360,11 @@
                 <div id="groups_notifications_panel" class="panel">
                     <h6>Notifications</h6>
                     <ul>
-                        <a href="http://leaguebook.com/dashboard/alerts">There are no new Notifications</a>
+                        <a href="http://leaguebook.com/dashboard/alerts">There are no new notifications.</a>
                     </ul>
-                </div></div>
+                </div>
+                <a id="groups_chat_button_g_leaguebook" class="chat group button" title="Chat" href="/_trigger/chat/toggle/group/leaguebook"><span id="groups_chat_button_g_label">Chat</span></a>
+            </div>
 
             <div id="groups_toaster_vcard" class="special_bg special_text special_border"></div>
 
@@ -356,16 +397,16 @@
     
                 groups._info.domName = 'http://leaguebook.com';
                 groups._info.groupName = 'leaguebook';
-                groups._info.groupNameX = '';
+                groups._info.groupNameX = 'm:pV___________^__________bolu__________^__________gy|8';
                 groups._info.isMember = '1';
                 groups._info.isGroupAdmin = '';
-                groups._info.subscriptionName = '';
-                groups._info.shouldEmailSubscriptionNotification = '';
-                groups._info.obj1 = 'privacy_settings';
+                groups._info.subscriptionName = 'Free Pivot';
+                groups._info.shouldEmailSubscriptionNotification = '1';
+                groups._info.obj1 = '';
                 groups._info.userId = '13530230';
                 groups._info.userName = 'oajiivhbldxbldhwi';
                 groups._info.isMobile = '';
-                groups._info.module.name = 'dashboard';
+                groups._info.module.name = 'groups';
                 groups._info.module.profileOwnerId = '';
                 groups._info.wikiPageCategoryId = '';
                 groups._info.wikiCategoryId = '';
@@ -388,7 +429,7 @@
                 groups._info.titleSeperator = ' | ';
                 groups._info.userNameSurname = 'Levi Limmex';
                 groups._info.userAvatar = 'http://leaguebook.com/avatars/b/80.png';
-                groups._info.chatConfig = null;groups._info.membershipId = '31280300';
+                groups._info.chatConfig = {"jid":"13530230-704597@im.com","room":"704597@conference.im.com","token":"7e4422157878949a9db1641dec01d6af","bind_endpoint":"http:\/\/leaguebook.com\/http-bind","mode":"xmpp"};groups._info.membershipId = '31280300';
                 groups._info.isAdmin = '';
                 groups._info.defaultAvatar = 'http://com/avatars/b/208.png?0';
                 groups._info.defaultAvatarMini = 'http://com/avatars/b/16.png?0';
@@ -529,7 +570,7 @@
 
 
                 /*ajax_javascript*/
-                window.applySajaxMethods = function(){['ExtraPages_addExtraPage','ExtraPages_getAddModulePanel','ExtraPages_get3rdAddModulePanel','ExtraPages_activateModules','deleteAction','saveStatusMessage','getMemberActions','addTwitterAssociation','reportIssue','facebookconnect_signup','zendSupport','sendSupportTicket','facebookconnect_control','updateEntrySimple','pollVote','dont_show_change_layout','ExtraBlocks_getModulesListForModuleBox','getModulesListForModuleBox','ExtraBlocks_addBlock'].each(function(f){window["x_"+f]=function(){return _S(f, Array.prototype.slice.apply(arguments));};});};
+                window.applySajaxMethods = function(){['ExtraPages_addExtraPage','ExtraPages_getAddModulePanel','ExtraPages_get3rdAddModulePanel','ExtraPages_activateModules','ExtraBlocks_addBlock','ExtraBlocks_removeBlock','ExtraBlocks_selectBlock','ExtraBlocks_editBlock','ExtraBlocks_editBlockWithContentLimit','ExtraBlocks_savePageDesign','ExtraBlocks_getModulesListForModuleBox','addSubGroup','deleteSubGroup','editSubGroup','joinSubGroup','leaveSubGroup','getInvitablesBox','invite','setPicture','loadWall','postForWall','deleteWallPost','hasLimitToCreateSubgroup','deleteAction','saveStatusMessage','getMemberActions','addTwitterAssociation','reportIssue','facebookconnect_signup','zendSupport','sendSupportTicket','facebookconnect_control','updateEntrySimple','pollVote','dont_show_change_layout','ExtraBlocks_getModulesListForModuleBox','getModulesListForModuleBox','ExtraBlocks_addBlock'].each(function(f){window["x_"+f]=function(){return _S(f, Array.prototype.slice.apply(arguments));};});};
 
                 /*ajax_functions*/
     

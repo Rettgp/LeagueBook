@@ -1,17 +1,14 @@
+<?PHP
+		session_start();
+		if (isset($_SESSION['sess_login']) && $_SESSION['sess_login'] == 1) {
+			
+		} else {
+			header ('Location: ../index.html');
+		}
+?>
 <!DOCTYPE html>
 <html dir="ltr">
     <head>
-		<?PHP
-
-			session_start();
-
-			if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
-
-			header ("Location: ../index.html");
-
-			}
-
-		?>
         <title>Default Album | Photos | League book</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
@@ -264,52 +261,50 @@
                 <div id="aSide">
                     <div id="userProfileBlock">
                         <a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi"><img
-                                src="http://leaguebook.com/avatars/b/80.png"
+                                src="no_image.png"
                                 alt="Levi Limmex"
                                 width="50" height="50"></a>
-                        <h1><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi">Levi Limmex</a></h1>
+                        <h1><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi">L6vi</a></h1>
                         <p><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi/edit">Edit Profile</a></p>
-                    </div>
-
-					<div id="menu">
+                    </div>              
+                    <div id="menu">
                         <ul id="nav" class="level1">
-                            <li id="menu_item_17306106" >
-                                <a href="../userhomepage/userhomepage.html"><span>Home</span></a>
+                            <li id="menu_item_17306106" class="selected" >
+                                <a href="../userhomepage/userhomepage.php"><span>Home</span></a>
                             </li>
                             <li id="menu_item_17306107" >
-                                <a href="../myprofile/myprofile.html" z=""><span>My Profile</span></a>
+                                <a href="../myprofile/myprofile.php" z=""><span>My Profile</span></a>
                             </li>
                             <li id="menu_item_17306108" >
-                                <a href="../friends/friends.html"><span>Friends</span></a>
+                                <a href="../friends/friends.php"><span>Friends</span></a>
                             </li>
                             <li id="menu_item_17306109" >
-                                <a href="../invite/invite.html" z=""><span>Invite</span></a>
+                                <a href="../invite/invite.php" z=""><span>Invite</span></a>
                             </li>
                             <li id="menu_item_17306110" >
-                                <a href="../teams/teams.html"><span>Teams</span></a>
+                                <a href="../teams/teams.php"><span>Teams</span></a>
                             </li>
-                            <li id="menu_item_17306111" class="selected" >
-                                <a href="../screenshots/screenshots.html"><span>Screenshots</span></a>
+                            <li id="menu_item_17306111" >
+                                <a href="../screenshots/screenshots.php"><span>Screenshots</span></a>
                             </li>
                             <li id="menu_item_17306112" >
-                                <a href="../videos/videos.html"><span>Videos</span></a>
+                                <a href="../videos/videos.php"><span>Videos</span></a>
                             </li>
                             <li id ="menu_item_17306113" >
-                                <a href="../scrims/scrims.html"><span>Scrims</span></a>
+                                <a href="../scrims/scrims.php"><span>Scrims</span></a>
                             </li>
                             <li id="menu_item_17306114" >
-                                <a href="../blogs/blogs.html"><span>Blogs</span></a>
+                                <a href="../blogs/blogs.php"><span>Blogs</span></a>
                             </li>
                         </ul>
                         <div style="clear:both;"></div>
-                    </div>                    
+                    </div>                
 					<ul id="subGroupsBlock">
-                        <h3><a href="../teams/teams.html">Teams</a></h3>
+                        <h3><a href="../teams/teams.php">Teams</a></h3>
                         <li>
-							<a href=" ../teams/SampleTeam/SampleTeamA.html">Sample Teams</a>
+							<a href=" ../teams/SampleTeam/SampleTeamA.php">Sample Teams</a>
 						</li>
-					</ul>
-
+					</ul>     
                 </div>           
                 <div id="content"><div id="col_main" class="col_main">
                         <div id="top_block_no_1"  ><div class="box"><div class="box_top" id="block_title_no_1"><h2><div id="block_title_sub_menu" class="menu_list"></div>Default Album</h2></div><div style="clear:both"></div><div class="box_mid"><div class="content" id="block_no_1">
