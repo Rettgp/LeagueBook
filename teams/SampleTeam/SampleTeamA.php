@@ -3,7 +3,7 @@
 		if (isset($_SESSION['sess_login']) && $_SESSION['sess_login'] == 1) {
 			
 		} else {
-			header ('Location: ../index.html');
+			header ('Location: ../index.php');
 		}
 ?>
 <!DOCTYPE html>

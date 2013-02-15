@@ -1,3 +1,13 @@
+<?PHP
+		session_start();
+		if (isset($_SESSION['sess_login']) && $_SESSION['sess_login'] == 1) {
+			header ('Location: /userhomepage/userhomepage.php');
+		} else {
+			
+		}
+
+?>
+
 <!DOCTYPE html>
 <html dir="ltr">
 <head>
@@ -46,7 +56,7 @@
                 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
             })();
         </script>
-<script src="../scripts/authentication.js" type="text/javascript"></script>
+
 <!-- ehc -->
 <!-- /ehc -->
 <script type="text/javascript" charset="utf-8">
