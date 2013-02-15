@@ -1,6 +1,6 @@
 <?PHP
 
-$uname = "";
+$email = "";
 $pword = "";
 $errorMessage = "";
 //==========================================
@@ -40,16 +40,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 		$email = quote_smart($email, $db_handle);
 		$pword = quote_smart($pword, $db_handle);
 		$SQL = "SELECT * FROM users WHERE email = $email AND password = md5($pword)";
+		$SQL1 = "SELECT email FROM users WHERE password = md5($pword)";
 		$result = mysql_query($SQL);
-		$row = mysql_fetch_array($result);
-		$total = $row[0];
+		$result1 = mysql_query($SQL1);
+		$row = mysql_num_rows($result);
 		
 	//====================================================
 	//	CHECK TO SEE IF THE $result VARIABLE IS TRUE
 	//====================================================
 
 		if ($result) {
-			if ($total ==  1) {
+			if ($row ==  1) {
 				session_start();
 				$_SESSION['sess_login'] = true;
 				$_SESSION['acct'] = $email;
@@ -57,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 			}
 			else {
 				session_start();
-				header ("Location: ../index.html");
+				//header ("Location: ../index.html");
 			}	
 		}
 		else {	
@@ -81,5 +82,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 
 <P>
-<?PHP print $errorMessage;?>
+<?PHP print $row;?>
 
