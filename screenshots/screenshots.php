@@ -19,8 +19,8 @@
         <link rel="shortcut icon" href="/images/favicon.ico">
         <link rel="stylesheet" type="text/css" href="../css/style.css" id="groups_template_style">
         <link rel="stylesheet" type="text/css" href="../css/general.css">
-        <link rel="index" title="League book" href="http://leaguebook.com">
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="http://com/rss/leaguebook/photos">
+        <link rel="index" title="League book" href="http://lolcodex.com">
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="http://com/rss/lolcodex/photos">
         <link href="../css/style.css" rel="stylesheet" type="text/css">
         <link href="../css/#.css" rel="stylesheet" type="text/css">
         <link href="../css/# #2.css" rel="stylesheet" type="text/css">
@@ -44,7 +44,7 @@
             _gaq.push(['_setDomainName', 'none']);
             _gaq.push(['_setAllowLinker', true]);
             _gaq.push(['_setCustomVar', 1,'member_type', 'group_member', 3]);
-            _gaq.push(['_setCustomVar', 2,'subdomain', 'leaguebook.com', 3]);
+            _gaq.push(['_setCustomVar', 2,'subdomain', 'lolcodex.com', 3]);
             _gaq.push(['_setCustomVar', 3,'category', 'other', 3]);
             _gaq.push(['_setCustomVar', 4,'product_type', 'Free Pivot', 3]);
             _gaq.push(['_setCustomVar', 5,'custom_domain', 'false', 3]);
@@ -87,7 +87,7 @@
             {
                 border: none;
             }
-        </style><link rel="stylesheet" type="text/css" href="/public/css/groups/groups.util.scroller.css" /><link rel="alternate" type="application/rss+xml" title="Grou.p Photos" href="http://com/rss/leaguebook/photos" /><link rel="stylesheet" href="/public/css/lightbox/lightbox.css" type="text/css" media="screen" /><link rel="stylesheet" href="/public/css/groups/groups.module.photos.css" type="text/css" media="screen" />
+        </style><link rel="stylesheet" type="text/css" href="/public/css/groups/groups.util.scroller.css" /><link rel="alternate" type="application/rss+xml" title="Grou.p Photos" href="http://com/rss/lolcodex/photos" /><link rel="stylesheet" href="/public/css/lightbox/lightbox.css" type="text/css" media="screen" /><link rel="stylesheet" href="/public/css/groups/groups.module.photos.css" type="text/css" media="screen" />
         <!-- /ehc -->
 
         <link href="/public/css/groups/groups.notification.menus.css?15997" rel="stylesheet" type="text/css">
@@ -116,7 +116,7 @@
         <div id="groupsInfoBoxCont" style="visibility:hidden;"><img src="/images/InfoBoxArrow2up.png" class="arrow" />
             <div id="groupsInfoBox"> </div>
         </div>
-        <!-- skfnsdfknsdlkfn leaguebook -->
+        <!-- skfnsdfknsdlkfn lolcodex -->
 
 
 
@@ -163,8 +163,8 @@
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tr>
                             <td class="td_group_title" valign="bottom"><div id="h1">
-                                    <a id="groupTitle" href="http://leaguebook.com/">
-                                        <h1>LeagueBook</h1>
+                                    <a id="groupTitle" href="http://lolcodex.com/">
+                                        <h1>lolcodex</h1>
                                     </a>
                                 </div>
                             </td>
@@ -176,7 +176,7 @@
                                             <h3> Friend Requests </h3>
                                             <div class="notificationContent"> </div>
                                             <li class="bottom">
-                                                <a href="http://leaguebook.com/dashboard/alerts">See All Friend Requests</a>
+                                                <a href="http://lolcodex.com/dashboard/alerts">See All Friend Requests</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -185,14 +185,14 @@
                                         <ul class="notificationMenu" style="display: none">
                                             <h3>Messages
                                                 <div class="notificationAction">
-                                                    <a href="http://leaguebook.com/dashboard/compose_message">Compose New Message</a>
+                                                    <a href="http://lolcodex.com/dashboard/compose_message">Compose New Message</a>
                                                 </div>
                                             </h3>
                                             <div class="notificationContent">
                                                 <li class="notificationNoContent">No Messages</li>
                                             </div>
                                             <li class="bottom">
-                                                <a href="http://leaguebook.com/dashboard/messages">See All Messages</a>
+                                                <a href="http://lolcodex.com/dashboard/messages">See All Messages</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -202,7 +202,7 @@
                                             <h3> Notifications </h3>
                                             <div class="notificationContent"> </div>
                                             <li class="bottom">
-                                                <a href="http://leaguebook.com/dashboard/notifications">See All Notifications</a>
+                                                <a href="http://lolcodex.com/dashboard/notifications">See All Notifications</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -210,7 +210,7 @@
                             </td>
                             <td class="td_search" valign="bottom">
                                 <div id="searchBoxDiv">
-                                    <form id="book_search_form" method="POST" action="http://leaguebook.com/people/search">
+                                    <form id="book_search_form" method="POST" action="http://lolcodex.com/people/search">
                                         <input id="book_groups_search_text" type="search" name="q" placeholder="Search" autocomplete="off" data-placeholder-bound="true">
                                         <input id="searchSubmitInput" type="submit" data-placeholder-bound="true">
                                         <ul id="book_search_types_box" class="autocomplete" style="display: none">
@@ -236,18 +236,18 @@
                                 </div>
                             </td>
                             <td class="td_user_nav" valign="bottom" align="right"><ul id="basicMenu">
-                                    <li id="basicItemHome"><a href="http://leaguebook.com/">Home</a></li>
-                                    <li id="basicItemProfile"><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi">Profile</a></li>
+                                    <li id="basicItemHome"><a href="http://lolcodex.com/">Home</a></li>
+                                    <li id="basicItemProfile"><a href="http://lolcodex.com/people/person/oajiivhbldxbldhwi">Profile</a></li>
                                     <li id="basicItemAccount"><a href="#">Account <span class="downArrowIcon">&#9660;</span></a>
                                         <ul id="accountMenu">
-                                            <div class="userAvatar"><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi"><img src="no_image.png" alt="Levi Limmex" width="50" height="50" align="absmiddle"></a><p><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi">Levi Limmex</a></p></div>
-                                            <li><a href="http://leaguebook.com/dashboard/myprofile">Edit Profile</a></li>
-                                            <!--<li><a href="http://leaguebook.com/dashboard/preferences">Account Settings</a></li>-->
-                                            <li><a href="http://leaguebook.com/dashboard/privacy_settings">Privacy Settings</a></li>
-                                            <!--<li><a href="http://leaguebook.com/dashboard/compose_message">Compose New Message</a></li>
-                                            <li><a href="http://leaguebook.com/dashboard/password">Change Credentials</a></li>
-                                            <li><a href="http://leaguebook.com/dashboard/email_settings">E-mail Settings</a></li>-->
-                                            <li><a href="http://leaguebook.com/dashboard/spread">Invite People</a></li>
+                                            <div class="userAvatar"><a href="http://lolcodex.com/people/person/oajiivhbldxbldhwi"><img src="no_image.png" alt="Levi Limmex" width="50" height="50" align="absmiddle"></a><p><a href="http://lolcodex.com/people/person/oajiivhbldxbldhwi">Levi Limmex</a></p></div>
+                                            <li><a href="http://lolcodex.com/dashboard/myprofile">Edit Profile</a></li>
+                                            <!--<li><a href="http://lolcodex.com/dashboard/preferences">Account Settings</a></li>-->
+                                            <li><a href="http://lolcodex.com/dashboard/privacy_settings">Privacy Settings</a></li>
+                                            <!--<li><a href="http://lolcodex.com/dashboard/compose_message">Compose New Message</a></li>
+                                            <li><a href="http://lolcodex.com/dashboard/password">Change Credentials</a></li>
+                                            <li><a href="http://lolcodex.com/dashboard/email_settings">E-mail Settings</a></li>-->
+                                            <li><a href="http://lolcodex.com/dashboard/spread">Invite People</a></li>
                                             <li><a href="/signout">Log Out</a></li>
                                         </ul>
                                     </li>
@@ -260,12 +260,12 @@
             <div id="contentWrapper" class="">
                 <div id="aSide">
                     <div id="userProfileBlock">
-                        <a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi"><img
+                        <a href="http://lolcodex.com/people/person/oajiivhbldxbldhwi"><img
                                 src="no_image.png"
                                 alt="Levi Limmex"
                                 width="50" height="50"></a>
-                        <h1><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi">L6vi</a></h1>
-                        <p><a href="http://leaguebook.com/people/person/oajiivhbldxbldhwi/edit">Edit Profile</a></p>
+                        <h1><a href="http://lolcodex.com/people/person/oajiivhbldxbldhwi">L6vi</a></h1>
+                        <p><a href="http://lolcodex.com/people/person/oajiivhbldxbldhwi/edit">Edit Profile</a></p>
                     </div>              
                     <div id="menu">
                         <ul id="nav" class="level1">
@@ -333,7 +333,7 @@
                             <input type="hidden" id="group_flickr_account" value="11271501@N00" />
 
                         </div>
-                        <div id="hidden_block_3"  style="display:none"  ><div class="box"><div style="clear:both"></div><div class="box_mid box_mid_sidebar_ie_width_fix"><div class="content" id="block_no_3">	<form action="http://leaguebook.com/photos/album/0/1" id="sorterform" method="POST">
+                        <div id="hidden_block_3"  style="display:none"  ><div class="box"><div style="clear:both"></div><div class="box_mid box_mid_sidebar_ie_width_fix"><div class="content" id="block_no_3">	<form action="http://lolcodex.com/photos/album/0/1" id="sorterform" method="POST">
                                             <input type="hidden" name="sort_by" id="sorterselect" />
                                             <input type="submit" name="sort_submit" value="Reload" />
                                         </form>
@@ -343,8 +343,8 @@
                                                 document.getElementById('sorterform').submit();
                                             }
                                         </script></div></div></div><div class="box_bottom"><span class="box_bottom_right"></span><span class="box_bottom_left"></span></div></div>
-                        <div id="top_block_no_2078072"  class="movable" ><div class="box"><div class="box_top" id="block_title_no_4"><h2>Did you know?</h2></div><div style="clear:both"></div><div class="box_mid box_mid_sidebar_ie_width_fix"><div class="content" id="block_no_2078072"><div class="adviseBlock">That you can share Photos and Videos with your group via email? <br><br> Simply email your photos and videos as attachments to <b><a href="mailto:share@leaguebook.com">share@leaguebook.com</a></b> and your photos and videos will be published to your group.</div></div></div></div><div class="box_bottom"><span class="box_bottom_right"></span><span class="box_bottom_left"></span></div></div>
-                        <div id="top_block_no_2078076"  class="movable" ><div class="box"><div class="box_top" id="block_title_no_4"><h2>Share</h2></div><div style="clear:both"></div><div class="box_mid box_mid_sidebar_ie_width_fix"><div class="content" id="block_no_2078076"><script type="text/javascript" src="/gw.php?group_name=leaguebook&width=165px&fontfam=arial, helvetica, sans-serif&fontsize=11&bkgcolor=f1f1f1&text_color=666&border_color=a4a4a4&gw_m_people=1&gw_m_people_amount=8&gw_m_blogs=0&gw_m_blogs_amount=3&gw_m_talks=0&gw_m_talks_amount=3&gw_m_photos=1&gw_m_photos_amount=3&gw_m_links=0&gw_m_links_amount=3&gw_m_wiki=0&gw_m_wiki_amount=3&gw_m_calendar=0&gw_m_calendar_amount=0&gw_m_groups=0&gw_m_groups_amount=0&gw_m_videos=0&gw_m_videos_amount=0&gw_m_files=0&gw_m_files_amount=0&gw_m_latest=0&gw_m_latest_amount=3&love_groups=0"></script></div></div></div><div class="box_bottom"><span class="box_bottom_right"></span><span class="box_bottom_left"></span></div></div>
+                        <div id="top_block_no_2078072"  class="movable" ><div class="box"><div class="box_top" id="block_title_no_4"><h2>Did you know?</h2></div><div style="clear:both"></div><div class="box_mid box_mid_sidebar_ie_width_fix"><div class="content" id="block_no_2078072"><div class="adviseBlock">That you can share Photos and Videos with your group via email? <br><br> Simply email your photos and videos as attachments to <b><a href="mailto:share@lolcodex.com">share@lolcodex.com</a></b> and your photos and videos will be published to your group.</div></div></div></div><div class="box_bottom"><span class="box_bottom_right"></span><span class="box_bottom_left"></span></div></div>
+                        <div id="top_block_no_2078076"  class="movable" ><div class="box"><div class="box_top" id="block_title_no_4"><h2>Share</h2></div><div style="clear:both"></div><div class="box_mid box_mid_sidebar_ie_width_fix"><div class="content" id="block_no_2078076"><script type="text/javascript" src="/gw.php?group_name=lolcodex&width=165px&fontfam=arial, helvetica, sans-serif&fontsize=11&bkgcolor=f1f1f1&text_color=666&border_color=a4a4a4&gw_m_people=1&gw_m_people_amount=8&gw_m_blogs=0&gw_m_blogs_amount=3&gw_m_talks=0&gw_m_talks_amount=3&gw_m_photos=1&gw_m_photos_amount=3&gw_m_links=0&gw_m_links_amount=3&gw_m_wiki=0&gw_m_wiki_amount=3&gw_m_calendar=0&gw_m_calendar_amount=0&gw_m_groups=0&gw_m_groups_amount=0&gw_m_videos=0&gw_m_videos_amount=0&gw_m_files=0&gw_m_files_amount=0&gw_m_latest=0&gw_m_latest_amount=3&love_groups=0"></script></div></div></div><div class="box_bottom"><span class="box_bottom_right"></span><span class="box_bottom_left"></span></div></div>
                         <div id="top_block_no_2078077"  class="movable" ><div class="box_mid box_mid_sidebar_ie_width_fix"><div class="content" id="block_no_2078077"><center></center></div></div></div><div class="box_bottom"><span class="box_bottom_right"></span><span class="box_bottom_left"></span></div></div>
                 </div>
             </div>
@@ -358,7 +358,7 @@
 
         <div id="groups_bar">
             <span id="groups_search_button" class="button">
-                <form id="search_form" action="http://leaguebook.com/people/search" method="POST" autocomplete="off">
+                <form id="search_form" action="http://lolcodex.com/people/search" method="POST" autocomplete="off">
                     <input type="search" id="groups_search_text" name="q" placeholder="Search in group">
                 </form>
             </span>
@@ -367,10 +367,10 @@
             <div id="groups_notifications_panel" class="panel">
                 <h6>Notifications</h6>
                 <ul>
-                    <a href="http://leaguebook.com/dashboard/alerts">There are no new Notifications</a>
+                    <a href="http://lolcodex.com/dashboard/alerts">There are no new Notifications</a>
                 </ul>
             </div>
-            <a id="groups_chat_button_g_leaguebook" class="chat group button" title="Chat" href="/_trigger/chat/toggle/group/leaguebook"><span id="groups_chat_button_g_label">Chat</span></a>
+            <a id="groups_chat_button_g_leaguebook" class="chat group button" title="Chat" href="/_trigger/chat/toggle/group/lolcodex"><span id="groups_chat_button_g_label">Chat</span></a>
         </div>
 
         <div id="groups_toaster_vcard" class="special_bg special_text special_border"></div>
@@ -402,8 +402,8 @@
     
             /*album*/
     
-            groups._info.domName = 'http://leaguebook.com';
-            groups._info.groupName = 'leaguebook';
+            groups._info.domName = 'http://lolcodex.com';
+            groups._info.groupName = 'lolcodex';
             groups._info.groupNameX = '';
             groups._info.isMember = '1';
             groups._info.isGroupAdmin = '';
@@ -429,14 +429,14 @@
             groups._info.groupId = 704597;
             groups._info.title = 'League book';
             groups._info.moduleTitle = 'Photos';
-            groups._info.searchTypes = {'blogs':{title:'Blogs',actionURL:'http://leaguebook.com/blogs/search'},'chat':{title:'Chat',actionURL:'http://leaguebook.com/chat/search'},'people':{title:'Members',actionURL:'http://leaguebook.com/people/search'},'talks':{title:'Forum',actionURL:'http://leaguebook.com/talks/search'},'wiki':{title:'Wiki',actionURL:'http://leaguebook.com/wiki/search'},'files':{title:'Files',actionURL:'http://leaguebook.com/files/search'},'messages':{title:'Priv. Messages',actionURL:'http://leaguebook.com/dashboard/search_messages'}};
+            groups._info.searchTypes = {'blogs':{title:'Blogs',actionURL:'http://lolcodex.com/blogs/search'},'chat':{title:'Chat',actionURL:'http://lolcodex.com/chat/search'},'people':{title:'Members',actionURL:'http://lolcodex.com/people/search'},'talks':{title:'Forum',actionURL:'http://lolcodex.com/talks/search'},'wiki':{title:'Wiki',actionURL:'http://lolcodex.com/wiki/search'},'files':{title:'Files',actionURL:'http://lolcodex.com/files/search'},'messages':{title:'Priv. Messages',actionURL:'http://lolcodex.com/dashboard/search_messages'}};
             groups._info.language = 'english';
             groups._info.languageRevision={custom:135260045,main:424,name:'english'};
             groups._info.bannedWords = '';
             groups._info.titleSeperator = ' | ';
             groups._info.userNameSurname = 'Levi Limmex';
-            groups._info.userAvatar = 'http://leaguebook.com/avatars/b/80.png';
-            groups._info.chatConfig = {"jid":"13530230-704597@im.com","room":"704597@conference.im.com","token":"7e4422157878949a9db1641dec01d6af","bind_endpoint":"http:\/\/leaguebook.com\/http-bind","mode":"xmpp"};groups._info.membershipId = '31280300';
+            groups._info.userAvatar = 'http://lolcodex.com/avatars/b/80.png';
+            groups._info.chatConfig = {"jid":"13530230-704597@im.com","room":"704597@conference.im.com","token":"7e4422157878949a9db1641dec01d6af","bind_endpoint":"http:\/\/lolcodex.com\/http-bind","mode":"xmpp"};groups._info.membershipId = '31280300';
             groups._info.isAdmin = '';
             groups._info.defaultAvatar = 'http://com/avatars/b/208.png?0';
             groups._info.defaultAvatarMini = 'http://com/avatars/b/16.png?0';
@@ -855,7 +855,7 @@
                         groups.RenderController.showModal(txt);
                     }
                     else {
-                        window.location.href = 'http://leaguebook.com/'+res[1]+'/edit';
+                        window.location.href = 'http://lolcodex.com/'+res[1]+'/edit';
                     }
                 }
                 else {
@@ -873,7 +873,7 @@
 
             function EP_goToStaticPage() {
                 if(extra_page_key!='' ) {
-                    window.open('http://leaguebook.com/'+extra_page_key+'/edit','static_page');
+                    window.open('http://lolcodex.com/'+extra_page_key+'/edit','static_page');
                 }
             }
 
@@ -942,7 +942,7 @@
                             groups.RenderController.showModal(txt);
                         }
                         else {
-                            window.location.href = 'http://leaguebook.com/'+res[1];
+                            window.location.href = 'http://lolcodex.com/'+res[1];
                         }
 
                     }
@@ -966,7 +966,7 @@
 
             function EP_goToLink() {
                 if(extra_page_key!='' ) {
-                    window.location.href = 'http://leaguebook.com/'+extra_page_key;
+                    window.location.href = 'http://lolcodex.com/'+extra_page_key;
                     extra_page_key = '';
                 }
             }
@@ -1027,7 +1027,7 @@
                 if(res!=""&&res!="admin") {
 
 
-                    document.location.href = "http://leaguebook.com/" + res;
+                    document.location.href = "http://lolcodex.com/" + res;
 
                     /*
                                         if(add_from=='admin') {
@@ -1036,12 +1036,12 @@
                                         }
                                         else {
                                                 var txt = '<h1>Add Module</h1>';
-                                                txt += '<div class="info">Your changes are successfully saved. If you want to administrate your pages, click <a href="http://leaguebook.com/admin/pages">here</a> or <a href="javascript:document.location.reload(true)">click</a> to continue...</div>';
+                                                txt += '<div class="info">Your changes are successfully saved. If you want to administrate your pages, click <a href="http://lolcodex.com/admin/pages">here</a> or <a href="javascript:document.location.reload(true)">click</a> to continue...</div>';
                                                 groups.RenderController.showModal(txt);
                                         }*/
 
                 } else {
-                    document.location.href = "http://leaguebook.com/admin/pages";
+                    document.location.href = "http://lolcodex.com/admin/pages";
                     //document.location.reload(true);
                 }
             }
@@ -1108,9 +1108,9 @@
             function addPhoto(album) {
                 if(PHOTOS_LIMIT_EXCEEDED) { var txt = '<h1><span class="module_box_icon module_box_photos"></span>Add Photo</h1><div class="info">The group has exceeded the storage limit. <a href="javascript:groups.RenderController.hideModal()">Click</a> to continue...</div>';groups.RenderController.showModal(txt);} else {/*groups.RenderController.showModal('<h1><span class="module_box_icon module_box_photos"></span>Add Photo</h1>Maintenance: Adding photo is temporarily disabled.);return;*/	 if(picNum != 1) picNum=1;
                     var txt = '<h1><span class="module_box_icon module_box_photos"></span>Add Photo</h1>';
-                    txt += '<form class="groupsForm" id="img_uploader" action="http://leaguebook.com/includes/picture_uploader_multiple.php" ENCTYPE="multipart/form-data" method="post" target="upload_frame">'
+                    txt += '<form class="groupsForm" id="img_uploader" action="http://lolcodex.com/includes/picture_uploader_multiple.php" ENCTYPE="multipart/form-data" method="post" target="upload_frame">'
                     txt += '<br />';
-                    txt += '<input type="hidden" name="groupname" value="leaguebook" />';
+                    txt += '<input type="hidden" name="groupname" value="lolcodex" />';
                     txt += '<input type="hidden" name="groupnameX" value="m:pV___________^__________bolu__________^__________gy|8" />';
                     txt += '<div id="pic_forms"><div id="pic_form1"><label class="formTitle">Photo:</label><div><input required="1" type="file" id="pic_1" name="thefile[]" /></div><label class="formTitle">Caption:</label><div><input type="text" id="cap_1" name="caption[]"></div><label class="formTitle">Tags:</label><div><input type="text" id="tag_1" name="tags[]"></div><div class="FormSubText">Separate by comma</div>';
                     for(var i=2;i<=maxPicNum;i++)
@@ -1285,7 +1285,7 @@
 
 
             function show_photo_comments(purl) {
-                window.location.href = 'http://com/leaguebook/photos/' + urlencode(base64_encode(purl));
+                window.location.href = 'http://com/lolcodex/photos/' + urlencode(base64_encode(purl));
             }
 
             var initial_comment_value = 1;
@@ -1437,7 +1437,7 @@
                 //alert('DELETE FOTO RES '+res);
                 if(res=='1') {
                     groups.warnOnLeave = -1;
-                    window.location.href = 'http://com/leaguebook/photos';
+                    window.location.href = 'http://com/lolcodex/photos';
 
                 }
                 else {
