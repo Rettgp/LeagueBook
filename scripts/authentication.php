@@ -31,18 +31,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	//==========================================
 	$user_name = "LoLCodexData";
 	$pass_word = "Israel90123!";
-	$database = "users";
+	$database = "LoLCodexData";
 	$server = "LoLCodexData.db.10536782.hostedresource.com";
 
 	$db_handle = mysql_connect($server, $user_name, $pass_word);
 	$db_found = mysql_select_db($database, $db_handle);
-
+	echo $db_found;
 	if ($db_found) {
-
 		$uname = quote_smart($uname, $db_handle);
 		$pword = quote_smart($pword, $db_handle);
 
-		$SQL = "SELECT * FROM login WHERE email = $uname AND password = md5($pword)";
+		$SQL = "SELECT * FROM users WHERE email = $uname AND password = md5($pword)";
 		$result = mysql_query($SQL);
 		$num_rows = mysql_num_rows($result);
 
@@ -51,15 +50,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	//====================================================
 
 		if ($result) {
-			if ($num_rows ==  1) {
+			if ($num_rows =  1) {
 				session_start();
 				$_SESSION['login'] = "1";
-				header ("Location: userhomepage.html");
+				header ("Location: ../userhomepage/userhomepage.html");
 			}
 			else {
+				
 				session_start();
 				$_SESSION['login'] = "";
-				header ("Location: index.html");
+				header ("Location: ../index.html");
 			}	
 		}
 		else {
