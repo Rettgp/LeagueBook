@@ -1,0 +1,24 @@
+*Request a duo page
+
+--Takes your highest win rate heros, matches them with summoners who have high win rates with heros
+  that your highest win rate heros have high win rates with
+
+--Within 100 of your elo/league/what the fuck ever.
+
+*Community pages you can subscribe to
+
+---Examples: Top 5 plays of the week, top 5 pictures of the week, patch previews
+
+*Clean up code/make it our own ---DONE SORTA
+
+*Streams embedded
+
+*Top 3 most improved players this week on homepage.
+
+*Chat module
+
+*Most recent game played in news feed
+
+*Database backend setup
+
+*Login module setup
