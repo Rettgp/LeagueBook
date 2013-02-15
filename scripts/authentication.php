@@ -36,7 +36,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 	$db_handle = mysql_connect($server, $user_name, $pass_word);
 	$db_found = mysql_select_db($database, $db_handle);
-	echo $db_found;
 	if ($db_found) {
 		$email = quote_smart($email, $db_handle);
 		$pword = quote_smart($pword, $db_handle);

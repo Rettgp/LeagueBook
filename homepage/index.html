@@ -146,7 +146,7 @@
 								<div class="fb">
 									<button class="fButton" rel="facebook-connect-login">Please Wait...</button>
 								</div>
-								<form class="siteForm" method="post" action="https://com/leaguebook/signup">
+								<form class="siteForm" action="/scripts/registration.php" method="post">
 									<input type="hidden" name="join" value="0"/>
 									<h2 style="display: block; font-size: 15px; margin: 20px 0 10px;">Alternatively you can sign up with your email;</h2>
 									<div style="padding: 10px; height: 20px;">
@@ -156,13 +156,13 @@
 										<div style="float:left;width:170px;">
 											<input type="text" name="email" class="large" autofocus="autofocus">
 										</div>
-									</div>
+									</div>						
 									<div style="padding: 10px; height: 20px;">
 										<div style="float:left;width:80px;font-weight:bold;">
 											Re-enter Email
 										</div>
 										<div style="float:left;width:170px;">
-											<input type="text" name="email" class="large" autofocus="autofocus">
+											<input type="text" name="confirmemail" class="large" autofocus="autofocus">
 										</div>
 									</div>
 									<div style="padding: 10px; height: 20px; clear: both;">
@@ -178,7 +178,7 @@
 											Re-enter Password
 										</div>
 										<div style="float:left;width:170px;">
-											<input type="password" name="password" class="large">
+											<input type="password" name="confirmpassword" class="large">
 										</div>
 									</div>
 									<input type="hidden" name="joinform" value="1" /> <div class="regFormContainer">
