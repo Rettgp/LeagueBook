@@ -21,10 +21,10 @@ function quote_smart($value, $handle) {
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-	$uname = $_POST['acct'];
+	$email = $_POST['acct'];
 	$pword = $_POST['pass'];
 
-	$uname = htmlspecialchars($uname);
+	$email = htmlspecialchars($email);
 	$pword = htmlspecialchars($pword);
 	//==========================================
 	//	CONNECT TO THE LOCAL DATABASE
@@ -38,32 +38,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$db_found = mysql_select_db($database, $db_handle);
 	echo $db_found;
 	if ($db_found) {
-		$uname = quote_smart($uname, $db_handle);
+		$email = quote_smart($email, $db_handle);
 		$pword = quote_smart($pword, $db_handle);
-
-		$SQL = "SELECT * FROM users WHERE email = $uname AND password = md5($pword)";
+		$SQL = "SELECT * FROM users WHERE email = $email AND password = md5($pword)";
 		$result = mysql_query($SQL);
-		$num_rows = mysql_num_rows($result);
-
+		$row = mysql_fetch_array($result);
+		$total = $row[0];
+		
 	//====================================================
 	//	CHECK TO SEE IF THE $result VARIABLE IS TRUE
 	//====================================================
 
 		if ($result) {
-			if ($num_rows =  1) {
+			if ($total ==  1) {
 				session_start();
 				$_SESSION['login'] = "1";
 				header ("Location: ../userhomepage/userhomepage.html");
 			}
 			else {
-				
 				session_start();
 				$_SESSION['login'] = "";
 				header ("Location: ../index.html");
 			}	
 		}
-		else {
-			$errorMessage = "Error logging on";
+		else {	
+			$errorMessage = "Error logging on" + $total;
 		}
 
 	mysql_close($db_handle);
@@ -71,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 	}
 
 	else {
-		$errorMessage = "Error logging on";
+		$errorMessage = "Error logging on" + $total;
 	}
 
 }
