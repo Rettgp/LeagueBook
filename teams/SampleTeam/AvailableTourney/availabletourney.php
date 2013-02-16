@@ -148,7 +148,7 @@
                                             <h3> Friend Requests </h3>
                                             <div class="notificationContent"> </div>
                                             <li class="bottom">
-                                                <a href="http://LoLcodex.com/alerts">See All Friend Requests</a>
+                                                <a href="http://LoLcodex.com/dashboard/alerts">See All Friend Requests</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -157,14 +157,14 @@
                                         <ul class="notificationMenu" style="display: none">
                                             <h3>Messages
                                                 <div class="notificationAction">
-                                                    <a href="http://LoLcodex.com/compose_message">Compose New Message</a>
+                                                    <a href="http://LoLcodex.com/dashboard/compose_message">Compose New Message</a>
                                                 </div>
                                             </h3>
                                             <div class="notificationContent">
                                                 <li class="notificationNoContent">No Messages</li>
                                             </div>
                                             <li class="bottom">
-                                                <a href="http://LoLcodex.com/messages">See All Messages</a>
+                                                <a href="http://LoLcodex.com/dashboard/messages">See All Messages</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -174,7 +174,7 @@
                                             <h3> Notifications </h3>
                                             <div class="notificationContent"> </div>
                                             <li class="bottom">
-                                                <a href="http://LoLcodex.com/notifications">See All Notifications</a>
+                                                <a href="http://LoLcodex.com/dashboard/notifications">See All Notifications</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -213,13 +213,13 @@
                                     <li id="basicItemAccount"><a href="#">Account <span class="downArrowIcon">&#9660;</span></a>
                                         <ul id="accountMenu">
                                             <div class="userAvatar"><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><img src="no_image.png" alt=<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?> width="50" height="50" align="absmiddle"></a><p><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?></a></p></div>
-                                            <li><a href="http://LoLcodex.com/myprofile">Edit Profile</a></li>
-                                            <!--<li><a href="http://LoLcodex.com/preferences">Account Settings</a></li>-->
-                                            <li><a href="http://LoLcodex.com/privacy_settings">Privacy Settings</a></li>
-                                            <!--<li><a href="http://LoLcodex.com/compose_message">Compose New Message</a></li>
-                                            <li><a href="http://LoLcodex.com/password">Change Credentials</a></li>
-                                            <li><a href="http://LoLcodex.com/email_settings">E-mail Settings</a></li>-->
-                                            <li><a href="http://LoLcodex.com/spread">Invite People</a></li>
+                                            <li><a href="http://LoLcodex.com/dashboard/myprofile">Edit Profile</a></li>
+                                            <!--<li><a href="http://LoLcodex.com/dashboard/preferences">Account Settings</a></li>-->
+                                            <li><a href="http://LoLcodex.com/dashboard/privacy_settings">Privacy Settings</a></li>
+                                            <!--<li><a href="http://LoLcodex.com/dashboard/compose_message">Compose New Message</a></li>
+                                            <li><a href="http://LoLcodex.com/dashboard/password">Change Credentials</a></li>
+                                            <li><a href="http://LoLcodex.com/dashboard/email_settings">E-mail Settings</a></li>-->
+                                            <li><a href="http://LoLcodex.com/dashboard/spread">Invite People</a></li>
                                             <li><a href="../scripts/logout.php">Log Out</a></li>
                                         </ul>
                                     </li>
@@ -330,7 +330,7 @@
 		<div id="groups_notifications_panel" class="panel">
 			<h6>Notifications</h6>
 			<ul>
-				<a href="http://LoLcodex.com/alerts">There are no new Notifications.</a>
+				<a href="http://LoLcodex.com/dashboard/alerts">There are no new Notifications.</a>
 			</ul>
 		</div>
 		<a id="groups_chat_button_g_leaguebook" class="chat group button" title="Chat" href="/_trigger/chat/toggle/group/LoLcodex"><span id="groups_chat_button_g_label">Chat</span></a>
@@ -375,7 +375,7 @@
                 groups._info.groupId = 704597;
                 groups._info.title = 'LoLcodex';
                 groups._info.moduleTitle = '';
-                groups._info.searchTypes = {'blogs':{title:'Blogs',actionURL:'http://LoLcodex.com/blogs/search'},'chat':{title:'Chat',actionURL:'http://LoLcodex.com/chat/search'},'people':{title:'Members',actionURL:'http://LoLcodex.com/people/search'},'talks':{title:'Forum',actionURL:'http://LoLcodex.com/talks/search'},'wiki':{title:'Wiki',actionURL:'http://LoLcodex.com/wiki/search'},'files':{title:'Files',actionURL:'http://LoLcodex.com/files/search'},'messages':{title:'Priv. Messages',actionURL:'http://LoLcodex.com/search_messages'}};
+                groups._info.searchTypes = {'blogs':{title:'Blogs',actionURL:'http://LoLcodex.com/blogs/search'},'chat':{title:'Chat',actionURL:'http://LoLcodex.com/chat/search'},'people':{title:'Members',actionURL:'http://LoLcodex.com/people/search'},'talks':{title:'Forum',actionURL:'http://LoLcodex.com/talks/search'},'wiki':{title:'Wiki',actionURL:'http://LoLcodex.com/wiki/search'},'files':{title:'Files',actionURL:'http://LoLcodex.com/files/search'},'messages':{title:'Priv. Messages',actionURL:'http://LoLcodex.com/dashboard/search_messages'}};
                 groups._info.language = 'english';
                 groups._info.languageRevision={custom:135260045,main:424,name:'english'};
                 groups._info.bannedWords = '';
