@@ -44,6 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 		$result = mysql_query($SQL);
 		$result1 = mysql_query($SQL1);
 		$row = mysql_num_rows($result);
+		$row1 = mysql_fetch_row($result1);
 		
 	//====================================================
 	//	CHECK TO SEE IF THE $result VARIABLE IS TRUE
@@ -54,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 				session_start();
 				$_SESSION['sess_login'] = true;
 				$_SESSION['acct'] = $email;
-				$_SESSION['summoner'] = $result1;
+				$_SESSION['summoner'] = $row1[0];
 				header ("Location: ../userhomepage/userhomepage.php");
 			}
 			else {
