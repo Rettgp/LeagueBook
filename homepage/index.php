@@ -21,7 +21,7 @@
 <link rel="shortcut icon" href="/images/favicon.ico">
 <link rel="stylesheet" type="text/css" href="../css/style.css" id="groups_template_style">
 <link rel="stylesheet" type="text/css" href="../css/general.css">
-<link rel="index" title="League book" href="http://LoLcodex.com">
+<link rel="index" title="LoLcodex" href="http://LoLcodex.com">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://com/rss/LoLcodex/home">
 <link href="/css/style.css" rel="stylesheet" type="text/css">
 <link href="/css/#.css" rel="stylesheet" type="text/css">
@@ -221,7 +221,7 @@
 			<span class="box_bottom_right"></span><span class="box_bottom_left"></span>
 		</div>
 		<div id="footer">
-			 &copy; 2013 League book
+			 &copy; 2013 LoLcodex
 		</div>
 		<iframe style="display:none;" name="_rlcdn" width=0 height=0 frameborder=0 src="http://ei.rlcdn.com/362258.gif?x=50b6c8d56ee2089ab2920555bfb0468ad7a137f72601a5d9&c=bf-ecb">
 		</iframe>
@@ -258,7 +258,7 @@
                 /*--------------*/
                 /*javascript_variables*/
                 groups._info.groupId = 704597;
-                groups._info.title = 'League book';
+                groups._info.title = 'LoLcodex';
                 groups._info.moduleTitle = '';
                 groups._info.searchTypes = {'blogs':{title:'Blogs',actionURL:'http://LoLcodex.com/blogs/search'},'chat':{title:'Chat',actionURL:'http://LoLcodex.com/chat/search'},'people':{title:'Members',actionURL:'http://LoLcodex.com/people/search'},'messages':{title:'Priv. Messages',actionURL:'http://LoLcodex.com/dashboard/search_messages'}};
                 groups._info.language = 'english';

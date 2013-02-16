@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html dir="ltr">
     <head>
-        <title>Videos | League book</title>
+        <title>Videos | LoLcodex</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
         <meta name="Keywords" content=",Videos">
@@ -19,7 +19,7 @@
         <link rel="shortcut icon" href="/images/favicon.ico">
         <link rel="stylesheet" type="text/css" href="../css/style.css" id="groups_template_style">
         <link rel="stylesheet" type="text/css" href="../css/general.css">
-        <link rel="index" title="League book" href="http://LoLcodex.com">
+        <link rel="index" title="LoLcodex" href="http://LoLcodex.com">
         <link rel="alternate" type="application/rss+xml" title="RSS" href="http://com/rss/LoLcodex/videos">
         <link href="../css/style.css" rel="stylesheet" type="text/css">
         <link href="../css/#.css" rel="stylesheet" type="text/css">
@@ -498,7 +498,7 @@
                 </div>
             </div>
 
-            <div id="footer"> &copy; 2013 League book
+            <div id="footer"> &copy; 2013 LoLcodex
             </div>
 
 
@@ -575,7 +575,7 @@
                 /*javascript_variables*/
     
                 groups._info.groupId = 704597;
-                groups._info.title = 'League book';
+                groups._info.title = 'LoLcodex';
                 groups._info.moduleTitle = 'Videos';
                 groups._info.searchTypes = {'blogs':{title:'Blogs',actionURL:'http://LoLcodex.com/blogs/search'},'chat':{title:'Chat',actionURL:'http://LoLcodex.com/chat/search'},'people':{title:'Members',actionURL:'http://LoLcodex.com/people/search'},'talks':{title:'Forum',actionURL:'http://LoLcodex.com/talks/search'},'wiki':{title:'Wiki',actionURL:'http://LoLcodex.com/wiki/search'},'files':{title:'Files',actionURL:'http://LoLcodex.com/files/search'},'messages':{title:'Priv. Messages',actionURL:'http://LoLcodex.com/dashboard/search_messages'}};
                 groups._info.language = 'english';

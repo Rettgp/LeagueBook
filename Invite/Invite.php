@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html dir="ltr">
     <head>
-        <title>League book | Private social network</title>
+        <title>LoLcodex | Private social network</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
         <meta name="Keywords" content="">
@@ -19,7 +19,7 @@
         <link rel="shortcut icon" href="/images/favicon.ico">
         <link rel="stylesheet" type="text/css" href="../css/style.css" id="groups_template_style">
         <link rel="stylesheet" type="text/css" href="../css/general.css">
-        <link rel="index" title="League book" href="http://LoLcodex.com">
+        <link rel="index" title="LoLcodex" href="http://LoLcodex.com">
         <link rel="alternate" type="application/rss+xml" title="RSS" href="">
         <link href="../css/style.css" rel="stylesheet" type="text/css">
         <link href="../css/#.css" rel="stylesheet" type="text/css">
@@ -295,11 +295,11 @@
                                                     var invite_text =document.getElementById('gnippet_invitation_text_id').value;
                                                     document.getElementById('preview_email').innerHTML = invite_text;
                                                 }
-                                                    </script><p><br /><a href="javascript:void(0)" onclick="document.getElementById('lsndfdd').style.display='block'; var container = this.parentNode.parentNode.parentNode.parentNode; container.style.height = container.scrollHeight + 'px'">Need to add a private message?</a><div id="lsndfdd" style="display:none; margin: 15px 0;"><textarea style="width: 350px; height: 100px;" onkeyup="change_preview()" id="gnippet_invitation_text_id" name="gnippet_invitation_text">I joined League book where I can post pictures, videos and events and I want to invite you here to communicate and collaborate. First, you need to join League book! Once you join, you can also create your own profile.</textarea><br><br><b>PREVIEW YOUR INVITATION EMAIL </b><a href="javascript:void(0)" onclick="document.getElementById('lsndfdd').style.display='none';"> Close Preview</a><br><br>
+                                                    </script><p><br /><a href="javascript:void(0)" onclick="document.getElementById('lsndfdd').style.display='block'; var container = this.parentNode.parentNode.parentNode.parentNode; container.style.height = container.scrollHeight + 'px'">Need to add a private message?</a><div id="lsndfdd" style="display:none; margin: 15px 0;"><textarea style="width: 350px; height: 100px;" onkeyup="change_preview()" id="gnippet_invitation_text_id" name="gnippet_invitation_text">I joined LoLcodex where I can post pictures, videos and events and I want to invite you here to communicate and collaborate. First, you need to join LoLcodex! Once you join, you can also create your own profile.</textarea><br><br><b>PREVIEW YOUR INVITATION EMAIL </b><a href="javascript:void(0)" onclick="document.getElementById('lsndfdd').style.display='none';"> Close Preview</a><br><br>
                                                         <table id="invitePreviewMail" cellpadding="0" cellspacing="0" border="0" width="620">
                                                             <tbody>
                                                                 <tr>
-                                                                    <td style="background:#444;color:#fff;font-weight:bold;font-family:'lucida grande', tahoma, verdana, arial, sans-serif;padding:4px 8px;vertical-align:middle;font-size:16px;letter-spacing:-0.03em;text-align:left">Join us on <span style="padding:0px 5px 10px; text-align: left;">League book</span></td>
+                                                                    <td style="background:#444;color:#fff;font-weight:bold;font-family:'lucida grande', tahoma, verdana, arial, sans-serif;padding:4px 8px;vertical-align:middle;font-size:16px;letter-spacing:-0.03em;text-align:left">Join us on <span style="padding:0px 5px 10px; text-align: left;">LoLcodex</span></td>
                                                                     <td style="background:#444;color:#fff;font-weight:bold;font-family:'lucida grande', tahoma, verdana, arial, sans-serif;padding:4px 8px;vertical-align:middle;font-size:12px;text-align:right"></td>
                                                                 </tr>
                                                                 <tr>
@@ -328,11 +328,11 @@
                                                                                                                     <td align="left" style="font-size:11px"><table cellspacing="0" cellpadding="0" style="border-collapse:collapse; font-size:11px;">
                                                                                                                             <tbody>
                                                                                                                                 <tr valign="top">
-                                                                                                                                    <td style="padding:0px 5px 10px; text-align: left;">Join us on<span style="padding:0px 5px 10px; font-size:11px; text-align: left;">League book</span></td>
+                                                                                                                                    <td style="padding:0px 5px 10px; text-align: left;">Join us on<span style="padding:0px 5px 10px; font-size:11px; text-align: left;">LoLcodex</span></td>
                                                                                                                                 </tr>
                                                                                                                                 <tr valign="top">
                                                                                                                                     <td style="padding:0px 5px 10px; font-size:11px; text-align: left;"><div style="padding:0px 5px 10px; font-size:11px; text-align: left;" id="preview_email">
-                                                                                                                                            I joined League book where I can post pictures, videos and events and I want to invite you here to communicate and collaborate. First, you need to join League book! Once you join, you can also create your own profile
+                                                                                                                                            I joined LoLcodex where I can post pictures, videos and events and I want to invite you here to communicate and collaborate. First, you need to join LoLcodex! Once you join, you can also create your own profile
                                                                                                                                         </div></td>
                                                                                                                                 </tr>
                                                                                                                             </tbody>
@@ -353,7 +353,7 @@
                                                                                                                     <td><table cellspacing="0" cellpadding="0" style="border-collapse:collapse;width:100%">
                                                                                                                             <tbody>
                                                                                                                                 <tr>
-                                                                                                                                    <td style="padding:10px;background-color:#f8f8ff;border-left:3px solid #ffd700;border-right:3px solid #ffd700;border-top:3px solid #ffd700;border-bottom:3px solid #ffd700"><div style="font-weight:bold; font-size:11px;">To join League book, please follow the link below:</div>
+                                                                                                                                    <td style="padding:10px;background-color:#f8f8ff;border-left:3px solid #ffd700;border-right:3px solid #ffd700;border-top:3px solid #ffd700;border-bottom:3px solid #ffd700"><div style="font-weight:bold; font-size:11px;">To join LoLcodex, please follow the link below:</div>
                                                                                                                                         <div>http://LoLcodex.com/join.php?[random_key]</div></td>
                                                                                                                                 </tr>
                                                                                                                             </tbody>
@@ -363,7 +363,7 @@
                                                                                                                     <td><table cellspacing="10" style="border:8px solid #eee;width:100%;margin-top:15px">
                                                                                                                             <tbody>
                                                                                                                                 <tr>
-                                                                                                                                    <td style="font-size:11px;font-weight:bold; text-align: center;">Other people you may know on League book:</td>
+                                                                                                                                    <td style="font-size:11px;font-weight:bold; text-align: center;">Other people you may know on LoLcodex:</td>
                                                                                                                                 </tr>
                                                                                                                                 <tr>
                                                                                                                                     <td><table cellpadding="0" style="margin-top:5px">
@@ -396,7 +396,7 @@
                     </div>
                 </div>
 
-                <div id="footer"> &copy; 2013 League book
+                <div id="footer"> &copy; 2013 LoLcodex
                 </div>
 
 
@@ -471,7 +471,7 @@
                     /*javascript_variables*/
     
                     groups._info.groupId = 704597;
-                    groups._info.title = 'League book';
+                    groups._info.title = 'LoLcodex';
                     groups._info.moduleTitle = '';
                     groups._info.searchTypes = {'blogs':{title:'Blogs',actionURL:'http://LoLcodex.com/blogs/search'},'chat':{title:'Chat',actionURL:'http://LoLcodex.com/chat/search'},'people':{title:'Members',actionURL:'http://LoLcodex.com/people/search'},'talks':{title:'Forum',actionURL:'http://LoLcodex.com/talks/search'},'wiki':{title:'Wiki',actionURL:'http://LoLcodex.com/wiki/search'},'files':{title:'Files',actionURL:'http://LoLcodex.com/files/search'},'messages':{title:'Priv. Messages',actionURL:'http://LoLcodex.com/dashboard/search_messages'}};
                     groups._info.language = 'english';
