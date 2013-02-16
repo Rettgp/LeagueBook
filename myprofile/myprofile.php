@@ -215,7 +215,7 @@
                                     <li id="basicItemProfile"><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi">Profile</a></li>
                                     <li id="basicItemAccount"><a href="#">Account <span class="downArrowIcon">&#9660;</span></a>
                                         <ul id="accountMenu">
-                                            <div class="userAvatar"><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><img src="no_image.png" alt="Levi Limmex" width="50" height="50" align="absmiddle"></a><p><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi">Levi Limmex</a></p></div>
+                                            <div class="userAvatar"><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><img src="no_image.png" alt="<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; ?>" width="50" height="50" align="absmiddle"></a><p><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; ?></a></p></div>
                                             <li><a href="http://LoLcodex.com/dashboard/myprofile">Edit Profile</a></li>
                                             <!--<li><a href="http://LoLcodex.com/dashboard/preferences">Account Settings</a></li>-->
                                             <li><a href="http://LoLcodex.com/dashboard/privacy_settings">Privacy Settings</a></li>
@@ -237,7 +237,7 @@
                     <div id="userProfileBlock">
                         <a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><img
                                 src="no_image.png"
-                                alt="Levi Limmex"
+                                alt="<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; ?>"
                                 width="50" height="50"></a>
                         <h1><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi">$_SESSION['summoner']</a></h1>
                         <p><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi/edit">Edit Profile</a></p>
@@ -296,7 +296,7 @@
                     <div class="col_main_in_withmenubar">
                         <div id="top_block_no_1"  ><div class="box"><div class="box_top" id="block_title_no_1"><h2>Edit My Profile</h2></div><div style="clear:both"></div><div class="box_mid"><div class="content" id="block_no_1"></div><form method="post" class="siteForm" action="http://LoLcodex.com/dashboard/myprofile" enctype="multipart/form-data" name="joinform" onsubmit="return _checkDate()"><div class="siteFormContainer">
                                             <div class="siteFormTitle">Name Surname</div>
-                                            <div class="siteFormBody"><input type="text" name="name" value="Levi Limmex" class="medium" maxlength="50" /></div></div>
+                                            <div class="siteFormBody"><input type="text" name="name" value="<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; ?>" class="medium" maxlength="50" /></div></div>
                                         <script>
                                             function selectSpecialValue(id,value) {
                                                 if(value=="")
@@ -842,7 +842,7 @@
                                                             groups._info.languageRevision={custom:135260045,main:424,name:'english'};
                                                             groups._info.bannedWords = '';
                                                             groups._info.titleSeperator = ' | ';
-                                                            groups._info.userNameSurname = 'Levi Limmex';
+                                                            groups._info.userNameSurname = '<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; ?>';
                                                             groups._info.userAvatar = 'http://LoLcodex.com/avatars/b/80.png';
                                                             groups._info.chatConfig = null;groups._info.membershipId = '31280300';
                                                             groups._info.isAdmin = '';
