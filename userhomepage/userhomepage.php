@@ -5,7 +5,10 @@
 		} else {
 			header ('Location: ../index.php');
 		}
-		include ('../scripts/summonerSetup.php'); 
+		if($_SESSION['summoner'] == ''){
+			include ('../scripts/summonerSetup.php'); 
+			setup();
+		}
 		
 ?>
 
@@ -77,7 +80,7 @@
         </script>
     </head>
 
-    <body class="group_member">	
+    <body class="group_member" onload="myFunction()">	
         <div id="bg_differentiation" style="display: none"></div>
         <div id="ajax_popup" style="display: none">
             <div class="ajaxModalBox"> <a href="javascript:groups.modalBox.hide()" class="closeButton"></a>
@@ -95,7 +98,6 @@
 		
         <script>
 			function myFunction(){
-				var acctID
 				var url = 'http://api.elophant.com/v2/na/summoner/rytael?key=orzAVNzOQCgT9R36YfW1';
 				$.get(url,
 				{
@@ -103,31 +105,22 @@
 				},
 				function(data,status){
 					var name = data.match(/\w+|"[^"]+"/g)[4].replace(/"/g, '');
-					acctID = data.match(/\w+|"[^"]+"/g)[6].replace(/"/g, '');
-					var profileIconID = data.match(/\w+|"[^"]+"/g)[8].replace(/"/g, '');
-					var summonerLVL = data.match(/\w+|"[^"]+"/g)[12].replace(/"/g, '');
-					var summonerID = data.match(/\w+|"[^"]+"/g)[14].replace(/"/g, '');
-					document.getElementById("userProfileBlock").children[1].textContent = name;
-					if(profileIconID == 0)
-						document.getElementById("userProfileBlock").children[0].children[0].src = "icons0.png";			
-					
-				}), 'text';
-				var url = "http://api.elophant.com/v2/na/recent_games/" + acctID + "?key=orzAVNzOQCgT9R36YfW1";
-				$.get(url,
-				{
-					accountId: acctID,
-				},
-				function(data,status){
-					/*alert(data.match(/\w+|"[^"]+"/g)[11]);/*
-					LOOK AT API TO SEE WHAT DATA TO GRAB
-					var name = data.match(/\w+|"[^"]+"/g)[4].replace(/"/g, '');
 					var acctID = data.match(/\w+|"[^"]+"/g)[6].replace(/"/g, '');
 					var profileIconID = data.match(/\w+|"[^"]+"/g)[8].replace(/"/g, '');
 					var summonerLVL = data.match(/\w+|"[^"]+"/g)[12].replace(/"/g, '');
 					var summonerID = data.match(/\w+|"[^"]+"/g)[14].replace(/"/g, '');
 					document.getElementById("userProfileBlock").children[1].textContent = name;
 					if(profileIconID == 0)
-						document.getElementById("userProfileBlock").children[0].children[0].src = "icons0.png";		*/	
+						document.getElementById("userProfileBlock").children[0].children[0].src = "icons0.png";			
+				}), 'text';
+				var url = "http://api.elophant.com/v2/na/recent_games/" + acctID + "?key=orzAVNzOQCgT9R36YfW1";
+				alert(url);
+				$.get(url,
+				{
+					accountId: acctID
+				},
+				function(data,status){
+					alert(data.match(/\w+|"[^"]+"/g)[4]);
 					
 				});
 			}
@@ -358,7 +351,7 @@
                                 <div class="box_mid">
                                     <div class="content" id="block_no_1202933">
                                         <div id="status_form">
-                                            <form action="../scripts/newsfeed.php" method="post">
+                                            <form action="../scripts/newsfeed.php?summ=<?PHP print $_GET['summ'] ?>" method="post">
                                                 <div id="status_form_media">	
                                                     <ul>		
                                                         <li class="update_status active">
@@ -372,10 +365,10 @@
                                                             <a href="http://LoLcodex.com/videos/add">Video</a></li><li class="add_blog"><a href="http://LoLcodex.com/blogs/add">Blog</a></li></ul></div>
 
                                                 <div id="statusMsgContainer">
-                                                    <textarea class="special_border" id="status_msg" cols="70" placeholder="What's happening in the rift, Summoner? "></textarea>
+                                                    <textarea class="special_border" id="status_msg" name="msg" cols="70" placeholder="What's happening in the rift, Summoner? "></textarea>
                                                 </div>
                                                 <div id="status_form_actions">
-                                                    <div class="status_form_action"><input id="status_form_update_button" type="button" value="Update" onclick="updateStatus()"/></div>
+                                                    <div class="status_form_action"><input id="status_form_update_button" type="submit" value="Update" onclick="updateStatus()"/></div>
                                                 </div>
                                             </form>
                                         </div>
