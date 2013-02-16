@@ -223,7 +223,7 @@
                                             <li><a href="http://LoLcodex.com/dashboard/password">Change Credentials</a></li>
                                             <li><a href="http://LoLcodex.com/dashboard/email_settings">E-mail Settings</a></li>-->
                                             <li><a href="http://LoLcodex.com/dashboard/spread">Invite People</a></li>
-                                            <li><a href="/signout">Log Out</a></li>
+                                            <li><a href="../scripts/logout.php">Log Out</a></li>
                                         </ul>
                                     </li>
                                 </ul></td>

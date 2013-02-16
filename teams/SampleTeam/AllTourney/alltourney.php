@@ -131,125 +131,103 @@
         </script>
 <div id="layout" class="module_groups ">
 	<div id="header">
-		<div id="hgroups">
-			<table width="100%" border="0" cellspacing="0" cellpadding="0">
-			<tr>
-				<td class="td_group_title" valign="bottom">
-					<div id="h1">
-						<a id="groupTitle" href="http://LoLcodex.com/">
-						<h1>LoLcodex</h1>
-						</a>
-					</div>
-				</td>
-				<td class="td_notifications" valign="bottom">
-					<ul id="headerNotificationsIcons">
-						<li>
-						<a id="headerFriendRequestItem" onclick="return false" href="#"></a>
-						<ul class="notificationMenu" style="display: none">
-							<h3> Friend Requests </h3>
-							<div class="notificationContent">
-							</div>
-							<li class="bottom">
-							<a href="http://LoLcodex.com/dashboard/alerts">See All Friend Requests</a>
-							</li>
-						</ul>
-						</li>
-						<li>
-						<a id="headerMessagesItem" onclick="return false" rel="setAllMessagesPassive" href="#"></a>
-						<ul class="notificationMenu" style="display: none">
-							<h3>Messages
-							<div class="notificationAction">
-								<a href="http://LoLcodex.com/dashboard/compose_message">Compose New Message</a>
-							</div>
-							</h3>
-							<div class="notificationContent">
-								<li class="notificationNoContent">No Messages</li>
-							</div>
-							<li class="bottom">
-							<a href="http://LoLcodex.com/dashboard/messages">See All Messages</a>
-							</li>
-						</ul>
-						</li>
-						<li>
-						<a id="headerNotificationsItem" onclick="return false" rel="setAllNotificationsPassive" href="#"></a>
-						<ul class="notificationMenu" style="display: none">
-							<h3> Notifications </h3>
-							<div class="notificationContent">
-							</div>
-							<li class="bottom">
-							<a href="http://LoLcodex.com/dashboard/notifications">See All Notifications</a>
-							</li>
-						</ul>
-						</li>
-					</ul>
-				</td>
-				<td class="td_search" valign="bottom">
-					<div id="searchBoxDiv">
-						<form id="book_search_form" method="POST" action="http://LoLcodex.com/people/search">
-							<input id="book_groups_search_text" type="search" name="q" placeholder="Search" autocomplete="off" data-placeholder-bound="true">
-							<input id="searchSubmitInput" type="submit" data-placeholder-bound="true">
-							<ul id="book_search_types_box" class="autocomplete" style="display: none">
-								<li id="searchPeopleModule" class="searchModule" onclick="groups.search.goToAdvancedSearch()">
-								<div class="searchModuleTitle">
-									People
-								</div>
-								<div class="searchModuleSubtitle">
-									Advanced Search
-								</div>
-								</li>
-								<li id="searchPeopleModuleLoading" class="searchResultsLoading" style="display: none"></li>
-								<li id="searchMessagesModule" class="searchModule" onclick="groups.search.searchInModule('messages')">
-								<div class="searchModuleTitle">
-									Messages
-								</div>
-								<div class="searchModuleSubtitle">
-									More?
-								</div>
-								</li>
-								<li id="searchBlogsModule" class="searchModule" onclick="groups.search.searchInModule('blogs')">
-								<div class="searchModuleTitle">
-									Blogs
-								</div>
-								<div class="searchModuleSubtitle">
-									More?
-								</div>
-								</li>
-								<li id="searchBlogsModuleLoading" class="searchResultsLoading" style="display: none"></li>
-								<li class="noResultsFound centered hovered" style="display: none" class="hovered">
-								No results found for <span class="searchKeyword"></span>
-								</li>
-							</ul>
-						</form>
-					</div>
-				</td>
-				<td class="td_user_nav" valign="bottom" align="right">
-					<ul id="basicMenu">
-						<li id="basicItemHome"><a href="http://LoLcodex.com/">Home</a></li>
-						<li id="basicItemProfile"><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi">Profile</a></li>
-						<li id="basicItemAccount"><a href="#">Account <span class="downArrowIcon">&#9660;</span></a>
-						<ul id="accountMenu">
-							<div class="userAvatar">
-								<a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><img src="no_image.png" alt="Levi Limmex" width="50" height="50" align="absmiddle"></a>
-								<p>
-									<a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi">Levi Limmex</a>
-								</p>
-							</div>
-							<li><a href="http://LoLcodex.com/dashboard/myprofile">Edit Profile</a></li>
-							<!--<li><a href="http://LoLcodex.com/dashboard/preferences">Account Settings</a></li>-->
-							<li><a href="http://LoLcodex.com/dashboard/privacy_settings">Privacy Settings</a></li>
-							<!--<li><a href="http://LoLcodex.com/dashboard/compose_message">Compose New Message</a></li>
+                <div id="hgroups">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td class="td_group_title" valign="bottom"><div id="h1">
+                                    <a id="groupTitle" href="http://LoLcodex.com/">
+                                        <h1>LoLcodex</h1>
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="td_notifications" valign="bottom">
+                                <ul id="headerNotificationsIcons">
+                                    <li>
+                                        <a id="headerFriendRequestItem" onclick="return false" href="#"> </a>
+                                        <ul class="notificationMenu" style="display: none">
+                                            <h3> Friend Requests </h3>
+                                            <div class="notificationContent"> </div>
+                                            <li class="bottom">
+                                                <a href="http://LoLcodex.com/dashboard/alerts">See All Friend Requests</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a id="headerMessagesItem" onclick="return false" rel="setAllMessagesPassive" href="#"> </a>
+                                        <ul class="notificationMenu" style="display: none">
+                                            <h3>Messages
+                                                <div class="notificationAction">
+                                                    <a href="http://LoLcodex.com/dashboard/compose_message">Compose New Message</a>
+                                                </div>
+                                            </h3>
+                                            <div class="notificationContent">
+                                                <li class="notificationNoContent">No Messages</li>
+                                            </div>
+                                            <li class="bottom">
+                                                <a href="http://LoLcodex.com/dashboard/messages">See All Messages</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a id="headerNotificationsItem" onclick="return false" rel="setAllNotificationsPassive" href="#"> </a>
+                                        <ul class="notificationMenu" style="display: none">
+                                            <h3> Notifications </h3>
+                                            <div class="notificationContent"> </div>
+                                            <li class="bottom">
+                                                <a href="http://LoLcodex.com/dashboard/notifications">See All Notifications</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="td_search" valign="bottom">
+                                <div id="searchBoxDiv">
+                                    <form id="book_search_form" method="POST" action="http://LoLcodex.com/people/search">
+                                        <input id="book_groups_search_text" type="search" name="q" placeholder="Search" autocomplete="off" data-placeholder-bound="true">
+                                        <input id="searchSubmitInput" type="submit" data-placeholder-bound="true">
+                                        <ul id="book_search_types_box" class="autocomplete" style="display: none">
+                                            <li id="searchPeopleModule" class="searchModule" onClick="groups.search.goToAdvancedSearch()">
+                                                <div class="searchModuleTitle">People</div>
+                                                <div class="searchModuleSubtitle">Advanced Search</div>
+                                            </li>
+                                            <li id="searchPeopleModuleLoading" class="searchResultsLoading" style="display: none"></li>
+                                            <li id="searchMessagesModule" class="searchModule" onClick="groups.search.searchInModule('messages')">
+                                                <div class="searchModuleTitle">Messages</div>
+                                                <div class="searchModuleSubtitle">More?</div>
+                                            </li>
+                                            <li id="searchBlogsModule" class="searchModule" onClick="groups.search.searchInModule('blogs')">
+                                                <div class="searchModuleTitle">Blogs</div>
+                                                <div class="searchModuleSubtitle">More?</div>
+                                            </li>
+                                            <li id="searchBlogsModuleLoading" class="searchResultsLoading" style="display: none"></li>
+                                            <li class="noResultsFound centered hovered" style="display: none" class="hovered">
+                                                No results found for <span class="searchKeyword"></span>
+                                            </li>
+                                        </ul>
+                                    </form>
+                                </div>
+                            </td>
+                            <td class="td_user_nav" valign="bottom" align="right"><ul id="basicMenu">
+                                    <li id="basicItemHome"><a href="http://LoLcodex.com/">Home</a></li>
+                                    <li id="basicItemProfile"><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi">Profile</a></li>
+                                    <li id="basicItemAccount"><a href="#">Account <span class="downArrowIcon">&#9660;</span></a>
+                                        <ul id="accountMenu">
+                                            <div class="userAvatar"><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><img src="no_image.png" alt="Levi Limmex" width="50" height="50" align="absmiddle"></a><p><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi">Levi Limmex</a></p></div>
+                                            <li><a href="http://LoLcodex.com/dashboard/myprofile">Edit Profile</a></li>
+                                            <!--<li><a href="http://LoLcodex.com/dashboard/preferences">Account Settings</a></li>-->
+                                            <li><a href="http://LoLcodex.com/dashboard/privacy_settings">Privacy Settings</a></li>
+                                            <!--<li><a href="http://LoLcodex.com/dashboard/compose_message">Compose New Message</a></li>
                                             <li><a href="http://LoLcodex.com/dashboard/password">Change Credentials</a></li>
                                             <li><a href="http://LoLcodex.com/dashboard/email_settings">E-mail Settings</a></li>-->
-							<li><a href="http://LoLcodex.com/dashboard/spread">Invite People</a></li>
-							<li><a href="/signout">Log Out</a></li>
-						</ul>
-						</li>
-					</ul>
-				</td>
-			</tr>
-			</table>
-		</div>
-	</div>
+                                            <li><a href="http://LoLcodex.com/dashboard/spread">Invite People</a></li>
+                                            <li><a href="../scripts/logout.php">Log Out</a></li>
+                                        </ul>
+                                    </li>
+                                </ul></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
 	<div id="contentWrapper" class="">
 		<div id="aSide">
 			<div id="userProfileBlock">

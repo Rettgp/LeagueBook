@@ -1,4 +1,5 @@
 <?PHP
+	session_start();
 	function setup(){
 		//Check if summoner name setup
 		$user_name = "LoLCodexData";
