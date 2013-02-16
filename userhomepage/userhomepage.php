@@ -251,7 +251,7 @@
                                     <li id="basicItemProfile"><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi">Profile</a></li>
                                     <li id="basicItemAccount"><a href="#">Account <span class="downArrowIcon">&#9660;</span></a>
                                         <ul id="accountMenu">
-                                            <div class="userAvatar"><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><img src="no_image.png" alt="<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; ?>" width="50" height="50" align="absmiddle"></a><p><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; ?></a></p></div>
+                                            <div class="userAvatar"><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><img src="no_image.png" alt=<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?> width="50" height="50" align="absmiddle"></a><p><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?></a></p></div>
                                             <li><a href="http://LoLcodex.com/dashboard/myprofile">Edit Profile</a></li>
                                             <!--<li><a href="http://LoLcodex.com/dashboard/preferences">Account Settings</a></li>-->
                                             <li><a href="http://LoLcodex.com/dashboard/privacy_settings">Privacy Settings</a></li>
@@ -273,9 +273,9 @@
                     <div id="userProfileBlock">
                         <a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><img
                                 src="no_image.png"
-                                alt="<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; ?>"
+                                alt=<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?>
                                 width="50" height="50"></a>
-                        <h1><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; ?></a></h1>
+                        <h1><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?></a></h1>
                         <p><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi/edit">Edit Profile</a></p>
                     </div>              
                     <div id="menu">
@@ -465,8 +465,8 @@
                     <ul id="groups_chat_user_list_g_leaguebook" class="chat_user_list">
                         <li id="panel_chat_user_13530230" class="vcard">
                             <a href="_trigger/chat/with/13530230" data-userid="13530230">
-                                <img class="avatar" width="30" height="30" src="http://LoLcodex.com/avatars/b/80.png" alt="<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; ?>'s avatar">
-                                <span class="fn"><?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; ?></span>
+                                <img class="avatar" width="30" height="30" src="http://LoLcodex.com/avatars/b/80.png" alt="<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?>'s avatar">
+                                <span class="fn"><?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?></span>
                             </a>
                         </li>
                     </ul>
@@ -537,7 +537,7 @@
                 groups._info.languageRevision={custom:135260045,main:424,name:'english'};
                 groups._info.bannedWords = '';
                 groups._info.titleSeperator = ' | ';
-                groups._info.userNameSurname = '<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; ?>';
+                groups._info.userNameSurname = '<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?>';
                 groups._info.userAvatar = 'no_image.png';
                 groups._info.chatConfig = {"jid":"13530230-704597@im.com","room":"704597@conference.im.com","token":"7e4422157878949a9db1641dec01d6af","bind_endpoint":"http:\/\/LoLcodex.com\/http-bind","mode":"xmpp"};groups._info.membershipId = '31280300';
                 groups._info.isAdmin = '';

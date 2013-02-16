@@ -215,7 +215,7 @@
                                     <li id="basicItemProfile"><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi">Profile</a></li>
                                     <li id="basicItemAccount"><a href="#">Account <span class="downArrowIcon">&#9660;</span></a>
                                         <ul id="accountMenu">
-                                            <div class="userAvatar"><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><img src="no_image.png" alt="<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; ?>" width="50" height="50" align="absmiddle"></a><p><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; ?></a></p></div>
+                                            <div class="userAvatar"><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><img src="no_image.png" alt=<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?> width="50" height="50" align="absmiddle"></a><p><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?></a></p></div>
                                             <li><a href="http://LoLcodex.com/dashboard/myprofile">Edit Profile</a></li>
                                             <!--<li><a href="http://LoLcodex.com/dashboard/preferences">Account Settings</a></li>-->
                                             <li><a href="http://LoLcodex.com/dashboard/privacy_settings">Privacy Settings</a></li>
@@ -237,7 +237,7 @@
                     <div id="userProfileBlock">
                         <a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><img
                                 src="no_image.png"
-                                alt="<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; ?>"
+                                alt=<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?>
                                 width="50" height="50"></a>
                         <h1><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi">$_SESSION['summoner']</a></h1>
                         <p><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi/edit">Edit Profile</a></p>
@@ -316,7 +316,7 @@
                                                                                                                 </tr>
                                                                                                                 <tr>
                                                                                                                     <td style="font-size:11px;color:#666666;padding:5px 2px"><div>
-                                                                                                                            <div><?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; ?> </div>
+                                                                                                                            <div><?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?> </div>
                                                                                                                             <div><div> </div></div>
                                                                                                                         </div></td>
                                                                                                                 </tr>
@@ -347,7 +347,7 @@
                                                                                                                 </tr>
                                                                                                                 <tr>
                                                                                                                     <td style="padding:10px 0px; font-size:11px"> Thanks,<br>
-                                                                                                                        <?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; ?></td>
+                                                                                                                        <?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?></td>
                                                                                                                 </tr>
                                                                                                                 <tr>
                                                                                                                     <td><table cellspacing="0" cellpadding="0" style="border-collapse:collapse;width:100%">
@@ -370,7 +370,7 @@
                                                                                                                                             <tbody>
                                                                                                                                                 <tr valign="top">
                                                                                                                                                     <td width="60" style="padding:0px 3px 10px 0px"><img src="http://LoLcodex.com/avatars/b/80.png"  width="50" height="50" align="right" style="border:0px none"></td>
-                                                                                                                                                    <td style="font-size:11px;color:#999;padding:0px 0px 10px 0px"><span style="font-size:11px;color:#3B5998"><?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; ?></span><br>us <img src="http://com/images/nations/us.gif"></td>
+                                                                                                                                                    <td style="font-size:11px;color:#999;padding:0px 0px 10px 0px"><span style="font-size:11px;color:#3B5998"><?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?></span><br>us <img src="http://com/images/nations/us.gif"></td>
                                                                                                                                                 </tr>
                                                                                                                                             </tbody>
                                                                                                                                         </table></td>
@@ -478,7 +478,7 @@
                     groups._info.languageRevision={custom:135260045,main:424,name:'english'};
                     groups._info.bannedWords = '';
                     groups._info.titleSeperator = ' | ';
-                    groups._info.userNameSurname = '<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; ?>';
+                    groups._info.userNameSurname = '<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?>';
                     groups._info.userAvatar = 'http://LoLcodex.com/avatars/b/80.png';
                     groups._info.chatConfig = null;groups._info.membershipId = '31280300';
                     groups._info.isAdmin = '';
