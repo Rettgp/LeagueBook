@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 		$email = quote_smart($email, $db_handle);
 		$pword = quote_smart($pword, $db_handle);
 		$SQL = "SELECT * FROM users WHERE email = $email AND password = md5($pword)";
-		$SQL1 = "SELECT email FROM users WHERE password = md5($pword)";
+		$SQL1 = "SELECT summoner FROM users WHERE email = $email";
 		$result = mysql_query($SQL);
 		$result1 = mysql_query($SQL1);
 		$row = mysql_num_rows($result);
@@ -54,6 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 				session_start();
 				$_SESSION['sess_login'] = true;
 				$_SESSION['acct'] = $email;
+				$_SESSION['summoner'] = $result1;
 				header ("Location: ../userhomepage/userhomepage.php");
 			}
 			else {

@@ -388,29 +388,8 @@
                                                 width: 100% !important;
                                             }
                                         </style>
-                                        <div id="newsfeed"><div class="userStream special_border" id="msg42694927-1">
-                                                <div class="msgCont" id="msgCont42694927-1">
-                                                    <div class="msgArrow"></div>
-                                                    <div class="msg"><span class="name"><a href="http://LoLcodex.com/people/oajiivhbldxbldhwi" data-userid="13530230" data-username="oajiivhbldxbldhwi">L6vi</a></span> This is coming along quite well</div>
-                                                    <div class="media"></div>
-                                                    <div class="msgFooter">
-                                                        <div class="time">
-                                                            <div class="icon">
-                                                                <img width="16, height="16" src="balloon.gif" alt="comment" />
-                                                            </div>
+                                        <div id="newsfeed">
 
-                                                            <a href="http://LoLcodex.com/newsfeed/post/42694927" rel="1360721629"> 3 minutes ago</a>
-                                                        </div>
-                                                        <div class="actions" id="actions42694927-1"><a id="newComment42694927-1" href="javascript:;">Comment</a> 
-                                                            <a id="like42694927-1" href="javascript:;">Like</a>  
-                                                            <a id="deleteAction42694927-1" href="javascript:;" redirectBackHome="false">Delete</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="pic">
-                                                    <a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi" data-userid="13530230" data-username="oajiivhbldxbldhwi"><img src="no_image.png" width="50" height="50" border="0" style=""  /></a>
-                                                </div>
-                                            </div>
                                         </div>
                                         <a id="newsfeed_loadMsgs" class="moreButton radius special_bg special_text special_border" href="javascript:;" style="display:none">Load More</a>
                                     </div>

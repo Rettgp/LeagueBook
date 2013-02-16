@@ -264,7 +264,7 @@
                                 src="no_image.png"
                                 alt="Levi Limmex"
                                 width="50" height="50"></a>
-                        <h1><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi">L6vi</a></h1>
+                        <h1><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi">$_SESSION['summoner']</a></h1>
                         <p><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi/edit">Edit Profile</a></p>
                     </div>              
                     <div id="menu">
