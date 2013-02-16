@@ -194,13 +194,13 @@
                                     <li id="basicItemAccount"><a href="#">Account <span class="downArrowIcon">&#9660;</span></a>
                                         <ul id="accountMenu">
                                             <div class="userAvatar"><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><img src="no_image.png" alt=<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?> width="50" height="50" align="absmiddle"></a><p><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?></a></p></div>
-                                            <li><a href="http://LoLcodex.com/myprofile">Edit Profile</a></li>
+                                            <li><a href="http://LoLcodex.com/myprofile/myprofile.php">Edit Profile</a></li>
                                             <!--<li><a href="http://LoLcodex.com/preferences">Account Settings</a></li>-->
                                             <li><a href="http://LoLcodex.com/privacy_settings">Privacy Settings</a></li>
                                             <!--<li><a href="http://LoLcodex.com/compose_message">Compose New Message</a></li>
                                             <li><a href="http://LoLcodex.com/password">Change Credentials</a></li>
                                             <li><a href="http://LoLcodex.com/email_settings">E-mail Settings</a></li>-->
-                                            <li><a href="http://LoLcodex.com/spread">Invite People</a></li>
+                                            <li><a href="http://LoLcodex.com/invite/invite.php">Invite People</a></li>
                                             <li><a href="../scripts/logout.php">Log Out</a></li>
                                         </ul>
                                     </li>
