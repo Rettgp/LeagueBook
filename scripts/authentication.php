@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 				$_SESSION['sess_login'] = true;
 				$_SESSION['acct'] = $email;
 				$_SESSION['summoner'] = $row1[0];
-				header ("Location: ../userhomepage/userhomepage.php");
+				header ("Location: ../userhomepage/userhomepage.php?summoner=$row1[0]");
 			}
 			else {
 				session_start();

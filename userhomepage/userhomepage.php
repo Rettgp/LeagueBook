@@ -131,7 +131,37 @@
 					
 				});
 			}
+			
+			function updateStatus(){
+					$toUpdate = document.getElementById("status_msg").value;
+					$html = '<div class="userStream special_border" id="msg42694927-1">'+
+                                               '<div class="msgCont" id="msgCont42694927-1">'
+                                                   +'<div class="msgArrow"></div>'
+                                                   +'<div class="msg"><span class="name"><a href="http://LoLcodex.com/people/oajiivhbldxbldhwi" data-userid="13530230" data-username="oajiivhbldxbldhwi"><?php print $_SESSION["summoner"]; ?></a></span>' + '  ' + $toUpdate + '</div>'
+                                                  + '<div class="media"></div>'
+                                                   +'<div class="msgFooter">'
+                                                      + '<div class="time">'
+                                                          + '<div class="icon">'
+                                                                +'<img width="16, height="16" src="balloon.gif" alt="comment" />'
+                                                           + '</div>'
 
+                                                           + '<a href="http://LoLcodex.com/newsfeed/post/42694927" rel="1360721629"> 3 minutes ago</a>'
+                                                       + '</div>'
+                                                        +'<div class="actions" id="actions42694927-1"><a id="newComment42694927-1" href="javascript:;">Comment</a> '
+                                                          +  '<a id="like42694927-1" href="javascript:;">Like</a>  '
+                                                           + '<a id="deleteAction42694927-1" href="javascript:;" redirectBackHome="false">Delete</a>'
+                                                       + '</div>'
+                                                   + '</div>'
+                                               + '</div>'
+                                                +'<div class="pic">'
+                                                    +'<a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi" data-userid="13530230" data-username="oajiivhbldxbldhwi"><img src="no_image.png" width="50" height="50" border="0" style=""  /></a>'
+                                               + '</div>'
+                                            +'</div>';
+					
+					document.getElementById('newsfeed').innerHTML = document.getElementById('newsfeed').innerHTML + $html;
+					
+			}
+			
             function searchGroups()
             {
 
@@ -167,7 +197,7 @@
             }
         </script>
 
-
+		
         <div id="layout" class="module_home ">
             <div id="header">
                 <div id="hgroups">
@@ -328,7 +358,7 @@
                                 <div class="box_mid">
                                     <div class="content" id="block_no_1202933">
                                         <div id="status_form">
-                                            <form onsubmit="return false">
+                                            <form action="../scripts/newsfeed.php" method="post">
                                                 <div id="status_form_media">	
                                                     <ul>		
                                                         <li class="update_status active">
@@ -345,7 +375,7 @@
                                                     <textarea class="special_border" id="status_msg" cols="70" placeholder="What's happening in the rift, Summoner? "></textarea>
                                                 </div>
                                                 <div id="status_form_actions">
-                                                    <div class="status_form_action"><input id="status_form_update_button" type="button" value="Update" /></div>
+                                                    <div class="status_form_action"><input id="status_form_update_button" type="button" value="Update" onclick="updateStatus()"/></div>
                                                 </div>
                                             </form>
                                         </div>
