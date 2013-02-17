@@ -152,14 +152,14 @@
                                         <ul class="notificationMenu" style="display: none">
                                             <h3>Messages
                                                 <div class="notificationAction">
-                                                    <a href="http://lolcodex.com/compose_message">Compose New Message</a>
+                                                    <a href="http://LoLcodex.com/composemessage.php">Compose New Message</a>
                                                 </div>
                                             </h3>
                                             <div class="notificationContent">
                                                 <li class="notificationNoContent">No Messages</li>
                                             </div>
                                             <li class="bottom">
-                                                <a href="http://lolcodex.com/messages">See All Messages</a>
+                                                <a href="http://LoLcodex.com/incomingmessages.php">See All Messages</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -208,13 +208,13 @@
                                     <li id="basicItemAccount"><a href="#">Account <span class="downArrowIcon">&#9660;</span></a>
                                         <ul id="accountMenu">
                                             <div class="userAvatar"><a href="http://lolcodex.com/people/person/oajiivhbldxbldhwi"><img src="no_image.png" alt="Levi Limmex" width="50" height="50" align="absmiddle"></a><p><a href="http://lolcodex.com/people/person/oajiivhbldxbldhwi">Levi Limmex</a></p></div>
-                                            <li><a href="http://lolcodex.com/myprofile">Edit Profile</a></li>
+                                            <li><a href="http://LoLcodex.com/myprofile/myprofile.php">Edit Profile</a></li>
                                             <!--<li><a href="http://lolcodex.com/preferences">Account Settings</a></li>-->
-                                            <li><a href="http://lolcodex.com/privacy_settings">Privacy Settings</a></li>
-                                            <!--<li><a href="http://lolcodex.com/compose_message">Compose New Message</a></li>
-                                            <li><a href="http://lolcodex.com/password">Change Credentials</a></li>
-                                            <li><a href="http://lolcodex.com/email_settings">E-mail Settings</a></li>-->
-                                            <li><a href="http://lolcodex.com/spread">Invite People</a></li>
+                                            <li><a href="http://LoLcodex.com/privacysettings.php">Privacy Settings</a></li>
+                                            <!--<li><a href="http://LoLcodex.com/composemessage.php">Compose New Message</a></li>
+                                            <li><a href="http://lolcodex/change_password.php">Change Credentials</a></li>
+                                            <li><a href="http://lolcodex/emailsettings.php">E-mail Settings</a></li>-->
+                                            <li><a href="http://LoLcodex.com/Invite.php">Invite People</a></li>
                                             <li><a href="/signout">Log Out</a></li>
                                         </ul>
                                     </li>

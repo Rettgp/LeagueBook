@@ -216,9 +216,9 @@
                                     <li id="basicItemAccount"><a href="#">Account <span class="downArrowIcon">&#9660;</span></a>
                                         <ul id="accountMenu">
                                             <div class="userAvatar"><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><img src="no_image.png" alt=<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?> width="50" height="50" align="absmiddle"></a><p><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?></a></p></div>
-                                            <li><a href="http://LoLcodex.com/myprofile/myprofile.php">Edit Profile</a></li>
+                                            <li><a href="http://LoLcodex.com/myprofile/myprofile.php/myprofile.php">Edit Profile</a></li>
                                             <!--<li><a href="http://LoLcodex.com/preferences">Account Settings</a></li>-->
-                                            <li><a href="http://LoLcodex.com/privacy_settings">Privacy Settings</a></li>
+                                            <li><a href="http://LoLcodex.com/privacysettings.php">Privacy Settings</a></li>
                                             <!--<li><a href="http://lolcodex/composemessage.php">Compose New Message</a></li>
                                             <li><a href="http://lolcodex/change_password.php">Change Credentials</a></li>
                                             <li><a href="http://lolcodex/emailsettings.php">E-mail Settings</a></li>-->
@@ -283,10 +283,10 @@
                 </div>            
                 <div id="content"><div class="col_menu" id="col_sidebar">
                         <div id="top_block_no_2"  ><div class="box_mid_ops"><div class="content" id="block_no_2">    <div class="menu_list">
-                                        <a style="background-image: url(http://com/images/fugue/user--pencil.png)"  href="http://LoLcodex.com/myprofile/myprofile.php">Edit My Profile</a>
+                                        <a style="background-image: url(http://com/images/fugue/user--pencil.png)"  href="http://LoLcodex.com/myprofile/myprofile.php/myprofile.php">Edit My Profile</a>
                                         <!--<a style="background-image: url(http://com/images/fugue/gear.png)"  href="http://LoLcodex.com/preferences">Preferences</a>-->
                                         <a style="background-image: url(http://com/images/fugue/lock.png)"  href="http://lolcodex/change_password.php">Change Credentials</a>
-                                        <a style="background-image: url(http://com/images/fugue/wall--pencil.png)"  href="http://LoLcodex.com/privacy_settings">Privacy Settings</a>
+                                        <a style="background-image: url(http://com/images/fugue/wall--pencil.png)"  href="http://LoLcodex.com/privacysettings.php">Privacy Settings</a>
                                         <a style="background-image: url(http://com/images/fugue/mail--plus.png)"  href="http://lolcodex/composemessage.php">Compose New Message</a>
                                         <a style="background-image: url(http://com/images/fugue/mail--pencil.png)"  href="http://lolcodex/emailsettings.php">E-mail Settings</a>
                                         <a style="background-image: url(http://com/images/fugue/mails-stack.png)"  href="http://LoLcodex.com/incomingmessages.php">My Incoming Messages</a>
@@ -294,7 +294,7 @@
                                         <a style="background-image: url(http://com/images/fugue/door-open-out.png)"  href="http://LoLcodex.com/signout">Sign Out</a>
                                     </div></div></div><div class="box_bottom_ops"> </div></div></div>
                     <div class="col_main_in_withmenubar">
-                        <div id="top_block_no_1"  ><div class="box"><div class="box_top" id="block_title_no_1"><h2>Edit My Profile</h2></div><div style="clear:both"></div><div class="box_mid"><div class="content" id="block_no_1"></div><form method="post" class="siteForm" action="http://LoLcodex.com/myprofile/myprofile.php" enctype="multipart/form-data" name="joinform" onsubmit="return _checkDate()"><div class="siteFormContainer">
+                        <div id="top_block_no_1"  ><div class="box"><div class="box_top" id="block_title_no_1"><h2>Edit My Profile</h2></div><div style="clear:both"></div><div class="box_mid"><div class="content" id="block_no_1"></div><form method="post" class="siteForm" action="http://LoLcodex.com/myprofile/myprofile.php/myprofile.php" enctype="multipart/form-data" name="joinform" onsubmit="return _checkDate()"><div class="siteFormContainer">
                                             <div class="siteFormTitle">Name Surname</div>
                                             <div class="siteFormBody"><input type="text" name="name" value=<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?> class="medium" maxlength="50" /></div></div>
                                         <script>
