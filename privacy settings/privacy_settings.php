@@ -167,7 +167,7 @@
                                                 <li class="notificationNoContent">No Messages</li>
                                             </div>
                                             <li class="bottom">
-                                                <a href="http://LoLcodex.com/messages">See All Messages</a>
+                                                <a href="http://LoLcodex.com/incomingmessages.php">See All Messages</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -289,7 +289,7 @@
                                         <a style="background-image: url(http://com/images/fugue/wall--pencil.png)"  href="http://LoLcodex.com/privacy_settings">Privacy Settings</a>
                                         <a style="background-image: url(http://com/images/fugue/mail--plus.png)"  href="http://lolcodex/composemessage.php">Compose New Message</a>
                                         <a style="background-image: url(http://com/images/fugue/mail--pencil.png)"  href="http://lolcodex/emailsettings.php">E-mail Settings</a>
-                                        <a style="background-image: url(http://com/images/fugue/mails-stack.png)"  href="http://LoLcodex.com/messages">My Incoming Messages</a>
+                                        <a style="background-image: url(http://com/images/fugue/mails-stack.png)"  href="http://LoLcodex.com/incomingmessages.php">My Incoming Messages</a>
                                         <a style="background-image: url(http://com/images/fugue/user--plus.png)"  href="http://LoLcodex.com/invite/invite.php">Invite People!</a>
                                         <a style="background-image: url(http://com/images/fugue/door-open-out.png)"  href="http://LoLcodex.com/signout">Sign Out</a>
                                     </div></div></div><div class="box_bottom_ops"> </div></div></div>

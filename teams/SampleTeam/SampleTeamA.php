@@ -164,7 +164,7 @@
                                                 <li class="notificationNoContent">No Messages</li>
                                             </div>
                                             <li class="bottom">
-                                                <a href="http://LoLcodex.com/messages">See All Messages</a>
+                                                <a href="http://LoLcodex.com/incomingmessages.php">See All Messages</a>
                                             </li>
                                         </ul>
                                     </li>
