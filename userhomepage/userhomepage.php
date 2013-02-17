@@ -97,6 +97,7 @@
 
 		
         <script>
+			var acctID
 			function myFunction(){
 				var url = 'http://api.elophant.com/v2/na/summoner/rytael?key=orzAVNzOQCgT9R36YfW1';
 				$.get(url,
@@ -105,7 +106,7 @@
 				},
 				function(data,status){
 					var name = data.match(/\w+|"[^"]+"/g)[4].replace(/"/g, '');
-					var acctID = data.match(/\w+|"[^"]+"/g)[6].replace(/"/g, '');
+					acctID = data.match(/\w+|"[^"]+"/g)[6].replace(/"/g, '');
 					var profileIconID = data.match(/\w+|"[^"]+"/g)[8].replace(/"/g, '');
 					var summonerLVL = data.match(/\w+|"[^"]+"/g)[12].replace(/"/g, '');
 					var summonerID = data.match(/\w+|"[^"]+"/g)[14].replace(/"/g, '');
@@ -114,13 +115,14 @@
 						document.getElementById("userProfileBlock").children[0].children[0].src = "icons0.png";			
 				}), 'text';
 				var url = "http://api.elophant.com/v2/na/recent_games/" + acctID + "?key=orzAVNzOQCgT9R36YfW1";
-				alert(url);
+				//alert(url);
 				$.get(url,
 				{
 					accountId: acctID
 				},
 				function(data,status){
-					alert(data.match(/\w+|"[^"]+"/g)[4]);
+					//alert(data.match(/\w+|"[^"]+"/g)[255]); //CHAMP ID
+					//alert(data.match(/\"premadeTeam\":(.*?)\}/i)[1]); //CHAMP ID
 					
 				});
 			}
