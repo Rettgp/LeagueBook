@@ -157,7 +157,7 @@
                                         <ul class="notificationMenu" style="display: none">
                                             <h3>Messages
                                                 <div class="notificationAction">
-                                                    <a href="http://LoLcodex.com/compose_message">Compose New Message</a>
+                                                    <a href="http://lolcodex/composemessage.php">Compose New Message</a>
                                                 </div>
                                             </h3>
                                             <div class="notificationContent">
@@ -216,9 +216,9 @@
                                             <li><a href="http://LoLcodex.com/myprofile/myprofile.php">Edit Profile</a></li>
                                             <!--<li><a href="http://LoLcodex.com/preferences">Account Settings</a></li>-->
                                             <li><a href="http://LoLcodex.com/privacy_settings">Privacy Settings</a></li>
-                                            <!--<li><a href="http://LoLcodex.com/compose_message">Compose New Message</a></li>
-                                            <li><a href="http://LoLcodex.com/password">Change Credentials</a></li>
-                                            <li><a href="http://LoLcodex.com/email_settings">E-mail Settings</a></li>-->
+                                            <!--<li><a href="http://lolcodex/composemessage.php">Compose New Message</a></li>
+                                            <li><a href="http://lolcodex/change_password.php">Change Credentials</a></li>
+                                            <li><a href="http://lolcodex/emailsettings.php">E-mail Settings</a></li>-->
                                             <li><a href="http://LoLcodex.com/invite/invite.php">Invite People</a></li>
                                             <li><a href="../scripts/logout.php">Log Out</a></li>
                                         </ul>
@@ -333,7 +333,7 @@
 				<a href="http://LoLcodex.com/alerts">There are no new Notifications.</a>
 			</ul>
 		</div>
-		<a id="groups_chat_button_g_leaguebook" class="chat group button" title="Chat" href="/_trigger/chat/toggle/group/LoLcodex"><span id="groups_chat_button_g_label">Chat</span></a>
+		<a id="groups_chat_button_g_LoLcodex" class="chat group button" title="Chat" href="/_trigger/chat/toggle/group/LoLcodex"><span id="groups_chat_button_g_label">Chat</span></a>
 	</div>
 	<div id="groups_toaster_vcard" class="special_bg special_text special_border">
 	</div>

@@ -569,7 +569,7 @@
                                         <ul class="notificationMenu" style="display: none">
                                             <h3>Messages
                                                 <div class="notificationAction">
-                                                    <a href="http://LoLcodex.com/compose_message">Compose New Message</a>
+                                                    <a href="http://lolcodex/composemessage.php">Compose New Message</a>
                                                 </div>
                                             </h3>
                                             <div class="notificationContent">
@@ -628,9 +628,9 @@
                                             <li><a href="http://LoLcodex.com/myprofile/myprofile.php">Edit Profile</a></li>
                                             <!--<li><a href="http://LoLcodex.com/preferences">Account Settings</a></li>-->
                                             <li><a href="http://LoLcodex.com/privacy_settings">Privacy Settings</a></li>
-                                            <!--<li><a href="http://LoLcodex.com/compose_message">Compose New Message</a></li>
-                                            <li><a href="http://LoLcodex.com/password">Change Credentials</a></li>
-                                            <li><a href="http://LoLcodex.com/email_settings">E-mail Settings</a></li>-->
+                                            <!--<li><a href="http://lolcodex/composemessage.php">Compose New Message</a></li>
+                                            <li><a href="http://lolcodex/change_password.php">Change Credentials</a></li>
+                                            <li><a href="http://lolcodex/emailsettings.php">E-mail Settings</a></li>-->
                                             <li><a href="http://LoLcodex.com/invite/invite.php">Invite People</a></li>
                                             <li><a href="../scripts/logout.php">Log Out</a></li>
                                         </ul>
@@ -820,22 +820,22 @@
                         <a href="http://LoLcodex.com/alerts">There are no new Notifications.</a>
                     </ul>
                 </div>
-                <a id="groups_chat_button_g_leaguebook" class="chat group button active" href="#" title="Group Chat">
+                <a id="groups_chat_button_g_LoLcodex" class="chat group button active" href="#" title="Group Chat">
                     <span>Chat (1 online)</span>
                     <div class="count" style="display: none;" id="groupsfw13607291338465400">
                         <img class="groups_bar_overlay" src="/images/groups_bar/overlay.png">
-                        <span id="groups_chat_unread_count_g_leaguebook">0</span>
+                        <span id="groups_chat_unread_count_g_LoLcodex">0</span>
                     </div>
                 </a>
-                <div id="groups_chat_panel_g_leaguebook" class="chat group panel" style="right: -1px;">
+                <div id="groups_chat_panel_g_LoLcodex" class="chat group panel" style="right: -1px;">
                     <h6 class="special_highlight">
                         <a class="chat_close_button" style="display:block" href="/_trigger/chat/action/close_group_panel"> </a>
-                        <a id="groups_chat_sound_g_leaguebook" class="groups_chat_sound on" href="/_trigger/chat/toggle/beep/g_leaguebook" title="Chat Sound"> </a>
-                        <a id="groups_chat_state_g_leaguebook" class="groups_chat_state online" href="/_trigger/chat/toggle/offline/g_leaguebook" title="Chat State">Online</a>
+                        <a id="groups_chat_sound_g_LoLcodex" class="groups_chat_sound on" href="/_trigger/chat/toggle/beep/g_LoLcodex" title="Chat Sound"> </a>
+                        <a id="groups_chat_state_g_LoLcodex" class="groups_chat_state online" href="/_trigger/chat/toggle/offline/g_LoLcodex" title="Chat State">Online</a>
                         Chat
                     </h6>
-                    <ol id="groups_chat_conversation_g_leaguebook" class="hConversation"></ol>
-                    <ul id="groups_chat_user_list_g_leaguebook" class="chat_user_list">
+                    <ol id="groups_chat_conversation_g_LoLcodex" class="hConversation"></ol>
+                    <ul id="groups_chat_user_list_g_LoLcodex" class="chat_user_list">
                         <li id="panel_chat_user_13530230" class="vcard">
                             <a href="_trigger/chat/with/13530230" data-userid="13530230">
                                 <img class="avatar" width="30" height="30" src="http://LoLcodex.com/avatars/b/80.png" alt="<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?>'s avatar">
@@ -844,8 +844,8 @@
                         </li>
                     </ul>
                     <div class="chat_new_message">
-                        <textarea id="groups_chat_new_message_g_leaguebook" class="message_area"></textarea>
-                        <button id="groups_chat_send_message_g_leaguebook" class="message_send">Send</button>
+                        <textarea id="groups_chat_new_message_g_LoLcodex" class="message_area"></textarea>
+                        <button id="groups_chat_send_message_g_LoLcodex" class="message_send">Send</button>
                     </div>
                 </div>
             </div>
