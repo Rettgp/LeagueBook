@@ -123,8 +123,8 @@
 				function(data,status){
 					//alert(data.match(/\w+|"[^"]+"/g)[255]); //CHAMP ID
 					//alert(data.match(/\"premadeTeam\":(.*?)\}/i)[1]); //CHAMP ID
-					
-				});
+					alert(data.championId);
+				}), 'json';
 			}
 			
 			function updateStatus(){
