@@ -157,7 +157,7 @@
                                         <ul class="notificationMenu" style="display: none">
                                             <h3>Messages
                                                 <div class="notificationAction">
-                                                    <a href="http://lolcodex/composemessage.php">Compose New Message</a>
+                                                    <a href="http://lolcodex/homepage/composemessage.php">Compose New Message</a>
                                                 </div>
                                             </h3>
                                             <div class="notificationContent">
@@ -215,10 +215,10 @@
                                             <div class="userAvatar"><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><img src="no_image.png" alt=<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?> width="50" height="50" align="absmiddle"></a><p><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?></a></p></div>
                                             <li><a href="http://LoLcodex.com/myprofile/myprofile.php/myprofile.php">Edit Profile</a></li>
                                             <!--<li><a href="http://LoLcodex.com/preferences">Account Settings</a></li>-->
-                                            <li><a href="http://LoLcodex.com/privacysettings.php">Privacy Settings</a></li>
-                                            <!--<li><a href="http://lolcodex/composemessage.php">Compose New Message</a></li>
-                                            <li><a href="http://lolcodex/change_password.php">Change Credentials</a></li>
-                                            <li><a href="http://lolcodex/emailsettings.php">E-mail Settings</a></li>-->
+                                            <li><a href="http://LoLcodex.com/privacy_settings/privacysettings.php">Privacy Settings</a></li>
+                                            <!--<li><a href="http://lolcodex/homepage/composemessage.php">Compose New Message</a></li>
+                                            <li><a href="http://lolcodex/homepage/change_password.php">Change Credentials</a></li>
+                                            <li><a href="http://lolcodex/homepage/emailsettings.php">E-mail Settings</a></li>-->
                                             <li><a href="http://LoLcodex.com/invite/invite.php">Invite People</a></li>
                                             <li><a href="../scripts/logout.php">Log Out</a></li>
                                         </ul>

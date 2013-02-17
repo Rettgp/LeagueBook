@@ -210,10 +210,10 @@
                                             <div class="userAvatar"><a href="http://lolcodex.com/people/person/oajiivhbldxbldhwi"><img src="no_image.png" alt="Levi Limmex" width="50" height="50" align="absmiddle"></a><p><a href="http://lolcodex.com/people/person/oajiivhbldxbldhwi">Levi Limmex</a></p></div>
                                             <li><a href="http://LoLcodex.com/myprofile/myprofile.php">Edit Profile</a></li>
                                             <!--<li><a href="http://lolcodex.com/preferences">Account Settings</a></li>-->
-                                            <li><a href="http://LoLcodex.com/privacysettings.php">Privacy Settings</a></li>
+                                            <li><a href="http://LoLcodex.com/privacy_settings/privacysettings.php">Privacy Settings</a></li>
                                             <!--<li><a href="http://LoLcodex.com/composemessage.php">Compose New Message</a></li>
-                                            <li><a href="http://lolcodex/change_password.php">Change Credentials</a></li>
-                                            <li><a href="http://lolcodex/emailsettings.php">E-mail Settings</a></li>-->
+                                            <li><a href="http://lolcodex/homepage/change_password.php">Change Credentials</a></li>
+                                            <li><a href="http://lolcodex/homepage/emailsettings.php">E-mail Settings</a></li>-->
                                             <li><a href="http://LoLcodex.com/Invite.php">Invite People</a></li>
                                             <li><a href="/signout">Log Out</a></li>
                                         </ul>
