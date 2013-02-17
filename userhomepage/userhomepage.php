@@ -5,11 +5,10 @@
 		} else {
 			header ('Location: ../index.php');
 		}
-		if($_SESSION['summoner'] == ''){
+		if($_SESSION['summoner'] == '' || $_SESSION['summoner'] == NULL){
 			include ('../scripts/summonerSetup.php'); 
 			setup();
 		}
-		
 ?>
 
 
