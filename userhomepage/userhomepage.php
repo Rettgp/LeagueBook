@@ -95,9 +95,8 @@
         <!-- skfnsdfknsdlkfn LoLcodex -->
 
 
-		
         <script>
-			var acctID
+			var acctID = 10;
 			function myFunction(){
 				var url = 'http://api.elophant.com/v2/na/summoner/rytael?key=orzAVNzOQCgT9R36YfW1';
 				$.get(url,
@@ -105,26 +104,375 @@
 					summonerName:"rytael",
 				},
 				function(data,status){
-					var name = data.match(/\w+|"[^"]+"/g)[4].replace(/"/g, '');
-					acctID = data.match(/\w+|"[^"]+"/g)[6].replace(/"/g, '');
-					var profileIconID = data.match(/\w+|"[^"]+"/g)[8].replace(/"/g, '');
-					var summonerLVL = data.match(/\w+|"[^"]+"/g)[12].replace(/"/g, '');
-					var summonerID = data.match(/\w+|"[^"]+"/g)[14].replace(/"/g, '');
+					var name = data.data.internalName;
+					acctID = data.data.acctId;
+					alert(acctID);
+					var profileIconID = data.data.profileIconId;
+					var summonerLVL = data.data.summonerLevel;
+					var summonerID = data.data.summonerId;
 					document.getElementById("userProfileBlock").children[1].textContent = name;
 					if(profileIconID == 0)
-						document.getElementById("userProfileBlock").children[0].children[0].src = "icons0.png";			
-				}), 'text';
-				var url = "http://api.elophant.com/v2/na/recent_games/" + acctID + "?key=orzAVNzOQCgT9R36YfW1";
-				//alert(url);
-				$.get(url,
-				{
-					accountId: acctID
-				},
-				function(data,status){
-					//alert(data.match(/\w+|"[^"]+"/g)[255]); //CHAMP ID
-					//alert(data.match(/\"premadeTeam\":(.*?)\}/i)[1]); //CHAMP ID
-					alert(data.championId);
-				}), 'json';
+						document.getElementById("userProfileBlock").children[0].children[0].src = "icons0.png";	
+					getRecentGames();
+				}, 'json');
+			}
+			
+			function getRecentGames(){
+				var url1 = "http://api.elophant.com/v2/na/recent_games/" + acctID + "?key=orzAVNzOQCgT9R36YfW1";
+					$.get(url1,
+					{
+						accountId: acctID
+					},
+					function(data1){
+						alert(data1.data.gameStatistics[0].championId); ///GET ALL CHAMPIONS PLAYED LAST 10 GAMES
+						alert(data1.data.gameStatistics[1].championId); ///9 IS MOST RECENT!
+						alert(data1.data.gameStatistics[2].championId);
+						alert(data1.data.gameStatistics[3].championId);
+						alert(data1.data.gameStatistics[4].championId);
+						alert(data1.data.gameStatistics[5].championId);
+						alert(data1.data.gameStatistics[6].championId);
+						alert(data1.data.gameStatistics[7].championId);
+						alert(data1.data.gameStatistics[8].championId);
+						alert(data1.data.gameStatistics[9].championId);
+					}, 'json');
+			}
+			
+			function chamions(id){
+				switch(id){
+				case 1:
+				  execute code block 1
+				  break;
+				case 2:
+				  execute code block 2
+				  break;
+				case 3:
+				  execute code block 1
+				  break;
+				case 4:
+				  execute code block 2
+				  break;
+				case 5:
+				  execute code block 2
+				  break;
+				case 6:
+				  execute code block 2
+				  break;
+				case 7:
+				  execute code block 2
+				  break;
+				 case 8:
+				  execute code block 2
+				  break;
+				  case 9:
+				  execute code block 2
+				  break;
+				  case 10:
+				  execute code block 2
+				  break;
+				  case 11:
+				  execute code block 2
+				  break;
+				  case 12:
+				  execute code block 2
+				  break;
+				  case 13:
+				  execute code block 2
+				  break;
+				  case 14:
+				  execute code block 2
+				  break;
+				  case 15:
+				  execute code block 2
+				  break;
+				  case 16:
+				  execute code block 2
+				  break;
+				  case 17:
+				  execute code block 2
+				  break;
+				  case 18:
+				  execute code block 2
+				  break;
+				  case 19:
+				  execute code block 2
+				  break;
+				  case 20:
+				  execute code block 2
+				  break;
+				  case 21:
+				  execute code block 2
+				  break;
+				  case 22:
+				  execute code block 2
+				  break;
+				  case 23:
+				  execute code block 2
+				  break;
+				  case 24:
+				  execute code block 2
+				  break;
+				  case 25:
+				  execute code block 2
+				  break;
+				  case 26:
+				  execute code block 2
+				  break;
+				  case 27:
+				  execute code block 2
+				  break;
+				  case 28:
+				  execute code block 2
+				  break;
+				  case 29:
+				  execute code block 2
+				  break;
+				  case 30:
+				  execute code block 2
+				  break;
+				  case 31:
+				  execute code block 2
+				  break;
+				  case 32:
+				  execute code block 2
+				  break;
+				  case 34:
+				  execute code block 2
+				  break;
+				  case 35:
+				  execute code block 2
+				  break;
+				  case 36:
+				  execute code block 2
+				  break;
+				  case 37:
+				  execute code block 2
+				  break;
+				  case 38:
+				  execute code block 2
+				  break;
+				case 39:
+				  execute code block 2
+				  break;
+				  case 40:
+				  execute code block 2
+				  break;
+				  case 41:
+				  execute code block 2
+				  break;
+				  case 42:
+				  execute code block 2
+				  break;
+				  case 43:
+				  execute code block 2
+				  break;
+				  case 44:
+				  execute code block 2
+				  break;
+				  case 45:
+				  execute code block 2
+				  break;
+				  case 46:
+				  execute code block 2
+				  break;
+				  case 47:
+				  execute code block 2
+				  break;
+				  case 48:
+				  execute code block 2
+				  break;
+				  case 49:
+				  execute code block 2
+				  break;
+				  case 50:
+				  execute code block 2
+				  break;
+				  case 51:
+				  execute code block 2
+				  break;
+				  case 52:
+				  execute code block 2
+				  break;
+				  case 53:
+				  execute code block 2
+				  break;
+				  case 54:
+				  execute code block 2
+				  break;
+				  case 55:
+				  execute code block 2
+				  break;
+				  case 56:
+				  execute code block 2
+				  break;
+				  case 57:
+				  execute code block 2
+				  break;
+				  case 58:
+				  execute code block 2
+				  break;
+				  case 59:
+				  execute code block 2
+				  break;
+				  case 60:
+				  execute code block 2
+				  break;
+				  case 61:
+				  execute code block 2
+				  break;
+				  case 62:
+				  execute code block 2
+				  break;
+				  case 63:
+				  execute code block 2
+				  break;
+				  case 64:
+				  execute code block 2
+				  break;
+				  case 65:
+				  execute code block 2
+				  break;
+				  case 66:
+				  execute code block 2
+				  break;
+				  case 67:
+				  execute code block 2
+				  break;
+				  case 68:
+				  execute code block 2
+				  break;
+				  case 69:
+				  execute code block 2
+				  break;
+				  case 70:
+				  execute code block 2
+				  break;
+				  case 71:
+				  execute code block 2
+				  break;
+				  case 72:
+				  execute code block 2
+				  break;
+				  case 73:
+				  execute code block 2
+				  break;
+				  case 74:
+				  execute code block 2
+				  break;
+				  case 75:
+				  execute code block 2
+				  break;
+				  case 76:
+				  execute code block 2
+				  break;
+				  case 77:
+				  execute code block 2
+				  break;
+				  case 78:
+				  execute code block 2
+				  break;
+				  case 79:
+				  execute code block 2
+				  break;
+				  case 80:
+				  execute code block 2
+				  break;
+				  case 81:
+				  execute code block 2
+				  break;
+				  case 82:
+				  execute code block 2
+				  break;
+				  case 83:
+				  execute code block 2
+				  break;
+				  case 84:
+				  execute code block 2
+				  break;
+				  case 85:
+				  execute code block 2
+				  break;
+				  case 86:
+				  execute code block 2
+				  break;
+				  case 87:
+				  execute code block 2
+				  break;
+				  case 88:
+				  execute code block 2
+				  break;
+				  case 89:
+				  execute code block 2
+				  break;
+				  case 90:
+				  execute code block 2
+				  break;
+				  case 91:
+				  execute code block 2
+				  break;
+				  case 92:
+				  execute code block 2
+				  break;
+				  case 93:
+				  execute code block 2
+				  break;
+				  case 94:
+				  execute code block 2
+				  break;
+				  case 95:
+				  execute code block 2
+				  break;
+				  case 96:
+				  execute code block 2
+				  break;
+				  case 97:
+				  execute code block 2
+				  break;
+				  case 98:
+				  execute code block 2
+				  break;
+				  case 99:
+				  execute code block 2
+				  break;
+				  case 100:
+				  execute code block 2
+				  break;
+				  
+				 
+				  
+				default:
+				  code to be executed if n is different from case 1 and 2
+				}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			}
 			
 			function updateStatus(){
