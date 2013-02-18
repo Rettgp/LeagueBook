@@ -212,8 +212,8 @@
                                             <!--<li><a href="http://lolcodex.com/preferences">Account Settings</a></li>-->
                                             <li><a href="http://LoLcodex.com/privacy_settings/privacysettings.php">Privacy Settings</a></li>
                                             <!--<li><a href="http://LoLcodex.com/composemessage.php">Compose New Message</a></li>
-                                            <li><a href="http://lolcodex/homepage/change_password.php">Change Credentials</a></li>
-                                            <li><a href="http://lolcodex/homepage/emailsettings.php">E-mail Settings</a></li>-->
+                                            <li><a href="http://lolcodex.com/homepage/change_password.php">Change Credentials</a></li>
+                                            <li><a href="http://lolcodex.com/homepage/emailsettings.php">E-mail Settings</a></li>-->
                                             <li><a href="http://LoLcodex.com/Invite.php">Invite People</a></li>
                                             <li><a href="/signout">Log Out</a></li>
                                         </ul>
@@ -288,7 +288,7 @@
     <a style="background-image: url(http://grou.ps/images/fugue/door-open-out.png)"  href="http://LoLcodex.grou.ps/signout">Sign Out</a>
     </div></div></div><div class="box_bottom_ops"> </div></div></div>
 <div class="col_main_in_withmenubar">
-<div id="top_block_no_1"  ><div class="box"><div class="box_top" id="block_title_no_1"><h2>Change My Password</h2></div><div style="clear:both"></div><div class="box_mid"><div class="content" id="block_no_1"><form method="POST" action="http://grou.ps/LoLcodex/password/change_password" class="siteForm">                    <div class="siteFormContainer">
+<div id="top_block_no_1"  ><div class="box"><div class="box_top" id="block_title_no_1"><h2>Change My Password</h2></div><div style="clear:both"></div><div class="box_mid"><div class="content" id="block_no_1"><form method="POST" action="http://grou.ps/lolcodex.com/password/change_password" class="siteForm">                    <div class="siteFormContainer">
                         <div class="siteFormTitle">Old Password</div>
                         <div class="siteFormBody">    
                             <input onfocus="inputfocus(this)" onblur="inputblur(this)" type="password" name="oldpassword" size="40" />
@@ -313,7 +313,7 @@
                        </div>
                     </div>
                 </form>				</div></div></div><div class="box_bottom"><span class="box_bottom_right"></span><span class="box_bottom_left"></span></div></div>
-<div id="hidden_block_2"  style="display:none"  ><div class="box"><div class="box_top" id="block_title_no_2"><h2>Change My Email</h2></div><div style="clear:both"></div><div class="box_mid"><div class="content" id="block_no_2"><form method="POST" action="http://grou.ps/LoLcodex/password/change_email" class="siteForm">                    <div class="siteFormContainer">
+<div id="hidden_block_2"  style="display:none"  ><div class="box"><div class="box_top" id="block_title_no_2"><h2>Change My Email</h2></div><div style="clear:both"></div><div class="box_mid"><div class="content" id="block_no_2"><form method="POST" action="http://grou.ps/lolcodex.com/password/change_email" class="siteForm">                    <div class="siteFormContainer">
                         <div class="siteFormTitle">Password</div>
                         <div class="siteFormBody">    
                             <input onfocus="inputfocus(this)" onblur="inputblur(this)" type="password" name="oldpassword" size="40" />

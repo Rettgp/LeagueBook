@@ -22,7 +22,7 @@
 <link rel="stylesheet" type="text/css" href="../css/style.css" id="groups_template_style">
 <link rel="stylesheet" type="text/css" href="../css/general.css">
 <link rel="index" title="LoLcodex" href="http://LoLcodex.com">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="http://com/rss/LoLcodex/home">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://com/rss/lolcodex.com/home">
 <link href="/css/style.css" rel="stylesheet" type="text/css">
 <link href="/css/#.css" rel="stylesheet" type="text/css">
 <link href="/css/# #2.css" rel="stylesheet" type="text/css">
