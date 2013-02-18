@@ -229,9 +229,9 @@
                     <div id="userProfileBlock">
                         <a href="http://lolcodex.com/people/person/oajiivhbldxbldhwi"><img
                                 src="http://lolcodex.com/avatars/b/80.png"
-                                alt="Levi Limmex"
+                                alt=<?PHP if($_GET['summ'] == NULL) print "Please associate a Summoner name"; else print $_GET['summ']; ?>
                                 width="50" height="50"></a>
-                        <h1><a href="http://lolcodex.com/people/person/oajiivhbldxbldhwi">Levi Limmex</a></h1>
+                        <h1><a href="http://lolcodex.com/people/person/oajiivhbldxbldhwi"><?PHP if($_GET['summ'] == NULL) print "Please associate a Summoner name"; else print $_GET['summ']; ?></a></h1>
                         <p><a href="http://lolcodex.com/people/person/oajiivhbldxbldhwi/edit">Edit Profile</a></p>
                     </div>
 

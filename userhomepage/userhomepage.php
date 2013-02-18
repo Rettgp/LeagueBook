@@ -111,15 +111,15 @@
         <script>
 			var acctID = 10;
 			function myFunction(){
-				var url = 'http://api.elophant.com/v2/na/summoner/rytael?key=orzAVNzOQCgT9R36YfW1';
+				var name = getUrlVars()["summ"];
+				var url = 'http://api.elophant.com/v2/na/summoner/' + name + '?key=orzAVNzOQCgT9R36YfW1';
 				$.get(url,
 				{
-					summonerName:"rytael",
+					summonerName: name,
 				},
 				function(data,status){
 					var name = data.data.internalName;
 					acctID = data.data.acctId;
-					alert(acctID);
 					var profileIconID = data.data.profileIconId;
 					var summonerLVL = data.data.summonerLevel;
 					var summonerID = data.data.summonerId;
@@ -130,6 +130,14 @@
 				}, 'json');
 				
 			}
+			function getUrlVars() {
+				var vars = {};
+				var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+					vars[key] = value;
+				});
+				return vars;
+			}
+
 			
 			function getRecentGames(){
 				var url1 = "http://api.elophant.com/v2/na/recent_games/" + acctID + "?key=orzAVNzOQCgT9R36YfW1";
@@ -138,7 +146,7 @@
 						accountId: acctID
 					},
 					function(data1){
-						alert(data1.data.gameStatistics[0].championId); ///GET ALL CHAMPIONS PLAYED LAST 10 GAMES
+						/*alert(data1.data.gameStatistics[0].championId); ///GET ALL CHAMPIONS PLAYED LAST 10 GAMES
 						alert(data1.data.gameStatistics[1].championId); ///9 IS MOST RECENT!
 						alert(data1.data.gameStatistics[2].championId);
 						alert(data1.data.gameStatistics[3].championId);
@@ -147,378 +155,398 @@
 						alert(data1.data.gameStatistics[6].championId);
 						alert(data1.data.gameStatistics[7].championId);
 						alert(data1.data.gameStatistics[8].championId);
-						alert(data1.data.gameStatistics[9].championId);
+						alert(data1.data.gameStatistics[9].championId);*/
+						var name = champions(data1.data.gameStatistics[9].championId);
+						document.getElementById('recentMatch').innerHTML += name;
 					}, 'json');
 			}
 			
-			function chamions(id){
+			function champions(id){
+			
 				switch(id){
 				case 1:
-				  execute code block 1
+				  return 'Annie';
 				  break;
 				case 2:
-				  execute code block 2
+				  return 'Olaf';
 				  break;
 				case 3:
-				  execute code block 1
+				  return 'Galio';
 				  break;
 				case 4:
-				  execute code block 2
+				  return 'Twisted Fate';
 				  break;
 				case 5:
-				  execute code block 2
+				  return 'Xin Zhao';
 				  break;
 				case 6:
-				  execute code block 2
+				  return 'Urgot';
 				  break;
 				case 7:
-				  execute code block 2
+				  return 'LeBlanc';
 				  break;
 				 case 8:
-				  execute code block 2
+				  return 'Vladimir';
 				  break;
 				  case 9:
-				  execute code block 2
+				  return 'Fiddlesticks';
 				  break;
 				  case 10:
-				  execute code block 2
+				  return 'Kayle';
 				  break;
 				  case 11:
-				  execute code block 2
+				  return 'Master Yi';
 				  break;
 				  case 12:
-				  execute code block 2
+				  return 'Alistar';
 				  break;
 				  case 13:
-				  execute code block 2
+				  return 'Ryze';
 				  break;
 				  case 14:
-				  execute code block 2
+				  return 'Sion';
 				  break;
 				  case 15:
-				  execute code block 2
+				  return 'Sivir';
 				  break;
 				  case 16:
-				  execute code block 2
+				  return 'Soraka';
 				  break;
 				  case 17:
-				  execute code block 2
+				  return 'Teemo';
 				  break;
 				  case 18:
-				  execute code block 2
+				  return 'Tristana';
 				  break;
 				  case 19:
-				  execute code block 2
+				  return 'Warwick';
 				  break;
 				  case 20:
-				  execute code block 2
+				  return 'Nunu';
 				  break;
 				  case 21:
-				  execute code block 2
+				  return 'Miss Fortune';
 				  break;
 				  case 22:
-				  execute code block 2
+				  return 'Ashe';
 				  break;
 				  case 23:
-				  execute code block 2
+				  return 'Tryndamere';
 				  break;
 				  case 24:
-				  execute code block 2
+				  return 'Jax';
 				  break;
 				  case 25:
-				  execute code block 2
+				  return 'Morgana';
 				  break;
 				  case 26:
-				  execute code block 2
+				  return 'Zilean';
 				  break;
 				  case 27:
-				  execute code block 2
+				  return 'Singed';
 				  break;
 				  case 28:
-				  execute code block 2
+				  return 'Evelynn';
 				  break;
 				  case 29:
-				  execute code block 2
+				  return 'Twitch';
 				  break;
 				  case 30:
-				  execute code block 2
+				  return 'Karthus';
 				  break;
 				  case 31:
-				  execute code block 2
+				  return "Cho'Gath";
 				  break;
 				  case 32:
-				  execute code block 2
+				  return 'Amumu';
+				  break;
+				  case 33:
+				  return 'Rammus';
 				  break;
 				  case 34:
-				  execute code block 2
+				  return 'Anivia';
 				  break;
 				  case 35:
-				  execute code block 2
+				  return 'Shaco';
 				  break;
 				  case 36:
-				  execute code block 2
+				  return 'Dr. Mundo';
 				  break;
 				  case 37:
-				  execute code block 2
+				  return 'Sona';
 				  break;
 				  case 38:
-				  execute code block 2
+				  return 'Kassadin';
 				  break;
 				case 39:
-				  execute code block 2
+				  return 'Irelia';
 				  break;
 				  case 40:
-				  execute code block 2
+				  return 'Janna';
 				  break;
 				  case 41:
-				  execute code block 2
+				  return 'Gangplank';
 				  break;
 				  case 42:
-				  execute code block 2
+				  return 'Corki';
 				  break;
 				  case 43:
-				  execute code block 2
+				  return 'Karma';
 				  break;
 				  case 44:
-				  execute code block 2
+				  return 'Taric';
 				  break;
 				  case 45:
-				  execute code block 2
-				  break;
-				  case 46:
-				  execute code block 2
-				  break;
-				  case 47:
-				  execute code block 2
+				  return 'Veigar';
 				  break;
 				  case 48:
-				  execute code block 2
-				  break;
-				  case 49:
-				  execute code block 2
+				  return 'Trundle';
 				  break;
 				  case 50:
-				  execute code block 2
+				  return 'Swain';
 				  break;
 				  case 51:
-				  execute code block 2
+				  return 'Caitlyn';
 				  break;
 				  case 52:
-				  execute code block 2
+				  return 'Sona';
 				  break;
 				  case 53:
-				  execute code block 2
+				  return 'Blitzcrank';
 				  break;
 				  case 54:
-				  execute code block 2
+				  return 'Malphite';
 				  break;
 				  case 55:
-				  execute code block 2
+				  return 'Katarina';
 				  break;
 				  case 56:
-				  execute code block 2
+				  return 'Nocturne';
 				  break;
 				  case 57:
-				  execute code block 2
+				  return 'Maokai';
 				  break;
 				  case 58:
-				  execute code block 2
+				  return 'Renekton';
 				  break;
 				  case 59:
-				  execute code block 2
+				  return 'Jarvan IV';
 				  break;
 				  case 60:
-				  execute code block 2
+				  return 'Elise';
 				  break;
 				  case 61:
-				  execute code block 2
+				  return 'Orianna';
 				  break;
 				  case 62:
-				  execute code block 2
+				  return 'Wukong';
 				  break;
 				  case 63:
-				  execute code block 2
+				  return 'Brand';
 				  break;
 				  case 64:
-				  execute code block 2
+				  return 'Lee Sin';
 				  break;
 				  case 65:
-				  execute code block 2
+				  return 'Sona';
 				  break;
 				  case 66:
-				  execute code block 2
+				  return 'Sona';
 				  break;
 				  case 67:
-				  execute code block 2
+				  return 'Vayne';
 				  break;
 				  case 68:
-				  execute code block 2
+				  return 'Rumble';
 				  break;
 				  case 69:
-				  execute code block 2
+				  return 'Cassiopeia';
 				  break;
 				  case 70:
-				  execute code block 2
+				  return 'Vayne';
 				  break;
 				  case 71:
-				  execute code block 2
+				  return 'Vayne';
 				  break;
 				  case 72:
-				  execute code block 2
+				  return 'Skarner';
 				  break;
 				  case 73:
-				  execute code block 2
+				  return 'Vayne';
 				  break;
 				  case 74:
-				  execute code block 2
+				  return 'Heimerdinger';
 				  break;
 				  case 75:
-				  execute code block 2
+				  return 'Nasus';
 				  break;
 				  case 76:
-				  execute code block 2
+				  return 'Nidalee';
 				  break;
 				  case 77:
-				  execute code block 2
+				  return 'Udyr';
 				  break;
 				  case 78:
-				  execute code block 2
+				  return 'Poppy';
 				  break;
 				  case 79:
-				  execute code block 2
+				  return 'Gragas';
 				  break;
 				  case 80:
-				  execute code block 2
+				  return 'Pantheon';
 				  break;
 				  case 81:
-				  execute code block 2
+				  return 'Ezreal';
 				  break;
 				  case 82:
-				  execute code block 2
+				  return 'Mordekaiser';
 				  break;
 				  case 83:
-				  execute code block 2
+				  return 'Yorick';
 				  break;
 				  case 84:
-				  execute code block 2
+				  return 'Akali';
 				  break;
 				  case 85:
-				  execute code block 2
+				  return 'Kennen';
 				  break;
 				  case 86:
-				  execute code block 2
+				  return 'Garen';
 				  break;
 				  case 87:
-				  execute code block 2
+				  return 'Vayne';
 				  break;
 				  case 88:
-				  execute code block 2
+				  return 'Vayne';
 				  break;
 				  case 89:
-				  execute code block 2
+				  return 'Leona';
 				  break;
 				  case 90:
-				  execute code block 2
+				  return 'Malzahar';
 				  break;
 				  case 91:
-				  execute code block 2
+				  return 'Talon';
 				  break;
 				  case 92:
-				  execute code block 2
+				  return 'Riven';
 				  break;
 				  case 93:
-				  execute code block 2
+				  return 'Vayne';
 				  break;
 				  case 94:
-				  execute code block 2
+				  return 'Vayne';
 				  break;
 				  case 95:
-				  execute code block 2
+				  return 'Vayne';
 				  break;
 				  case 96:
-				  execute code block 2
+				  return "Kog'Maw";
 				  break;
 				  case 97:
-				  execute code block 2
+				  return 'Vayne';
 				  break;
 				  case 98:
-				  execute code block 2
+				  return 'Shen';
 				  break;
 				  case 99:
-				  execute code block 2
+				  return 'Lux';
 				  break;
 				  case 100:
-				  execute code block 2
+				  return 'Vayne';
 				  break;
-				  
-				 
-				  
+				  case 101:
+				  return 'Xerath';
+				  break;
+				  case 102:
+				  return 'Shyvana';
+				  break;
+				  case 103:
+				  return 'Ahri';
+				  break;
+				  case 104:
+				  return 'Graves';
+				  break;
+				  case 105:
+				  return 'Fizz';
+				  break;
+				  case 106:
+				  return 'Volibear';
+				  break;
+				  case 107:
+				  return 'Rengar';
+				  break;
+				  case 108:
+				  return 'Vayne';
+				  break;
+				  case 109:
+				  return 'Vayne';
+				  break;
+				  case 110:
+				  return 'Varus';
+				  break;
+				  case 111:
+				  return 'Nautilus';
+				  break;
+				  case 112:
+				  return 'Viktor';
+				  break;
+				  case 113:
+				  return 'Sejuani';
+				  break;
+				  case 114:
+				  return 'Fiora';
+				  break;
+				  case 115:
+				  return 'Ziggs';
+				  break;
+				  case 116:
+				  return 'Vayne';
+				  break;
+				  case 117:
+				  return 'Lulu';
+				  break;
+				  case 119:
+				  return 'Draven';
+				  break;
+				  case 120:
+				  return 'Hecarim';
+				  break;
+				  case 121:
+				  return "Kha'Zix";
+				  break;
+				  case 122:
+				  return 'Darius';
+				  break;
+				  case 126:
+				  return 'Jayce';
+				  break;
+				  case 131:
+				  return 'Diana';
+				  break;
+				  case 134:
+				  return 'Syndra';
+				  break;
+				  case 143:
+				  return 'Zyra';
+				  break;
+				  case 238:
+				  return 'Zed';
+				  break;
+				  case 254:
+				  return 'Vi';
+				  break;
+				  case 267:
+				  return 'Nami';
+				  break;
+				  case 412:
+				  return 'Thresh';
+				  break;			 	  
 				default:
-				  code to be executed if n is different from case 1 and 2
+				  return "N/A"
 				}
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
 			}
-			/*
-			function updateStatus(){
-					$toUpdate = document.getElementById("status_msg").value;
-					$html = '<div class="userStream special_border" id="msg42694927-1">'+
-                                               '<div class="msgCont" id="msgCont42694927-1">'
-                                                   +'<div class="msgArrow"></div>'
-                                                   +'<div class="msg"><span class="name"><a href="http://LoLcodex.com/people/oajiivhbldxbldhwi" data-userid="13530230" data-username="oajiivhbldxbldhwi"><?php print $_SESSION["summoner"]; ?></a></span>' + '  ' + $toUpdate + '</div>'
-                                                  + '<div class="media"></div>'
-                                                   +'<div class="msgFooter">'
-                                                      + '<div class="time">'
-                                                          + '<div class="icon">'
-                                                                +'<img width="16, height="16" src="balloon.gif" alt="comment" />'
-                                                           + '</div>'
-
-                                                           + '<a href="http://LoLcodex.com/newsfeed/post/42694927" rel="1360721629"> 3 minutes ago</a>'
-                                                       + '</div>'
-                                                        +'<div class="actions" id="actions42694927-1"><a id="newComment42694927-1" href="javascript:;">Comment</a> '
-                                                          +  '<a id="like42694927-1" href="javascript:;">Like</a>  '
-                                                           + '<a id="deleteAction42694927-1" href="javascript:;" redirectBackHome="false">Delete</a>'
-                                                       + '</div>'
-                                                   + '</div>'
-                                               + '</div>'
-                                                +'<div class="pic">'
-                                                    +'<a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi" data-userid="13530230" data-username="oajiivhbldxbldhwi"><img src="no_image.png" width="50" height="50" border="0" style=""  /></a>'
-                                               + '</div>'
-                                            +'</div>';
-					
-					document.getElementById('newsfeed').innerHTML = document.getElementById('newsfeed').innerHTML + $html;
-					
-			}*/
-			
+				
             function searchGroups()
             {
 
@@ -638,7 +666,7 @@
                                     <li id="basicItemProfile"><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi">Profile</a></li>
                                     <li id="basicItemAccount"><a href="#">Account <span class="downArrowIcon">&#9660;</span></a>
                                         <ul id="accountMenu">
-                                            <div class="userAvatar"><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><img src="no_image.png" alt=<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?> width="50" height="50" align="absmiddle"></a><p><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?></a></p></div>
+                                            <div class="userAvatar"><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><img src="no_image.png" alt=<?PHP if($_GET['summ'] == NULL) print "Please associate a Summoner name"; else print $_GET['summ']; ?> width="50" height="50" align="absmiddle"></a><p><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><?PHP if($_GET['summ'] == NULL) print "Please associate a Summoner name"; else print $_GET['summ']; ?></a></p></div>
                                             <li><a href="http://LoLcodex.com/myprofile/myprofile.php/myprofile.php">Edit Profile</a></li>
                                             <!--<li><a href="http://LoLcodex.com/preferences">Account Settings</a></li>-->
                                             <li><a href="http://LoLcodex.com/privacy_settings/privacysettings.php">Privacy Settings</a></li>
@@ -660,47 +688,47 @@
                     <div id="userProfileBlock">
                         <a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><img
                                 src="no_image.png"
-                                alt=<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?>
+                                alt=<?PHP if($_GET['summ'] == NULL) print "Please associate a Summoner name"; else print $_GET['summ']; ?>
                                 width="50" height="50"></a>
-                        <h1><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?></a></h1>
+                        <h1><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><?PHP if($_GET['summ'] == NULL) print "Please associate a Summoner name"; else print $_GET['summ']; ?></a></h1>
                         <p><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi/edit">Edit Profile</a></p>
                     </div>              
                     <div id="menu">
                         <ul id="nav" class="level1">
                             <li id="menu_item_17306106" class="selected" >
-                                <a href="../userhomepage/userhomepage.php"><span>Home</span></a>
+                                <a href=<?PHP echo "../userhomepage/userhomepage.php?summ=" .$_SESSION['summoner']; ?>><span>Home</span></a>
                             </li>
                             <li id="menu_item_17306107" >
-                                <a href="../myprofile/myprofile.php" z=""><span>My Profile</span></a>
+                                <a href=<?PHP echo "../myprofile/myprofile.php?summ=" .$_SESSION['summoner']; ?> z=""><span>My Profile</span></a>
                             </li>
                             <li id="menu_item_17306108" >
-                                <a href="../friends/friends.php"><span>Friends</span></a>
+                                <a href=<?PHP echo "../friends/friends.php?summ=" .$_SESSION['summoner']; ?>><span>Friends</span></a>
                             </li>
                             <li id="menu_item_17306109" >
-                                <a href="../invite/invite.php" z=""><span>Invite</span></a>
+                                <a href=<?PHP echo "../invite/invite.php?summ=" .$_SESSION['summoner']; ?> z=""><span>Invite</span></a>
                             </li>
                             <li id="menu_item_17306110" >
-                                <a href="../teams/teams.php"><span>Teams</span></a>
+                                <a href=<?PHP echo "../teams/teams.php?summ=" .$_SESSION['summoner']; ?>><span>Teams</span></a>
                             </li>
                             <li id="menu_item_17306111" >
-                                <a href="../screenshots/screenshots.php"><span>Screenshots</span></a>
+                                <a href=<?PHP echo "../screenshots/screenshots.php?summ=" .$_SESSION['summoner']; ?>><span>Screenshots</span></a>
                             </li>
                             <li id="menu_item_17306112" >
-                                <a href="../videos/videos.php"><span>Videos</span></a>
+                                <a href=<?PHP echo "../videos/videos.php?summ=" .$_SESSION['summoner']; ?>><span>Videos</span></a>
                             </li>
                             <li id ="menu_item_17306113" >
-                                <a href="../scrims/scrims.php"><span>Scrims</span></a>
+                                <a href=<?PHP echo "../scrims/scrims.php?summ=" .$_SESSION['summoner']; ?>><span>Scrims</span></a>
                             </li>
                             <li id="menu_item_17306114" >
-                                <a href="../blogs/blogs.php"><span>Blogs</span></a>
+                                <a href=<?PHP echo "../blogs/blogs.php?summ=" .$_SESSION['summoner']; ?>><span>Blogs</span></a>
                             </li>
                         </ul>
                         <div style="clear:both;"></div>
                     </div>                
 					<ul id="subGroupsBlock">
-                        <h3><a href="../teams/teams.php">Teams</a></h3>
+                        <h3><a href=<?PHP echo "../teams/teams.php?summ=" .$_SESSION['summoner']; ?>>Teams</a></h3>
                         <li>
-							<a href=" ../teams/SampleTeam/SampleTeamA.php">Sample Teams</a>
+							<a href=<?PHP echo " ../teams/SampleTeam/SampleTeamA.php" .$_SESSION['summoner']; ?>>Sample Teams</a>
 						</li>
 					</ul>     
                 </div>           
@@ -777,6 +805,24 @@
                                         </style>
                                         <div id="newsfeed">
 											<ul>
+													<li id="Recent_game">
+														<div class="userStream special_border" id="msg42694927-1">
+															<div class="msgCont" id="msgCont42694927-1">
+																<div class="msgArrow"></div>
+																<div class="msg" id="recentMatch"><span class="name"><a href="http://LoLcodex.com/people/oajiivhbldxbldhwi" data-userid="13530230" data-username="oajiivhbldxbldhwi"> Recent Match: </a></span>   </div>
+																<div class="media"></div>
+																<div class="msgFooter">											
+																	<div class="actions" id="actions42694927-1"><a id="newComment42694927-1" href="javascript:;">Comment</a> 
+																		<a id="like42694927-1" href="javascript:;">Like</a>  
+																		<a id="deleteAction42694927-1" href="javascript:;" redirectBackHome="false">Delete</a>
+																	</div>
+																</div>
+															</div>
+															<div class="pic">
+																<a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi" data-userid="13530230" data-username="oajiivhbldxbldhwi"><img src="no_image.png" width="50" height="50" border="0" style=""  /></a>
+															</div>
+														</div>
+													</li>
 												<?php foreach($news as $item): ?>
 													<li id="<?php echo $item['timestamp'] ?>">
 														<div class="userStream special_border" id="msg42694927-1">
@@ -880,8 +926,8 @@
                     <ul id="groups_chat_user_list_g_LoLcodex" class="chat_user_list">
                         <li id="panel_chat_user_13530230" class="vcard">
                             <a href="_trigger/chat/with/13530230" data-userid="13530230">
-                                <img class="avatar" width="30" height="30" src="http://LoLcodex.com/avatars/b/80.png" alt="<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?>'s avatar">
-                                <span class="fn"><?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?></span>
+                                <img class="avatar" width="30" height="30" src="http://LoLcodex.com/avatars/b/80.png" alt="<?PHP if($_GET['summ'] == NULL) print "Please associate a Summoner name"; else print $_GET['summ']; ?>'s avatar">
+                                <span class="fn"><?PHP if($_GET['summ'] == NULL) print "Please associate a Summoner name"; else print $_GET['summ']; ?></span>
                             </a>
                         </li>
                     </ul>
@@ -952,7 +998,7 @@
                 groups._info.languageRevision={custom:135260045,main:424,name:'english'};
                 groups._info.bannedWords = '';
                 groups._info.titleSeperator = ' | ';
-                groups._info.userNameSurname = '<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?>';
+                groups._info.userNameSurname = '<?PHP if($_GET['summ'] == NULL) print "Please associate a Summoner name"; else print $_GET['summ']; ?>';
                 groups._info.userAvatar = 'no_image.png';
                 groups._info.chatConfig = {"jid":"13530230-704597@im.com","room":"704597@conference.im.com","token":"7e4422157878949a9db1641dec01d6af","bind_endpoint":"http:\/\/LoLcodex.com\/http-bind","mode":"xmpp"};groups._info.membershipId = '31280300';
                 groups._info.isAdmin = '';

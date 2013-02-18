@@ -237,32 +237,32 @@
 
 					<div id="menu">
                         <ul id="nav" class="level1">
-                            <li id="menu_item_17306106" >
-                                <a href="../userhomepage/userhomepage.html"><span>Home</span></a>
+                            <li id="menu_item_17306106" class="selected" >
+                                <a href=<?PHP echo "../userhomepage/userhomepage.php?summ=" .$_SESSION['summoner']; ?>><span>Home</span></a>
                             </li>
-                            <li id="menu_item_17306107" class="selected" >
-                                <a href="../myprofile/myprofile.html" z=""><span>My Profile</span></a>
+                            <li id="menu_item_17306107" >
+                                <a href=<?PHP echo "../myprofile/myprofile.php?summ=" .$_SESSION['summoner']; ?> z=""><span>My Profile</span></a>
                             </li>
                             <li id="menu_item_17306108" >
-                                <a href="../friends/friends.html"><span>Friends</span></a>
+                                <a href=<?PHP echo "../friends/friends.php?summ=" .$_SESSION['summoner']; ?>><span>Friends</span></a>
                             </li>
                             <li id="menu_item_17306109" >
-                                <a href="../invite/invite.html" z=""><span>Invite</span></a>
+                                <a href=<?PHP echo "../invite/invite.php?summ=" .$_SESSION['summoner']; ?> z=""><span>Invite</span></a>
                             </li>
                             <li id="menu_item_17306110" >
-                                <a href="../teams/teams.html"><span>Teams</span></a>
+                                <a href=<?PHP echo "../teams/teams.php?summ=" .$_SESSION['summoner']; ?>><span>Teams</span></a>
                             </li>
                             <li id="menu_item_17306111" >
-                                <a href="../screenshots/screenshots.html"><span>Screenshots</span></a>
+                                <a href=<?PHP echo "../screenshots/screenshots.php?summ=" .$_SESSION['summoner']; ?>><span>Screenshots</span></a>
                             </li>
                             <li id="menu_item_17306112" >
-                                <a href="../videos/videos.html"><span>Videos</span></a>
+                                <a href=<?PHP echo "../videos/videos.php?summ=" .$_SESSION['summoner']; ?>><span>Videos</span></a>
                             </li>
                             <li id ="menu_item_17306113" >
-                                <a href="../scrims/scrims.html"><span>Scrims</span></a>
+                                <a href=<?PHP echo "../scrims/scrims.php?summ=" .$_SESSION['summoner']; ?>><span>Scrims</span></a>
                             </li>
                             <li id="menu_item_17306114" >
-                                <a href="../blogs/blogs.html"><span>Blogs</span></a>
+                                <a href=<?PHP echo "../blogs/blogs.php?summ=" .$_SESSION['summoner']; ?>><span>Blogs</span></a>
                             </li>
                         </ul>
                         <div style="clear:both;"></div>
