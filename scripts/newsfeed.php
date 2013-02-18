@@ -22,5 +22,5 @@
 
 		mysql_close($db_handle);
 	}
-	header ("Location: ../userhomepage/userhomepage.php?summoner=$receiver");
+	header ("Location: ../userhomepage/userhomepage.php?summ=$receiver");
 ?>

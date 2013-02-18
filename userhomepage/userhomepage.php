@@ -10,6 +10,19 @@
 			include ('../scripts/summonerSetup.php'); 
 			setup();
 		}*/
+
+		require('../scripts/db.php');
+
+		/**
+		* Getting news Items and preparing sql query with respect to request
+		**/
+		$sql = "SELECT * FROM newsfeed WHERE receiver = '".$_SESSION['summoner']."' ORDER BY timestamp DESC";
+		$resource = mysql_query($sql);
+		$news = array();
+		while($row = mysql_fetch_assoc($resource)){
+			$news[] = $row;
+		}
+
 ?>
 
 
@@ -115,6 +128,7 @@
 						document.getElementById("userProfileBlock").children[0].children[0].src = "icons0.png";	
 					getRecentGames();
 				}, 'json');
+				
 			}
 			
 			function getRecentGames(){
@@ -474,7 +488,7 @@
 			
 			
 			}
-			
+			/*
 			function updateStatus(){
 					$toUpdate = document.getElementById("status_msg").value;
 					$html = '<div class="userStream special_border" id="msg42694927-1">'+
@@ -503,7 +517,7 @@
 					
 					document.getElementById('newsfeed').innerHTML = document.getElementById('newsfeed').innerHTML + $html;
 					
-			}
+			}*/
 			
             function searchGroups()
             {
@@ -762,7 +776,35 @@
                                             }
                                         </style>
                                         <div id="newsfeed">
+											<ul>
+												<?php foreach($news as $item): ?>
+													<li id="<?php echo $item['timestamp'] ?>">
+														<div class="userStream special_border" id="msg42694927-1">
+															<div class="msgCont" id="msgCont42694927-1">
+																<div class="msgArrow"></div>
+																<div class="msg"><span class="name"><a href="http://LoLcodex.com/people/oajiivhbldxbldhwi" data-userid="13530230" data-username="oajiivhbldxbldhwi"><?php echo $item['poster'] ?></a></span>   <?php echo $item['message'] ?></div>
+																<div class="media"></div>
+																<div class="msgFooter">
+																	<div class="time">
+																		<div class="icon">
+																			<img width="16, height="16" src="balloon.gif" alt="comment" />
+																		</div>
 
+																		<a href="http://LoLcodex.com/newsfeed/post/42694927" rel="1360721629"><?php echo $item['timestamp'] ?></a>
+																	</div>
+																	<div class="actions" id="actions42694927-1"><a id="newComment42694927-1" href="javascript:;">Comment</a> 
+																		<a id="like42694927-1" href="javascript:;">Like</a>  
+																		<a id="deleteAction42694927-1" href="javascript:;" redirectBackHome="false">Delete</a>
+																	</div>
+																</div>
+															</div>
+															<div class="pic">
+																<a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi" data-userid="13530230" data-username="oajiivhbldxbldhwi"><img src="no_image.png" width="50" height="50" border="0" style=""  /></a>
+															</div>
+														</div>
+													</li>
+												<?php endforeach; ?>
+											</ul>
                                         </div>
                                         <a id="newsfeed_loadMsgs" class="moreButton radius special_bg special_text special_border" href="javascript:;" style="display:none">Load More</a>
                                     </div>
