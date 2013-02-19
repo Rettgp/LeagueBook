@@ -1633,7 +1633,7 @@
                 /*--------------*/
             </script>
 
-
+		</div>
             <script type="text/javascript" rel="compressed" charset="utf-8" src="/public/js/min.grouppage.js?b=1359739035"></script>
 
             <script type="text/javascript" src="http://s.skimresources.com/js/6948X660046.skimlinks.js"></script>
