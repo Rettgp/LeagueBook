@@ -1,6 +1,6 @@
 <?PHP
 		session_start();
-		if (isset($_SESSION['sess_login']) && $_SESSION['sess_login'] == 1) {
+		if (isset($_SESSION['sess_login']) && ($_SESSION['sess_login'] == 1) && ($_SESSION['summoner'] != "" || $_SESSION['summoner'] != NULL)) {
 			header ('Location: /userhomepage/userhomepage.php');
 		} else {
 			
@@ -23,22 +23,22 @@
 <link rel="stylesheet" type="text/css" href="../css/general.css">
 <link rel="index" title="LoLcodex" href="http://LoLcodex.com">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://com/rss/lolcodex.com/home">
-<link href="/css/style.css" rel="stylesheet" type="text/css">
-<link href="/css/#.css" rel="stylesheet" type="text/css">
-<link href="/css/# #2.css" rel="stylesheet" type="text/css">
-<link href="/css/# #3.css" rel="stylesheet" type="text/css">
-<link href="/css/groups.module.chat.css" rel="stylesheet" type="text/css">
-<link href="/css/groups.main.bar.css" rel="stylesheet" type="text/css">
-<link href="/css/groups_admin_panel.css" rel="stylesheet" type="text/css">
-<link href="/css/groups_comments.css" rel="stylesheet" type="text/css">
-<link href="/css/groups_modal_box.css" rel="stylesheet" type="text/css">
-<link href="/css/groups_newsfeed.css" rel="stylesheet" type="text/css">
-<link href="/css/groups_share.css" rel="stylesheet" type="text/css">
-<link href="/css/groups_top_bar.css" rel="stylesheet" type="text/css">
-<link href="/css/groups.notification.menu.css" rel="stylesheet" type="text/css">
-<link href="/css/prototabs.css" rel="stylesheet" type="text/css">
-<link href="/css/general.css" rel="stylesheet" type="text/css">
-<link href="/css/accordion.css" rel="stylesheet" type="text/css">
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<link href="../css/#.css" rel="stylesheet" type="text/css">
+<link href="../css/# #2.css" rel="stylesheet" type="text/css">
+<link href="../css/# #3.css" rel="stylesheet" type="text/css">
+<link href="../css/groups.module.chat.css" rel="stylesheet" type="text/css">
+<link href="../css/groups.main.bar.css" rel="stylesheet" type="text/css">
+<link href="../css/groups_admin_panel.css" rel="stylesheet" type="text/css">
+<link href="../css/groups_comments.css" rel="stylesheet" type="text/css">
+<link href="../css/groups_modal_box.css" rel="stylesheet" type="text/css">
+<link href="../css/groups_newsfeed.css" rel="stylesheet" type="text/css">
+<link href="../css/groups_share.css" rel="stylesheet" type="text/css">
+<link href="../css/groups_top_bar.css" rel="stylesheet" type="text/css">
+<link href="../css/groups.notification.menu.css" rel="stylesheet" type="text/css">
+<link href="../css/prototabs.css" rel="stylesheet" type="text/css">
+<link href="../css/general.css" rel="stylesheet" type="text/css">
+<link href="../css/accordion.css" rel="stylesheet" type="text/css">
 <script type='text/javascript'>
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-3121632-1']);
@@ -112,7 +112,7 @@
                 }
             }
         </script>
-	<div id="layout" class="module_home ">
+	<div id="layout">
             <div id="header">
 			
                 <div id="hgroups">
@@ -172,15 +172,10 @@
                     </table>
                 </div>
             </div>
-			<div class="box_bottom" id="reg_msg">
-				<span class="box_bottom_right"></span><span class="box_bottom_left"></span>
-					<div align="center" style="width:800px;"> <h1 style="display: block; font-size: 25px; margin: 20px 0 10px; font-weight:bold"> Register your Summoner</h1><br><h2>Why do you have to do this?
-										- Since we can’t confirm that you are who you say you are without some help from RIOT we have to have you play a custom game as specific champion that you own with a specific item in your first slot. This makes sure that when you register to the site and go to register your summoner, that no one has already registered as you to try and steal your league of legends fame! It’s also a great way to have all your smurfs on the same login so you don’t have to remember too many passwords.</h2> </div> 
-					<div style="z-index: 1000;
-									position: absolute;
-									width: 400px;
-									top: 115%;
-									left: 50%;">
+			<div class="reg_container">
+				<div class="reg_msgg">
+						<h1 style="display: block; font-size: 25px; margin: 20px 0 10px; font-weight:bold"> Register your Summoner</h1><br><h2>Why do you have to do this?
+											- Since we can’t confirm that you are who you say you are without some help from RIOT we have to have you play a custom game as specific champion that you own with a specific item in your first slot. This makes sure that when you register to the site and go to register your summoner, that no one has already registered as you to try and steal your league of legends fame! It’s also a great way to have all your smurfs on the same login so you don’t have to remember too many passwords.</h2> 
 						<form id="summoner_form" action="/scripts/authentication.php" method="post">
 							 Summoner Name: <input type="text" name="sum_name">
 							<td class="td_user_nav" valign="bottom" align="right">
@@ -191,7 +186,7 @@
 								</ul>
 							</td>
 						</form>
-					</div>	
+				</div>
 			</div>
 	</div>
 	<div id="footer">

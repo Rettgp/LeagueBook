@@ -42,19 +42,6 @@ body {
     text-shadow: 0.1em 0.1em 0.2em white;
 }
 
-#layout #reg_msg{
-	z-index: 1000;
-	color: #787878;
-    font-size: 125%;
-	position: absolute;
-    height: 200px;
-    width: 400px;
-    margin: -100px 0 0 -200px;
-    top: 45%;
-    left: 41%;
-    text-shadow: 0.1em 0.1em 0.2em white;
-}
-
 a {
     color: #080B0B;
     text-decoration: none;
@@ -1487,4 +1474,17 @@ li.horizontal_steps {
 }
 #groups_toaster_vcard {
     border: 1px solid #D8D8D8 !important;
+}
+
+.reg_container .reg_msgg{
+	z-index: 1000;
+	color: #787878;
+    font-size: 125%;
+	position: absolute;
+    height: 200px;
+    width: 400px;
+    margin: -100px 0 0 -200px;
+    top: 45%;
+    left: 41%;
+    text-shadow: 0.1em 0.1em 0.2em white;
 }

@@ -2,6 +2,8 @@
 div, img, a {
     outline-style: none;
 }
+
+
 q {
     display: block;
     padding: 5px 5px 5px 50px;
@@ -2619,4 +2621,17 @@ div.item-input-dropdown-facebook ul li em {
     border: medium none !important;
     height: 1500px !important;
     width: 100% !important;
+}
+
+.reg_container .reg_msgg{
+	z-index: 1000;
+	color: #787878;
+    font-size: 125%;
+	position: absolute;
+    height: 200px;
+    width: 400px;
+    margin: -100px 0 0 -200px;
+    top: 45%;
+    left: 41%;
+    text-shadow: 0.1em 0.1em 0.2em white;
 }
