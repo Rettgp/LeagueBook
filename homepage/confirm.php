@@ -112,8 +112,9 @@
                 }
             }
         </script>
-<div id="layout" class="module_home ">
+	<div id="layout" class="module_home ">
             <div id="header">
+			
                 <div id="hgroups">
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tr>
@@ -152,17 +153,17 @@
                             </td>
                             <td class="td_user_nav" valign="bottom" align="right"><ul id="basicMenu">
                                     <li id="basicItemHome"><a href="http://LoLcodex.com/">Home</a></li>
-                                    <li id="basicItemProfile"><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi">Profile</a></li>
+                                    <li id="basicItemProfile"><a href="http://LoLcodex.com/homepage/confirm.php">Profile</a></li>
                                     <li id="basicItemAccount"><a href="#">Account <span class="downArrowIcon">&#9660;</span></a>
                                         <ul id="accountMenu">
-                                            <div class="userAvatar"><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><img src="no_image.png" alt=<?PHP if($_GET['summ'] == NULL) print "Please associate a Summoner name"; else print $_GET['summ']; ?> width="50" height="50" align="absmiddle"></a><p><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><?PHP if($_GET['summ'] == NULL) print "Please associate a Summoner name"; else print $_GET['summ']; ?></a></p></div>
-                                            <li><a href="http://LoLcodex.com/myprofile/myprofile.php/myprofile.php">Edit Profile</a></li>
+                                            <div class="userAvatar"><a href="http://LoLcodex.com/homepage/confirm.php"><img src="no_image.png" alt=<?PHP if($_GET['summ'] == NULL) print "Please associate a Summoner name"; else print $_GET['summ']; ?> width="50" height="50" align="absmiddle"></a><p><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><?PHP if($_GET['summ'] == NULL) print "Please associate a Summoner name"; else print $_GET['summ']; ?></a></p></div>
+                                            <li><a href="http://LoLcodex.com/homepage/confirm.php">Edit Profile</a></li>
                                             <!--<li><a href="http://LoLcodex.com/preferences">Account Settings</a></li>-->
-                                            <li><a href="http://LoLcodex.com/privacy_settings/privacysettings.php">Privacy Settings</a></li>
+                                            <li><a href="http://LoLcodex.com/homepage/confirm.php">Privacy Settings</a></li>
                                             <!--<li><a href="http://lolcodex.com/homepage/composemessage.php">Compose New Message</a></li>
                                             <li><a href="http://lolcodex.com/homepage/change_password.php">Change Credentials</a></li>
                                             <li><a href="http://lolcodex.com/homepage/emailsettings.php">E-mail Settings</a></li>-->
-                                            <li><a href="http://LoLcodex.com/invite/invite.php">Invite People</a></li>
+                                            <li><a href="http://LoLcodex.com/homepage/confirm.php">Invite People</a></li>
                                             <li><a href="../scripts/logout.php">Log Out</a></li>
                                         </ul>
                                     </li>
@@ -171,23 +172,31 @@
                     </table>
                 </div>
             </div>
+			<div class="box_bottom" id="reg_msg">
+				<span class="box_bottom_right"></span><span class="box_bottom_left"></span>
+					<div align="center" style="width:800px;"> <h1 style="display: block; font-size: 25px; margin: 20px 0 10px; font-weight:bold"> Register your Summoner</h1><br><h2>Why do you have to do this?
+										- Since we can’t confirm that you are who you say you are without some help from RIOT we have to have you play a custom game as specific champion that you own with a specific item in your first slot. This makes sure that when you register to the site and go to register your summoner, that no one has already registered as you to try and steal your league of legends fame! It’s also a great way to have all your smurfs on the same login so you don’t have to remember too many passwords.</h2> </div> 
+					<div style="z-index: 1000;
+									position: absolute;
+									width: 400px;
+									top: 115%;
+									left: 50%;">
+						<form id="summoner_form" action="/scripts/authentication.php" method="post">
+							 Summoner Name: <input type="text" name="sum_name">
+							<td class="td_user_nav" valign="bottom" align="right">
+								<ul id="basicMenu">
+									<li id="basicItemHome">
+									<input type="submit" name="submit" value="Submit" />
+									</li>
+								</ul>
+							</td>
+						</form>
+					</div>	
 			</div>
-		<div class="box_bottom">
-			<span class="box_bottom_right"></span><span class="box_bottom_left"></span>
-			<div align="center" style="width:800px;"> <h1 style="display: block; font-size: 25px; margin: 20px 0 10px; font-weight:bold"> Register your Summoner</h1><br><h2>Why do you have to do this?
-- Since we can’t confirm that you are who you say you are without some help from RIOT we have to have you play a custom game as specific champion that you own with a specific item in your first slot. This makes sure that when you register to the site and go to register your summoner, that no one has already registered as you to try and steal your league of legends fame! It’s also a great way to have all your smurfs on the same login so you don’t have to remember too many passwords.</h2> </div> 
-											<div style="padding: 10px; height: 20px;">
-										<div style="width:80px;font-weight:bold;">
-											Summoner Name
-										</div>
-										<div style="width:170px;">
-											<input type="text" name="summoner name" class="large" autofocus="autofocus">
-										</div>
-									</div>	
-		</div>
-		<div id="footer">
+	</div>
+	<div id="footer">
 			 &copy; 2013 LoLcodex
-		</div>
+	</div>
 		<iframe style="display:none;" name="_rlcdn" width=0 height=0 frameborder=0 src="http://ei.rlcdn.com/362258.gif?x=50b6c8d56ee2089ab2920555bfb0468ad7a137f72601a5d9&c=bf-ecb">
 		</iframe>
 		<!-- footer scripts begin -->

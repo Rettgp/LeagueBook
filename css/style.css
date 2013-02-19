@@ -41,6 +41,20 @@ body {
     position: relative;
     text-shadow: 0.1em 0.1em 0.2em white;
 }
+
+#layout #reg_msg{
+	z-index: 1000;
+	color: #787878;
+    font-size: 125%;
+	position: absolute;
+    height: 200px;
+    width: 400px;
+    margin: -100px 0 0 -200px;
+    top: 45%;
+    left: 41%;
+    text-shadow: 0.1em 0.1em 0.2em white;
+}
+
 a {
     color: #080B0B;
     text-decoration: none;
@@ -582,10 +596,11 @@ ul#accountMenu .userAvatar a:hover {
     clear: both;
     color: #787878;
     font-size: 1em;
-    margin: 0 auto;
-    padding: 15px 0 0;
     text-align: center;
-    width: 970px;
+    position:absolute;
+	bottom:0;
+	width:100%;
+	height:60px;   /* Height of the footer */
 }
 #footer a {
     color: #787878;
@@ -878,6 +893,8 @@ ul#accountMenu .userAvatar a:hover {
     display: inline;
     margin-left: 5px;
 }
+
+
 #content .pagerItem, .pagerItemActive, .pagerItemNext, .pagerItemPrevious {
     color: #787878;
     line-height: 2.167em;
