@@ -39,6 +39,7 @@
 <link href="../css/prototabs.css" rel="stylesheet" type="text/css">
 <link href="../css/general.css" rel="stylesheet" type="text/css">
 <link href="../css/accordion.css" rel="stylesheet" type="text/css">
+<script src="../scripts/jquery.js" type="text/javascript"></script>
 <script type='text/javascript'>
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-3121632-1']);
@@ -111,6 +112,502 @@
                     return false;
                 }
             }
+			var inputSummoner;
+			$(function() {  
+				 $(".button").click(function() {  
+					//hide error
+					inputSummoner = $("#sum_name").val();
+					if(inputSummoner == ""){
+						//show error 
+						return false;
+					}else{
+						getSummonerInfo(inputSummoner);
+						return false;
+					}
+				 });  
+			});  
+			
+			
+			$('.buttonConfirm').live('click', function() {  
+					//hide error
+					var flag = confirmGame;
+					alert("sgg");
+					confirmGame();
+
+			});
+			var acctID = 10;
+			function getSummonerInfo(summoner){
+				var name = summoner;
+				var url = 'http://api.elophant.com/v2/na/summoner/' + name + '?key=orzAVNzOQCgT9R36YfW1';
+				$.get(url,
+				{
+					summonerName: name,
+				},
+				function(data,status){
+					var name = data.data.internalName;
+					acctID = data.data.acctId;
+					var profileIconID = data.data.profileIconId;
+					var summonerLVL = data.data.summonerLevel;
+					var summonerID = data.data.summonerId;
+					getRecentGame();
+				}, 'json');
+				
+			}
+			var champToPlay;
+			function getRecentGame(){
+				var url1 = "http://api.elophant.com/v2/na/recent_games/" + acctID + "?key=orzAVNzOQCgT9R36YfW1";
+					$.get(url1,
+					{
+						accountId: acctID
+					},
+					function(data1){
+						/*alert(data1.data.gameStatistics[0].championId); ///GET ALL CHAMPIONS PLAYED LAST 10 GAMES
+						alert(data1.data.gameStatistics[1].championId); ///9 IS MOST RECENT!
+						alert(data1.data.gameStatistics[2].championId);
+						alert(data1.data.gameStatistics[3].championId);
+						alert(data1.data.gameStatistics[4].championId);
+						alert(data1.data.gameStatistics[5].championId);
+						alert(data1.data.gameStatistics[6].championId);
+						alert(data1.data.gameStatistics[7].championId);
+						alert(data1.data.gameStatistics[8].championId);
+						alert(data1.data.gameStatistics[9].championId);*/
+						var champ = champions(data1.data.gameStatistics[8].championId);
+						champtoPlay = champ;
+						var source = "../Champions/Soraka.png";
+						$('.reg_msgg').append("<h2>" + champ + "</h2><br>")
+						.append("<img id='champImag' src=" + source + " />")
+						.append("<img id='inventory' src='../pictures/inventory.png' />")
+						.append("<input type='submit' name='submitSummoner' class='buttonConfirm' value='I have finished this game!' />").hide().fadeIn(1500); 
+					}, 'json');
+			}
+			function confirmGame(){
+				var url1 = "http://api.elophant.com/v2/na/recent_games/" + acctID + "?key=orzAVNzOQCgT9R36YfW1";
+					$.get(url1,
+					{
+						accountId: acctID
+					},
+					function(data1){
+						/*alert(data1.data.gameStatistics[0].championId); ///GET ALL CHAMPIONS PLAYED LAST 10 GAMES
+						alert(data1.data.gameStatistics[1].championId); ///9 IS MOST RECENT!
+						alert(data1.data.gameStatistics[2].championId);
+						alert(data1.data.gameStatistics[3].championId);
+						alert(data1.data.gameStatistics[4].championId);
+						alert(data1.data.gameStatistics[5].championId);
+						alert(data1.data.gameStatistics[6].championId);
+						alert(data1.data.gameStatistics[7].championId);
+						alert(data1.data.gameStatistics[8].championId);
+						alert(data1.data.gameStatistics[9].championId);*/
+						var name = champions(data1.data.gameStatistics[9].championId);
+						var item1;
+						var stat;
+						var item2;
+						for(var i = 0; i < data1.data.gameStatistics[9].statistics.length; i++){
+							stat = data1.data.gameStatistics[9].statistics[i].statType;
+							if(stat == "ITEM0"){
+								item1 = data1.data.gameStatistics[9].statistics[i].value;
+								alert(item1);
+							}
+							if(stat == "ITEM2"){
+								item2 = data1.data.gameStatistics[9].statistics[i].value;
+								alert(item2);
+							}
+						}
+						var dataString = 'correct=' + champToPlay + '&sum='+ inputSummoner + '&champ=' + name + '&item1=' + item1 + '&item2=' + item2;  
+						$.ajax({  
+						  type: "POST",  
+						  url: "../scripts/summonerProcess.php",  
+						  data: dataString,  
+						  success: function() {  
+						  }  
+						});
+					}, 'json');
+			}
+			
+			function champions(id){
+			
+				switch(id){
+				case 1:
+				  return 'Annie';
+				  break;
+				case 2:
+				  return 'Olaf';
+				  break;
+				case 3:
+				  return 'Galio';
+				  break;
+				case 4:
+				  return 'Twisted Fate';
+				  break;
+				case 5:
+				  return 'Xin Zhao';
+				  break;
+				case 6:
+				  return 'Urgot';
+				  break;
+				case 7:
+				  return 'LeBlanc';
+				  break;
+				 case 8:
+				  return 'Vladimir';
+				  break;
+				  case 9:
+				  return 'Fiddlesticks';
+				  break;
+				  case 10:
+				  return 'Kayle';
+				  break;
+				  case 11:
+				  return 'Master Yi';
+				  break;
+				  case 12:
+				  return 'Alistar';
+				  break;
+				  case 13:
+				  return 'Ryze';
+				  break;
+				  case 14:
+				  return 'Sion';
+				  break;
+				  case 15:
+				  return 'Sivir';
+				  break;
+				  case 16:
+				  return 'Soraka';
+				  break;
+				  case 17:
+				  return 'Teemo';
+				  break;
+				  case 18:
+				  return 'Tristana';
+				  break;
+				  case 19:
+				  return 'Warwick';
+				  break;
+				  case 20:
+				  return 'Nunu';
+				  break;
+				  case 21:
+				  return 'Miss Fortune';
+				  break;
+				  case 22:
+				  return 'Ashe';
+				  break;
+				  case 23:
+				  return 'Tryndamere';
+				  break;
+				  case 24:
+				  return 'Jax';
+				  break;
+				  case 25:
+				  return 'Morgana';
+				  break;
+				  case 26:
+				  return 'Zilean';
+				  break;
+				  case 27:
+				  return 'Singed';
+				  break;
+				  case 28:
+				  return 'Evelynn';
+				  break;
+				  case 29:
+				  return 'Twitch';
+				  break;
+				  case 30:
+				  return 'Karthus';
+				  break;
+				  case 31:
+				  return "Cho'Gath";
+				  break;
+				  case 32:
+				  return 'Amumu';
+				  break;
+				  case 33:
+				  return 'Rammus';
+				  break;
+				  case 34:
+				  return 'Anivia';
+				  break;
+				  case 35:
+				  return 'Shaco';
+				  break;
+				  case 36:
+				  return 'Dr. Mundo';
+				  break;
+				  case 37:
+				  return 'Sona';
+				  break;
+				  case 38:
+				  return 'Kassadin';
+				  break;
+				case 39:
+				  return 'Irelia';
+				  break;
+				  case 40:
+				  return 'Janna';
+				  break;
+				  case 41:
+				  return 'Gangplank';
+				  break;
+				  case 42:
+				  return 'Corki';
+				  break;
+				  case 43:
+				  return 'Karma';
+				  break;
+				  case 44:
+				  return 'Taric';
+				  break;
+				  case 45:
+				  return 'Veigar';
+				  break;
+				  case 48:
+				  return 'Trundle';
+				  break;
+				  case 50:
+				  return 'Swain';
+				  break;
+				  case 51:
+				  return 'Caitlyn';
+				  break;
+				  case 52:
+				  return 'Sona';
+				  break;
+				  case 53:
+				  return 'Blitzcrank';
+				  break;
+				  case 54:
+				  return 'Malphite';
+				  break;
+				  case 55:
+				  return 'Katarina';
+				  break;
+				  case 56:
+				  return 'Nocturne';
+				  break;
+				  case 57:
+				  return 'Maokai';
+				  break;
+				  case 58:
+				  return 'Renekton';
+				  break;
+				  case 59:
+				  return 'Jarvan IV';
+				  break;
+				  case 60:
+				  return 'Elise';
+				  break;
+				  case 61:
+				  return 'Orianna';
+				  break;
+				  case 62:
+				  return 'Wukong';
+				  break;
+				  case 63:
+				  return 'Brand';
+				  break;
+				  case 64:
+				  return 'Lee Sin';
+				  break;
+				  case 65:
+				  return 'Sona';
+				  break;
+				  case 66:
+				  return 'Sona';
+				  break;
+				  case 67:
+				  return 'Vayne';
+				  break;
+				  case 68:
+				  return 'Rumble';
+				  break;
+				  case 69:
+				  return 'Cassiopeia';
+				  break;
+				  case 70:
+				  return 'Vayne';
+				  break;
+				  case 71:
+				  return 'Vayne';
+				  break;
+				  case 72:
+				  return 'Skarner';
+				  break;
+				  case 73:
+				  return 'Vayne';
+				  break;
+				  case 74:
+				  return 'Heimerdinger';
+				  break;
+				  case 75:
+				  return 'Nasus';
+				  break;
+				  case 76:
+				  return 'Nidalee';
+				  break;
+				  case 77:
+				  return 'Udyr';
+				  break;
+				  case 78:
+				  return 'Poppy';
+				  break;
+				  case 79:
+				  return 'Gragas';
+				  break;
+				  case 80:
+				  return 'Pantheon';
+				  break;
+				  case 81:
+				  return 'Ezreal';
+				  break;
+				  case 82:
+				  return 'Mordekaiser';
+				  break;
+				  case 83:
+				  return 'Yorick';
+				  break;
+				  case 84:
+				  return 'Akali';
+				  break;
+				  case 85:
+				  return 'Kennen';
+				  break;
+				  case 86:
+				  return 'Garen';
+				  break;
+				  case 87:
+				  return 'Vayne';
+				  break;
+				  case 88:
+				  return 'Vayne';
+				  break;
+				  case 89:
+				  return 'Leona';
+				  break;
+				  case 90:
+				  return 'Malzahar';
+				  break;
+				  case 91:
+				  return 'Talon';
+				  break;
+				  case 92:
+				  return 'Riven';
+				  break;
+				  case 93:
+				  return 'Vayne';
+				  break;
+				  case 94:
+				  return 'Vayne';
+				  break;
+				  case 95:
+				  return 'Vayne';
+				  break;
+				  case 96:
+				  return "Kog'Maw";
+				  break;
+				  case 97:
+				  return 'Vayne';
+				  break;
+				  case 98:
+				  return 'Shen';
+				  break;
+				  case 99:
+				  return 'Lux';
+				  break;
+				  case 100:
+				  return 'Vayne';
+				  break;
+				  case 101:
+				  return 'Xerath';
+				  break;
+				  case 102:
+				  return 'Shyvana';
+				  break;
+				  case 103:
+				  return 'Ahri';
+				  break;
+				  case 104:
+				  return 'Graves';
+				  break;
+				  case 105:
+				  return 'Fizz';
+				  break;
+				  case 106:
+				  return 'Volibear';
+				  break;
+				  case 107:
+				  return 'Rengar';
+				  break;
+				  case 108:
+				  return 'Vayne';
+				  break;
+				  case 109:
+				  return 'Vayne';
+				  break;
+				  case 110:
+				  return 'Varus';
+				  break;
+				  case 111:
+				  return 'Nautilus';
+				  break;
+				  case 112:
+				  return 'Viktor';
+				  break;
+				  case 113:
+				  return 'Sejuani';
+				  break;
+				  case 114:
+				  return 'Fiora';
+				  break;
+				  case 115:
+				  return 'Ziggs';
+				  break;
+				  case 116:
+				  return 'Vayne';
+				  break;
+				  case 117:
+				  return 'Lulu';
+				  break;
+				  case 119:
+				  return 'Draven';
+				  break;
+				  case 120:
+				  return 'Hecarim';
+				  break;
+				  case 121:
+				  return "Kha'Zix";
+				  break;
+				  case 122:
+				  return 'Darius';
+				  break;
+				  case 126:
+				  return 'Jayce';
+				  break;
+				  case 131:
+				  return 'Diana';
+				  break;
+				  case 134:
+				  return 'Syndra';
+				  break;
+				  case 143:
+				  return 'Zyra';
+				  break;
+				  case 238:
+				  return 'Zed';
+				  break;
+				  case 254:
+				  return 'Vi';
+				  break;
+				  case 267:
+				  return 'Nami';
+				  break;
+				  case 412:
+				  return 'Thresh';
+				  break;			 	  
+				default:
+				  return "N/A"
+				}
+			}
         </script>
 	<div id="layout">
             <div id="header">
@@ -176,9 +673,9 @@
 				<div class="reg_msgg">
 						<h1 style="display: block; font-size: 25px; margin: 20px 0 10px; font-weight:bold"> Register your Summoner</h1><br><h2>Why do you have to do this?
 											- Since we can’t confirm that you are who you say you are without some help from RIOT we have to have you play a custom game as specific champion that you own with a specific item in your first slot. This makes sure that when you register to the site and go to register your summoner, that no one has already registered as you to try and steal your league of legends fame! It’s also a great way to have all your smurfs on the same login so you don’t have to remember too many passwords.</h2> 
-						<form id="summoner_form" action="/scripts/authentication.php" method="post">
-							 Summoner Name: <input type="text" name="sum_name">
-							 <input type="submit" name="submit" value="Submit" />
+						<form id="summoner_form" action="">
+							 Summoner Name: <input type="text" id="sum_name">
+							 <input type="submit" name="submit" class="button" value="Submit" />
 						</form>
 				</div>
 			</div>
@@ -228,7 +725,7 @@
                 groups._info.languageRevision={custom:135260045,main:424,name:'english'};
                 groups._info.bannedWords = '';
                 groups._info.titleSeperator = ' | ';
-                groups._info.userNameSurname = '<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?>';
+               // groups._info.userNameSurname = '<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?>';
                 groups._info.userAvatar = 'no_image.png';
                 groups._info.chatConfig = {"jid":"13530230-704597@im.com","room":"704597@conference.im.com","token":"7e4422157878949a9db1641dec01d6af","bind_endpoint":"http:\/\/LoLcodex.com\/http-bind","mode":"xmpp"};groups._info.membershipId = '31280300';
                 groups._info.isAdmin = '';
