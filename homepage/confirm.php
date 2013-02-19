@@ -178,13 +178,7 @@
 											- Since we can’t confirm that you are who you say you are without some help from RIOT we have to have you play a custom game as specific champion that you own with a specific item in your first slot. This makes sure that when you register to the site and go to register your summoner, that no one has already registered as you to try and steal your league of legends fame! It’s also a great way to have all your smurfs on the same login so you don’t have to remember too many passwords.</h2> 
 						<form id="summoner_form" action="/scripts/authentication.php" method="post">
 							 Summoner Name: <input type="text" name="sum_name">
-							<td class="td_user_nav" valign="bottom" align="right">
-								<ul id="basicMenu">
-									<li id="basicItemHome">
-									<input type="submit" name="submit" value="Submit" />
-									</li>
-								</ul>
-							</td>
+							 <input type="submit" name="submit" value="Submit" />
 						</form>
 				</div>
 			</div>
