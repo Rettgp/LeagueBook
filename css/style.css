@@ -35,11 +35,10 @@ body {
 	color: #FFFFFF;
     float: right;
     font-size: 125%;
-    margin-left: 1050px;
-    margin-right: 1px;
+    margin-right: 10px;
     margin-top: 10px;
     padding-top: 1px;
-    position: absolute;
+    position: relative;
     text-shadow: 0.1em 0.1em 0.2em white;
 }
 a {
