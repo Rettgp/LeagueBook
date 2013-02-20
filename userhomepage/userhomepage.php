@@ -581,6 +581,12 @@
                 }
 
             }
+			
+			function searchFunc(){
+				var searched = document.getElementById('book_search_form').summ.value
+				window.location = "../userhomepage/userhomepage.php?summ=" + searched;
+				
+			}
         </script>
 
 		
@@ -637,9 +643,9 @@
                             </td>
                             <td class="td_search" valign="bottom">
                                 <div id="searchBoxDiv">
-                                    <form id="book_search_form" method="POST" action="http://LoLcodex.com/people/search">
-                                        <input id="book_groups_search_text" type="search" name="q" placeholder="Search" autocomplete="off" data-placeholder-bound="true">
-                                        <input id="searchSubmitInput" type="submit" data-placeholder-bound="true">
+                                    <form id="book_search_form">
+                                        <input id="book_groups_search_text" type="search" name="summ" placeholder="Search" autocomplete="off" data-placeholder-bound="true">
+                                        <input id="searchSubmitInput" type="submit" onclick="searchFunc()">
                                         <ul id="book_search_types_box" class="autocomplete" style="display: none">
                                             <li id="searchPeopleModule" class="searchModule" onClick="groups.search.goToAdvancedSearch()">
                                                 <div class="searchModuleTitle">People</div>
