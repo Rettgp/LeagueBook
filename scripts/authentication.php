@@ -56,8 +56,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 				$_SESSION['sess_login'] = true;
 				$_SESSION['acct'] = $email;
 				$_SESSION['summoner'] = $row1[0];
-				header ("Location: ../userhomepage/userhomepage.php?summ=$row1[0]");
-			}
+				if($_SESSION['summoner'] == "" || $_SESSION['summoner'] == NULL || $_SESSION['summoner'] == "NULL"){
+					header ('Location: ../homepage/confirm.php');
+					exit();
+				}else{
+					header ("Location: ../userhomepage/userhomepage.php?summ=$row1[0]");
+				}
+			}	
 			else {
 				session_start();
 				header ("Location: ../index.php");

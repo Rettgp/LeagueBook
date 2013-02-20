@@ -1,6 +1,6 @@
 <?PHP
 		session_start();
-		if (isset($_SESSION['sess_login']) && ($_SESSION['sess_login'] == 1) && ($_SESSION['summoner'] != "" || $_SESSION['summoner'] != NULL)) {
+		if (isset($_SESSION['sess_login']) && ($_SESSION['sess_login'] == 1) && ($_SESSION['summoner'] != "" && $_SESSION['summoner'] != NULL && $_SESSION['summoner'] != "NULL")) {
 			header ('Location: /userhomepage/userhomepage.php');
 		} else {
 			
@@ -130,8 +130,6 @@
 			
 			$('.buttonConfirm').live('click', function() {  
 					//hide error
-					var flag = confirmGame;
-					alert("sgg");
 					confirmGame();
 
 			});
@@ -153,7 +151,7 @@
 				}, 'json');
 				
 			}
-			var champToPlay;
+			var champ;
 			function getRecentGame(){
 				var url1 = "http://api.elophant.com/v2/na/recent_games/" + acctID + "?key=orzAVNzOQCgT9R36YfW1";
 					$.get(url1,
@@ -171,8 +169,7 @@
 						alert(data1.data.gameStatistics[7].championId);
 						alert(data1.data.gameStatistics[8].championId);
 						alert(data1.data.gameStatistics[9].championId);*/
-						var champ = champions(data1.data.gameStatistics[8].championId);
-						champtoPlay = champ;
+						champ = champions(data1.data.gameStatistics[9].championId);
 						var source = "../Champions/Soraka.png";
 						$('.reg_msgg').append("<h2>" + champ + "</h2><br>")
 						.append("<img id='champImag' src=" + source + " />")
@@ -205,22 +202,21 @@
 							stat = data1.data.gameStatistics[9].statistics[i].statType;
 							if(stat == "ITEM0"){
 								item1 = data1.data.gameStatistics[9].statistics[i].value;
-								alert(item1);
 							}
 							if(stat == "ITEM2"){
 								item2 = data1.data.gameStatistics[9].statistics[i].value;
-								alert(item2);
 							}
 						}
-						var dataString = 'correct=' + champToPlay + '&sum='+ inputSummoner + '&champ=' + name + '&item1=' + item1 + '&item2=' + item2;  
-						$.ajax({  
-						  type: "POST",  
-						  url: "../scripts/summonerProcess.php",  
-						  data: dataString,  
-						  success: function() {  
-						  }  
+						$.post('../scripts/summonerProcess.php', { correct : champ, sum : inputSummoner, champ : name, item1 : item1, item2 : item2}, function(r) {
+							if(r != ""){
+								$('.reg_msgg').append("<h2>Congratulations! You may now go to your profile or sign out and sign back in.</h2><br>").hide().fadeIn(1500);
+								window.location = "../userhomepage/userhomepage.php?summ=" + r;
+							}else{
+								$('.reg_msgg').append("<h2>ERROR! Please reload the page and try again.</h2><br>").hide().fadeIn(1500);
+							}
 						});
 					}, 'json');
+					return false;
 			}
 			
 			function champions(id){
