@@ -832,7 +832,7 @@
 														</div>
 													</li>
 													<!--IF THERES A loss
-													<li id="Recent_game" style="background: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0, #690019), color-stop(1.0, #4F0011));">
+													<li id="Recent_game" style="background: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0, #690019), color-stop(1.0, #4F0011)); background: -moz-linear-gradient(center top , #690019 0%, #4F0011 100%) repeat scroll 0 0 transparent;">
 														<div id="msg42694927-1" class="userStream special_border">
 															<div id="match">
 																<h2 style="font-size: 135%; color: white; text-shadow: grey 0.1em 0.1em 0.2em;"> Recent Match </h2><br>
