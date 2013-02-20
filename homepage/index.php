@@ -118,11 +118,9 @@
 			 Email: <input type="text" name="acct">
 			Password: <input type="password" name="pass">
 			<td class="td_user_nav" valign="bottom" align="right">
-				<ul id="basicMenu">
-					<li id="basicItemHome">
+
 					<input type="submit" name="submit" value="Login" />
-					</li>
-				</ul>
+
 			</td>
 		</form>
 			<div id="hgroups">
