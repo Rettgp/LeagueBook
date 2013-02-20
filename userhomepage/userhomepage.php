@@ -10,7 +10,7 @@
 		$SQL1 = "SELECT summoner FROM users WHERE email = $email";
 		$result = mysql_query($SQL1);
 		$row = mysql_fetch_row($result);
-		if(row[0] == "" || row[0] == NULL || row[0] == "NULL"){
+		if($row[0] == "" || $row[0] == NULL || $row[0] == "NULL"){
 			header ('Location: ../homepage/confirm.php');
 			exit();
 		}
@@ -805,25 +805,45 @@
                                             }
                                         </style>
                                         <div id="newsfeed">
-											<ul>
-													<li id="Recent_game">
-														<div class="userStream special_border" id="msg42694927-1">
-															<div class="msgCont" id="msgCont42694927-1">
-																<div class="msgArrow"></div>
-																<div class="msg" id="recentMatch"><span class="name"><a href="http://LoLcodex.com/people/oajiivhbldxbldhwi" data-userid="13530230" data-username="oajiivhbldxbldhwi"> Recent Match: </a></span>   </div>
-																<div class="media"></div>
-																<div class="msgFooter">											
-																	<div class="actions" id="actions42694927-1"><a id="newComment42694927-1" href="javascript:;">Comment</a> 
-																		<a id="like42694927-1" href="javascript:;">Like</a>  
-																		<a id="deleteAction42694927-1" href="javascript:;" redirectBackHome="false">Delete</a>
+											<ul style="list-style-type: none;">
+												<!--IF THERES A WIN-->
+													<li id="Recent_game" style="background: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0, #00611A), color-stop(1.0, #004D14));">
+														<div id="msg42694927-1" class="userStream special_border">
+															<div id="match">
+																<h2 style="font-size: 135%; color: white; text-shadow: grey 0.1em 0.1em 0.2em;"> Recent Match </h2><br>
+																<div style="float: right; padding: 5px 10px;text-align: center; display: table-cell; vertical-align: middle; font-size: 14px; white-space: nowrap;" class="match_details_cell">
+																	<div style="width: 100px;">
+																		<div style="font-size: 12px; font-weight: bold;"> Normal 5v5 </div>
+																		<div style="font-weight: bold; font-size: 16px; color: #66CC33;"> WIN </div>
 																	</div>
 																</div>
-															</div>
-															<div class="pic">
-																<a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi" data-userid="13530230" data-username="oajiivhbldxbldhwi"><img src="no_image.png" width="50" height="50" border="0" style=""  /></a>
-															</div>
+																<div style="float: right; padding: 5px 10px;text-align: center; display: table-cell; vertical-align: middle; font-size: 14px; white-space: nowrap;" class="match_details_cell">
+																	<div style="width: 70px;">
+																		<strong>0</strong> <span style="color: #BBBBBB; font-size: 10px; line-height: 6px;">Kills</span><br />
+																		<strong>1</strong> <span style="color: #BBBBBB; font-size: 10px; line-height: 6px;">Deaths</span><br />
+																		<strong>0</strong> <span style="color: #BBBBBB; font-size: 10px; line-height: 6px;">Assists</span>
+																	</div>
+																</div>
+																<div id="champ_pic" style="width: 80px; height: 80px;"> 
+																	 <img src="../Champions/Annie.jpg" id="inventory" style="width: 100%; height: 100%;">
+																</div>
+															</div>													
+																													
 														</div>
 													</li>
+													<!--IF THERES A loss
+													<li id="Recent_game" style="background: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0, #690019), color-stop(1.0, #4F0011));">
+														<div id="msg42694927-1" class="userStream special_border">
+															<div id="match">
+																<h2 style="font-size: 135%; color: white; text-shadow: grey 0.1em 0.1em 0.2em;"> Recent Match </h2><br>
+																<div id="champ_pic" style="width: 80px; height: 80px;"> 
+																	 <img src="../Champions/Annie.jpg" id="inventory" style="width: 100%; height: 100%;">
+																</div>
+
+															</div>													
+																													
+														</div>
+													</li>-->
 												<?php foreach($news as $item): ?>
 													<li id="<?php echo $item['timestamp'] ?>">
 														<div class="userStream special_border" id="msg42694927-1">
