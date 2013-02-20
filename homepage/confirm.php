@@ -170,7 +170,7 @@
 						alert(data1.data.gameStatistics[8].championId);
 						alert(data1.data.gameStatistics[9].championId);*/
 						champ = champions(data1.data.gameStatistics[9].championId);
-						var source = "../Champions/Soraka.png";
+						var source = "../Champions/" + champ +".jpg";
 						$('.reg_msgg').append("<h2>" + champ + "</h2><br>")
 						.append("<img id='champImag' src=" + source + " />")
 						.append("<img id='inventory' src='../pictures/inventory.png' />")

@@ -1,26 +1,23 @@
 
 <?PHP
 		session_start();
-		if (isset($_SESSION['sess_login']) && $_SESSION['sess_login'] == 1) {
+		if (isset($_SESSION['sess_login']) && $_SESSION['sess_login'] == true) {
 		} else {
 			header ('Location: ../index.php');
 		}
-		if($_SESSION['summoner'] == "" || $_SESSION['summoner'] == NULL || $_SESSION['summoner'] == "NULL"){
+		require('../scripts/db.php');
+		$email = $_SESSION['acct'];
+		$SQL1 = "SELECT summoner FROM users WHERE email = $email";
+		$result = mysql_query($SQL1);
+		$row = mysql_fetch_row($result);
+		if(row[0] == "" || row[0] == NULL || row[0] == "NULL"){
 			header ('Location: ../homepage/confirm.php');
 			exit();
 		}
-		/*
-		if($_SESSION['summoner'] == '' || $_SESSION['summoner'] == NULL){
-			include ('../scripts/summonerSetup.php'); 
-			setup();
-		}*/
-
-		require('../scripts/db.php');
-
 		/**
 		* Getting news Items and preparing sql query with respect to request
 		**/
-		$sql = "SELECT * FROM newsfeed WHERE receiver = '".$_SESSION['summoner']."' ORDER BY timestamp DESC";
+		$sql = "SELECT * FROM newsfeed WHERE receiver = '".$_GET['summ']."' ORDER BY timestamp DESC";
 		$resource = mysql_query($sql);
 		$news = array();
 		while($row = mysql_fetch_assoc($resource)){
