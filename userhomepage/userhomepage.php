@@ -587,6 +587,16 @@
 				window.location = "../userhomepage/userhomepage.php?summ=" + searched;
 				
 			}
+			
+			var int=self.setInterval(function(){updateNotifications()},60000);
+			function updateNotifications(){
+				var summoner = getUrlVars()["summ"];
+				$.post('../scripts/notificationCenter.php', { sum: summoner}, function(r) {
+					if(r != ""){
+						
+					}
+				});
+			}
         </script>
 
 		
@@ -813,7 +823,7 @@
                                         <div id="newsfeed">
 											<ul style="list-style-type: none;">
 												<!--IF THERES A WIN-->
-													<li id="Recent_game" style="background: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0, #00611A), color-stop(1.0, #004D14));">
+													<li id="Recent_game" style="background: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0, #00611A), color-stop(1.0, #004D14)); background: -moz-linear-gradient(center top , #00611A 0%, #004D14 100%) repeat scroll 0 0 transparent;">
 														<div id="msg42694927-1" class="userStream special_border">
 															<div id="match">
 																<h2 style="font-size: 135%; color: white; text-shadow: grey 0.1em 0.1em 0.2em;"> Recent Match </h2><br>
