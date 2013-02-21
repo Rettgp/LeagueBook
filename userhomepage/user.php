@@ -680,12 +680,12 @@
                                 </div>
                             </td>
                             <td class="td_user_nav" valign="bottom" align="right"><ul id="basicMenu">
-                                    <li id="basicItemHome"><a href="http://LoLcodex.com/">Home</a></li>
-                                    <li id="basicItemProfile"><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi">Profile</a></li>
+                                    <li id="basicItemHome"><a href="http://LoLcodex.com/userhomepage/userhomepage.php?summ=<?PHP print $_SESSION['summoner']; ?>">Home</a></li>
+                                    <li id="basicItemProfile"><a href="http://LoLcodex.com/userhomepage/userhomepage.php?summ=<?PHP print $_SESSION['summoner']; ?>">Profile</a></li>
                                     <li id="basicItemAccount"><a href="#">Account <span class="downArrowIcon">&#9660;</span></a>
                                         <ul id="accountMenu">
-                                            <div class="userAvatar"><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><img src="no_image.png" alt=<?PHP if($_GET['summ'] == NULL) print "Please associate a Summoner name"; else print $_GET['summ']; ?> width="50" height="50" align="absmiddle"></a><p><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><?PHP if($_GET['summ'] == NULL) print "Please associate a Summoner name"; else print $_GET['summ']; ?></a></p></div>
-                                            <li><a href="http://LoLcodex.com/myprofile/myprofile.php/myprofile.php">Edit Profile</a></li>
+                                            <div class="userAvatar"><a href="http://LoLcodex.com/userhomepage/userhomepage.php?summ=<?PHP print $_SESSION['summoner']; ?>"><img src="no_image.png" alt=<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?> width="50" height="50" align="absmiddle"></a><p><a href="http://LoLcodex.com/userhomepage/userhomepage.php?summ=<?PHP print $_SESSION['summoner']; ?>"><?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?></a></p></div>
+                                            <li><a href="http://LoLcodex.com/userhomepage/userhomepage.php?summ=<?PHP print $_SESSION['summoner']; ?>">Edit Profile</a></li>
                                             <!--<li><a href="http://LoLcodex.com/preferences">Account Settings</a></li>-->
                                             <li><a href="http://LoLcodex.com/privacy_settings/privacysettings.php">Privacy Settings</a></li>
                                             <!--<li><a href="http://lolcodex/homepage/composemessage.php">Compose New Message</a></li>
@@ -707,9 +707,9 @@
                         <a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><img
                                 src="no_image.png"
                                 alt=<?PHP if($_GET['summ'] == NULL) print "Please associate a Summoner name"; else print $_GET['summ']; ?>
-                                width="50" height="50"></a>
-                        <h1><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><?PHP if($_GET['summ'] == NULL) print "Please associate a Summoner name"; else print $_GET['summ']; ?></a></h1>
-						<p><a href="http://LoLcodex.com/ADD THE FUNCTION YO">Invite to Friends</a></p>
+                                width="100" height="100"></a>
+                        <h1><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi" style="font-size: 1.5em;"><?PHP if($_GET['summ'] == NULL) print "Please associate a Summoner name"; else print $_GET['summ']; ?></a></h1>
+						<p><a href="http://LoLcodex.com/ADD THE FUNCTION YO" style="line-height: 40px; font-size: 1.1em;">Invite to Friends</a></p>
                     </div>              
                              
                 </div>           
