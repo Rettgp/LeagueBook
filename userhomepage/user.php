@@ -14,7 +14,6 @@
 			header ('Location: ../homepage/confirm.php');
 			exit();
 		}
-		
 		/**
 		* Getting news Items and preparing sql query with respect to request
 		**/
@@ -656,7 +655,7 @@
                             <td class="td_search" valign="bottom">
                                 <div id="searchBoxDiv">
                                     <form id="book_search_form">
-                                        <input id="book_groups_search_text" type="text" name="summ" placeholder="Search" autocomplete="off" data-placeholder-bound="true">
+                                        <input id="book_groups_search_text" type="search" name="summ" placeholder="Search" autocomplete="off" data-placeholder-bound="true">
                                         <input id="searchSubmitInput" type="submit" onclick="return searchFunc()">
                                         <ul id="book_search_types_box" class="autocomplete" style="display: none">
                                             <li id="searchPeopleModule" class="searchModule" onClick="groups.search.goToAdvancedSearch()">
@@ -681,12 +680,12 @@
                                 </div>
                             </td>
                             <td class="td_user_nav" valign="bottom" align="right"><ul id="basicMenu">
-                                    <li id="basicItemHome"><a href="http://LoLcodex.com/userhomepage/userhomepage.php?summ=<?PHP print $_SESSION['summoner']; ?>">Home</a></li>
-                                    <li id="basicItemProfile"><a href="http://LoLcodex.com/userhomepage/userhomepage.php?summ=<?PHP print $_SESSION['summoner']; ?>">Profile</a></li>
+                                    <li id="basicItemHome"><a href="http://LoLcodex.com/">Home</a></li>
+                                    <li id="basicItemProfile"><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi">Profile</a></li>
                                     <li id="basicItemAccount"><a href="#">Account <span class="downArrowIcon">&#9660;</span></a>
                                         <ul id="accountMenu">
-                                            <div class="userAvatar"><a href="http://LoLcodex.com/userhomepage/userhomepage.php?summ=<?PHP print $_SESSION['summoner']; ?>"><img src="no_image.png" alt=<?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?> width="50" height="50" align="absmiddle"></a><p><a href="http://LoLcodex.com/userhomepage/userhomepage.php?summ=<?PHP print $_SESSION['summoner']; ?>"><?PHP if($_SESSION['summoner'] == NULL) print "Please associate a Summoner name"; else print $_SESSION['summoner']; ?></a></p></div>
-                                            <li><a href="http://LoLcodex.com/userhomepage/userhomepage.php?summ=<?PHP print $_SESSION['summoner']; ?>">Edit Profile</a></li>
+                                            <div class="userAvatar"><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><img src="no_image.png" alt=<?PHP if($_GET['summ'] == NULL) print "Please associate a Summoner name"; else print $_GET['summ']; ?> width="50" height="50" align="absmiddle"></a><p><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><?PHP if($_GET['summ'] == NULL) print "Please associate a Summoner name"; else print $_GET['summ']; ?></a></p></div>
+                                            <li><a href="http://LoLcodex.com/myprofile/myprofile.php/myprofile.php">Edit Profile</a></li>
                                             <!--<li><a href="http://LoLcodex.com/preferences">Account Settings</a></li>-->
                                             <li><a href="http://LoLcodex.com/privacy_settings/privacysettings.php">Privacy Settings</a></li>
                                             <!--<li><a href="http://lolcodex/homepage/composemessage.php">Compose New Message</a></li>
@@ -710,46 +709,9 @@
                                 alt=<?PHP if($_GET['summ'] == NULL) print "Please associate a Summoner name"; else print $_GET['summ']; ?>
                                 width="50" height="50"></a>
                         <h1><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi"><?PHP if($_GET['summ'] == NULL) print "Please associate a Summoner name"; else print $_GET['summ']; ?></a></h1>
-                        <p><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi/edit">Edit Profile</a></p>
+						<p><a href="http://LoLcodex.com/ADD THE FUNCTION YO">Invite to Friends</a></p>
                     </div>              
-                    <div id="menu">
-                        <ul id="nav" class="level1">
-                            <li id="menu_item_17306106" class="selected" >
-                                <a href=<?PHP echo "../userhomepage/userhomepage.php?summ=" .$_SESSION['summoner']; ?>><span>Home</span></a>
-                            </li>
-                            <li id="menu_item_17306107" >
-                                <a href=<?PHP echo "../myprofile/myprofile.php?summ=" .$_SESSION['summoner']; ?> z=""><span>My Profile</span></a>
-                            </li>
-                            <li id="menu_item_17306108" >
-                                <a href=<?PHP echo "../friends/friends.php?summ=" .$_SESSION['summoner']; ?>><span>Friends</span></a>
-                            </li>
-                            <li id="menu_item_17306109" >
-                                <a href=<?PHP echo "../invite/invite.php?summ=" .$_SESSION['summoner']; ?> z=""><span>Invite</span></a>
-                            </li>
-                            <li id="menu_item_17306110" >
-                                <a href=<?PHP echo "../teams/teams.php?summ=" .$_SESSION['summoner']; ?>><span>Teams</span></a>
-                            </li>
-                            <li id="menu_item_17306111" >
-                                <a href=<?PHP echo "../screenshots/screenshots.php?summ=" .$_SESSION['summoner']; ?>><span>Screenshots</span></a>
-                            </li>
-                            <li id="menu_item_17306112" >
-                                <a href=<?PHP echo "../videos/videos.php?summ=" .$_SESSION['summoner']; ?>><span>Videos</span></a>
-                            </li>
-                            <li id ="menu_item_17306113" >
-                                <a href=<?PHP echo "../scrims/scrims.php?summ=" .$_SESSION['summoner']; ?>><span>Scrims</span></a>
-                            </li>
-                            <li id="menu_item_17306114" >
-                                <a href=<?PHP echo "../blogs/blogs.php?summ=" .$_SESSION['summoner']; ?>><span>Blogs</span></a>
-                            </li>
-                        </ul>
-                        <div style="clear:both;"></div>
-                    </div>                
-					<ul id="subGroupsBlock">
-                        <h3><a href=<?PHP echo "../teams/teams.php?summ=" .$_SESSION['summoner']; ?>>Teams</a></h3>
-                        <li>
-							<a href=<?PHP echo " ../teams/SampleTeam/SampleTeamA.php" .$_SESSION['summoner']; ?>>Sample Teams</a>
-						</li>
-					</ul>     
+                             
                 </div>           
                 <div id="content">
                     <div id="col_two_main_side" class="col_two_main_side">
