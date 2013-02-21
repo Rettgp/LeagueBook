@@ -667,7 +667,7 @@
             </div>
 			<div class="reg_container">
 				<div class="reg_msgg">
-						<h1 style="display: block; font-size: 25px; margin: 20px 0 10px; font-weight:bold"> Register your Summoner</h1><br><h2>Why do you have to do this?
+						<h1 style="display: block; font-size: 25px; margin: 20px 0 10px; font-weight:bold"> Register your Summoner</h1><br><h2>Why do you have to do this?<br>
 											- Since we can’t confirm that you are who you say you are without some help from RIOT we have to have you play a custom game as specific champion that you own with a specific item in your first and third slot. This makes sure that when you register to the site and go to register your summoner, that no one has already registered as you to try and steal your league of legends fame! It’s also a great way to have all your smurfs on the same login so you don’t have to remember too many passwords.</h2> 
 						<form id="summoner_form" action="">
 							 Summoner Name: <input type="text" id="sum_name">
