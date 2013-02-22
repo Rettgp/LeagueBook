@@ -111,6 +111,7 @@
                     return false;
                 }
             }
+			
         </script>
 <div id="layout" class="module_home ">
 	<div id="header">

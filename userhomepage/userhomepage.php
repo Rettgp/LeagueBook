@@ -590,15 +590,6 @@
 				
 			}
 			
-			var int=self.setInterval(function(){updateNotifications()},60000);
-			function updateNotifications(){
-				var summoner = getUrlVars()["summ"];
-				$.post('../scripts/notificationCenter.php', { sum: summoner}, function(r) {
-					if(r != ""){
-						
-					}
-				});
-			}
         </script>
 
 		

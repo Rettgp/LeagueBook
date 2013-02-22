@@ -124,7 +124,7 @@
 					var profileIconID = data.data.profileIconId;
 					var summonerLVL = data.data.summonerLevel;
 					var summonerID = data.data.summonerId;
-					document.getElementById("userProfileBlock").children[1].textContent = name;
+					//document.getElementById("userProfileBlock").children[1].textContent = name;
 					if(profileIconID == 0)
 						document.getElementById("userProfileBlock").children[0].children[0].src = "icons0.png";	
 					getRecentGames();
@@ -589,15 +589,40 @@
 				
 			}
 			
+			var summonerRequest;
 			var int=self.setInterval(function(){updateNotifications()},60000);
 			function updateNotifications(){
-				var summoner = getUrlVars()["summ"];
-				$.post('../scripts/notificationCenter.php', { sum: summoner}, function(r) {
-					if(r != ""){
-						
+				$.ajax({
+				  type: "POST",
+				  url: "../scripts/notificationCenter.php",
+				  success: function(data) {
+						if(data.length > 0){
+							summonerRequest = data[0];
+							document.getElementById("headerNotificationsIcons").children[0].children[1].style.display = "";
+							document.getElementById("headerNotificationsIcons").children[0].children[1].children[1].innerHTML = "<h2>" + summonerRequest + " wants to be friends! </h2><br> <input type='submit' id='acceptRequest' name='submit' value='Accept'/><input type='submit' id='declineRequest' name='submit' value='Decline'/>";
+						}
 					}
 				});
 			}
+			
+			$("#acceptRequest").click(function() {
+				$.ajax({   
+					type:"POST",
+					url:"../scripts/acceptRequest.php",
+					data:{summoner:summonerRequest},
+					cache:false
+				});
+				document.getElementById("headerNotificationsIcons").children[0].children[1].children[1].innerHTML = "<h2>Friend was added!</h2><br> <input type='button' id='removeNotification' name='submit' value='Ok'/>";
+				document.getElementById("headerNotificationsIcons").children[0].children[1].style.display = "none";
+			});
+			
+			$("#removeNotification").click(function() {
+				document.getElementById("headerNotificationsIcons").children[0].children[1].style.display = "none";
+			});
+	
+			$("#declineRequest").click(function() {
+				document.getElementById("headerNotificationsIcons").children[0].children[1].style.display = "none";
+			});
         </script>
 
 		
