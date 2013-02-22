@@ -251,7 +251,7 @@ ul#headerNotificationsIcons li .userCount {
     top: -6px;
 }
 a#headerFriendRequestItem {
-    background: url("/templates/tpl_std/cosy/images/white/friend-request.png") no-repeat scroll center center transparent;
+    background: url("../pictures/globe.png") no-repeat scroll center center transparent;
     height: 15px;
     width: 16px;
 }

@@ -598,7 +598,7 @@
 				  type: "POST",
 				  url: "../scripts/notificationCenter.php",
 				  success: function(data) {
-						if(data != "" && data != NULL){
+						if(data != "" && data != 'NULL'){
 							summonerRequest = data;
 							document.getElementById("headerNotificationsIcons").children[0].children[1].style.display = "";
 							document.getElementById("headerNotificationsIcons").children[0].children[1].children[1].innerHTML = "<h2>" + summonerRequest + " wants to be friends! </h2><br> <input type='submit' id='acceptRequest' name='submit' value='Accept'/><input type='submit' id='declineRequest' name='submit' value='Decline'/>";

@@ -23,7 +23,6 @@
 		while($row = mysql_fetch_assoc($resource)){
 			$news[] = $row;
 		}
-
 ?>
 
 
@@ -112,6 +111,16 @@
         <script>
 			var acctID = 10;
 			function myFunction(){
+				var visiting = getUrlVars()["summ"];
+				$.ajax({   
+					type:"POST",
+					url:"../scripts/checkFriend.php",
+					data:{summoner:visiting},
+					success: function(data) {
+						if(data == 1)
+							document.getElementById("userProfileBlock").children[2].innerHTML = "<a href='' style='line-height: 40px; font-size: 1.1em;'>Friend</a>";
+					}
+				});
 				var name = getUrlVars()["summ"];
 				var url = 'http://api.elophant.com/v2/na/summoner/' + name + '?key=orzAVNzOQCgT9R36YfW1';
 				$.get(url,
@@ -596,7 +605,7 @@
 				  type: "POST",
 				  url: "../scripts/notificationCenter.php",
 				  success: function(data) {
-						if(data != "" && data != NULL){
+						if(data != "" && data != 'NULL'){
 							summonerRequest = data;
 							document.getElementById("headerNotificationsIcons").children[0].children[1].style.display = "";
 							document.getElementById("headerNotificationsIcons").children[0].children[1].children[1].innerHTML = "<h2>" + summonerRequest + " wants to be friends! </h2><br> <input type='submit' id='acceptRequest' name='submit' value='Accept'/><input type='submit' id='declineRequest' name='submit' value='Decline'/>";
@@ -742,7 +751,16 @@
                                 width="100" height="100"></a>
                         <h1><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi" style="font-size: 1.5em;"><?PHP if($_GET['summ'] == NULL) print "Please associate a Summoner name"; else print $_GET['summ']; ?></a></h1>
 						<p><a href="../scripts/notifyUser.php?summ=<?PHP echo $_GET['summ']; ?>&summoner=<?PHP echo $_SESSION['summoner']; ?>" style="line-height: 40px; font-size: 1.1em;">Invite to Friends</a></p>
-                    </div>              
+                    </div>  
+					<div id="solo_queue" style="text-align: center;">
+						<h2 style="text-align: center; font-size: 16px; border-bottom: 2px solid #000000;">Solo Queue<h2>
+					</div>
+					<div id="5v5_team" style="text-align: center;">
+						<h2 style="text-align: center; font-size: 16px; border-bottom: 2px solid #000000;">5v5 Team<h2>
+					</div>
+					<div id="3v3_team" style="text-align: center;">
+						<h2 style="text-align: center; font-size: 16px; border-bottom: 2px solid #000000;">3v3 Team<h2>
+					</div>
                              
                 </div>           
                 <div id="content">
