@@ -596,8 +596,8 @@
 				  type: "POST",
 				  url: "../scripts/notificationCenter.php",
 				  success: function(data) {
-						if(data.length > 0){
-							summonerRequest = data[0];
+						if(data != "" && data != NULL){
+							summonerRequest = data;
 							document.getElementById("headerNotificationsIcons").children[0].children[1].style.display = "";
 							document.getElementById("headerNotificationsIcons").children[0].children[1].children[1].innerHTML = "<h2>" + summonerRequest + " wants to be friends! </h2><br> <input type='submit' id='acceptRequest' name='submit' value='Accept'/><input type='submit' id='declineRequest' name='submit' value='Decline'/>";
 						}
@@ -605,23 +605,30 @@
 				});
 			}
 			
-			$("#acceptRequest").click(function() {
+			$("#acceptRequest").live('click',function() {
 				$.ajax({   
 					type:"POST",
 					url:"../scripts/acceptRequest.php",
 					data:{summoner:summonerRequest},
-					cache:false
+					success: function(data) {
+						document.getElementById("headerNotificationsIcons").children[0].children[1].children[1].innerHTML = "<h2>Friend was added!</h2><br> <input type='button' id='removeNotification' name='submit' value='Ok'/>";
+					}
 				});
-				document.getElementById("headerNotificationsIcons").children[0].children[1].children[1].innerHTML = "<h2>Friend was added!</h2><br> <input type='button' id='removeNotification' name='submit' value='Ok'/>";
-				document.getElementById("headerNotificationsIcons").children[0].children[1].style.display = "none";
 			});
 			
-			$("#removeNotification").click(function() {
-				document.getElementById("headerNotificationsIcons").children[0].children[1].style.display = "none";
+			$("#removeNotification").live('click',function() {
+					document.getElementById("headerNotificationsIcons").children[0].children[1].style.display = "none";
 			});
 	
-			$("#declineRequest").click(function() {
-				document.getElementById("headerNotificationsIcons").children[0].children[1].style.display = "none";
+			$("#declineRequest").live('click',function() {
+				$.ajax({
+					type:"POST",
+					url:"../scripts/deleteNotification.php",
+					data:{summoner:summonerRequest},
+					success: function(data) {
+					document.getElementById("headerNotificationsIcons").children[0].children[1].style.display = "none";
+					}
+				});
 			});
         </script>
 
@@ -734,7 +741,7 @@
                                 alt=<?PHP if($_GET['summ'] == NULL) print "Please associate a Summoner name"; else print $_GET['summ']; ?>
                                 width="100" height="100"></a>
                         <h1><a href="http://LoLcodex.com/people/person/oajiivhbldxbldhwi" style="font-size: 1.5em;"><?PHP if($_GET['summ'] == NULL) print "Please associate a Summoner name"; else print $_GET['summ']; ?></a></h1>
-						<p><a href="http://LoLcodex.com/ADD THE FUNCTION YO" style="line-height: 40px; font-size: 1.1em;">Invite to Friends</a></p>
+						<p><a href="../scripts/notifyUser.php?summ=<?PHP echo $_GET['summ']; ?>&summoner=<?PHP echo $_SESSION['summoner']; ?>" style="line-height: 40px; font-size: 1.1em;">Invite to Friends</a></p>
                     </div>              
                              
                 </div>           

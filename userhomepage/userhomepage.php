@@ -590,6 +590,48 @@
 				
 			}
 			
+			
+			var summonerRequest;
+			var int=self.setInterval(function(){updateNotifications()},60000);
+			function updateNotifications(){
+				$.ajax({
+				  type: "POST",
+				  url: "../scripts/notificationCenter.php",
+				  success: function(data) {
+						if(data != "" && data != NULL){
+							summonerRequest = data;
+							document.getElementById("headerNotificationsIcons").children[0].children[1].style.display = "";
+							document.getElementById("headerNotificationsIcons").children[0].children[1].children[1].innerHTML = "<h2>" + summonerRequest + " wants to be friends! </h2><br> <input type='submit' id='acceptRequest' name='submit' value='Accept'/><input type='submit' id='declineRequest' name='submit' value='Decline'/>";
+						}
+					}
+				});
+			}
+			
+			$("#acceptRequest").live('click',function() {
+				$.ajax({   
+					type:"POST",
+					url:"../scripts/acceptRequest.php",
+					data:{summoner:summonerRequest},
+					success: function(data) {
+						document.getElementById("headerNotificationsIcons").children[0].children[1].children[1].innerHTML = "<h2>Friend was added!</h2><br> <input type='button' id='removeNotification' name='submit' value='Ok'/>";
+					}
+				});
+			});
+			
+			$("#removeNotification").live('click',function() {
+					document.getElementById("headerNotificationsIcons").children[0].children[1].style.display = "none";
+			});
+	
+			$("#declineRequest").live('click',function() {
+				$.ajax({
+					type:"POST",
+					url:"../scripts/deleteNotification.php",
+					data:{summoner:summonerRequest},
+					success: function(data) {
+					document.getElementById("headerNotificationsIcons").children[0].children[1].style.display = "none";
+					}
+				});
+			});
         </script>
 
 		
