@@ -632,6 +632,14 @@
 					}
 				});
 			});
+			function openChat(){
+				var visibility = document.getElementById("groups_chat_panel_g_LoLcodex").style.visibility;
+				if(visibility == ""){
+					document.getElementById("groups_chat_panel_g_LoLcodex").style.visibility = 'hidden';
+				}else{
+					document.getElementById("groups_chat_panel_g_LoLcodex").style.visibility = '';
+				}
+			}
         </script>
 
 		
@@ -980,7 +988,7 @@
                         <a href="http://LoLcodex.com/alerts">There are no new Notifications.</a>
                     </ul>
                 </div>
-                <a id="groups_chat_button_g_LoLcodex" class="chat group button active" href="#" title="Group Chat">
+                <a id="groups_chat_button_g_LoLcodex" class="chat group button active" href="javascript:openChat()" title="Group Chat">
                     <span>Chat (1 online)</span>
                     <div class="count" style="display: none;" id="groupsfw13607291338465400">
                         <img class="groups_bar_overlay" src="/images/groups_bar/overlay.png">
