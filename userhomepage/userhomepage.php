@@ -866,7 +866,7 @@
                                         <div id="newsfeed">
 											<ul style="list-style-type: none;">
 												<!--IF THERES A WIN-->
-													<li id="Recent_game" style="background: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0, #00611A), color-stop(1.0, #004D14)); background: -moz-linear-gradient(center top , #00611A 0%, #004D14 100%) repeat scroll 0 0 transparent;">
+													<li id="Recent_game" style="background: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0, #00611A), color-stop(1.0, #004D14)); background: -moz-linear-gradient(center top , #00611A 0%, #004D14 100%) repeat scroll 0 0 transparent; margin-left: -40px; border-top: 5px solid #545454; border-right: 5px solid #545454; border-left: 5px solid #545454; border-right: 5px solid #545454;">
 														<div id="msg42694927-1" class="userStream special_border">
 															<div id="match">
 																<h2 style="font-size: 135%; color: white; text-shadow: grey 0.1em 0.1em 0.2em;"> Recent Match </h2><br>
