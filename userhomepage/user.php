@@ -5,6 +5,10 @@
 		} else {
 			header ('Location: ../index.php');
 		}
+		if($_SESSION['summoner'] == $_GET['summ']){
+			$foo = $_SESSION['summoner'];
+			header ("Location: userhomepage.php?summ=$foo");
+		}
 		require('../scripts/db.php');
 		$email = $_SESSION['acct'];
 		$SQL1 = "SELECT summoner FROM users WHERE email = $email";
@@ -110,6 +114,7 @@
 
         <script>
 			var acctID = 10;
+			var summonerIdentify = 1;
 			function myFunction(){
 				var visiting = getUrlVars()["summ"];
 				$.ajax({   
@@ -130,6 +135,7 @@
 				function(data,status){
 					var name = data.data.internalName;
 					acctID = data.data.acctId;
+					summonerIdentify = data.data.summonerId;
 					var profileIconID = data.data.profileIconId;
 					var summonerLVL = data.data.summonerLevel;
 					var summonerID = data.data.summonerId;
@@ -167,8 +173,143 @@
 						alert(data1.data.gameStatistics[8].championId);
 						alert(data1.data.gameStatistics[9].championId);*/
 						var name = champions(data1.data.gameStatistics[9].championId);
+						getLeagues();
 						document.getElementById('recentMatch').innerHTML += name;
 					}, 'json');
+			}
+			
+			function getLeagues(){
+				var url1 = "http://api.elophant.com/v2/na/leagues/" + summonerIdentify + "?key=orzAVNzOQCgT9R36YfW1";
+				$.get(url1,
+					{
+						summonerId: summonerIdentify
+					},
+					function(data1){
+						var foo;
+						if(data1.data.summonerLeagues[0].queue == "RANKED_SOLO_5x5"){
+							foo = 0;
+						}else if (data1.data.summonerLeagues[1].queue == "RANKED_SOLO_5x5"){
+							foo = 1;
+						}else if (data1.data.summonerLeagues[2].queue == "RANKED_SOLO_5x5"){
+							foo = 2;
+						}
+						getEmblem("solo_queue", data1.data.summonerLeagues[foo].tier, data1.data.summonerLeagues[foo].requestorsRank, data1.data.summonerLeagues[foo].name);
+					}, 'json');
+			}
+			
+			function getEmblem(type, tier, rank, name){
+						tier = tier.toLowerCase();
+						var foo = tier + rank;
+						if(tier == "bronze"){
+							if(rank == "I"){
+								tier = "Bronze";
+								document.getElementById(type).innerHTML += "<br><h2 style='text-align: center; font-size: 13px;'>" + name +"</h2><br><h2 style='text-align: center; font-size: 13px; font-weight:bold;'>" + tier + " " + rank + "</h2><br><img src ='../pictures/" + foo + ".png' width='140' height='140'><br>";
+							}
+							if(rank == "II"){
+								tier = "Bronze";
+								document.getElementById(type).innerHTML += "<br><h2 style='text-align: center; font-size: 13px;'>" + name +"</h2><br><h2 style='text-align: center; font-size: 13px; font-weight:bold;'>" + tier + " " + rank + "</h2><br><img src ='../pictures/" + foo + ".png' width='140' height='140'><br>";
+							}
+							if(rank == "III"){
+								tier = "Bronze";
+								document.getElementById(type).innerHTML += "<br><h2 style='text-align: center; font-size: 13px;'>" + name +"</h2><br><h2 style='text-align: center; font-size: 13px; font-weight:bold;'>" + tier + " " + rank + "</h2><br><img src ='../pictures/" + foo + ".png' width='140' height='140'><br>";
+							}
+							if(rank == "IV"){
+								tier = "Bronze";
+								document.getElementById(type).innerHTML += "<br><h2 style='text-align: center; font-size: 13px;'>" + name +"</h2><br><h2 style='text-align: center; font-size: 13px; font-weight:bold;'>" + tier + " " + rank + "</h2><br><img src ='../pictures/" + foo + ".png' width='140' height='140'><br>";
+							}
+							if(rank == "V"){
+								tier = "Bronze";
+								document.getElementById(type).innerHTML += "<br><h2 style='text-align: center; font-size: 13px;'>" + name +"</h2><br><h2 style='text-align: center; font-size: 13px; font-weight:bold;'>" + tier + " " + rank + "</h2><br><img src ='../pictures/" + foo + ".png' width='140' height='140'><br>";
+							}
+						}
+						if(tier == "silver"){
+							if(rank == "I"){
+								tier = "Silver";
+								document.getElementById(type).innerHTML += "<br><h2 style='text-align: center; font-size: 13px;'>" + name +"</h2><br><h2 style='text-align: center; font-size: 13px; font-weight:bold;'>" + tier + " " + rank + "</h2><br><img src ='../pictures/" + foo + ".png' width='140' height='140'><br>";
+							}
+							if(rank == "II"){
+								tier = "Silver";
+								document.getElementById(type).innerHTML += "<br><h2 style='text-align: center; font-size: 13px;'>" + name +"</h2><br><h2 style='text-align: center; font-size: 13px; font-weight:bold;'>" + tier + " " + rank + "</h2><br><img src ='../pictures/" + foo + ".png' width='140' height='140'><br>";
+							}
+							if(rank == "III"){
+								tier = "Silver";
+								document.getElementById(type).innerHTML += "<br><h2 style='text-align: center; font-size: 13px;'>" + name +"</h2><br><h2 style='text-align: center; font-size: 13px; font-weight:bold;'>" + tier + " " + rank + "</h2><br><img src ='../pictures/" + foo + ".png' width='140' height='140'><br>";
+							}
+							if(rank == "IV"){
+								tier = "Silver";
+								document.getElementById(type).innerHTML += "<br><h2 style='text-align: center; font-size: 13px;'>" + name +"</h2><br><h2 style='text-align: center; font-size: 13px; font-weight:bold;'>" + tier + " " + rank + "</h2><br><img src ='../pictures/" + foo + ".png' width='140' height='140'><br>";
+							}
+							if(rank == "V"){
+								tier = "Silver";
+								document.getElementById(type).innerHTML += "<br><h2 style='text-align: center; font-size: 13px;'>" + name +"</h2><br><h2 style='text-align: center; font-size: 13px; font-weight:bold;'>" + tier + " " + rank + "</h2><br><img src ='../pictures/" + foo + ".png' width='140' height='140'><br>";
+							}
+						}
+						if(tier == "gold"){
+							if(rank == "I"){
+								tier = "Gold";
+								document.getElementById(type).innerHTML += "<br><h2 style='text-align: center; font-size: 13px;'>" + name +"</h2><br><h2 style='text-align: center; font-size: 13px; font-weight:bold;'>" + tier + " " + rank + "</h2><br><img src ='../pictures/" + foo + ".png' width='140' height='140'><br>";
+							}
+							if(rank == "II"){
+								tier = "Gold";
+								document.getElementById(type).innerHTML += "<br><h2 style='text-align: center; font-size: 13px;'>" + name +"</h2><br><h2 style='text-align: center; font-size: 13px; font-weight:bold;'>" + tier + " " + rank + "</h2><br><img src ='../pictures/" + foo + ".png' width='140' height='140'><br>";
+							}
+							if(rank == "III"){
+								tier = "Gold";
+								document.getElementById(type).innerHTML += "<br><h2 style='text-align: center; font-size: 13px;'>" + name +"</h2><br><h2 style='text-align: center; font-size: 13px; font-weight:bold;'>" + tier + " " + rank + "</h2><br><img src ='../pictures/" + foo + ".png' width='140' height='140'><br>";
+							}
+							if(rank == "IV"){
+								tier = "Gold";
+								document.getElementById(type).innerHTML += "<br><h2 style='text-align: center; font-size: 13px;'>" + name +"</h2><br><h2 style='text-align: center; font-size: 13px; font-weight:bold;'>" + tier + " " + rank + "</h2><br><img src ='../pictures/" + foo + ".png' width='140' height='140'><br>";
+							}
+							if(rank == "V"){
+								tier = "Gold";
+								document.getElementById(type).innerHTML += "<br><h2 style='text-align: center; font-size: 13px;'>" + name +"</h2><br><h2 style='text-align: center; font-size: 13px; font-weight:bold;'>" + tier + " " + rank + "</h2><br><img src ='../pictures/" + foo + ".png' width='140' height='140'><br>";
+							}
+						}
+						if(tier == "platinum"){
+							if(rank == "I"){
+								tier = "Platinum";
+								document.getElementById(type).innerHTML += "<br><h2 style='text-align: center; font-size: 13px;'>" + name +"</h2><br><h2 style='text-align: center; font-size: 13px; font-weight:bold;'>" + tier + " " + rank + "</h2><br><img src ='../pictures/" + foo + ".png' width='140' height='140'><br>";
+							}
+							if(rank == "II"){
+								tier = "Platinum";
+								document.getElementById(type).innerHTML += "<br><h2 style='text-align: center; font-size: 13px;'>" + name +"</h2><br><h2 style='text-align: center; font-size: 13px; font-weight:bold;'>" + tier + " " + rank + "</h2><br><img src ='../pictures/" + foo + ".png' width='140' height='140'><br>";
+							}
+							if(rank == "III"){
+								tier = "Platinum";
+								document.getElementById(type).innerHTML += "<br><h2 style='text-align: center; font-size: 13px;'>" + name +"</h2><br><h2 style='text-align: center; font-size: 13px; font-weight:bold;'>" + tier + " " + rank + "</h2><br><img src ='../pictures/" + foo + ".png' width='140' height='140'><br>";
+							}
+							if(rank == "IV"){
+								tier = "Platinum";
+								document.getElementById(type).innerHTML += "<br><h2 style='text-align: center; font-size: 13px;'>" + name +"</h2><br><h2 style='text-align: center; font-size: 13px; font-weight:bold;'>" + tier + " " + rank + "</h2><br><img src ='../pictures/" + foo + ".png' width='140' height='140'><br>";
+							}
+							if(rank == "V"){
+								tier = "Platinum";
+								document.getElementById(type).innerHTML += "<br><h2 style='text-align: center; font-size: 13px;'>" + name +"</h2><br><h2 style='text-align: center; font-size: 13px; font-weight:bold;'>" + tier + " " + rank + "</h2><br><img src ='../pictures/" + foo + ".png' width='140' height='140'><br>";
+							}
+						}
+						if(tier == "diamond"){
+							if(rank == "I"){
+								tier = "Diamond";
+								document.getElementById(type).innerHTML += "<br><h2 style='text-align: center; font-size: 13px;'>" + name +"</h2><br><h2 style='text-align: center; font-size: 13px; font-weight:bold;'>" + tier + " " + rank + "</h2><br><img src ='../pictures/" + foo + ".png' width='140' height='140'><br>";
+							}
+							if(rank == "II"){
+								tier = "Diamond";
+								document.getElementById(type).innerHTML += "<br><h2 style='text-align: center; font-size: 13px;'>" + name +"</h2><br><h2 style='text-align: center; font-size: 13px; font-weight:bold;'>" + tier + " " + rank + "</h2><br><img src ='../pictures/" + foo + ".png' width='140' height='140'><br>";
+							}
+							if(rank == "III"){
+								tier = "Diamond";
+								document.getElementById(type).innerHTML += "<br><h2 style='text-align: center; font-size: 13px;'>" + name +"</h2><br><h2 style='text-align: center; font-size: 13px; font-weight:bold;'>" + tier + " " + rank + "</h2><br><img src ='../pictures/" + foo + ".png' width='140' height='140'><br>";
+							}
+							if(rank == "IV"){
+								tier = "Diamond";
+								document.getElementById(type).innerHTML += "<br><h2 style='text-align: center; font-size: 13px;'>" + name +"</h2><br><h2 style='text-align: center; font-size: 13px; font-weight:bold;'>" + tier + " " + rank + "</h2><br><img src ='../pictures/" + foo + ".png' width='140' height='140'><br>";
+							}
+							if(rank == "V"){
+								tier = "Diamond";
+								document.getElementById(type).innerHTML += "<br><h2 style='text-align: center; font-size: 13px;'>" + name +"</h2><br><h2 style='text-align: center; font-size: 13px; font-weight:bold;'>" + tier + " " + rank + "</h2><br><img src ='../pictures/" + foo + ".png' width='140' height='140'><br>";
+							}
+						}
 			}
 			
 			function champions(id){
