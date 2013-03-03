@@ -6,6 +6,12 @@
 		$champ = $_POST['champ'];
 		$item1 = $_POST['item1'];
 		$item2 = $_POST['item2'];
+		$intenName = $_POST['interName'];
+		$acctName = $_POST['acctName'];
+		$acctID = $_POST['acctID'];
+		$iconID = $_POST['iconID'];
+		$lvl = $_POST['lvl'];
+		$summonerID = $_POST['summonerID'];
 		$user_name = "LoLCodexData";
 		$pass_word = "Israel90123!";
 		$database = "LoLCodexData";
@@ -17,6 +23,9 @@
 			if ($db_found) {
 				$SQL2 = "UPDATE users SET summoner='$sum' WHERE email=$acct";
 				$result2 = mysql_query($SQL2);
+				$SQL3 = "INSERT INTO  summoners (internalname, name, iconID, lvl, summonerID)
+							VALUES ($intenName,  $acctName,  $acctID,  $iconID,  $lvl,  $summonerID);";
+				$result3 = mysql_query($SQL3);
 				$_SESSION['summoner'] = $sum;
 				mysql_close($db_handle);
 				echo $sum;

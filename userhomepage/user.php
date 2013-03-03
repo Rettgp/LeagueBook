@@ -989,22 +989,66 @@
 												<!--IF THERES A WIN-->
 													<li id="Recent_game" style="background: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0, #00611A), color-stop(1.0, #004D14)); background: -moz-linear-gradient(center top , #00611A 0%, #004D14 100%) repeat scroll 0 0 transparent; margin-left: -40px; border-top: 5px solid #545454; border-right: 5px solid #545454; border-left: 5px solid #545454; border-right: 5px solid #545454;">
 														<div id="msg42694927-1" class="userStream special_border">
-															<div id="match">
-																<h2 style="font-size: 135%; color: white; text-shadow: grey 0.1em 0.1em 0.2em;"> Recent Match </h2><br>
-																<div style="float: right; padding: 5px 10px;text-align: center; display: table-cell; vertical-align: middle; font-size: 14px; white-space: nowrap;" class="match_details_cell">
+															<div id="match" style="font-size: 20px; color: #FFF; text-align: center;">
+																<h2 style="font-size: 135%; color: white; text-shadow: grey 0.1em 0.1em 0.2em; padding-right: 200px;"> Recent Match </h2><br>
+																<div class="match_details_cell">
 																	<div style="width: 100px;">
 																		<div style="font-size: 12px; font-weight: bold;"> Normal 5v5 </div>
 																		<div style="font-weight: bold; font-size: 16px; color: #66CC33;"> WIN </div>
 																	</div>
 																</div>
-																<div style="float: right; padding: 5px 10px;text-align: center; display: table-cell; vertical-align: middle; font-size: 14px; white-space: nowrap;" class="match_details_cell">
-																	<div style="width: 70px;">
+																<div class="match_details_cell">
+																	<div style="width: 140px;">
+																		<div style="padding: 2px; display: table-row">
+																			<div style="display: table-cell; padding: 2px; width: 40px; height: 40px;">
+																				<img src ='../pictures/items.png' width='40' height='40'>
+																				<img src ='../pictures/items.png' width='40' height='40'>
+																				<img src ='../pictures/items.png' width='40' height='40'>
+																			</div>
+																		</div>
+																		<div style="padding: 2px; display: table-row">
+																			<div style="display: table-cell; padding: 2px; width: 40px; height: 40px;">
+																				<img src ='../pictures/items.png' width='40' height='40'>
+																				<img src ='../pictures/items.png' width='40' height='40'>
+																				<img src ='../pictures/items.png' width='40' height='40'>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="match_details_cell">
+																	<div style="width: 42px; padding-top: 3px;">
+																		<div style="padding: 2px; display: table-row">
+																			<div style="display: table-cell; padding: 2px;">
+																				<img src ='../pictures/items.png' width='40' height='40'>
+																			</div>
+																		</div>
+																		<div style="padding: 2px; display: table-row">
+																			<div style="display: table-cell; padding: 2px; width: 40px; height: 40px;">
+																				<img src ='../pictures/items.png' width='40' height='40'>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="match_details_cell">
+																	<div style="width: 50px;">
 																		<strong>0</strong> <span style="color: #BBBBBB; font-size: 10px; line-height: 6px;">Kills</span><br />
 																		<strong>1</strong> <span style="color: #BBBBBB; font-size: 10px; line-height: 6px;">Deaths</span><br />
 																		<strong>0</strong> <span style="color: #BBBBBB; font-size: 10px; line-height: 6px;">Assists</span>
 																	</div>
 																</div>
-																<div id="champ_pic" style="width: 80px; height: 80px;"> 
+																<div class="match_details_cell">
+																	<div style="width: 60px; padding-top: 20px;">
+																		<strong>238</strong>
+																		<div class="match_details_cell_label">Minions</div>
+																	</div>
+																</div>
+																<div class="match_details_cell">
+																	<div style="width: 60px; padding-top: 20px;">
+																		<strong>13.3k</strong>
+																		<div class="match_details_cell_label">Gold</div>
+																	</div>
+																</div>
+																<div id="champ_pic" style="padding-left: 60px; width: 100px; height: 100px;"> 
 																	 <img src="../Champions/Annie.jpg" id="inventory" style="width: 100%; height: 100%;">
 																</div>
 															</div>													

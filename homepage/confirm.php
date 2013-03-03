@@ -134,6 +134,11 @@
 
 			});
 			var acctID = 10;
+			var name0 = "";
+			var profileIconID0 = "";
+			var summonerLVL0 = "";
+			var summonerID0 = "";
+			
 			function getSummonerInfo(summoner){
 				var name = summoner;
 				var url = 'http://api.elophant.com/v2/na/summoner/' + name + '?key=orzAVNzOQCgT9R36YfW1';
@@ -142,11 +147,11 @@
 					summonerName: name,
 				},
 				function(data,status){
-					var name = data.data.internalName;
+					name0 = data.data.name;
 					acctID = data.data.acctId;
-					var profileIconID = data.data.profileIconId;
-					var summonerLVL = data.data.summonerLevel;
-					var summonerID = data.data.summonerId;
+					profileIconID0 = data.data.profileIconId;
+					summonerLVL0 = data.data.summonerLevel;
+					summonerID0 = data.data.summonerId;
 					getRecentGame();
 				}, 'json');
 				
@@ -184,16 +189,7 @@
 						accountId: acctID
 					},
 					function(data1){
-						/*alert(data1.data.gameStatistics[0].championId); ///GET ALL CHAMPIONS PLAYED LAST 10 GAMES
-						alert(data1.data.gameStatistics[1].championId); ///9 IS MOST RECENT!
-						alert(data1.data.gameStatistics[2].championId);
-						alert(data1.data.gameStatistics[3].championId);
-						alert(data1.data.gameStatistics[4].championId);
-						alert(data1.data.gameStatistics[5].championId);
-						alert(data1.data.gameStatistics[6].championId);
-						alert(data1.data.gameStatistics[7].championId);
-						alert(data1.data.gameStatistics[8].championId);
-						alert(data1.data.gameStatistics[9].championId);*/
+
 						var name = champions(data1.data.gameStatistics[9].championId);
 						var item1;
 						var stat;
@@ -207,7 +203,7 @@
 								item2 = data1.data.gameStatistics[9].statistics[i].value;
 							}
 						}
-						$.post('../scripts/summonerProcess.php', { correct : champ, sum : inputSummoner, champ : name, item1 : item1, item2 : item2}, function(r) {
+						$.post('../scripts/summonerProcess.php', { correct : champ, sum : inputSummoner, champ : name, item1 : item1, item2 : item2, internName: name0, acctID: acctID, iconID: profileIconID0, lvl: summonerLVL0, summonerID: summonerID0}, function(r) {
 							if(r != ""){
 								$('.reg_msgg').append("<h2>Congratulations! You may now go to your profile or sign out and sign back in.</h2><br>").hide().fadeIn(1500);
 								window.location = "../userhomepage/userhomepage.php?summ=" + r;

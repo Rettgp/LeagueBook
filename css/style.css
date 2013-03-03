@@ -30,6 +30,24 @@ body {
     font: 13px/2em "Lucida Grande",Tahoma,Verdana,Arial,sans-serif;
     overflow-x: hidden;
 }
+
+.match_details_cell{
+	color: #FFF;
+	float: right; 
+	padding: 5px 10px;
+	text-align: center; 
+	display: table-cell; 
+	vertical-align: middle; 
+	font-size: 20px; 
+	white-space: nowrap;
+}
+
+.match_details_cell_label {
+font-size: 10px;
+color: #BBB;
+line-height: 7px;
+}
+
 #header #login_form{
 	z-index: 1000;
 	color: #FFFFFF;
