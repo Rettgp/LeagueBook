@@ -148,17 +148,11 @@
 						accountId: acctID
 					},
 					function(data1){
-						/*alert(data1.data.gameStatistics[0].championId); ///GET ALL CHAMPIONS PLAYED LAST 10 GAMES
-						alert(data1.data.gameStatistics[1].championId); ///9 IS MOST RECENT!
-						alert(data1.data.gameStatistics[2].championId);
-						alert(data1.data.gameStatistics[3].championId);
-						alert(data1.data.gameStatistics[4].championId);
-						alert(data1.data.gameStatistics[5].championId);
-						alert(data1.data.gameStatistics[6].championId);
-						alert(data1.data.gameStatistics[7].championId);
-						alert(data1.data.gameStatistics[8].championId);
-						alert(data1.data.gameStatistics[9].championId);*/
+						
 						var name = champions(data1.data.gameStatistics[9].championId);
+						var numOfDeaths = 0;
+						var assists = 0;
+						var champsKilled = 0;
 						var item0 = 0;
 						var item1 = 0;
 						var item2 = 0;
@@ -168,9 +162,9 @@
 						var name = champions(data1.data.gameStatistics[9].championId);
 						for(var i = 0; i < data1.data.gameStatistics[9].statistics.length; i++){
 							if(data1.data.gameStatistics[9].statistics[i].statType == "CHAMPIONS_KILLED")
-								var champsKilled = data1.data.gameStatistics[9].statistics[i].value;
+								champsKilled = data1.data.gameStatistics[9].statistics[i].value;
 							if(data1.data.gameStatistics[9].statistics[i].statType == "ASSISTS")
-								var assists = data1.data.gameStatistics[9].statistics[i].value;
+								assists = data1.data.gameStatistics[9].statistics[i].value;
 							if(data1.data.gameStatistics[9].statistics[i].statType == "NEUTRAL_MINIONS_KILLED")
 								var NminionsKilled = data1.data.gameStatistics[9].statistics[i].value;
 							if(data1.data.gameStatistics[9].statistics[i].statType == "MINIONS_KILLED")
@@ -178,7 +172,7 @@
 							if(data1.data.gameStatistics[9].statistics[i].statType == "GOLD_EARNED")
 								var gold = data1.data.gameStatistics[9].statistics[i].value;
 							if(data1.data.gameStatistics[9].statistics[i].statType == "NUM_DEATHS")
-								var numOfDeaths = data1.data.gameStatistics[9].statistics[i].value;
+								numOfDeaths = data1.data.gameStatistics[9].statistics[i].value;
 							if(data1.data.gameStatistics[9].statistics[i].statType == "WIN")
 								var win = data1.data.gameStatistics[9].statistics[i].value;
 							if(data1.data.gameStatistics[9].statistics[i].statType == "ITEM0")
@@ -1018,7 +1012,7 @@
 																	</div>
 																</div>
 																<div id="champ_pic" style="padding-left: 60px; width: 100px; height: 100px;"> 
-																	 <img src="../Champions/Annie.jpg" id="inventory" style="width: 100%; height: 100%;">
+																	 <img src="../Champions/Blank.jpg" id="inventory" style="width: 100%; height: 100%;">
 																</div>
 															</div>													
 																													
