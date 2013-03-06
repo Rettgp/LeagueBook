@@ -159,7 +159,97 @@
 						alert(data1.data.gameStatistics[8].championId);
 						alert(data1.data.gameStatistics[9].championId);*/
 						var name = champions(data1.data.gameStatistics[9].championId);
-						document.getElementById('recentMatch').innerHTML += name;
+						var item0 = 0;
+						var item1 = 0;
+						var item2 = 0;
+						var item3 = 0;
+						var item4 = 0;
+						var item5 = 0;
+						var name = champions(data1.data.gameStatistics[9].championId);
+						for(var i = 0; i < data1.data.gameStatistics[9].statistics.length; i++){
+							if(data1.data.gameStatistics[9].statistics[i].statType == "CHAMPIONS_KILLED")
+								var champsKilled = data1.data.gameStatistics[9].statistics[i].value;
+							if(data1.data.gameStatistics[9].statistics[i].statType == "ASSISTS")
+								var assists = data1.data.gameStatistics[9].statistics[i].value;
+							if(data1.data.gameStatistics[9].statistics[i].statType == "NEUTRAL_MINIONS_KILLED")
+								var NminionsKilled = data1.data.gameStatistics[9].statistics[i].value;
+							if(data1.data.gameStatistics[9].statistics[i].statType == "MINIONS_KILLED")
+								var TminionsKilled = data1.data.gameStatistics[9].statistics[i].value;
+							if(data1.data.gameStatistics[9].statistics[i].statType == "GOLD_EARNED")
+								var gold = data1.data.gameStatistics[9].statistics[i].value;
+							if(data1.data.gameStatistics[9].statistics[i].statType == "NUM_DEATHS")
+								var numOfDeaths = data1.data.gameStatistics[9].statistics[i].value;
+							if(data1.data.gameStatistics[9].statistics[i].statType == "WIN")
+								var win = data1.data.gameStatistics[9].statistics[i].value;
+							if(data1.data.gameStatistics[9].statistics[i].statType == "ITEM0")
+								item0 = data1.data.gameStatistics[9].statistics[i].value;
+							if(data1.data.gameStatistics[9].statistics[i].statType == "ITEM1")
+								item1 = data1.data.gameStatistics[9].statistics[i].value;
+							if(data1.data.gameStatistics[9].statistics[i].statType == "ITEM2")
+								item2 = data1.data.gameStatistics[9].statistics[i].value;
+							if(data1.data.gameStatistics[9].statistics[i].statType == "ITEM3")
+								item3 = data1.data.gameStatistics[9].statistics[i].value;
+							if(data1.data.gameStatistics[9].statistics[i].statType == "ITEM4")
+								item4 = data1.data.gameStatistics[9].statistics[i].value;
+							if(data1.data.gameStatistics[9].statistics[i].statType == "ITEM5")
+								item5 = data1.data.gameStatistics[9].statistics[i].value;
+						}
+						minionsKilled = NminionsKilled + TminionsKilled;
+						var spell1 = data1.data.gameStatistics[9].spell1;
+						var spell2 = data1.data.gameStatistics[9].spell2;
+						var gameType = data1.data.gameStatistics[9].queueType;
+						if(win == 1){
+							$("#Recent_game").css("background", "#004D14");
+							$(".match_result").html("WIN");
+							$(".match_result").css("color", "#66CC33");
+						}else{
+							$("#Recent_game").css("background", "#690019");
+							$(".match_result").html("LOSS");
+							$(".match_result").css("color", "#DD7777");
+						}
+						document.getElementById("inventory").src = "../Champions/" + name + ".jpg";
+						$("strong", ".match_gold").text(gold + "k");
+						$("strong", ".match_minions").text(minionsKilled);
+						$("strong", ".match_stats")[0].innerHTML = champsKilled; //kills
+						$("strong", ".match_stats")[1].innerHTML = numOfDeaths; //deaths
+						$("strong", ".match_stats")[2].innerHTML = assists; //assists
+						if(gameType == "RANKED_SOLO_5X5")
+							$(".match_type").html("Ranked 5v5");
+						if(gameType == "NORMAL_SOLO_5X5")
+							$(".match_type").html("Normal 5v5");
+						if(gameType == "RANKED_SOLO_3X3")
+							$(".match_type").html("Ranked 3v3");
+						if(gameType == "NORMAL_SOLO_3X3")
+							$(".match_type").html("Normal 3v3");
+						
+						document.getElementById("match_spell1").src = "http://img.lolking.net/images/spells/" + spell1 +".png"; //location of spell 1;
+						document.getElementById("match_spell2").src = "http://img.lolking.net/images/spells/" + spell2 +".png";; //location of spell 2;
+						if(item0 != 0)
+							$("img", ".match_items1")[0].src = "http://img.lolking.net/shared/riot/images/items/" + item0 +"_32.png"; 
+						else
+							$("img", ".match_items1")[0].src ="../pictures/empty.png";
+						if(item1 != 0)
+							$("img", ".match_items1")[1].src = "http://img.lolking.net/shared/riot/images/items/" + item1 +"_32.png";
+						else
+							$("img", ".match_items1")[1].src ="../pictures/empty.png";
+						if(item2 != 0)
+							$("img", ".match_items1")[2].src = "http://img.lolking.net/shared/riot/images/items/" + item2 +"_32.png";
+						else
+							$("img", ".match_items1")[2].src ="../pictures/empty.png";
+						if(item3 != 0)
+							$("img", ".match_items2")[0].src = "http://img.lolking.net/shared/riot/images/items/" + item3 +"_32.png";
+						else
+							$("img", ".match_items2")[0].src ="../pictures/empty.png";
+						if(item4 != 0)
+							$("img", ".match_items2")[1].src = "http://img.lolking.net/shared/riot/images/items/" + item4 +"_32.png";
+						else
+							$("img", ".match_items2")[1].src = "../pictures/empty.png";
+						if(item5 != 0)
+							$("img", ".match_items2")[2].src = "http://img.lolking.net/shared/riot/images/items/" + item5 +"_32.png";
+						else
+							$("img", ".match_items2")[2].src ="../pictures/empty.png";
+						//getLeagues();
+						//document.getElementById('recentMatch').innerHTML += name;
 					}, 'json');
 			}
 			
@@ -868,22 +958,66 @@
 												<!--IF THERES A WIN-->
 													<li id="Recent_game" style="background: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0, #00611A), color-stop(1.0, #004D14)); background: -moz-linear-gradient(center top , #00611A 0%, #004D14 100%) repeat scroll 0 0 transparent; margin-left: -40px; border-top: 5px solid #545454; border-right: 5px solid #545454; border-left: 5px solid #545454; border-right: 5px solid #545454;">
 														<div id="msg42694927-1" class="userStream special_border">
-															<div id="match">
-																<h2 style="font-size: 135%; color: white; text-shadow: grey 0.1em 0.1em 0.2em;"> Recent Match </h2><br>
-																<div style="float: right; padding: 5px 10px;text-align: center; display: table-cell; vertical-align: middle; font-size: 14px; white-space: nowrap;" class="match_details_cell">
+															<div id="match" style="font-size: 20px; color: #FFF; text-align: center;">
+																<h2 style="font-size: 135%; color: white; text-shadow: grey 0.1em 0.1em 0.2em; padding-right: 200px;"> Recent Match </h2><br>
+																<div class="match_details_cell">
 																	<div style="width: 100px;">
-																		<div style="font-size: 12px; font-weight: bold;"> Normal 5v5 </div>
-																		<div style="font-weight: bold; font-size: 16px; color: #66CC33;"> WIN </div>
+																		<div class="match_type" style="font-size: 12px; font-weight: bold;"> Normal 5v5 </div>
+																		<div class="match_result" style="font-weight: bold; font-size: 16px; color: #66CC33;"> WIN </div>
 																	</div>
 																</div>
-																<div style="float: right; padding: 5px 10px;text-align: center; display: table-cell; vertical-align: middle; font-size: 14px; white-space: nowrap;" class="match_details_cell">
-																	<div style="width: 70px;">
+																<div class="match_details_cell">
+																	<div style="width: 140px;">
+																		<div style="padding: 2px; display: table-row">
+																			<div class="match_items1" style="display: table-cell; padding: 2px; width: 40px; height: 40px;">
+																				<img src ='../pictures/items.png' width='36' height='36'>
+																				<img src ='../pictures/items.png' width='36' height='36'>
+																				<img src ='../pictures/items.png' width='36' height='36'>
+																			</div>
+																		</div>
+																		<div style="padding: 2px; display: table-row">
+																			<div class="match_items2" style="display: table-cell; padding: 2px; width: 40px; height: 40px;">
+																				<img src ='../pictures/items.png' width='36' height='36'>
+																				<img src ='../pictures/items.png' width='36' height='36'>
+																				<img src ='../pictures/items.png' width='36' height='36'>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="match_details_cell">
+																	<div style="width: 42px; padding-top: 3px;">
+																		<div style="padding: 2px; display: table-row">
+																			<div style="display: table-cell; padding: 2px;">
+																				<img src ='../pictures/items.png' id="match_spell1" width='40' height='40'>
+																			</div>
+																		</div>
+																		<div style="padding: 2px; display: table-row">
+																			<div style="display: table-cell; padding: 2px; width: 40px; height: 40px;">
+																				<img src ='../pictures/items.png' width='40' id="match_spell2" height='40'>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="match_details_cell">
+																	<div class="match_stats" style="width: 50px;">
 																		<strong>0</strong> <span style="color: #BBBBBB; font-size: 10px; line-height: 6px;">Kills</span><br />
 																		<strong>1</strong> <span style="color: #BBBBBB; font-size: 10px; line-height: 6px;">Deaths</span><br />
 																		<strong>0</strong> <span style="color: #BBBBBB; font-size: 10px; line-height: 6px;">Assists</span>
 																	</div>
 																</div>
-																<div id="champ_pic" style="width: 80px; height: 80px;"> 
+																<div class="match_details_cell">
+																	<div class="match_minions" style="width: 60px; padding-top: 20px;">
+																		<strong>238</strong>
+																		<div class="match_details_cell_label">Minions</div>
+																	</div>
+																</div>
+																<div class="match_details_cell">
+																	<div class="match_gold" style="width: 80px; padding-top: 20px;">
+																		<strong>13.3k</strong>
+																		<div class="match_details_cell_label">Gold</div>
+																	</div>
+																</div>
+																<div id="champ_pic" style="padding-left: 60px; width: 100px; height: 100px;"> 
 																	 <img src="../Champions/Annie.jpg" id="inventory" style="width: 100%; height: 100%;">
 																</div>
 															</div>													
