@@ -202,7 +202,8 @@
 							$(".match_result").css("color", "#DD7777");
 						}
 						document.getElementById("inventory").src = "../Champions/" + name + ".jpg";
-						$("strong", ".match_gold").text(gold + "k");
+						gold = gold.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+						$("strong", ".match_gold").text(gold);
 						$("strong", ".match_minions").text(minionsKilled);
 						$("strong", ".match_stats")[0].innerHTML = champsKilled; //kills
 						$("strong", ".match_stats")[1].innerHTML = numOfDeaths; //deaths
@@ -242,6 +243,8 @@
 							$("img", ".match_items2")[2].src = "http://img.lolking.net/shared/riot/images/items/" + item5 +"_32.png";
 						else
 							$("img", ".match_items2")[2].src ="../pictures/empty.png";
+						$("#Recent_game").css("visibility", "");
+						$("#Recent_game").hide().fadeIn(1500);
 						//getLeagues();
 						//document.getElementById('recentMatch').innerHTML += name;
 					}, 'json');
@@ -950,7 +953,7 @@
                                         <div id="newsfeed">
 											<ul style="list-style-type: none;">
 												<!--IF THERES A WIN-->
-													<li id="Recent_game" style="background: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0, #00611A), color-stop(1.0, #004D14)); background: -moz-linear-gradient(center top , #00611A 0%, #004D14 100%) repeat scroll 0 0 transparent; margin-left: -40px; border-top: 5px solid #545454; border-right: 5px solid #545454; border-left: 5px solid #545454; border-right: 5px solid #545454;">
+													<li id="Recent_game" style="visibility:hidden; background: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0, #00611A), color-stop(1.0, #004D14)); background: -moz-linear-gradient(center top , #00611A 0%, #004D14 100%) repeat scroll 0 0 transparent; margin-left: -40px; border-top: 5px solid #545454; border-right: 5px solid #545454; border-left: 5px solid #545454; border-right: 5px solid #545454;">
 														<div id="msg42694927-1" class="userStream special_border">
 															<div id="match" style="font-size: 20px; color: #FFF; text-align: center;">
 																<h2 style="font-size: 135%; color: white; text-shadow: grey 0.1em 0.1em 0.2em; padding-right: 200px;"> Recent Match </h2><br>
