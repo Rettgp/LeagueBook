@@ -140,85 +140,64 @@
 		</div>
 		<a id="newsfeed_loadMsgs" class="moreButton radius special_bg special_text special_border" href="javascript:;" style="display:none">Load More</a>
 	</div>
-	<div id="home_content">
-		<div id="top_block_no_1">
-			<div class="box">
-				<div style="clear:both">
-				</div>
-				<div class="box_mid">
-					<div class="content" id="block_no_1">
-					<h2 style="display: block; font-size: 25px; margin: 20px 0 10px;">LoLcodex is a social networking and team building site by League fans, for League fans. Enjoy!</h2>
-						<div id="signInCont">
-							<div class="col1">
-								<div id="fb-root">
-								</div>
-								<div class="fb">
-									<button class="fButton" rel="facebook-connect-login">Please Wait...</button>
-								</div>
-								<form class="siteForm" action="/scripts/registration.php" method="post">
-									<input type="hidden" name="join" value="0"/>
-									<h2 style="display: block; font-size: 15px; margin: 20px 0 10px;">Alternatively you can sign up with your email;</h2>
-									<div style="padding: 10px; height: 20px;">
-										<div style="float:left;width:80px;font-weight:bold;">
-											Email
-										</div>
-										<div style="float:left;width:170px;">
-											<input type="text" name="email" class="large" autofocus="autofocus">
-										</div>
-									</div>						
-									<div style="padding: 10px; height: 20px;">
-										<div style="float:left;width:80px;font-weight:bold;">
-											Re-enter Email
-										</div>
-										<div style="float:left;width:170px;">
-											<input type="text" name="confirmemail" class="large" autofocus="autofocus">
-										</div>
-									</div>
-									<div style="padding: 10px; height: 20px; clear: both;">
-										<div style="float:left;width:80px;font-weight:bold;">
-											Password
-										</div>
-										<div style="float:left;width:170px;">
-											<input type="password" name="password" class="large">
-										</div>
-									</div>
-									<div style="padding: 10px; height: 20px; clear: both;">
-										<div style="float:left;width:80px;font-weight:bold;">
-											Re-enter Password
-										</div>
-										<div style="float:left;width:170px;">
-											<input type="password" name="confirmpassword" class="large">
-										</div>
-									</div>
-									<input type="hidden" name="joinform" value="1" /> <div class="regFormContainer">
-                                            <div class="siteFormTitle">Which Region do you primarily play in?</div>
-                                            <div class="siteFormBody">
-                                                <select id="nationality" name="nationality" class="medium">
-                                                    <option value="AF">Afghanistan</option>
-                                                    <option value="BR">Brazil</option>
-                                                    <option value="EUNE">EU Nordic & East</option>
-                                                    <option value="EUW">EU West</option>
-                                                    <option value="NA" selected>North America</option>
-                                                </select>
-                                            </div>
-                                        </div> <div class="regFormContainer">
-										<div style="padding:80px;">
-											<input type="submit" value="Sign Up"/><br/><small>By signing up, you agree to the <a href="http://LoLcodex.com/tos">Terms of Service</a> and <a href="http://LoLcodex.com/privacy">Privacy Policy</a>.</small>
-										</div>
-									</form>
-								</div>
+	<div id="home_content" style="text-align: center;">
+		<div class="content" id="block_no_1">
+			<h2 style="display: block; font-size: 25px; margin: 20px 0 10px;">LoLcodex is a social networking and team building site by League fans, for League fans. Enjoy!</h2>
+			<div id="signInCont" style="text-align: center;">
+				<div class="col1" style="height: 500px; width: 500px; margin-left: 33%;">
+					<div class="fb">
+						<button class="fButton" rel="facebook-connect-login">Please Wait...</button>
+					</div>
+					<h2 style="display: block; font-size: 15px; margin: 20px 0 10px;">Alternatively you can sign up with your email;</h2>
+					<form class="siteForm" action="/scripts/registration.php" method="post" style="overflow: hidden; margin-left: 9%;" >
+						<input type="hidden" name="join" value="0"/>
+						<div style="padding: 10px; height: 50px; width: 200px; float: left;">
+							<div style="float:left;width:80px;font-weight:bold;">Email</div>
+							<div style="margin-left: 5%;float:left;width:170px;">
+								<input type="text" name="email" class="large" autofocus="autofocus">
+							</div>
+						</div>						
+						<div style="padding: 10px; height: 50px; width: 200px; float: left;">
+							<div style="float:left;width:150px;font-weight:bold;">Re-enter Email:</div>
+							<div style="margin-left: 5%;float:left;width:170px;">
+								<input type="text" name="confirmemail" class="large" autofocus="autofocus">
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="box_bottom">
-					<span class="box_bottom_right"></span><span class="box_bottom_left"></span>
+						<div style="padding: 10px; height: 50px; width: 200px; float: left;">
+							<div style="float:left;width:115px;font-weight:bold;">Password:</div>
+							<div style="margin-left: 5%;float:left;width:170px;">
+								<input type="password" name="password" class="large">
+							</div>
+						</div>
+						<div style="padding: 10px; height: 50px; width: 200px; float: left;">
+							<div style="float:left;width:179px;font-weight:bold;">Re-enter Password:</div>
+							<div style="margin-left: 5%;float:left;width:170px;">
+								<input type="password" name="confirmpassword" class="large">
+							</div>
+						</div>
+						<div class="regFormContainer" style="padding: 10px; height: 50px; width: 200px; float: left;">
+							<div class="siteFormTitle" style="float:left;width:119px;font-weight:bold;">Server Region:</div><br>
+							<div class="siteFormBody">
+								<select id="nationality" name="nationality" class="medium" style="margin-left: 9%;float:left;width:165px;">
+									<option value="AF">Afghanistan</option>
+									<option value="BR">Brazil</option>
+									<option value="EUNE">EU Nordic & East</option>
+									<option value="EUW">EU West</option>
+									<option value="NA" selected>North America</option>
+								</select>
+							</div>
+                        </div> 
+						<div class="regFormContainer" style="margin-top: 5%; height: 100px; width: 200px; float: left;">
+							<div>
+								<input type="submit" value="Sign Up" style="font-size: 18px; height: 40px; width: 160px;"/><br>
+								<small>By signing up, you agree to the <a href="http://LoLcodex.com/tos">Terms of Service</a> and <a href="http://LoLcodex.com/privacy">Privacy Policy</a>.</small>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
-		<div class="box_bottom">
-			<span class="box_bottom_right"></span><span class="box_bottom_left"></span>
-		</div>
+
 		<div id="footer">
 			 &copy; 2013 LoLcodex
 		</div>

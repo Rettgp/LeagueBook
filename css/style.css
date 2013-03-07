@@ -2,6 +2,7 @@
 body, div, dl, dt, dd, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote {
     margin: 0;
     padding: 0;
+	
 }
 fieldset, img {
     border: 0 none;
@@ -82,7 +83,7 @@ a:hover {
 
 #home_content{
 	float: left;
-    margin-top: 1%;
+    margin-top: 4%;
     min-height: 450px;
     width: 100%;
 }
@@ -181,7 +182,11 @@ blockquote {
 	background-image: -ms-linear-gradient(bottom, rgb(46,45,45) 27%, rgb(23,23,23) 64%, rgb(26,61,61) 100%);
     box-shadow: 0 1px 3px rgba(10, 10, 10, 0.4);
     clear: both;
-    min-height: 44px;
+    min-height: 60px;
+	width: 100%;
+	position:fixed;
+	z-index:10000;
+	
 }
 #hgroups {
 	margin: 0 auto;
@@ -295,9 +300,9 @@ a#headerNotificationsItem {
 }
 #aSide {
     float: left;
-    margin-top: 20px;
 	margin-left: 220px;
     width: 150px;
+	margin-top: 4%;
 }
 #aSide img {
     border-radius: 3px 3px 3px 3px;
@@ -611,8 +616,8 @@ ul#accountMenu .userAvatar a:hover {
     text-align: center;
     position:absolute;
 	bottom:0;
-	width:100%;
-	height:10px;   /* Height of the footer */
+	width:95%;
+	height:40px;   /* Height of the footer */
 }
 #footer a {
     color: #787878;
@@ -627,6 +632,7 @@ ul#accountMenu .userAvatar a:hover {
     min-height: 450px;
     position: relative;
     width: 1200px;
+	margin-top: 4%;
 }
 #content .col_full {
     background: none repeat scroll 0 0 #FFFFFF;
